@@ -1,4 +1,4 @@
-updater-wordpress-plugin
+Updater Wordpress Plugin
 ========================
 
 This plugin updates plugins and WordPress core. You can also use the auto mode or manual mode for updating and set email notifications.

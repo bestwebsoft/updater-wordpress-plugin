@@ -1,0 +1,162 @@
+/*
+Plugin Name: Updater
+Plugin URI:  http://bestwebsoft.com/plugin/
+Description: This plugin allows you to update plugins and WP core in auto or manual mode.
+Author: BestWebSoft
+Version: 1.11
+Author URI: http://bestwebsoft.com/
+License: GPLv2 or later
+*/
+#adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+	background: url("../images/icon_16.png") no-repeat scroll center center transparent;
+}
+.admin-color-classic #adminmenu #toplevel_page_bws_plugins div.wp-menu-image {
+	background: url("../images/icon_16_b.png") no-repeat scroll center center transparent;
+}
+#adminmenu #toplevel_page_bws_plugins:hover div.wp-menu-image, #adminmenu #toplevel_page_bws_plugins.wp-has-current-submenu div.wp-menu-image {
+	background: url("../images/icon_16_c.png") no-repeat scroll center center transparent;
+}	
+.wrap #icon-options-general.icon32-bws {
+	background: url("../images/icon_36.png") no-repeat scroll left top transparent;
+}
+.admin-color-classic .wrap #icon-options-general.icon32-bws {
+	background: url("../images/icon_36_b.png") no-repeat scroll left top transparent;
+}
+#toplevel_page_bws_plugins .wp-submenu .wp-first-item {
+	display:none;
+}
+.bws_system_info_meta_box {
+    width: 850px;
+}
+.bws_system_info_meta_box .hndle {
+    cursor: pointer !important;
+}
+.bws_system_info {
+    float: left;
+    margin-right: 10px;
+    width: 400px;
+}
+.bws_system_info th {
+    padding: 10px 0;
+    text-align: left;
+    width: 50%;
+}
+.bws_system_info tbody td {
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.pdtr {
+	width: auto !important;
+}
+.pdtr * {
+	width: auto !important;
+}
+.pdtr td,
+.pdtr td {
+	border-bottom-color: #DFDFDF;
+    border-top-color: #FFFFFF;
+}
+.pdtr .plugin-title {
+    border-right: 1px solid #DFDFDF !important;
+    padding-right: 15px !important;
+    padding-top: 7px !important;
+}
+.pdtr thead tr th {
+	padding: 8px 8px 7px 0 !important;
+}
+.pdtr .check-column {
+	padding: 7px 8px 7px 8px !important;
+}
+.pdtr_right {
+	float: right;
+}
+.pdtr_right input {
+    position: relative;
+    top: -1px;
+}
+.pdtr_left {
+	float: left;
+	padding-right: 15px;
+}
+.pdtr_settings input {    
+    margin: 0 !important;
+	position: relative;
+    top: 1px;
+}
+.pdtr_settings input[type="text"],
+.pdtr_settings input[type="url"],
+.pdtr_settings input[type="email"] {
+	background-color: #FFFFFF;
+    border-color: #DFDFDF;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+	width: 300px;
+}
+a.pdtr_pro_version {
+	text-decoration: none;
+	color: #666666;	
+    position: relative;
+}
+div.pdtr_pro_version {
+	border: 1px solid #AAAAAA;
+	background: #E0E0E0;
+	padding: 2px 3px;
+}
+.pdtr_pro_version_tooltip {
+    left: 675px;
+    margin-top: -55px;
+	position: absolute;
+	width: 380px;
+	border: 1px solid #AAAAAA;
+	padding: 10px;
+    border-radius: 5px;
+    text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+    background: #FFFFFF;
+}
+.pdtr_pro_version_tooltip:before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #FFFFFF transparent transparent;
+   	top: 53px;
+    left: 30px;
+}
+.pdtr_pro_version_content {
+	border: 1px solid #AAAAAA;
+	background: #E0E0E0;
+	padding: 5px 10px;
+	margin-top: 20px; 
+	color: #555555;
+}
+.pdtr_pro_version th,
+.pdtr_pro_version td{
+	color: #555555;
+}
+.form-table.pdtr_pro_version th {
+    width: 300px;
+}
+.pdtr_pro_version input,
+.pdtr_pro_version select {
+	color: #555555;
+}
+.pdtr_span {
+	color: #888888;
+	font-size: 10px;
+	margin: 0;
+}
+.form-table.pdtr_pro_version input[type="text"] {
+    width: 270px;
+}
+.pdtr_img {
+	margin-bottom: -3px;
+	opacity: 0.6;
+}
+td.pdtr_pro_version,
+th.pdtr_pro_version {
+	background: #E0E0E0;
+	border-left: 1px solid #DFDFDF;
+	color: #919191 !important;
+}

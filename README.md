@@ -1,9 +1,16 @@
-Updater Wordpress Plugin
+<a href="http://bestwebsoft.com/plugin/updater-plugin/" target=_blank>Updater Wordpress Plugin</a>
 ========================
 
-This plugin updates plugins and WordPress core. You can also use the auto mode or manual mode for updating and set email notifications.
+This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications. There is also a premium version of the plugin with more useful features available. 
 
-Official plugin page: http://bestwebsoft.com/plugin/updater-plugin/
+<img src="http://bestwebsoft.com/wp-content/uploads/2013/01/updater2.jpg" />
+
+<a href="http://bestwebsoft.com/plugin/updater-plugin/#description" target=_blank>Description</a> | 
+<a href="http://bestwebsoft.com/plugin/updater-plugin/#installation" target=_blank>Installation</a> | 
+<a href="http://bestwebsoft.com/plugin/updater-plugin/#faq" target=_blank>FAQ</a> | 
+<a href="http://bestwebsoft.com/plugin/updater-plugin/#screenshots" target=_blank>Screenshots</a> | 
+<a href="http://bestwebsoft.com/plugin/updater-plugin/#changelog" target=_blank>Changelog</a> | 
+<a href="http://bestwebsoft.com/plugin/updater-plugin/#download" target=_blank>Download</a>
 
 
 User guide
@@ -16,6 +23,7 @@ User guide
 Translation
 -----------------------------
 * Russian (ru_RU)
+* Serbian (sr_RS) (thanks to Borisa Djuraskovic)
 * Ukrainian (uk)
 
 If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.

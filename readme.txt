@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: plugin, core, wordpress, update
 Requires at least: 3.0
-Tested up to: 3.6.1
-Stable tag: 1.11
+Tested up to: 3.8.1
+Stable tag: 1.16
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -14,8 +14,11 @@ This plugin allows you to update plugins and WordPress core.
 This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
 There is also a premium version of the plugin with more useful features available.
 
-<a href="http://wordpress.org/extend/plugins/updater/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/updater/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+
+<a href="http://bestwebsoft.com/plugin/updater-pro?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Pro Version</a>
 
 = User Guide =
 
@@ -26,6 +29,7 @@ There is also a premium version of the plugin with more useful features availabl
 = Translation =
 
 * Russian (ru_RU)
+* Serbian (sr_RS) (thanks to <a href="mailto:borisad@webhostinghub.com">Borisa Djuraskovic</a>)
 * Ukrainian (uk)
 
 If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -70,12 +74,39 @@ Updater does it every 12 hours by default. In auto mode Updater updates plugins 
 
 It's impossible. The number of hours should be integer and it should not include more than 5 digits.
 
+= I have some problems with the plugin's work. What Information should I provide to receive proper support? =
+
+Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+1. the link to the page where the problem occurs
+2. the name of the plugin and its version. If you are using a pro version - your order number.
+3. the version of your WordPress installation
+4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+
 == Screenshots ==
 
-1. Updater Options page.
+1. Updater Settings page.
 2. Updater page in the BWS admin area.
 
 == Changelog ==
+
+= V1.16 - 04.02.2014 =
+* Update : We updated all functionality for wordpress 3.8.1.
+
+= V1.15 - 16.12.2013 =
+* Update : We updated all functionality for wordpress 3.8.
+* NEW : A notice when changing settings on the plugin's settings page was added. 
+
+= V1.14 - 13.11.2013 =
+* Bugfix : We fixed the bug of syntax error.
+
+= V1.13 - 12.11.2013 =
+* NEW : Add checking installed wordpress version.
+* NEW : The Serbian language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.7.1.
+* Update : Activation of radio button or checkbox by clicking on its label.
+
+= V1.12 - 22.10.2013 =
+* Update : Screenshots and BWS menu were updated.
 
 = V1.11 - 02.10.2013 =
 * Update : We updated all functionality for wordpress 3.6.1.
@@ -121,6 +152,21 @@ It's impossible. The number of hours should be integer and it should not include
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.16 =
+We updated all functionality for wordpress 3.8.1.
+
+= V1.15 =
+We updated all functionality for wordpress 3.8. A notice when changing settings on the plugin's settings page was added. 
+
+= V1.14 =
+We fixed the bug of syntax error.
+
+= V1.13 =
+Add checking installed wordpress version. The Serbian language file is added to the plugin. We updated all functionality for wordpress 3.7.1. Activation of radio button or checkbox by clicking on its label.
+
+= V1.12 =
+Screenshots and BWS menu were updated.
 
 = V1.11 =
 We updated all functionality for wordpress 3.6.1. The Ukrainian language file is added to the plugin.

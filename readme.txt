@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: plugin, core, wordpress, update
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 1.17
+Tested up to: 3.8.2
+Stable tag: 1.18
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -13,6 +13,8 @@ This plugin allows you to update plugins and WordPress core.
 
 This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
 There is also a premium version of the plugin with more useful features available.
+
+http://www.youtube.com/watch?v=I63426HTJjI
 
 <a href="http://wordpress.org/plugins/updater/faq/" target="_blank">FAQ</a>
 
@@ -80,7 +82,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
 
 == Screenshots ==
 
@@ -88,6 +90,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater page in the BWS admin area.
 
 == Changelog ==
+
+= V1.18 - 11.04.2014 =
+* Update : We updated all functionality for wordpress 3.8.2.
 
 = V1.17 - 13.03.2014 =
 * Budfix : Plugin optimization is done.
@@ -156,6 +161,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.18 =
+We updated all functionality for wordpress 3.8.2.
 
 = V1.17 =
 Plugin optimization is done. Screenshots and BWS menu were updated.

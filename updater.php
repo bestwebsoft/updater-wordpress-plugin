@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Updater
-Plugin URI:  http://bestwebsoft.com/plugin/
+Plugin URI: http://bestwebsoft.com/plugin/
 Description: This plugin allows you to update plugins and WP core in auto or manual mode.
 Author: BestWebSoft
-Version: 1.18
+Version: 1.19
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -30,7 +30,8 @@ License: GPLv2 or later
 if ( ! function_exists( 'pdtr_add_admin_menu' ) ) {
 	function pdtr_add_admin_menu() {
 		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_version = '1.2.6';
+		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
+		$bws_menu_version = $bws_menu_info["Version"];
 		$base = plugin_basename(__FILE__);
 
 		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
@@ -265,7 +266,7 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 				<a class="nav-tab<?php if ( isset( $_GET['page'] ) && 'updater' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater"><?php _e( 'Tools', 'updater' ); ?></a>
 				<a class="nav-tab<?php if ( isset( $_GET['page'] ) && 'updater-options' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater-options"><?php _e( 'Settings', 'updater' ); ?></a>
 				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/updater-pro/" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'updater' ); ?>"><?php _e( 'User guide', 'updater' ); ?></a>
-				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/updater-pro/" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'updater' ); ?>"><?php _e( 'FAQ (with images)', 'updater' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/updater-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'updater' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['page'] ) && 'updater-go-pro' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater-go-pro"><?php _e( 'Go PRO', 'updater' ); ?></a>
 			</h2>
 			<div class="error"><p><strong><?php _e( 'We strongly recommend that you backup your website and the WordPress database before updating! We are not responsible for the site work after updates', 'updater' ); ?></strong></p></div>
@@ -345,11 +346,17 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 				<div class="bws_pro_version_table_bloc">	
 					<div class="bws_table_bg"></div>											
 					<table class="form-table bws_pro_version">
+						<tr valign="top">
+							<th><?php _e( 'Disable auto WP core update', 'updater' ); ?></th>
+							<td>
+								<input type="checkbox" disabled name="pdtrpr_disable_auto_core_update" value="1" />
+							</td>
+						</tr>
 						<tr>
 							<th><?php _e( 'Make backup before updating', 'updater' ); ?></th>
 							<td>
 								<input type="checkbox" disabled value="1" />
-								<input type="button" disabled class="button" value="<?php echo __( 'Test making the backup', 'updater' ); ?>" style="margin-left: 115px;"/>
+								<input type="button" disabled class="button" value="<?php _e( 'Test making the backup', 'updater' ); ?>" style="margin-left: 115px;"/>
 							</td>
 						</tr>
 						<tr>
@@ -479,7 +486,7 @@ if ( ! function_exists ( 'pdtr_own_page' ) ) {
 				<a class="nav-tab<?php if ( isset( $_GET['page'] ) && 'updater' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater"><?php _e( 'Tools', 'updater' ); ?></a>
 				<a class="nav-tab<?php if ( isset( $_GET['page'] ) && 'updater-options' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater-options"><?php _e( 'Settings', 'updater' ); ?></a>
 				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/updater-pro/" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'updater' ); ?>"><?php _e( 'User guide', 'updater' ); ?></a>
-				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/updater-pro/" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'updater' ); ?>"><?php _e( 'FAQ (with images)', 'updater' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/updater-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'updater' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['page'] ) && 'updater-go-pro' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater-go-pro"><?php _e( 'Go PRO', 'updater' ); ?></a>
 			</h2>
 			<div class="error"><p><strong><?php _e( 'We strongly recommend that you backup your website and the WordPress database before updating! We are not responsible for the site work after updates', 'updater' ); ?></strong></p></div>
@@ -729,7 +736,7 @@ if ( ! function_exists ( 'pdtr_go_pro_page' ) ) {
 				<a class="nav-tab<?php if ( isset( $_GET['page'] ) && 'updater' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater"><?php _e( 'Tools', 'updater' ); ?></a>
 				<a class="nav-tab<?php if ( isset( $_GET['page'] ) && 'updater-options' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater-options"><?php _e( 'Settings', 'updater' ); ?></a>
 				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/updater-pro/" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'updater' ); ?>"><?php _e( 'User guide', 'updater' ); ?></a>
-				<a class="bws_plugin_menu_pro_version nav-tab" href="http://bestwebsoft.com/plugin/updater-pro/" target="_blank" title="<?php _e( 'This setting is available in Pro version', 'updater' ); ?>"><?php _e( 'FAQ (with images)', 'updater' ); ?></a>
+				<a class="nav-tab" href="http://bestwebsoft.com/plugin/updater-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'updater' ); ?></a>
 				<a class="nav-tab bws_go_pro_tab<?php if ( isset( $_GET['page'] ) && 'updater-go-pro' == $_GET['page'] ) echo ' nav-tab-active'; ?>" href="admin.php?page=updater-go-pro"><?php _e( 'Go PRO', 'updater' ); ?></a>
 			</h2>
 			<div class="updated fade" <?php if ( ! isset( $_REQUEST["bws_license_submit"] ) || "" != $error || "" == $message ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
@@ -762,7 +769,7 @@ if ( ! function_exists ( 'pdtr_go_pro_page' ) ) {
 						$bstwbsftwppdtplgns_options['go_pro']['updater-pro/updater_pro.php']['time'] < ( time() + ( 24 * 60 * 60 ) ) ) { ?>
 						<p>
 							<input disabled="disabled" type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
-							<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Go!', 'updater' ); ?>" />
+							<input disabled="disabled" type="submit" class="button-primary" value="<?php _e( 'Activate', 'updater' ); ?>" />
 						</p>
 						<p>
 							<?php _e( "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually.", 'updater' ); ?>
@@ -772,7 +779,7 @@ if ( ! function_exists ( 'pdtr_go_pro_page' ) ) {
 							<input type="text" name="bws_license_key" value="<?php echo $bws_license_key; ?>" />
 							<input type="hidden" name="bws_license_plugin" value="updater-pro/updater_pro.php" />
 							<input type="hidden" name="bws_license_submit" value="submit" />
-							<input type="submit" class="button-primary" value="<?php _e( 'Go!', 'updater' ); ?>" />
+							<input type="submit" class="button-primary" value="<?php _e( 'Activate', 'updater' ); ?>" />
 							<?php wp_nonce_field( plugin_basename(__FILE__), 'bws_license_nonce_name' ); ?>
 						</p>
 					<?php } ?>
@@ -858,8 +865,9 @@ if ( ! function_exists ( 'pdtr_update_core' ) ) {
 /* Function for sending email after update */
 if ( ! function_exists ( 'pdtr_notification_after_update' ) ) {
 	function pdtr_notification_after_update( $plugins_list, $core ) {
-		global $pdtr_options, $pdtr_core_plugin_list;
+		global $pdtr_options;
 
+		$pdtr_core_plugin_list = pdtr_processing_site();
 		$subject	=	esc_html__( 'The Updater plugin made the updates at the site', 'updater' ) .  ' ' . esc_attr( get_bloginfo( 'name', 'display' ) );
 		$message	=	'<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
 						<body>
@@ -1099,8 +1107,11 @@ if ( ! function_exists ( 'pdtr_plugin_banner' ) ) {
 		if ( 'plugins.php' == $hook_suffix ) {
 			global $pdtr_plugin_info;
 			$banner_array = array(
+				array( 'sndr_hide_banner_on_plugin_page', 'sender/sender.php', '0.5' ),
+				array( 'srrl_hide_banner_on_plugin_page', 'user-role/user-role.php', '1.4' ),
 				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),
-				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),		
+				array( 'cntctfrmtdb_hide_banner_on_plugin_page', 'contact-form-to-db/contact_form_to_db.php', '1.2' ),
+				array( 'cntctfrmmlt_hide_banner_on_plugin_page', 'contact-form-multi/contact-form-multi.php', '1.0.7' ),		
 				array( 'gglmps_hide_banner_on_plugin_page', 'bws-google-maps/bws-google-maps.php', '1.2' ),		
 				array( 'fcbkbttn_hide_banner_on_plugin_page', 'facebook-button-plugin/facebook-button-plugin.php', '2.29' ),
 				array( 'twttr_hide_banner_on_plugin_page', 'twitter-plugin/twitter.php', '2.34' ),
@@ -1150,7 +1161,7 @@ if ( ! function_exists ( 'pdtr_plugin_banner' ) ) {
 								<a class="button" target="_blank" href="http://bestwebsoft.com/plugin/updater-pro?k=0b6882b0c99c2776d06c375dc22b5869&pn=84&v=<?php echo $pdtr_plugin_info["Version"]; ?>&wp_v=<?php echo $wp_version; ?>"><?php _e( 'Learn More', 'updater' ); ?></a>
 							</div>
 							<div class="text"><?php
-								_e( 'It’s time to upgrade your', 'updater' ); ?> <strong><?php _e( 'Updater plugin', 'updater' ); ?></strong> <?php _e( 'to', 'updater' ); ?> <strong>PRO</strong> <?php _e( 'version!', 'updater' ); ?><br />
+								_e( 'It’s time to upgrade your', 'updater' ); ?> <strong>Updater plugin</strong> <?php _e( 'to', 'updater' ); ?> <strong>PRO</strong> <?php _e( 'version!', 'updater' ); ?><br />
 								<span><?php _e( 'Extend standard plugin functionality with new great options.', 'updater' ); ?></span>
 							</div>
 							<div class="icon">

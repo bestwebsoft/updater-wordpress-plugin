@@ -4,15 +4,14 @@ Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&
 Tags: apdater, auto mode update, manual mode update, latest version, latest wordpress version, recent version, recent plugin versions, recent wordpress version, updatar, updater, updeiter, update plugins automatically, update wordpress automatically, update email notification, update frequency, update manually, update notification, update plugins, update to latest version, update to recent version, update wordpress, update wordpress core, updater plugin, plugin, core, wordpress, update
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 1.19
+Stable tag: 1.20
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
 
 == Description ==
 
-This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin with more useful features available.
+This plugin updates your WordPress and the plugins to the recent versions. It also has auto or manual mode for updating and set email notifications. No more lasting updates of each separate plugins. The Updater plugin will do it for you.
 
 http://www.youtube.com/watch?v=I63426HTJjI
 
@@ -91,6 +90,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.20 - 15.07.2014 =
+* Update : We updated all functionality for Email Queue plugin.
+
 = V1.19 - 22.05.2014 =
 * Update : We updated all functionality for wordpress 3.9.1.
 * Bugfix : We fixed the bug of the wrong version in the report after the update.
@@ -166,6 +168,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.20 =
+We updated all functionality for Email Queue plugin.
 
 = V1.19 =
 We updated all functionality for wordpress 3.9.1. We fixed the bug of the wrong version in the report after the update. The Ukrainian language file is updated.

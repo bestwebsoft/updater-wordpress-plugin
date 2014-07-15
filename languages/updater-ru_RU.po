@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-20 16:36+0300\n"
-"PO-Revision-Date: 2014-05-20 16:37+0300\n"
+"POT-Creation-Date: 2014-07-15 14:01+0300\n"
+"PO-Revision-Date: 2014-07-15 14:01+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -83,8 +83,8 @@ msgstr "Инструменты"
 #: updater.php:267
 #: updater.php:487
 #: updater.php:737
-#: updater.php:1081
-#: updater.php:1094
+#: updater.php:1114
+#: updater.php:1127
 msgid "Settings"
 msgstr "Настройки"
 
@@ -103,7 +103,7 @@ msgstr "Руководство пользователя"
 #: updater.php:269
 #: updater.php:489
 #: updater.php:739
-#: updater.php:1095
+#: updater.php:1128
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -238,7 +238,7 @@ msgstr "Активируйте премиум опции обновившись 
 
 #: updater.php:384
 #: updater.php:512
-#: updater.php:1160
+#: updater.php:1193
 msgid "Learn More"
 msgstr "Узнать больше"
 
@@ -424,109 +424,109 @@ msgstr "Обновление провалилось"
 msgid "WordPress updated successfully!"
 msgstr "WordPress удачно обновлен!"
 
-#: updater.php:870
+#: updater.php:871
 msgid "The Updater plugin made the updates at the site"
 msgstr "Плагин Updater выполнил обновления на сайте"
 
-#: updater.php:873
-#: updater.php:935
+#: updater.php:874
+#: updater.php:957
 msgid "Hello!"
 msgstr "Здравствуйте!"
 
-#: updater.php:874
-#: updater.php:936
+#: updater.php:875
+#: updater.php:958
 msgid "The Updater plugin is being run on your website"
 msgstr "Плагин Updater был запущен на вашем сайте"
 
-#: updater.php:877
+#: updater.php:878
 msgid "These plugins were updated:"
 msgstr "Следующие плагины обновлены: "
 
-#: updater.php:880
-#: updater.php:947
+#: updater.php:881
+#: updater.php:969
 msgid "to the version"
 msgstr "до версии"
 
-#: updater.php:886
+#: updater.php:887
 msgid "WordPress was updated to the version"
 msgstr "WordPress был обновлен  до версии"
 
-#: updater.php:889
+#: updater.php:890
 msgid "If you want to change the plugin mode or other settings you should go here:"
 msgstr "Если вы хотите изменить тип режима для плагина или другие настройки, вам сюда:"
 
-#: updater.php:890
-#: updater.php:973
+#: updater.php:891
+#: updater.php:995
 msgid "the Updater settings page on your website."
 msgstr "страница настроек Updater на вашем сайте."
 
-#: updater.php:892
-#: updater.php:975
+#: updater.php:893
+#: updater.php:997
 msgid "Thanks for using the plugin"
 msgstr "Спасибо за использование плагина"
 
-#: updater.php:932
+#: updater.php:954
 msgid "Check for updates on"
 msgstr "Проверка обновлений на"
 
-#: updater.php:939
+#: updater.php:961
 msgid "The files that need update are:"
 msgstr "Файлы, требующие обновления:"
 
-#: updater.php:944
+#: updater.php:966
 msgid "These plugins can be updated:"
 msgstr "Следующие плагины могут быть обновлены: "
 
-#: updater.php:948
-#: updater.php:955
+#: updater.php:970
+#: updater.php:977
 msgid "the current version is"
 msgstr "текущая версии"
 
-#: updater.php:954
+#: updater.php:976
 msgid "WordPress can be updated to the version"
 msgstr "WordPress может быть обновлен до версии"
 
-#: updater.php:960
-#: updater.php:965
+#: updater.php:982
+#: updater.php:987
 msgid "Please use this link to update:"
 msgstr "Для обновления воспользуйтесь этой ссылкой:"
 
-#: updater.php:960
-#: updater.php:965
+#: updater.php:982
+#: updater.php:987
 msgid "the Updater page on your website."
 msgstr "страница Updater на вашем сайте."
 
-#: updater.php:962
+#: updater.php:984
 msgid "The Updater plugin starts updating these files."
 msgstr "Плагин Updater начинает обновлние этих файлов."
 
-#: updater.php:969
+#: updater.php:991
 msgid "Congratulations! Your plugins and WordPress have the latest updates!"
 msgstr "Поздравляем! Ваши плагины и WordPress не нуждаются в обновлениях!"
 
-#: updater.php:972
+#: updater.php:994
 msgid "If you want to change type of mode for the plugin or other settings you should go here:"
 msgstr "Если вы хотите изменить тип режима для плагина или другие настройки, вам сюда:"
 
-#: updater.php:1096
+#: updater.php:1129
 msgid "Support"
 msgstr "Поддержка"
 
-#: updater.php:1163
+#: updater.php:1196
 msgid "It’s time to upgrade your"
 msgstr "Настало время модернизировать Ваш"
 
-#: updater.php:1163
+#: updater.php:1196
 msgid "to"
 msgstr "до"
 
-#: updater.php:1163
+#: updater.php:1196
 msgid "version!"
 msgstr "версии!"
 
-#: updater.php:1164
+#: updater.php:1197
 msgid "Extend standard plugin functionality with new great options."
-msgstr "Расширяет возможности в стандартного функционала плагина."
+msgstr "Расширяет возможности стандартного функционала плагина."
 
 #~ msgid "FAQ (with images)"
 #~ msgstr "FAQ (c изображениями)"

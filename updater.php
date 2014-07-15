@@ -4,7 +4,7 @@ Plugin Name: Updater
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: This plugin allows you to update plugins and WP core in auto or manual mode.
 Author: BestWebSoft
-Version: 1.19
+Version: 1.20
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -912,18 +912,39 @@ if ( ! function_exists ( 'pdtr_notification_after_update' ) ) {
 		$headers[] = 'From: ' . $from_name . ' <' . $from_email . '>';
 		add_filter( 'wp_mail_content_type', create_function( '', 'return "text/html";' ) );
 		
-		if ( '10' == has_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' ) ) {
-			remove_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' );
-			$mail_result = wp_mail( $email, $subject, $message, $headers );
-			add_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter', 10, 1 );
+		if ( ! function_exists( 'is_plugin_active' ) )
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+		if ( is_plugin_active( 'email-queue/email-queue.php' ) && mlq_if_mail_plugin_is_in_queue( plugin_basename( __FILE__ ) ) ) {
+			/* if email-queue plugin is active and this plugin's "in_queue" status is 'ON' */
+			global $mlq_mail_result;
+			do_action( 'pdtr_get_mail_data', plugin_basename( __FILE__ ), $email, $subject, $message, $headers );
+			/* return $mail_result = true if email-queue has successfully inserted mail in its DB; in other case - return false */
+			return $mail_result = $mlq_mail_result;
 		} else {
-			$mail_result = wp_mail( $email, $subject, $message, $headers );
+			if ( '10' == has_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' ) ) {
+				remove_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' );
+				$mail_result = wp_mail( $email, $subject, $message, $headers );
+				add_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter', 10, 1 );
+			} else {
+				$mail_result = wp_mail( $email, $subject, $message, $headers );
+			}
 		}
 
 		return $mail_result;
 	}
 }
 /* End function pdtr_notification_after_update */
+
+/**
+ * Function that is used by email-queue plugin to check for compatibility
+ * @return void 
+ */
+if ( ! function_exists( 'pdtr_check_for_compatibility_with_mlq' ) ) {
+	function pdtr_check_for_compatibility_with_mlq() {
+		return false;
+	}
+}
 
 /* Function for sending email if exist update */
 if ( ! function_exists ( 'pdtr_notification_exist_update' ) ) {
@@ -994,13 +1015,24 @@ if ( ! function_exists ( 'pdtr_notification_exist_update' ) ) {
 		
 		$headers[] = 'From: ' . $from_name . ' <' . $from_email . '>';
 		add_filter( 'wp_mail_content_type', create_function( '', 'return "text/html";' ) );
-		
-		if ( '10' == has_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' ) ) {
-			remove_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' );
-			$mail_result = wp_mail( $email, $subject, $message, $headers );
-			add_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter', 10, 1 );
+
+		if ( ! function_exists( 'is_plugin_active' ) )
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+		if ( is_plugin_active( 'email-queue/email-queue.php' ) && mlq_if_mail_plugin_is_in_queue( plugin_basename( __FILE__ ) ) ) {
+			/* if email-queue plugin is active and this plugin's "in_queue" status is 'ON' */
+			global $mlq_mail_result;
+			do_action( 'pdtr_get_mail_data', plugin_basename( __FILE__ ), $email, $subject, $message, $headers );
+			/* return $mail_result = true if email-queue has successfully inserted mail in its DB; in other case - return false */
+			return $mail_result = $mlq_mail_result;
 		} else {
-			$mail_result = wp_mail( $email, $subject, $message, $headers );
+			if ( '10' == has_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' ) ) {
+				remove_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter' );
+				$mail_result = wp_mail( $email, $subject, $message, $headers );
+				add_filter( 'wp_mail_from_name', 'cntctfrm_email_name_filter', 10, 1 );
+			} else {
+				$mail_result = wp_mail( $email, $subject, $message, $headers );
+			}
 		}
 		return $mail_result;
 	}

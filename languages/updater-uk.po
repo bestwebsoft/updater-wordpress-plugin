@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-22 14:09+0300\n"
-"PO-Revision-Date: 2014-05-22 14:09+0300\n"
+"POT-Creation-Date: 2014-08-12 14:57+0300\n"
+"PO-Revision-Date: 2014-08-12 14:57+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -57,11 +57,11 @@ msgid "Please enter a time for search and/or update. A number of hours should be
 msgstr "Будь ласка, введіть час для пошуку та/або оновлення. Кількість годин повинна бути цілим числом та мати не більше 5 цифр. Налаштування не збережено"
 
 #: updater.php:224
-msgid "Please enter a valid recipient name. Settings are not saved"
+msgid "Please enter a valid recipient email. Settings are not saved"
 msgstr "Будь ласка, введіть коректну адресу отримувача. Налаштування не збережено"
 
 #: updater.php:232
-msgid "Please enter a valid sender name. Settings are not saved"
+msgid "Please enter a valid sender email. Settings are not saved"
 msgstr "Будь ласка, введіть коректну адресу відправника. Налаштування не збережено"
 
 #: updater.php:239
@@ -74,40 +74,40 @@ msgstr "Updater | Налаштування"
 
 #: updater.php:266
 #: updater.php:486
-#: updater.php:736
+#: updater.php:734
 msgid "Tools"
 msgstr "Інструменти"
 
 #: updater.php:267
 #: updater.php:487
-#: updater.php:737
-#: updater.php:1082
-#: updater.php:1095
+#: updater.php:735
+#: updater.php:1116
+#: updater.php:1129
 msgid "Settings"
 msgstr "Налаштування"
 
 #: updater.php:268
 #: updater.php:488
-#: updater.php:738
+#: updater.php:736
 msgid "This setting is available in Pro version"
 msgstr "Ці налаштування доступні у Pro-версії плагіну"
 
 #: updater.php:268
 #: updater.php:488
-#: updater.php:738
+#: updater.php:736
 msgid "User guide"
 msgstr "Довідник користувача"
 
 #: updater.php:269
 #: updater.php:489
-#: updater.php:739
-#: updater.php:1096
+#: updater.php:737
+#: updater.php:1130
 msgid "FAQ"
 msgstr "Розповсюджені питання"
 
 #: updater.php:270
 #: updater.php:490
-#: updater.php:740
+#: updater.php:738
 msgid "Go PRO"
 msgstr "Перейти на PRO версію"
 
@@ -236,7 +236,7 @@ msgstr "Відкрийте додаткові опції, перейшовши �
 
 #: updater.php:384
 #: updater.php:512
-#: updater.php:1161
+#: updater.php:1195
 msgid "Learn More"
 msgstr "Дізнатись більше"
 
@@ -246,17 +246,17 @@ msgid "Go"
 msgstr "Перейти"
 
 #: updater.php:394
-#: updater.php:605
+#: updater.php:603
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr "Якщо вам сподобався плагін, будь ласка, поставте нам 5 зірочок на WordPress"
 
 #: updater.php:395
-#: updater.php:606
+#: updater.php:604
 msgid "Rate the plugin"
 msgstr "Оцінити плагін"
 
 #: updater.php:398
-#: updater.php:609
+#: updater.php:607
 msgid "If there is something wrong about it, please contact us"
 msgstr "Якщо щось не так, будь ласка, повідомте нам"
 
@@ -304,225 +304,225 @@ msgstr "Ядро WP /  Плагіни"
 msgid "WordPress Version"
 msgstr "Версія WordPress"
 
-#: updater.php:540
-#: updater.php:573
+#: updater.php:539
+#: updater.php:571
 msgid "Update to"
 msgstr "Оновити до"
 
-#: updater.php:547
-#: updater.php:582
+#: updater.php:546
+#: updater.php:580
 msgid "Version"
 msgstr "Версія"
 
-#: updater.php:560
+#: updater.php:559
 msgid "No plugins found"
 msgstr "Плагіни не знайдено"
 
-#: updater.php:599
+#: updater.php:597
 msgid "Update"
 msgstr "Оновити"
 
-#: updater.php:630
-#: updater.php:667
+#: updater.php:628
+#: updater.php:665
 msgid "Wrong license key"
 msgstr "Невірний ключ ліцензії"
 
-#: updater.php:661
+#: updater.php:659
 msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
 msgstr "Щось не так, спробуйте пізніше. Якщо помилка повториться, будь ласка, повідомте нам <a href=http://support.bestwebsoft.com>BestWebSoft</a>. Просимо вибачення за незручності."
 
-#: updater.php:669
+#: updater.php:667
 msgid "This license key is bind to another site"
 msgstr "Цей ліцензійний ключ прив'язано до іншого сайту"
 
-#: updater.php:671
-#: updater.php:775
+#: updater.php:669
+#: updater.php:773
 msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
 msgstr "На жаль, ви перевищили кількість доступних спроб на день. Будь ласка, завантажте плагін вручну"
 
-#: updater.php:673
+#: updater.php:671
 msgid "Unfortunately, Your license has expired. To continue getting top-priority support and plugin updates you should extend it in your"
 msgstr "На жаль, ваша ліцензія скінчилась. Для того, щоб і надалі отримувати першочергову техпідтримку і оновлення, будь ласка, продовжте ліцензію"
 
-#: updater.php:690
+#: updater.php:688
 msgid "Failed to open the zip archive. Please, upload the plugin manually"
 msgstr "Помилка при відкритті zip-архіву. Будь ласка, завантажте плагін вручну"
 
-#: updater.php:696
+#: updater.php:694
 msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
 msgstr "Ваш сервер не підтримує формати Zip і Phar. Будь ласка, завантажте плагін вручну"
 
-#: updater.php:700
-#: updater.php:709
+#: updater.php:698
+#: updater.php:707
 msgid "Failed to download the zip archive. Please, upload the plugin manually"
 msgstr "Помилка при завантаженні zip-архіву. Будь ласка, завантажте плагін вручну"
 
-#: updater.php:713
+#: updater.php:711
 msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvenience."
 msgstr "Щось не так. Спробуйте пізніше або завантажте плагін вручну. Просимо вибачення за незручності."
 
-#: updater.php:728
+#: updater.php:726
 msgid "Please, enter Your license key"
 msgstr "Будь ласка, введіть ліцензійний ключ"
 
-#: updater.php:734
+#: updater.php:732
 msgid "Updater | Go PRO"
 msgstr "Updater | Перейти на PRO"
 
-#: updater.php:750
+#: updater.php:748
 msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
 msgstr "Вітаємо! PRO версію плагіну було завантажено на активновано успішно!"
 
-#: updater.php:752
+#: updater.php:750
 msgid "Please, go to"
 msgstr "Будь ласка, перейдіть"
 
-#: updater.php:752
+#: updater.php:750
 msgid "the setting page"
 msgstr "на сторінку налаштувань"
 
-#: updater.php:753
+#: updater.php:751
 msgid "You will be redirected automatically in 5 seconds."
 msgstr "Вас буде переадресовано автоматично через 5 секунд"
 
-#: updater.php:758
+#: updater.php:756
 msgid "You can download and activate"
 msgstr "Ви можете завантажити і активувати"
 
-#: updater.php:760
+#: updater.php:758
 msgid "version of this plugin by entering Your license key."
 msgstr "PRO версію плагіну, ввівши ліцензійний ключ"
 
-#: updater.php:762
+#: updater.php:760
 msgid "You can find your license key on your personal page Client area, by clicking on the link"
 msgstr "Ви можете знайти ліцензіїний ключ у вкладці \"Клієнтам\" вашої сторінки"
 
-#: updater.php:764
+#: updater.php:762
 msgid "(your username is the email you specify when purchasing the product)."
 msgstr "(ваше ім'я - це емейл, який ви вказували при купівлі плагіну)"
 
-#: updater.php:772
-#: updater.php:782
+#: updater.php:770
+#: updater.php:780
 msgid "Activate"
 msgstr "Активувати"
 
-#: updater.php:801
+#: updater.php:799
 msgid "Updating plugins..."
 msgstr "Оновлення плагінів…"
 
-#: updater.php:816
+#: updater.php:814
 msgid "Updating WordPress..."
 msgstr "Оновлення WordPress…"
 
-#: updater.php:852
+#: updater.php:854
 msgid "Update Failed"
 msgstr "Помилка оновлення"
 
-#: updater.php:856
+#: updater.php:858
 msgid "WordPress updated successfully!"
 msgstr "WordPress було успішно оновлено!"
 
-#: updater.php:871
+#: updater.php:873
 msgid "The Updater plugin made the updates at the site"
 msgstr "Плагін Updater виконав оновлення на сайті"
 
-#: updater.php:874
-#: updater.php:936
+#: updater.php:876
+#: updater.php:959
 msgid "Hello!"
 msgstr "Привіт!"
 
-#: updater.php:875
-#: updater.php:937
+#: updater.php:877
+#: updater.php:960
 msgid "The Updater plugin is being run on your website"
 msgstr "Плагін Updater було запущено на вашому сайті"
 
-#: updater.php:878
+#: updater.php:880
 msgid "These plugins were updated:"
 msgstr "Було оновлено такі плагіни: "
 
-#: updater.php:881
-#: updater.php:948
+#: updater.php:883
+#: updater.php:971
 msgid "to the version"
 msgstr "до версії"
 
-#: updater.php:887
+#: updater.php:889
 msgid "WordPress was updated to the version"
 msgstr "WordPress біло оновлено до версії"
 
-#: updater.php:890
+#: updater.php:892
 msgid "If you want to change the plugin mode or other settings you should go here:"
 msgstr "Яко ви хочете змінити режим плагіну або інші налаштування, перейдіть сюди:"
 
-#: updater.php:891
-#: updater.php:974
+#: updater.php:893
+#: updater.php:997
 msgid "the Updater settings page on your website."
 msgstr "Сторінка налаштування Updater на вашому сайті"
 
-#: updater.php:893
-#: updater.php:976
+#: updater.php:895
+#: updater.php:999
 msgid "Thanks for using the plugin"
 msgstr "Дякуємо за користування плагіном"
 
-#: updater.php:933
+#: updater.php:956
 msgid "Check for updates on"
 msgstr "Перевірка оновлень на"
 
-#: updater.php:940
+#: updater.php:963
 msgid "The files that need update are:"
 msgstr "Файли, що потребують оновлення:"
 
-#: updater.php:945
+#: updater.php:968
 msgid "These plugins can be updated:"
 msgstr "Ці плагіни можуть бути оновлені: "
 
-#: updater.php:949
-#: updater.php:956
+#: updater.php:972
+#: updater.php:979
 msgid "the current version is"
 msgstr "поточна версія"
 
-#: updater.php:955
+#: updater.php:978
 msgid "WordPress can be updated to the version"
 msgstr "WordPress може бути оновлено до версії"
 
-#: updater.php:961
-#: updater.php:966
+#: updater.php:984
+#: updater.php:989
 msgid "Please use this link to update:"
 msgstr "Для оновлення скористуйтесь цим посиланням для оновлення:"
 
-#: updater.php:961
-#: updater.php:966
+#: updater.php:984
+#: updater.php:989
 msgid "the Updater page on your website."
 msgstr "сторінка Updater на вашому сайті."
 
-#: updater.php:963
+#: updater.php:986
 msgid "The Updater plugin starts updating these files."
 msgstr "Плагін Updater починає оновлення цих файлів."
 
-#: updater.php:970
+#: updater.php:993
 msgid "Congratulations! Your plugins and WordPress have the latest updates!"
 msgstr "Вітаємо! Ваші плагіни та WordPress оновлено до останніх версій!"
 
-#: updater.php:973
+#: updater.php:996
 msgid "If you want to change type of mode for the plugin or other settings you should go here:"
 msgstr "Якщо ви хочете змінити режим плагіну, перейдіть сюди:"
 
-#: updater.php:1097
+#: updater.php:1131
 msgid "Support"
 msgstr "Підтримка"
 
-#: updater.php:1164
+#: updater.php:1198
 msgid "It’s time to upgrade your"
 msgstr "Настав час модернізувати Ваш"
 
-#: updater.php:1164
+#: updater.php:1198
 msgid "to"
 msgstr "до"
 
-#: updater.php:1164
+#: updater.php:1198
 msgid "version!"
 msgstr "версії!"
 
-#: updater.php:1165
+#: updater.php:1199
 msgid "Extend standard plugin functionality with new great options."
 msgstr "Розширює можливості стандартного функціоналу плагіна."
 

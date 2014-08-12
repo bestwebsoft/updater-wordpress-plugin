@@ -4,7 +4,7 @@ Plugin Name: Updater
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: This plugin allows you to update plugins and WP core in auto or manual mode.
 Author: BestWebSoft
-Version: 1.20
+Version: 1.21
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -183,7 +183,7 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 				$core = true;
 			
 			if ( isset( $pdtr_core_plugin_list["plg_need_update"] ) ) {
-				foreach ( $pdtr_core_plugin_list["plg_need_update"] as $key => $value) {
+				foreach ( $pdtr_core_plugin_list["plg_need_update"] as $key => $value ) {
 					$plugin_upd_list[] = $key;
 				}
 			}
@@ -218,18 +218,18 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 			}
 			/* If user enter receiver's email check if it correct. Save email if it pass the test */
 			if ( isset( $_REQUEST["pdtr_to_email"] ) ) {
-				if ( ( preg_match( "/^((?:[a-z0-9']+(?:[a-z0-9\-_\.']+)?@[a-z0-9]+(?:[a-z0-9\-\.]+)?\.[a-z]{2,5})[, ]*)+$/i", trim( $_REQUEST["pdtr_to_email"] ) ) ) || "" == $_REQUEST["pdtr_to_email"] )
-					$pdtr_options["pdtr_to_email"] = $_REQUEST["pdtr_to_email"];
+				if ( is_email( trim( $_REQUEST["pdtr_to_email"] ) ) || "" == $_REQUEST["pdtr_to_email"] )
+					$pdtr_options["pdtr_to_email"] = trim( $_REQUEST["pdtr_to_email"] );
 				else
-					$options_error = __( "Please enter a valid recipient name. Settings are not saved", 'updater' );
+					$options_error = __( "Please enter a valid recipient email. Settings are not saved", 'updater' );
 			}
-			$pdtr_options["pdtr_from_name"] =  htmlspecialchars( stripcslashes( $_REQUEST["pdtr_from_name"] ) );
+			$pdtr_options["pdtr_from_name"] = stripslashes( esc_html( $_REQUEST["pdtr_from_name"] ) );
 			/*If user enter sender's email check if it correct. Save email if it pass the test */
 			if ( isset( $_REQUEST["pdtr_from_email"] ) ) {
-				if ( ( preg_match( "/^((?:[a-z0-9']+(?:[a-z0-9\-_\.']+)?@[a-z0-9]+(?:[a-z0-9\-\.]+)?\.[a-z]{2,5})[, ]*)+$/i", trim( $_REQUEST["pdtr_from_email"] ) ) ) || "" == $_REQUEST["pdtr_from_email"] )
-					$pdtr_options["pdtr_from_email"] = $_REQUEST["pdtr_from_email"];
+				if ( is_email( trim( $_REQUEST["pdtr_from_email"] ) ) || "" == $_REQUEST["pdtr_from_email"] )
+					$pdtr_options["pdtr_from_email"] = trim( $_REQUEST["pdtr_from_email"] );
 				else
-					$options_error = __( "Please enter a valid sender name. Settings are not saved", 'updater' );
+					$options_error = __( "Please enter a valid sender email. Settings are not saved", 'updater' );
 			}
 
 			/* Update options in the database */
@@ -532,15 +532,14 @@ if ( ! function_exists ( 'pdtr_own_page' ) ) {
 					<tbody id="the-list">
 						<tr>
 							<td class="plugin-title"><strong><?php _e( 'WordPress Version', 'updater' ); ?></strong></td>
-							<?php
-								$message_update	=	"";
-								$version		=	$pdtr_core_plugin_list["core"]["current"];
-								if ( isset( $pdtr_core_plugin_list["core"]["new"] ) ) {
-									if ( $version != $pdtr_core_plugin_list["core"]["new"] ) {
-										$message_update = __( 'Update to', 'updater' ) . ' ' . $pdtr_core_plugin_list["core"]["new"];
-									}
-								} ?>
-							<td class="manage-column" <?php if ( "" != $message_update ) echo "style=\"background:#e89b92\""; ?> >
+							<?php $message_update	=	"";
+							$version		=	$pdtr_core_plugin_list["core"]["current"];
+							if ( isset( $pdtr_core_plugin_list["core"]["new"] ) ) {
+								if ( $version != $pdtr_core_plugin_list["core"]["new"] ) {
+									$message_update = __( 'Update to', 'updater' ) . ' ' . $pdtr_core_plugin_list["core"]["new"];
+								}
+							} ?>
+							<td class="manage-column check-column" <?php if ( "" != $message_update ) echo "style=\"background:#e89b92\""; ?> >
 								<div <?php if ( "" != $message_update ) echo "class=\"update-message\""; ?>>
 									<div class="pdtr_left">
 										<img class="pdtr_img" src="<?php echo plugins_url( 'images/unlock.png' , __FILE__ );?>" alt="" />
@@ -548,7 +547,7 @@ if ( ! function_exists ( 'pdtr_own_page' ) ) {
 									</div>
 									<?php if ( "" != $message_update ) { ?>
 										<div class="pdtr_right">
-											<input type='checkbox' value='1' />
+											<input type='checkbox' value='1' name='checked_core' />
 											<strong><?php echo $message_update; ?></strong>
 										</div>
 									<?php } ?>
@@ -563,18 +562,17 @@ if ( ! function_exists ( 'pdtr_own_page' ) ) {
 							foreach ( $pdtr_core_plugin_list["plg_list"] as $plg_key => $value ) { ?>
 								<tr>
 									<td class="plugin-title"><strong><?php echo $pdtr_core_plugin_list["plg_list"][ $plg_key ]["Name"]; ?></strong></td>
-									<?php
-										$message_update	=	"";
-										$version		=	$pdtr_core_plugin_list["plg_list"][ $plg_key ]["Version"];
-										if ( isset( $pdtr_core_plugin_list["plg_need_update"] ) ) {
-											foreach ( $pdtr_core_plugin_list["plg_need_update"] as $file => $plugin_up ) {
-												if ( $plg_key == $file ) {
-													if ( $version != $plugin_up["new_version"] ) {
-														$message_update = __( 'Update to', 'updater' ) . ' ' . $plugin_up["new_version"];
-													}
+									<?php $message_update	=	"";
+									$version		=	$pdtr_core_plugin_list["plg_list"][ $plg_key ]["Version"];
+									if ( isset( $pdtr_core_plugin_list["plg_need_update"] ) ) {
+										foreach ( $pdtr_core_plugin_list["plg_need_update"] as $file => $plugin_up ) {
+											if ( $plg_key == $file ) {
+												if ( $version != $plugin_up["new_version"] ) {
+													$message_update = __( 'Update to', 'updater' ) . ' ' . $plugin_up["new_version"];
 												}
 											}
-										} ?>
+										}
+									} ?>
 									<td class="manage-column check-column" <?php if ( "" != $message_update ) echo "style=\"background:#e89b92\""; ?>>
 										<div <?php if ( "" != $message_update ) echo "class=\"update-message\""; ?>>
 											<div class="pdtr_left">
@@ -622,14 +620,14 @@ if ( ! function_exists ( 'pdtr_go_pro_page' ) ) {
 		$error = $message = "";
 
 		/* GO PRO */
-		$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? trim( $_POST['bws_license_key'] ) : "";
+		$bws_license_key = ( isset( $_POST['bws_license_key'] ) ) ? stripslashes( esc_html( trim( $_POST['bws_license_key'] ) ) ) : "";
 
 		if ( isset( $_POST['bws_license_submit'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'bws_license_nonce_name' ) ) {
 			if ( '' != $bws_license_key ) { 
 				if ( strlen( $bws_license_key ) != 18 ) {
 					$error = __( "Wrong license key", 'updater' );
 				} else {
-					$bws_license_plugin = trim( $_POST['bws_license_plugin'] );	
+					$bws_license_plugin = stripslashes( esc_html( $_POST['bws_license_plugin'] ) );	
 					if ( isset( $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] ) && $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['time'] < ( time() + (24 * 60 * 60) ) ) {
 						$bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] = $bstwbsftwppdtplgns_options['go_pro'][ $bws_license_plugin ]['count'] + 1;
 					} else {
@@ -828,10 +826,8 @@ if ( ! function_exists ( 'pdtr_update_core' ) ) {
 
 		$from_api	=	get_site_transient( 'update_core' );
 		$updates	=	$from_api->updates;
-
-		foreach( $updates as $value ) {
-			$update	=	$value;
-		}
+		/* get latest WP version */
+		$update	=	$updates[0];
 
 		if ( ! WP_Filesystem( $credentials, ABSPATH ) ) {
 			request_filesystem_credentials( $url, '', true, ABSPATH ); /* Failed to connect, Error and request again */
@@ -843,8 +839,14 @@ if ( ! function_exists ( 'pdtr_update_core' ) ) {
 				show_message( $message );
 			return false;
 		}
-
-		$result = wp_update_core( $update, 'show_message' );
+		if ( '3.7' > $wp_version )
+			$result = @wp_update_core( $update, 'show_message' );
+		else {
+			add_filter( 'update_feedback', 'show_message' );
+			include ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+			$upgrader = new Core_Upgrader();
+			$result = @$upgrader->upgrade( $update );
+		}
 
 		if ( is_wp_error( $result ) ) {
 			show_message( $result );
@@ -1139,6 +1141,7 @@ if ( ! function_exists ( 'pdtr_plugin_banner' ) ) {
 		if ( 'plugins.php' == $hook_suffix ) {
 			global $pdtr_plugin_info;
 			$banner_array = array(
+				array( 'lmtttmpts_hide_banner_on_plugin_page', 'limit-attempts/limit-attempts.php', '1.0.2' ),
 				array( 'sndr_hide_banner_on_plugin_page', 'sender/sender.php', '0.5' ),
 				array( 'srrl_hide_banner_on_plugin_page', 'user-role/user-role.php', '1.4' ),
 				array( 'pdtr_hide_banner_on_plugin_page', 'updater/updater.php', '1.12' ),

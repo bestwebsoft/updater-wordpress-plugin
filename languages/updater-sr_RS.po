@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-20 16:37+0300\n"
-"PO-Revision-Date: 2014-05-20 16:37+0300\n"
+"POT-Creation-Date: 2014-08-12 14:57+0300\n"
+"PO-Revision-Date: 2014-08-12 14:57+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
 "Language: ru_RU\n"
@@ -59,11 +59,13 @@ msgid "Please enter a time for search and/or update. A number of hours should be
 msgstr "Unesite vreme za pretragu i/ili update. Broj sati bi trebao da bude integrisan i ne bi trebao da sadrži više od 5 cifara. Postavke nisu sačuvane"
 
 #: updater.php:224
-msgid "Please enter a valid recipient name. Settings are not saved"
+#, fuzzy
+msgid "Please enter a valid recipient email. Settings are not saved"
 msgstr "Molim vas unesite validno ime primaoca. Postavke nisu sačuvane"
 
 #: updater.php:232
-msgid "Please enter a valid sender name. Settings are not saved"
+#, fuzzy
+msgid "Please enter a valid sender email. Settings are not saved"
 msgstr "Molim vas unesite validno ime pošaljioca.Postavke nisu sačuvane"
 
 #: updater.php:239
@@ -76,40 +78,40 @@ msgstr "Updater | Postavke"
 
 #: updater.php:266
 #: updater.php:486
-#: updater.php:736
+#: updater.php:734
 msgid "Tools"
 msgstr "Alatke"
 
 #: updater.php:267
 #: updater.php:487
-#: updater.php:737
-#: updater.php:1081
-#: updater.php:1094
+#: updater.php:735
+#: updater.php:1116
+#: updater.php:1129
 msgid "Settings"
 msgstr "Postavke"
 
 #: updater.php:268
 #: updater.php:488
-#: updater.php:738
+#: updater.php:736
 msgid "This setting is available in Pro version"
 msgstr "Ove postavke su dostupne u Pro verziji"
 
 #: updater.php:268
 #: updater.php:488
-#: updater.php:738
+#: updater.php:736
 msgid "User guide"
 msgstr "Vodič za korisnika"
 
 #: updater.php:269
 #: updater.php:489
-#: updater.php:739
-#: updater.php:1095
+#: updater.php:737
+#: updater.php:1130
 msgid "FAQ"
 msgstr "FAQ"
 
 #: updater.php:270
 #: updater.php:490
-#: updater.php:740
+#: updater.php:738
 msgid "Go PRO"
 msgstr ""
 
@@ -239,7 +241,7 @@ msgstr ""
 
 #: updater.php:384
 #: updater.php:512
-#: updater.php:1160
+#: updater.php:1195
 msgid "Learn More"
 msgstr ""
 
@@ -249,18 +251,18 @@ msgid "Go"
 msgstr ""
 
 #: updater.php:394
-#: updater.php:605
+#: updater.php:603
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
 msgstr ""
 
 #: updater.php:395
-#: updater.php:606
+#: updater.php:604
 #, fuzzy
 msgid "Rate the plugin"
 msgstr "Update-ovanje plugina..."
 
 #: updater.php:398
-#: updater.php:609
+#: updater.php:607
 #, fuzzy
 msgid "If there is something wrong about it, please contact us"
 msgstr "Если у вас есть какие-то вoпросы, обращайтесь на"
@@ -309,228 +311,228 @@ msgstr "WP Core / Plugins"
 msgid "WordPress Version"
 msgstr "WordPress Version"
 
-#: updater.php:540
-#: updater.php:573
+#: updater.php:539
+#: updater.php:571
 msgid "Update to"
 msgstr "Update-ovano do"
 
-#: updater.php:547
-#: updater.php:582
+#: updater.php:546
+#: updater.php:580
 msgid "Version"
 msgstr "Version"
 
-#: updater.php:560
+#: updater.php:559
 msgid "No plugins found"
 msgstr "Nijedan pligin nije pronadjen"
 
-#: updater.php:599
+#: updater.php:597
 msgid "Update"
 msgstr "Update"
 
-#: updater.php:630
-#: updater.php:667
+#: updater.php:628
+#: updater.php:665
 msgid "Wrong license key"
 msgstr ""
 
-#: updater.php:661
+#: updater.php:659
 msgid "Something went wrong. Try again later. If the error will appear again, please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</a>. We are sorry for inconvenience."
 msgstr ""
 
-#: updater.php:669
+#: updater.php:667
 msgid "This license key is bind to another site"
 msgstr ""
 
-#: updater.php:671
-#: updater.php:775
+#: updater.php:669
+#: updater.php:773
 msgid "Unfortunately, you have exceeded the number of available tries per day. Please, upload the plugin manually."
 msgstr ""
 
-#: updater.php:673
+#: updater.php:671
 msgid "Unfortunately, Your license has expired. To continue getting top-priority support and plugin updates you should extend it in your"
 msgstr ""
 
-#: updater.php:690
+#: updater.php:688
 msgid "Failed to open the zip archive. Please, upload the plugin manually"
 msgstr ""
 
-#: updater.php:696
+#: updater.php:694
 msgid "Your server does not support either ZipArchive or Phar. Please, upload the plugin manually"
 msgstr ""
 
-#: updater.php:700
-#: updater.php:709
+#: updater.php:698
+#: updater.php:707
 msgid "Failed to download the zip archive. Please, upload the plugin manually"
 msgstr ""
 
-#: updater.php:713
+#: updater.php:711
 msgid "Something went wrong. Try again later or upload the plugin manually. We are sorry for inconvenience."
 msgstr ""
 
-#: updater.php:728
+#: updater.php:726
 msgid "Please, enter Your license key"
 msgstr ""
 
-#: updater.php:734
+#: updater.php:732
 #, fuzzy
 msgid "Updater | Go PRO"
 msgstr "Updater | Alatke"
 
-#: updater.php:750
+#: updater.php:748
 msgid "Congratulations! The PRO version of the plugin is successfully download and activated."
 msgstr ""
 
-#: updater.php:752
+#: updater.php:750
 msgid "Please, go to"
 msgstr ""
 
-#: updater.php:752
+#: updater.php:750
 msgid "the setting page"
 msgstr ""
 
-#: updater.php:753
+#: updater.php:751
 msgid "You will be redirected automatically in 5 seconds."
 msgstr ""
 
-#: updater.php:758
+#: updater.php:756
 msgid "You can download and activate"
 msgstr ""
 
-#: updater.php:760
+#: updater.php:758
 msgid "version of this plugin by entering Your license key."
 msgstr ""
 
-#: updater.php:762
+#: updater.php:760
 msgid "You can find your license key on your personal page Client area, by clicking on the link"
 msgstr ""
 
-#: updater.php:764
+#: updater.php:762
 msgid "(your username is the email you specify when purchasing the product)."
 msgstr ""
 
-#: updater.php:772
-#: updater.php:782
+#: updater.php:770
+#: updater.php:780
 #, fuzzy
 msgid "Activate"
 msgstr "Активированные плагины"
 
-#: updater.php:801
+#: updater.php:799
 msgid "Updating plugins..."
 msgstr "Update-ovanje plugina..."
 
-#: updater.php:816
+#: updater.php:814
 msgid "Updating WordPress..."
 msgstr "Update-ovanje WordPress-a..."
 
-#: updater.php:852
+#: updater.php:854
 msgid "Update Failed"
 msgstr "Update nije uspeo"
 
-#: updater.php:856
+#: updater.php:858
 msgid "WordPress updated successfully!"
 msgstr "WordPress updateovan uspešno!"
 
-#: updater.php:870
+#: updater.php:873
 msgid "The Updater plugin made the updates at the site"
 msgstr "Updater plugin je napravio update-ove na sajtu"
 
-#: updater.php:873
-#: updater.php:935
+#: updater.php:876
+#: updater.php:959
 msgid "Hello!"
 msgstr "Pozdrav!"
 
-#: updater.php:874
-#: updater.php:936
+#: updater.php:877
+#: updater.php:960
 msgid "The Updater plugin is being run on your website"
 msgstr "Updater plugin radi na vašem sajtu"
 
-#: updater.php:877
+#: updater.php:880
 msgid "These plugins were updated:"
 msgstr "Ovi pluginovi su updatovani:"
 
-#: updater.php:880
-#: updater.php:947
+#: updater.php:883
+#: updater.php:971
 msgid "to the version"
 msgstr "za verziju"
 
-#: updater.php:886
+#: updater.php:889
 msgid "WordPress was updated to the version"
 msgstr "WordPress  je update-ovan za verziju"
 
-#: updater.php:889
+#: updater.php:892
 msgid "If you want to change the plugin mode or other settings you should go here:"
 msgstr "Ako želite da promenite režim plugina ili druge postavke idite ovde:"
 
-#: updater.php:890
-#: updater.php:973
+#: updater.php:893
+#: updater.php:997
 msgid "the Updater settings page on your website."
 msgstr "Updater stranica postavki na vašem sajtu. "
 
-#: updater.php:892
-#: updater.php:975
+#: updater.php:895
+#: updater.php:999
 msgid "Thanks for using the plugin"
 msgstr "Hvala što koristite plugin"
 
-#: updater.php:932
+#: updater.php:956
 msgid "Check for updates on"
 msgstr "Proverava update na "
 
-#: updater.php:939
+#: updater.php:963
 msgid "The files that need update are:"
 msgstr "Fajlovi kojima treba update:"
 
-#: updater.php:944
+#: updater.php:968
 msgid "These plugins can be updated:"
 msgstr "Ovi pluginovi mogu biti update-ovani:"
 
-#: updater.php:948
-#: updater.php:955
+#: updater.php:972
+#: updater.php:979
 msgid "the current version is"
 msgstr "trenutna verzija je"
 
-#: updater.php:954
+#: updater.php:978
 msgid "WordPress can be updated to the version"
 msgstr "WordPress može biti updatovan na verziju"
 
-#: updater.php:960
-#: updater.php:965
+#: updater.php:984
+#: updater.php:989
 msgid "Please use this link to update:"
 msgstr "Koristite ovaj link za update:"
 
-#: updater.php:960
-#: updater.php:965
+#: updater.php:984
+#: updater.php:989
 msgid "the Updater page on your website."
 msgstr "Updater stranica na vašem sajtu"
 
-#: updater.php:962
+#: updater.php:986
 msgid "The Updater plugin starts updating these files."
 msgstr " Updater plugin počinje update ovih fajlova."
 
-#: updater.php:969
+#: updater.php:993
 msgid "Congratulations! Your plugins and WordPress have the latest updates!"
 msgstr "Čestitamo! Vaša plugin i WordPress imaju poslednji update."
 
-#: updater.php:972
+#: updater.php:996
 msgid "If you want to change type of mode for the plugin or other settings you should go here:"
 msgstr "Ako želite da promenite tip režima za plugin ili druge postavke idite ovde:"
 
-#: updater.php:1096
+#: updater.php:1131
 msgid "Support"
 msgstr "Podrška"
 
-#: updater.php:1163
+#: updater.php:1198
 msgid "It’s time to upgrade your"
 msgstr ""
 
-#: updater.php:1163
+#: updater.php:1198
 msgid "to"
 msgstr ""
 
-#: updater.php:1163
+#: updater.php:1198
 #, fuzzy
 msgid "version!"
 msgstr "Version"
 
-#: updater.php:1164
+#: updater.php:1199
 msgid "Extend standard plugin functionality with new great options."
 msgstr ""
 

@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: apdater, auto mode update, manual mode update, latest version, latest wordpress version, recent version, recent plugin versions, recent wordpress version, updatar, updater, updeiter, update plugins automatically, update wordpress automatically, update email notification, update frequency, update manually, update notification, update plugins, update to latest version, update to recent version, update wordpress, update wordpress core, updater plugin, plugin, core, wordpress, update
 Requires at least: 3.3
-Tested up to: 4.1
-Stable tag: 1.23
+Tested up to: 4.1.1
+Stable tag: 1.24
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -16,14 +16,13 @@ This plugin updates your WordPress and the plugins to the recent versions. It al
 http://www.youtube.com/watch?v=I63426HTJjI
 
 <a href="http://wordpress.org/plugins/updater/faq/" target="_blank">FAQ</a>
-
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 <a href="http://bestwebsoft.com/plugin/updater-pro?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Pro Version</a>
 
 = User Guide =
 
-1. After downloading and activating the plugin 'Updater', you should go to the page 'Updater' => 'Options' in the 'BWS Plugins' menu, where the plugin settings are available.
+1. After downloading and activating the plugin 'Updater', you should go to the page 'Updater' => 'Settings' in the 'BWS Plugins' menu, where the plugin settings are available.
 2. On this page you should choose the plugin mode and edit email notifications settings.
 3. If you want to update your plugins or WP core in the manual mode you should go to the page 'Updater' in the 'Tools' menu. If WordPress or some of your plugins needs update it will be highlighted in red. Check it and click 'update'.
 
@@ -47,7 +46,9 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the `updater` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. Plugin settings are located in 'BWS Plugins', 'Updater', 'options'.
+3. Plugin settings are located in 'BWS Plugins', 'Updater', 'Settings'.
+
+<a href="https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/edit" target="_blank">View a PDF version of Step-by-step Instruction on Updater Installation</a>.
 
 == Frequently Asked Questions ==
 
@@ -57,23 +58,15 @@ Please follow the instructions below:
 1. Please check the plugin settings '/wp-admin/admin.php?page=updater-options'
 2. The plugin sends email notifications if any updates are available. 
 3. Some email messages can be marked as spam on the server. Enter email address ('Sender's name and email address'), for example, gmail account or similar. If the message is approved (sent), this means that the email filtering is configured on your server.
-4. Are you getting any notifications about new users registration? If no, perhaps you didn't configure email sending. In this case You should install an extra plugin called WP-mail-SMTP and configure it.
+4. Perhaps you didn't configure email sending. In this case You should install SMTP by BestWebSoft plugin and configure it. Afterwards you should send a test email from this plugin and you will see if the plugin logs have errors.
 
 = The plugin stopped sending emails after some time. What's the problem? =
 
 The plugin sends email notification if any updates are available. If there are no updates available, you won't get anything.
 
-= The time of sending does not match what I have specified (or default value). =
+= Sending time does not correspond to that specified on the settings page =
 
-The function for sending emails and updating is triggered when the site is active (when someone visits your site.) If there is no activity, it will run when the first activity appears. So the time can be shifted.
-
-= How often will the plugin search for updates or/and update plugins and WordPress if I did not specify the time? =
-
-Updater does it every 12 hours by default. In auto mode Updater updates plugins or WP if any updates are available.
-
-= I want the plugin to search for updates or/and update plugins and WordPress every 0.5 hours =
-
-It's impossible. The number of hours should be integer and it should not include more than 5 digits.
+The function of sending emails and updating runs when the site is active (when someone visits your site.) If there is no activity, it will run when the first activity appears. So the time can be shifted.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
@@ -89,6 +82,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater page in the BWS admin area.
 
 == Changelog ==
+
+= V1.24 - 26.02.2015 =
+* Update : Plugin settings are updated.
+* Update : We updated all functionality for wordpress 4.1.1.
 
 = V1.23 - 08.01.2015 =
 * Update : We updated all functionality for wordpress 4.1.
@@ -180,6 +177,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.24 =
+Plugin settings are updated. We updated all functionality for wordpress 4.1.1.
 
 = V1.23 =
 We updated all functionality for wordpress 4.1.

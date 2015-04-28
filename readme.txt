@@ -1,10 +1,10 @@
-=== Updater ===
+=== Updater by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: apdater, auto mode update, manual mode update, latest version, latest wordpress version, recent version, recent plugin versions, recent wordpress version, updatar, updater, updeiter, update plugins automatically, update wordpress automatically, update email notification, update frequency, update manually, update notification, update plugins, update to latest version, update to recent version, update wordpress, update wordpress core, updater plugin, plugin, core, wordpress, update
 Requires at least: 3.3
-Tested up to: 4.1.1
-Stable tag: 1.24
+Tested up to: 4.2
+Stable tag: 1.25
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -14,6 +14,8 @@ This plugin allows you to update plugins and WordPress core.
 This plugin updates your WordPress and the plugins to the recent versions. It also has auto or manual mode for updating and set email notifications. No more lasting updates of each separate plugins. The Updater plugin will do it for you.
 
 http://www.youtube.com/watch?v=I63426HTJjI
+
+<a href="http://www.youtube.com/watch?v=CmHctvGHWMs" target="_blank">Video instruction on Installation</a>
 
 <a href="http://wordpress.org/plugins/updater/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
@@ -50,6 +52,8 @@ We can fix some things for free for the users who provide translation of our plu
 
 <a href="https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/edit" target="_blank">View a PDF version of Step-by-step Instruction on Updater Installation</a>.
 
+http://www.youtube.com/watch?v=CmHctvGHWMs
+
 == Frequently Asked Questions ==
 
 = The plugin doesn't send any emails =
@@ -82,6 +86,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater page in the BWS admin area.
 
 == Changelog ==
+
+= V1.25 - 28.04.2015 =
+* Bugfix : Plugins work on multisite was changed. Managing settings is now available for the network administrator only.
+* Update : We updated all functionality for wordpress 4.2.
 
 = V1.24 - 26.02.2015 =
 * Update : Plugin settings are updated.
@@ -177,6 +185,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.25 =
+Plugins work on multisite was changed. Managing settings is now available for the network administrator only. We updated all functionality for wordpress 4.2.
 
 = V1.24 =
 Plugin settings are updated. We updated all functionality for wordpress 4.1.1.

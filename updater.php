@@ -4,7 +4,7 @@ Plugin Name: Updater by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows you to update plugins and WP core in auto or manual mode.
 Author: BestWebSoft
-Version: 1.25
+Version: 1.26
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -71,7 +71,7 @@ if ( ! function_exists ( 'pdtr_admin_init' ) ) {
 /* Register settings function */
 if ( ! function_exists( 'pdtr_register_settings' ) ) {
 	function pdtr_register_settings() {
-		global $pdtr_options, $pdtr_plugin_info, $pdtr_option_defaults,$wpdb ;
+		global $pdtr_options, $pdtr_plugin_info, $pdtr_option_defaults,$wpdb;
 
 		$sitename = strtolower( $_SERVER['SERVER_NAME'] );
 		if ( substr( $sitename, 0, 4 ) == 'www.' ) {
@@ -112,7 +112,7 @@ if ( ! function_exists( 'pdtr_register_settings' ) ) {
 				add_option( 'pdtr_options', $pdtr_option_defaults );
 		}
 	  	/* Get options from the database */
-		$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' ) ;
+		$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' );
 
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $pdtr_options['plugin_option_version'] ) || $pdtr_options['plugin_option_version'] != $pdtr_plugin_info["Version"] ) {
@@ -135,6 +135,18 @@ if ( ! function_exists( 'pdtr_register_settings' ) ) {
 	}
 }
 /* End pdtr_register_settings */
+
+if ( ! function_exists( 'pdtr_activation' ) ) {
+	function pdtr_activation() {
+		global $pdtr_options;
+	  	/* Get options from the database */
+		$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' );
+		if ( ! empty( $pdtr_options ) && ( '0' != $pdtr_options["pdtr_mode"] || '0' != $pdtr_options["pdtr_send_mail_get_update"] ) ) {
+			$time = ( '' != $pdtr_options['pdtr_time'] ) ? time()+$pdtr_options['pdtr_time']*60*60 : time()+12*60*60;
+			wp_schedule_event( $time, 'schedules_hours', 'pdtr_auto_hook' );
+		}
+	}
+}
 
 /* Add time for cron viev */
 if ( ! function_exists( 'pdtr_schedules' ) ) {
@@ -159,8 +171,7 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 		if ( isset( $_REQUEST["pdtr_form_check_mail"] ) && check_admin_referer( plugin_basename(__FILE__), 'pdtr_nonce_check_mail' ) ) {
 			global $pdtr_core_plugin_list;			
 			$pdtr_core_plugin_list = pdtr_processing_site();
-			$plugin_upd_list		=	"";
-			$core					=	false;
+			$plugin_upd_list = $core = "";
 			
 			if ( $pdtr_core_plugin_list["core"]["current"] != $pdtr_core_plugin_list["core"]["new"] )
 				$core = true;
@@ -174,7 +185,11 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 			if ( 1 == $pdtr_options["pdtr_send_mail_get_update"] || 1 == $pdtr_options["pdtr_send_mail_after_update"] ) {
 				$result_mail = pdtr_notification_exist_update( $plugin_upd_list, $core, true );
 
-				$email = ( "" != $pdtr_options["pdtr_to_email"] ) ? $pdtr_options["pdtr_to_email"] : is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );
+				if ( "" != $pdtr_options["pdtr_to_email"] ) 
+					$email = $pdtr_options["pdtr_to_email"];
+				else { 
+					$email = is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );
+				}
 
 				if ( $result_mail != true )
 					$message = __( "Sorry, your message could not be delivered to", 'updater' ) . ' ' . $email;
@@ -225,7 +240,8 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 
 		    /* Add or delete hook of auto/handle mode */
 		    if ( wp_next_scheduled( 'pdtr_auto_hook' ) )
-					wp_clear_scheduled_hook( 'pdtr_auto_hook' );
+				wp_clear_scheduled_hook( 'pdtr_auto_hook' );
+
 			if ( '0' != $pdtr_options["pdtr_mode"] || '0' != $pdtr_options["pdtr_send_mail_get_update"] ) {
 				$time = ( '' != $pdtr_options['pdtr_time'] ) ? time()+$pdtr_options['pdtr_time']*60*60 : time()+12*60*60;
 				wp_schedule_event( $time, 'schedules_hours', 'pdtr_auto_hook' );
@@ -266,7 +282,7 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 						<tr valign="top">
 							<th><?php _e( 'Send email after updating the plugins or WordPress', 'updater' ); ?></th>
 							<td colspan="2">
-								<input type="checkbox" name="pdtr_send_mail_after_update" value="1" <?php if ( '1' == $pdtr_options["pdtr_send_mail_after_update"] ) echo "checked=\"checked\""; ?> />
+								<input type="checkbox" name="pdtr_send_mail_after_update" value="1" <?php if ( 1 == $pdtr_options["pdtr_send_mail_after_update"] ) echo "checked=\"checked\""; ?> />
 							</td>
 						</tr>
 						<tr valign="top">
@@ -399,7 +415,7 @@ if ( ! function_exists ( 'pdtr_processing_site' ) ) {
 if ( ! function_exists ( 'pdtr_own_page' ) ) {
 	function pdtr_own_page() {
 		global $pdtr_options, $wp_version, $pdtr_plugin_info, $pdtr_core_plugin_list;
-		$core = false;
+		$core = '';
 
 		if ( 0 < get_option( 'gmt_offset' ) )
 			$gmt = 'UTC+' . get_option( 'gmt_offset' );
@@ -427,7 +443,11 @@ if ( ! function_exists ( 'pdtr_own_page' ) ) {
 			if ( 1 == $pdtr_options["pdtr_send_mail_after_update"] ) {
 				$result_mail = pdtr_notification_after_update( $plugins, $core );
 
-				$email = ( "" != $pdtr_options["pdtr_to_email"] ) ? $pdtr_options["pdtr_to_email"] : is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );
+				if ( "" != $pdtr_options["pdtr_to_email"] ) 
+					$email = $pdtr_options["pdtr_to_email"];
+				else { 
+					$email = is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );
+				}
 
 				if ( true != $result_mail )
 					echo '<p>' . __( "Sorry, your message could not be delivered to", 'updater' ) . ' ' . $email . '</p>';
@@ -616,20 +636,23 @@ if ( ! function_exists ( 'pdtr_update_plugin' ) ) {
 
 /* Function for updating WP core */
 if ( ! function_exists ( 'pdtr_update_core' ) ) {
-	function pdtr_update_core() {
+	function pdtr_update_core( $auto_mode = false ) {
 		global $wp_filesystem, $wp_version;
-		echo '<h3>' . __( 'Updating WordPress...', 'updater' ) . '</h3>';
+
+		if ( ! $auto_mode )
+			echo '<h3>' . __( 'Updating WordPress...', 'updater' ) . '</h3>';
 		/* Include files for correct update */
 		include_once( ABSPATH . 'wp-admin/includes/misc.php' );
 		include_once( ABSPATH . 'wp-admin/includes/file.php' );
+		include_once( ABSPATH . 'wp-admin/includes/update.php' );
 
 		$url	=	wp_nonce_url( 'update-core.php?action=do-core-upgrade', 'upgrade-core' );
 		if ( false === ( $credentials = request_filesystem_credentials( $url, '', false, ABSPATH ) ) )
-			return;
+			return false;
 
 		$url	=	wp_nonce_url( 'admin.php?page=updater', 'upgrade-core' );
 		if ( false === ( $credentials = request_filesystem_credentials( $url, '', false, ABSPATH ) ) )
-			return;
+			return false;
 
 		$from_api	=	get_site_transient( 'update_core' );
 		$updates	=	$from_api->updates;
@@ -646,23 +669,29 @@ if ( ! function_exists ( 'pdtr_update_core' ) ) {
 				show_message( $message );
 			return false;
 		}
+
 		if ( '3.7' > $wp_version )
 			$result = @wp_update_core( $update, 'show_message' );
 		else {
 			add_filter( 'update_feedback', 'show_message' );
-			include ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+			include_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader.php' );
 			$upgrader = new Core_Upgrader();
-			$result = @$upgrader->upgrade( $update );
+			if ( '4.1' > $wp_version )
+				$result = @$upgrader->upgrade( $update );
+			else				
+				$result = @$upgrader->upgrade( $update, array( 'allow_relaxed_file_ownership' => true ) );
 		}
 
 		if ( is_wp_error( $result ) ) {
-			show_message( $result );
-			if ( 'up_to_date' != $result->get_error_code() )
-				show_message( __( 'Update Failed', 'updater' ) );
+			if ( ! $auto_mode ) {
+				show_message( $result );
+				if ( 'up_to_date' != $result->get_error_code() )
+					show_message( __( 'Update Failed', 'updater' ) );
+			}
 			return false;
 		}
-
-		show_message( __( 'WordPress updated successfully!', 'updater' ) );
+		if ( ! $auto_mode )
+			show_message( __( 'WordPress updated successfully!', 'updater' ) );
 		/* Check version and set option 'update_core' */
 		wp_version_check();
 
@@ -695,6 +724,8 @@ if ( ! function_exists ( 'pdtr_notification_after_update' ) ) {
 
 		if ( true === $core ) {
 			$message .= '<strong> - ' . __( 'WordPress was updated to the version', 'updater' ) . ' ' . $pdtr_core_plugin_list["core"]["new"] . '.</strong><br/><br/>';
+		} elseif ( false === $core ) {
+			$message .= '<strong> - ' . __( "We couldn't update WordPress Core in the site", 'updater' ) . '.</strong><br/><br/>';
 		}
 
 		$message .= __( 'If you want to change the plugin mode or other settings you should go here:', 'updater' ) .
@@ -702,8 +733,12 @@ if ( ! function_exists ( 'pdtr_notification_after_update' ) ) {
 				<br/><br/>----------------------------------------<br/><br/>' .
 				esc_html__( 'Thanks for using the plugin', 'updater' ) . ' <a href="http://bestwebsoft.com/products/updater/">Updater</a>!</body></html>';
 		
-		$email = ( "" != $pdtr_options["pdtr_to_email"] ) ? $pdtr_options["pdtr_to_email"] : is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );	
-		
+		if ( "" != $pdtr_options["pdtr_to_email"] ) 
+			$email = $pdtr_options["pdtr_to_email"];
+		else { 
+			$email = is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );
+		}
+
 		$from_email = ( "" != $pdtr_options["pdtr_from_email"] ) ? $pdtr_options["pdtr_from_email"] : $email;		
 		$from_name = ( "" != $pdtr_options["pdtr_from_name"] ) ? htmlspecialchars_decode( $pdtr_options["pdtr_from_name"] ) : esc_attr( get_bloginfo( 'name', 'display' ) );
 		
@@ -789,8 +824,12 @@ if ( ! function_exists ( 'pdtr_notification_exist_update' ) ) {
 				<br/><br/>----------------------------------------<br/><br/>' .
 				esc_html__( 'Thanks for using the plugin', 'updater' ) . ' <a href="http://bestwebsoft.com/products/updater/">Updater</a>!</body></html>';
 
-		$email = ( "" != $pdtr_options["pdtr_to_email"] ) ? $pdtr_options["pdtr_to_email"] : is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );
-		
+		if ( "" != $pdtr_options["pdtr_to_email"] ) 
+			$email = $pdtr_options["pdtr_to_email"];
+		else { 
+			$email = is_multisite() ? get_site_option( 'admin_email' ) : get_option( 'admin_email' );
+		}
+
 		$from_email = ( "" != $pdtr_options["pdtr_from_email"] ) ? $pdtr_options["pdtr_from_email"] : $email;		
 		$from_name = ( "" != $pdtr_options["pdtr_from_name"] ) ? htmlspecialchars_decode( $pdtr_options["pdtr_from_name"] ) : esc_attr( get_bloginfo( 'name', 'display' ) );
 		
@@ -828,8 +867,7 @@ if ( ! function_exists ( 'pdtr_admin_head' ) ) {
 if ( ! function_exists ( 'pdtr_auto_function' ) ) {
 	function pdtr_auto_function() {
 		global $pdtr_options, $pdtr_core_plugin_list;
-		$plugin_upd_list		=	"";
-		$core					=	false;
+		$plugin_upd_list = $core =	"";
 		$pdtr_core_plugin_list	=	pdtr_processing_site();
 
 		if ( empty( $pdtr_options ) )
@@ -844,27 +882,21 @@ if ( ! function_exists ( 'pdtr_auto_function' ) ) {
 			}
 		}
 
-		if ( 1 == $pdtr_options["pdtr_send_mail_get_update"] ) {
-			if ( false != $test ) {
-				pdtr_notification_exist_update( $plugin_upd_list, $core, true );
-			} elseif ( ( "" != $plugin_upd_list ) || ( false != $core ) ) {
-				pdtr_notification_exist_update( $plugin_upd_list, $core );
-			}
+		if ( 1 == $pdtr_options["pdtr_send_mail_get_update"] && ( "" != $plugin_upd_list || '' != $core ) ) {
+			pdtr_notification_exist_update( $plugin_upd_list, $core );
 		}
 
-		if ( 1 == $pdtr_options["pdtr_mode"] ) {
+		if ( 1 == $pdtr_options["pdtr_mode"] ) {			
 			/* If WP core need to be update */
-			if ( true === $core )
-				$core = pdtr_update_core(); // update the WP core
+			if ( '' != $core )
+				$core_result = pdtr_update_core( true ); /* update the WP core */
 			/* Update the list of plugins */
 			if ( "" != $plugin_upd_list ) {
 				pdtr_update_plugin( $plugin_upd_list );
 			}
 			/* Send mail */
-			if ( 1 == $pdtr_options["pdtr_send_mail_after_update"] ) {
-				if ( ( "" != $plugin_upd_list ) || ( false != $core ) ) {
-					pdtr_notification_after_update( $plugin_upd_list, $core );
-				}
+			if ( 1 == $pdtr_options["pdtr_send_mail_after_update"] && ( "" != $plugin_upd_list || '' != $core ) ) {
+				pdtr_notification_after_update( $plugin_upd_list, $core_result );
 			}
 		}
 
@@ -914,7 +946,7 @@ if ( ! function_exists( 'pdtr_plugin_banner' ) ) {
 		global $hook_suffix;
 		if ( 'plugins.php' == $hook_suffix ) {
 			global $pdtr_plugin_info;
-			bws_plugin_banner( $pdtr_plugin_info, 'pdtr', 'updater', '0b6882b0c99c2776d06c375dc22b5869', '84', 'http://ps.w.org/updater/assets/icon-128x128.png' );    
+			bws_plugin_banner( $pdtr_plugin_info, 'pdtr', 'updater', '0b6882b0c99c2776d06c375dc22b5869', '84', '//ps.w.org/updater/assets/icon-128x128.png' );    
 		}
 	}
 }
@@ -934,6 +966,9 @@ if ( ! function_exists( 'pdtr_uninstall' ) ) {
 		delete_site_option( 'pdtr_options' );
 	}
 }
+
+/* When deactivate plugin */
+register_activation_hook( __FILE__, 'pdtr_activation' );
 
 if ( function_exists( 'is_multisite' ) ) {
 	if ( is_multisite() )

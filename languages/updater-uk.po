@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-28 10:36+0300\n"
-"PO-Revision-Date: 2015-04-28 10:37+0300\n"
+"POT-Creation-Date: 2015-05-04 11:19+0300\n"
+"PO-Revision-Date: 2015-05-04 11:19+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -16,365 +16,369 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: updater.php:184
-#: updater.php:437
+#: updater.php:195
+#: updater.php:453
 msgid "Sorry, your message could not be delivered to"
 msgstr "На жаль, ваше повідомлення не може бути доставлено на"
 
-#: updater.php:186
+#: updater.php:197
 msgid "Test message is sent to"
 msgstr "Тестове повідомлення відправлено на"
 
-#: updater.php:188
+#: updater.php:199
 msgid "Please check off the Send email options, save settings and try again"
 msgstr "Будь ласка, вимкніть опцію відправки листів, збережіть налаштування та спробуйте ще раз."
 
-#: updater.php:201
+#: updater.php:212
 msgid "Please enter a time for search and/or update. A number of hours should be integer and it should not contain more than 5 digits. Settings are not saved"
 msgstr "Будь ласка, введіть час для пошуку та/або оновлення. Кількість годин повинна бути цілим числом та мати не більше 5 цифр. Налаштування не збережено"
 
-#: updater.php:208
+#: updater.php:219
 msgid "Please enter a valid recipient email. Settings are not saved"
 msgstr "Будь ласка, введіть коректну адресу отримувача. Налаштування не збережено"
 
-#: updater.php:218
+#: updater.php:229
 msgid "Please enter a valid sender email. Settings are not saved"
 msgstr "Будь ласка, введіть коректну адресу відправника. Налаштування не збережено"
 
-#: updater.php:228
+#: updater.php:239
 msgid "All settings are saved"
 msgstr "Всі налаштування збережено"
 
-#: updater.php:240
-#: updater.php:243
-#: updater.php:451
-#: updater.php:589
-#: updater.php:892
-#: updater.php:907
+#: updater.php:252
+#: updater.php:255
+#: updater.php:467
+#: updater.php:605
+#: updater.php:920
+#: updater.php:935
 msgid "Settings"
 msgstr "Налаштування"
 
-#: updater.php:242
-#: updater.php:448
-#: updater.php:450
-#: updater.php:588
+#: updater.php:254
+#: updater.php:464
+#: updater.php:466
+#: updater.php:604
 msgid "Tools"
 msgstr "Інструменти"
 
-#: updater.php:244
-#: updater.php:452
-#: updater.php:590
+#: updater.php:256
+#: updater.php:468
+#: updater.php:606
 msgid "This setting is available in Pro version"
 msgstr "Ці налаштування доступні у Pro-версії плагіну"
 
-#: updater.php:244
-#: updater.php:452
-#: updater.php:590
+#: updater.php:256
+#: updater.php:468
+#: updater.php:606
 msgid "User guide"
 msgstr "Довідник користувача"
 
-#: updater.php:245
-#: updater.php:453
-#: updater.php:591
-#: updater.php:908
+#: updater.php:257
+#: updater.php:469
+#: updater.php:607
+#: updater.php:936
 msgid "FAQ"
 msgstr "Розповсюджені питання"
 
-#: updater.php:246
-#: updater.php:454
-#: updater.php:586
-#: updater.php:592
+#: updater.php:258
+#: updater.php:470
+#: updater.php:602
+#: updater.php:608
 msgid "Go PRO"
 msgstr "Перейти на PRO версію"
 
-#: updater.php:248
-#: updater.php:456
+#: updater.php:260
+#: updater.php:472
 msgid "We strongly recommend that you backup your website and the WordPress database before updating! We are not responsible for the site work after updates"
 msgstr "Ми настійно рекомендуємо Вам зробити бекап вашого сайту та бази даних WordPress перед оновленнями! Ми не несемо відповідальність за коректність роботи сайту після будь-яких оновлень"
 
-#: updater.php:251
+#: updater.php:263
 msgid "Notice:"
 msgstr "Зауважте:"
 
-#: updater.php:251
+#: updater.php:263
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "Налаштування плагіну змінено. Щоб зберегти їх, будь ласка, не забудьте клікнути \"Зберегти зміни\""
 
-#: updater.php:257
+#: updater.php:269
 msgid "Select the plugin mode"
 msgstr "Вибір режиму плагіну"
 
-#: updater.php:260
+#: updater.php:272
 msgid "Manual mode"
 msgstr "Ручний режим"
 
-#: updater.php:261
+#: updater.php:273
 msgid "Auto mode"
 msgstr "Автоматичний режим"
 
-#: updater.php:265
+#: updater.php:277
 msgid "Notify when new versions of plugins or WordPress are available"
 msgstr "Повідомити, коли з'являться нові версії плагінів або WordPress"
 
-#: updater.php:271
+#: updater.php:283
 msgid "Send email after updating the plugins or WordPress"
 msgstr "Відправити лист після оновлення плагінів чи WordPress"
 
-#: updater.php:277
+#: updater.php:289
 msgid "How often should the plugin search for or/and update plugins and WordPress?"
 msgstr "Як часто плагін має шукати та/або оновлювати плагіни та WordPress?"
 
-#: updater.php:279
+#: updater.php:291
 msgid "hours"
 msgstr "годин(а)"
 
-#: updater.php:281
+#: updater.php:293
 msgid "It should be integer and it should not contain more than 5 digits."
 msgstr "Воно повинно бути цілим та мати не більше 5 цифр."
 
-#: updater.php:285
+#: updater.php:297
 msgid "Recipient email address (To:)"
 msgstr "Електронна адреса отримувача (  'Кому:'  )"
 
-#: updater.php:291
+#: updater.php:303
 msgid "'FROM' field"
 msgstr "Поле відправника ( 'Від кого:' )"
 
-#: updater.php:293
+#: updater.php:305
 msgid "Name"
 msgstr "Им’я"
 
-#: updater.php:297
+#: updater.php:309
 msgid "Email"
 msgstr "Емейл"
 
-#: updater.php:301
+#: updater.php:313
 msgid "If this option is changed, email messages may be moved to the spam folder or email delivery failures may occur."
 msgstr "Якщо це налаштування буде змінено , це може призводить до того, що листи будуть надходити в спам або можуть не надходити."
 
-#: updater.php:308
+#: updater.php:320
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: updater.php:312
+#: updater.php:324
 msgid "Send a test email message"
 msgstr "Надіслати тестове повідомлення"
 
-#: updater.php:315
+#: updater.php:327
 msgid "Here You can make sure that your settings are correct and the email can be delivered."
 msgstr "Тут ви можете перевірити, що налаштування вірні та емейл може бути доставлено."
 
-#: updater.php:316
+#: updater.php:328
 msgid "Check email sending"
 msgstr "Перевірити відправку листа"
 
-#: updater.php:324
+#: updater.php:336
 msgid "Disable auto WP core update"
 msgstr "Вимкнути автоматичне оновлення WP core"
 
-#: updater.php:330
+#: updater.php:342
 msgid "Make backup before updating"
 msgstr "Зробити бекап перед оновленням"
 
-#: updater.php:333
+#: updater.php:345
 msgid "Test making the backup"
 msgstr "Тестове створення бекапу"
 
-#: updater.php:337
+#: updater.php:349
 msgid "Backup all folders"
 msgstr "Бекап усіх папок"
 
-#: updater.php:341
+#: updater.php:353
 msgid "Backup all tables in database"
 msgstr "Бекап усіх таблиць у базі даних"
 
-#: updater.php:345
+#: updater.php:357
 msgid "Delete test backup after testing"
 msgstr "Видалити тестовий бекап після тестування"
 
-#: updater.php:350
-#: updater.php:471
+#: updater.php:362
+#: updater.php:487
 msgid "If you upgrade to Pro version all your settings will be saved."
 msgstr "Якщо ви перейдете на Pro версію, всі налаштування буде збережено."
 
-#: updater.php:357
-#: updater.php:475
+#: updater.php:369
+#: updater.php:491
 msgid "Unlock premium options by upgrading to a PRO version."
 msgstr "Відкрийте додаткові опції, перейшовши на PRO версію."
 
-#: updater.php:358
-#: updater.php:476
+#: updater.php:370
+#: updater.php:492
 msgid "Learn More"
 msgstr "Дізнатись більше"
 
-#: updater.php:361
-#: updater.php:479
+#: updater.php:373
+#: updater.php:495
 msgid "Go"
 msgstr "Перейти"
 
-#: updater.php:420
+#: updater.php:432
 msgid "Updater"
 msgstr "Updater"
 
-#: updater.php:429
+#: updater.php:441
 msgid "Go back to the Updater page"
 msgstr "Назад на сторінку \"Updater\""
 
-#: updater.php:429
+#: updater.php:441
 msgid "Return to the Updater page"
 msgstr "Повернутися на сторінку \"Updater\""
 
-#: updater.php:439
+#: updater.php:455
 msgid "The email message with the update results is sent to"
 msgstr "Емейл з результатами оновлення було відправлено на"
 
-#: updater.php:461
+#: updater.php:477
 msgid "the element will be updated"
 msgstr "елемент буде оновлюватися"
 
-#: updater.php:462
+#: updater.php:478
 msgid "the element will not be updated"
 msgstr "елемент не буде оновлюватися"
 
-#: updater.php:465
+#: updater.php:481
 msgid "Update information"
 msgstr "Оновити дані"
 
-#: updater.php:465
+#: updater.php:481
 msgid "Latest update was"
 msgstr "Останнє оновлення було"
 
-#: updater.php:469
+#: updater.php:485
 msgid "Updater Pro will display, check and update all plugins (Not just the active ones)"
 msgstr "Updater Pro буде відображати, перевіряти та оновлювати усі плагіни (не тільки активні)"
 
-#: updater.php:489
+#: updater.php:505
 msgid "WP Core / Plugins"
 msgstr "Ядро WP /  Плагіни"
 
-#: updater.php:498
+#: updater.php:514
 msgid "WordPress Version"
 msgstr "Версія WordPress"
 
-#: updater.php:503
-#: updater.php:535
+#: updater.php:519
+#: updater.php:551
 msgid "Update to"
 msgstr "Оновити до"
 
-#: updater.php:510
-#: updater.php:544
+#: updater.php:526
+#: updater.php:560
 msgid "Version"
 msgstr "Версія"
 
-#: updater.php:523
+#: updater.php:539
 msgid "No plugins found"
 msgstr "Плагіни не знайдено"
 
-#: updater.php:561
+#: updater.php:577
 msgid "Update"
 msgstr "Оновити"
 
-#: updater.php:610
+#: updater.php:626
 msgid "Updating plugins..."
 msgstr "Оновлення плагінів…"
 
-#: updater.php:625
+#: updater.php:643
 msgid "Updating WordPress..."
 msgstr "Оновлення WordPress…"
 
-#: updater.php:665
+#: updater.php:689
 msgid "Update Failed"
 msgstr "Помилка оновлення"
 
-#: updater.php:669
+#: updater.php:694
 msgid "WordPress updated successfully!"
 msgstr "WordPress було успішно оновлено!"
 
-#: updater.php:685
+#: updater.php:710
 msgid "The Updater plugin made the updates at the site"
 msgstr "Плагін Updater виконав оновлення на сайті"
 
-#: updater.php:688
-#: updater.php:754
+#: updater.php:713
+#: updater.php:785
 msgid "Hello!"
 msgstr "Привіт!"
 
-#: updater.php:689
-#: updater.php:755
+#: updater.php:714
+#: updater.php:786
 msgid "The Updater plugin is being run on your website"
 msgstr "Плагін Updater було запущено на вашому сайті"
 
-#: updater.php:692
+#: updater.php:717
 msgid "These plugins were updated:"
 msgstr "Було оновлено такі плагіни: "
 
-#: updater.php:695
-#: updater.php:766
+#: updater.php:720
+#: updater.php:797
 msgid "to the version"
 msgstr "до версії"
 
-#: updater.php:701
+#: updater.php:726
 msgid "WordPress was updated to the version"
 msgstr "WordPress було оновлено до версії"
 
-#: updater.php:704
+#: updater.php:728
+msgid "We couldn't update WordPress Core in the site"
+msgstr "Не вдалося оновити ядро WordPress на сайті"
+
+#: updater.php:731
 msgid "If you want to change the plugin mode or other settings you should go here:"
 msgstr "Якщо ви хочете змінити режим плагіну або інші налаштування, перейдіть сюди:"
 
-#: updater.php:705
-#: updater.php:792
+#: updater.php:732
+#: updater.php:823
 msgid "the Updater settings page on your website."
 msgstr "Сторінка налаштування Updater на вашому сайті"
 
-#: updater.php:707
-#: updater.php:794
+#: updater.php:734
+#: updater.php:825
 msgid "Thanks for using the plugin"
 msgstr "Дякуємо за користування плагіном"
 
-#: updater.php:751
+#: updater.php:782
 msgid "Check for updates on"
 msgstr "Перевірка оновлень на"
 
-#: updater.php:758
+#: updater.php:789
 msgid "The files that need update are:"
 msgstr "Файли, що потребують оновлення:"
 
-#: updater.php:763
+#: updater.php:794
 msgid "These plugins can be updated:"
 msgstr "Ці плагіни можуть бути оновлені: "
 
-#: updater.php:767
-#: updater.php:774
+#: updater.php:798
+#: updater.php:805
 msgid "the current version is"
 msgstr "поточна версія"
 
-#: updater.php:773
+#: updater.php:804
 msgid "WordPress can be updated to the version"
 msgstr "WordPress може бути оновлено до версії"
 
-#: updater.php:779
-#: updater.php:784
+#: updater.php:810
+#: updater.php:815
 msgid "Please use this link to update:"
 msgstr "Для оновлення скористуйтесь цим посиланням для оновлення:"
 
-#: updater.php:779
-#: updater.php:784
+#: updater.php:810
+#: updater.php:815
 msgid "the Updater page on your website."
 msgstr "сторінка Updater на вашому сайті."
 
-#: updater.php:781
+#: updater.php:812
 msgid "The Updater plugin starts updating these files."
 msgstr "Плагін Updater починає оновлення цих файлів."
 
-#: updater.php:788
+#: updater.php:819
 msgid "Congratulations! Your plugins and WordPress have the latest updates!"
 msgstr "Вітаємо! Ваші плагіни та WordPress оновлено до останніх версій!"
 
-#: updater.php:791
+#: updater.php:822
 msgid "If you want to change type of mode for the plugin or other settings you should go here:"
 msgstr "Якщо ви хочете змінити режим плагіну, перейдіть сюди:"
 
-#: updater.php:909
+#: updater.php:937
 msgid "Support"
 msgstr "Підтримка"
 

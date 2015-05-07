@@ -1,10 +1,10 @@
 === Updater by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: apdater, auto mode update, manual mode update, latest version, latest wordpress version, recent version, recent plugin versions, recent wordpress version, updatar, updater, updeiter, update plugins automatically, update wordpress automatically, update email notification, update frequency, update manually, update notification, update plugins, update to latest version, update to recent version, update wordpress, update wordpress core, updater plugin, plugin, core, wordpress, update
 Requires at least: 3.3
-Tested up to: 4.2
-Stable tag: 1.25
+Tested up to: 4.2.2
+Stable tag: 1.26
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -59,6 +59,7 @@ http://www.youtube.com/watch?v=CmHctvGHWMs
 = The plugin doesn't send any emails =
 
 Please follow the instructions below:
+
 1. Please check the plugin settings '/wp-admin/admin.php?page=updater-options'
 2. The plugin sends email notifications if any updates are available. 
 3. Some email messages can be marked as spam on the server. Enter email address ('Sender's name and email address'), for example, gmail account or similar. If the message is approved (sent), this means that the email filtering is configured on your server.
@@ -75,6 +76,7 @@ The function of sending emails and updating runs when the site is active (when s
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
@@ -86,6 +88,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater page in the BWS admin area.
 
 == Changelog ==
+
+= V1.26 - 07.05.2015 =
+* Bugfix : Auto core update was fixed.
+* Bugfix : Recipient email address setting was fixed.
 
 = V1.25 - 28.04.2015 =
 * Bugfix : Plugins work on multisite was changed. Managing settings is now available for the network administrator only.
@@ -185,6 +191,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.26 =
+Auto core update was fixed. Recipient email address setting was fixed.
 
 = V1.25 =
 Plugins work on multisite was changed. Managing settings is now available for the network administrator only. We updated all functionality for wordpress 4.2.

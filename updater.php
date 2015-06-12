@@ -4,7 +4,7 @@ Plugin Name: Updater by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows you to update plugins and WP core in auto or manual mode.
 Author: BestWebSoft
-Version: 1.26
+Version: 1.27
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -296,19 +296,19 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 						<tr valign="top">
 							<th><?php _e( 'Recipient email address (To:)', 'updater' ); ?></th>
 							<td colspan="2">
-								<input type="email" name="pdtr_to_email" value="<?php echo $pdtr_options["pdtr_to_email"]; ?>" />
+								<input type="email" name="pdtr_to_email" maxlength="250" value="<?php echo $pdtr_options["pdtr_to_email"]; ?>" />
 							</td>
 						</tr>
 						<tr valign="top">
 							<th><?php _e( "'FROM' field", 'updater' ); ?></th>
 							<td style="width: 200px; vertical-align: top;">
 								<div><?php _e( "Name", 'updater' ); ?></div>
-								<div><input type="text" name="pdtr_from_name" value="<?php echo $pdtr_options["pdtr_from_name"]; ?>" /></div>
+								<div><input type="text" name="pdtr_from_name" maxlength="250" value="<?php echo $pdtr_options["pdtr_from_name"]; ?>" /></div>
 							</td>
 							<td>
 								<div><?php _e( "Email", 'updater' ); ?></div>
 								<div>
-									<input type="email" name="pdtr_from_email" value="<?php echo $pdtr_options["pdtr_from_email"]; ?>" />
+									<input type="email" name="pdtr_from_email" maxlength="250" value="<?php echo $pdtr_options["pdtr_from_email"]; ?>" />
 								</div>
 								<span class="pdtr_span">(<?php _e( 'If this option is changed, email messages may be moved to the spam folder or email delivery failures may occur.', 'updater' ); ?>)</span>
 							</td>

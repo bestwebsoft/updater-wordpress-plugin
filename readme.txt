@@ -4,7 +4,7 @@ Donate link: http://bestwebsoft.com/donate/
 Tags: apdater, auto mode update, manual mode update, latest version, latest wordpress version, recent version, recent plugin versions, recent wordpress version, updatar, updater, updeiter, update plugins automatically, update wordpress automatically, update email notification, update frequency, update manually, update notification, update plugins, update to latest version, update to recent version, update wordpress, update wordpress core, updater plugin, plugin, core, wordpress, update
 Requires at least: 3.3
 Tested up to: 4.2.2
-Stable tag: 1.26
+Stable tag: 1.27
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -88,6 +88,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater page in the BWS admin area.
 
 == Changelog ==
+
+= V1.27 - 12.06.2015 =
+* Update : We updated all functionality for wordpress 4.2.2.
+* Update : BWS plugins section was updated.
 
 = V1.26 - 07.05.2015 =
 * Bugfix : Auto core update was fixed.
@@ -191,6 +195,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.27 =
+We updated all functionality for wordpress 4.2.2. BWS plugins section was updated.
 
 = V1.26 =
 Auto core update was fixed. Recipient email address setting was fixed.

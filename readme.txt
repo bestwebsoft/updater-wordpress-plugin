@@ -1,10 +1,10 @@
 === Updater by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: apdater, auto mode update, manual mode update, latest version, latest wordpress version, recent version, recent plugin versions, recent wordpress version, updatar, updater, updeiter, update plugins automatically, update wordpress automatically, update email notification, update frequency, update manually, update notification, update plugins, update to latest version, update to recent version, update wordpress, update wordpress core, updater plugin, plugin, core, wordpress, update
-Requires at least: 3.3
-Tested up to: 4.2.2
-Stable tag: 1.28
+Tags: automatic updates, apdater, auto mode update, core,  disable updates, disable updates manager, easy updates manager, latest version, latest wordpress version, manual mode update, plugin, recent plugin versions, recent version, recent wordpress version, updatar, update,  update control, update email notification, update frequency, update manually, update notification, update plugins, update plugins automatically, update to latest version, update to recent version, update wordpress, update wordpress automatically, update wordpress core, updater, updater plugin, updeiter, wordpress,  wp, wp plugin, wp free plugin, wp updater, wp updater plugin, wp simple updater plugin, wp free updater, wp free updater plugin, wordpress plugin, wordpress free plugin, wordpress updater, wordpress updater plugin, wordpress simple updater plugin, wordpress free updater, wordpress free updater plugin
+Requires at least: 3.8
+Tested up to: 4.3.1
+Stable tag: 1.29
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -15,12 +15,12 @@ This plugin updates your WordPress and the plugins to the recent versions. It al
 
 http://www.youtube.com/watch?v=I63426HTJjI
 
-<a href="http://www.youtube.com/watch?v=CmHctvGHWMs" target="_blank">Video instruction on Installation</a>
+<a href="http://www.youtube.com/watch?v=CmHctvGHWMs" target="_blank">Updater by BestWebSoft Video instruction on Installation</a>
 
-<a href="http://wordpress.org/plugins/updater/faq/" target="_blank">FAQ</a>
-<a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+<a href="http://wordpress.org/plugins/updater/faq/" target="_blank">Updater by BestWebSoft FAQ</a>
+<a href="http://support.bestwebsoft.com" target="_blank">Updater by BestWebSoft Support</a>
 
-<a href="http://bestwebsoft.com/plugin/updater-pro?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Pro Version</a>
+<a href="http://bestwebsoft.com/plugin/updater-pro?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Updater Pro by BestWebSoft</a>
 
 = User Guide =
 
@@ -84,10 +84,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. Updater Settings page.
-2. Updater page in the BWS admin area.
+1. Updater Tools page.
+2. Updater Settings page.
 
 == Changelog ==
+
+= V1.29 - 24.09.2015 =
+* Update : We updated all functionality for wordpress 4.3.1.
 
 = V1.28 - 14.07.2015 =
 * NEW : Ability to restore settings to defaults.
@@ -199,6 +202,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.29 =
+We updated all functionality for wordpress 4.3.1.
 
 = V1.28 =
 Ability to restore settings to defaults. The settings page url in email was fixed.

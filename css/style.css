@@ -12,6 +12,7 @@ License: GPLv2 or later
 */
 .pdtr {
 	width: auto !important;
+	margin-top: 10px;
 }
 .pdtr * {
 	width: auto !important;

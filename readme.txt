@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: automatic updates, apdater, auto mode update, core,  disable updates, disable updates manager, easy updates manager, latest version, latest wordpress version, manual mode update, plugin, recent plugin versions, recent version, recent wordpress version, updatar, update,  update control, update email notification, update frequency, update manually, update notification, update plugins, update plugins automatically, update to latest version, update to recent version, update wordpress, update wordpress automatically, update wordpress core, updater, updater plugin, updeiter, wordpress,  wp, wp plugin, wp free plugin, wp updater, wp updater plugin, wp simple updater plugin, wp free updater, wp free updater plugin, wordpress plugin, wordpress free plugin, wordpress updater, wordpress updater plugin, wordpress simple updater plugin, wordpress free updater, wordpress free updater plugin
 Requires at least: 3.8
-Tested up to: 4.3.1
-Stable tag: 1.29
+Tested up to: 4.4-RC1
+Stable tag: 1.30
 License: GPLv2 or later
 
 This plugin allows you to update plugins and WordPress core.
@@ -88,6 +88,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.30 - 02.12.2015 =
+* Bugfix : The bug with plugin menu duplicating was fixed.
 
 = V1.29 - 24.09.2015 =
 * Update : We updated all functionality for wordpress 4.3.1.
@@ -202,6 +205,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.30 =
+The bug with plugin menu duplicating was fixed.
 
 = V1.29 =
 We updated all functionality for wordpress 4.3.1.

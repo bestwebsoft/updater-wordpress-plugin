@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-02 13:35+0300\n"
-"PO-Revision-Date: 2015-12-02 13:35+0300\n"
+"POT-Creation-Date: 2015-12-28 15:28+0300\n"
+"PO-Revision-Date: 2015-12-28 19:06+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
 "Language: ru_RU\n"
@@ -12,39 +12,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: updater.php:198
+#: updater.php:201
 msgid "Updater"
-msgstr "Updater"
+msgstr "Добавить Updater"
 
-#: updater.php:207
+#: updater.php:216
+#, fuzzy
 msgid "Go back to the Updater page"
 msgstr "Idi nazad na Updater stranicu"
 
-#: updater.php:207
+#: updater.php:216
 msgid "Return to the Updater page"
 msgstr "Vrati se na Updater stranicu"
 
-#: updater.php:219 updater.php:257
-msgid "Sorry, your message could not be delivered to"
+#: updater.php:228 updater.php:272
+#, fuzzy
+msgid "Sorry, your message could not be sent to"
 msgstr "Izvinite, vaša poruka ne može da se dostavi"
 
-#: updater.php:221
+#: updater.php:230
+#, fuzzy
 msgid "The email message with the update results is sent to"
 msgstr "Email poruka sa update rezultatima je poslata na"
 
-#: updater.php:259
-msgid "Test message is sent to"
+#: updater.php:274
+#, fuzzy
+msgid "Test message was sent to"
 msgstr "Test poruka poslata"
 
-#: updater.php:261
+#: updater.php:276
 msgid "Please check off the Send email options, save settings and try again"
 msgstr "Proverite opciju Poslati mailovi, sačuvajte postavke i pokušajte opet"
 
-#: updater.php:279
+#: updater.php:297
 msgid ""
 "Please enter a time for search and/or update. A number of hours should be "
 "integer and it should not contain more than 5 digits. Settings are not saved"
@@ -52,46 +56,53 @@ msgstr ""
 "Unesite vreme za pretragu i/ili update. Broj sati bi trebao da bude "
 "integrisan i ne bi trebao da sadrži više od 5 cifara. Postavke nisu sačuvane"
 
-#: updater.php:286
+#: updater.php:304
 #, fuzzy
 msgid "Please enter a valid recipient email. Settings are not saved"
 msgstr "Molim vas unesite validno ime primaoca. Postavke nisu sačuvane"
 
-#: updater.php:296
+#: updater.php:315
 #, fuzzy
 msgid "Please enter a valid sender email. Settings are not saved"
 msgstr "Molim vas unesite validno ime pošaljioca.Postavke nisu sačuvane"
 
-#: updater.php:306
+#: updater.php:319
+#, fuzzy
+msgid ""
+"Please select at least one option in the Search/Update section. Settings are "
+"not saved"
+msgstr "Molim vas unesite validno ime primaoca. Postavke nisu sačuvane"
+
+#: updater.php:327
 msgid "All settings are saved"
 msgstr "Sve postavke su sačuvane"
 
-#: updater.php:327
+#: updater.php:349
 #, fuzzy
 msgid "All plugin settings were restored."
 msgstr "Sve postavke su sačuvane"
 
-#: updater.php:346
+#: updater.php:368
 msgid "Tools"
 msgstr "Alatke"
 
-#: updater.php:347 updater.php:934 updater.php:949
+#: updater.php:369 updater.php:1084 updater.php:1099
 msgid "Settings"
 msgstr "Postavke"
 
-#: updater.php:349
+#: updater.php:371
 msgid "This setting is available in Pro version"
 msgstr "Ove postavke su dostupne u Pro verziji"
 
-#: updater.php:349
+#: updater.php:371
 msgid "User guide"
 msgstr "Vodič za korisnika"
 
-#: updater.php:351
+#: updater.php:373
 msgid "Go PRO"
 msgstr ""
 
-#: updater.php:353
+#: updater.php:375
 msgid ""
 "We strongly recommend that you backup your website and the WordPress "
 "database before updating! We are not responsible for the site work after "
@@ -101,163 +112,201 @@ msgstr ""
 "što updatujete! Ne odgovaramo za ono šta se desi sa vašim sajtom nakon "
 "update-a"
 
-#: updater.php:365
+#: updater.php:387
 msgid "the element will be updated"
 msgstr "element će biti update-ovan"
 
-#: updater.php:366
+#: updater.php:388
 msgid "the element will not be updated"
 msgstr "element neće biti update-ovan"
 
-#: updater.php:369
+#: updater.php:391
 msgid "Update information"
 msgstr "Update informcije"
 
-#: updater.php:369
+#: updater.php:391
 msgid "Latest update was"
 msgstr "Poslednji update je bio"
 
-#: updater.php:373
+#: updater.php:395
+#, fuzzy
 msgid ""
-"Updater Pro will display, check and update all plugins (Not just the active "
-"ones)"
+"Updater Pro will display, check, and update all plugins/themes (Not just the "
+"active ones)"
 msgstr ""
 "Updater Pro će prikazati, proveri i update-uj sve pluginove(ne samo aktivne)"
 
-#: updater.php:375 updater.php:552
+#: updater.php:397 updater.php:640
 msgid "If you upgrade to Pro version all your settings will be saved."
 msgstr ""
 
-#: updater.php:379 updater.php:559
+#: updater.php:401 updater.php:647
 msgid "Unlock premium options by upgrading to Pro version"
 msgstr ""
 
-#: updater.php:381 updater.php:561
+#: updater.php:403 updater.php:649
 msgid "Learn More"
 msgstr ""
 
-#: updater.php:391
-msgid "WP Core / Plugins"
-msgstr "WP Core / Plugins"
+#: updater.php:415 updater.php:496 updater.php:565
+msgid "Themes"
+msgstr ""
 
-#: updater.php:399
+#: updater.php:417 updater.php:454 updater.php:564
+#, fuzzy
+msgid "Plugins"
+msgstr "Pro плагины"
+
+#: updater.php:420
+#, fuzzy
+msgid "Update all"
+msgstr "Updater"
+
+#: updater.php:427
+#, fuzzy
 msgid "WordPress Version"
-msgstr "WordPress Version"
+msgstr "Версия базы данных WordPress"
 
-#: updater.php:404 updater.php:434
+#: updater.php:432 updater.php:470 updater.php:512
+#, fuzzy
 msgid "Update to"
-msgstr "Update-ovano do"
+msgstr "Update-ovanje WordPress-a..."
 
-#: updater.php:411 updater.php:443
+#: updater.php:439 updater.php:479 updater.php:521
 msgid "Version"
 msgstr "Version"
 
-#: updater.php:423
+#: updater.php:459
+#, fuzzy
 msgid "No plugins found"
 msgstr "Nijedan pligin nije pronadjen"
 
-#: updater.php:460
-msgid "Update"
-msgstr "Update"
+#: updater.php:501
+#, fuzzy
+msgid "No themes found"
+msgstr "Nijedan pligin nije pronadjen"
 
-#: updater.php:474
+#: updater.php:539
+#, fuzzy
+msgid "Update"
+msgstr "Updater"
+
+#: updater.php:553
 #, fuzzy
 msgid "Plugin mode"
 msgstr "Настройки для Plugins Updater"
 
-#: updater.php:477
+#: updater.php:556
 #, fuzzy
 msgid "Manual"
 msgstr "Ručni režim"
 
-#: updater.php:478
+#: updater.php:557
 #, fuzzy
 msgid "Auto"
 msgstr "Автоматическое добавление"
 
-#: updater.php:482
-msgid "Send email when new versions are available"
-msgstr "Отправить письмо когда доступны новые версии"
+#: updater.php:561
+#, fuzzy
+msgid "Search/update"
+msgstr "Произошли обновления"
 
-#: updater.php:488
-msgid "Send email after updating"
-msgstr "Отправить письмо после выполнения обновлении"
+#: updater.php:563
+#, fuzzy
+msgid "WordPress"
+msgstr "Update-ovanje WordPress-a..."
 
-#: updater.php:494
+#: updater.php:569
 msgid "Search/update frequency"
 msgstr ""
 
-#: updater.php:496
+#: updater.php:571
 msgid "hours"
 msgstr ""
 
-#: updater.php:498
+#: updater.php:573
 #, fuzzy
 msgid "It should be integer and it should not contain more than 5 digits."
 msgstr ""
 "(Izaberite broj sati. Trebao da bude integrisan i ne bi trebao da sadrži "
 "više od 5 cifara. )"
 
-#: updater.php:502
+#: updater.php:577
+msgid "Send email when new versions are available"
+msgstr "Отправить письмо когда доступны новые версии"
+
+#: updater.php:583
+msgid "Send email after updating"
+msgstr "Отправить письмо после выполнения обновлении"
+
+#: updater.php:589
 #, fuzzy
 msgid "Recipient email address (To:)"
 msgstr "Email adresa primaoca"
 
-#: updater.php:508
+#: updater.php:595
 msgid "'FROM' field"
 msgstr ""
 
-#: updater.php:510
+#: updater.php:597
 msgid "Name"
 msgstr ""
 
-#: updater.php:514
+#: updater.php:601
 msgid "Email"
 msgstr ""
 
-#: updater.php:518
+#: updater.php:605
 msgid ""
 "If this option is changed, email messages may be moved to the spam folder or "
 "email delivery failures may occur."
 msgstr ""
 
-#: updater.php:526
+#: updater.php:613
 msgid "Close"
 msgstr ""
 
-#: updater.php:530
-msgid "Disable auto WP core update"
+#: updater.php:617
+msgid "Disable auto WordPress update"
 msgstr ""
 
-#: updater.php:536
+#: updater.php:620
+msgid "Disable updates for WordPress minor versions"
+msgstr ""
+
+#: updater.php:624
+#, fuzzy
 msgid "Make backup before updating"
 msgstr "Napravi backup pre updating"
 
-#: updater.php:539
+#: updater.php:627
+#, fuzzy
 msgid "Test making the backup"
 msgstr "Test pravljenje backup-a"
 
-#: updater.php:545
+#: updater.php:633
 msgid "Backup all folders"
 msgstr "Backup svih foldera"
 
-#: updater.php:546
+#: updater.php:634
 msgid "Backup all tables in database"
 msgstr "Backup svih tabela u bazi podataka"
 
-#: updater.php:547
+#: updater.php:635
 msgid "Delete test backup after testing"
 msgstr "Obrisati test backup nakon testiranja"
 
-#: updater.php:568
+#: updater.php:656
 msgid "Save Changes"
 msgstr "Sačuvaj promene"
 
-#: updater.php:572
-msgid "Send a test email message"
+#: updater.php:660
+#, fuzzy
+msgid "Send a test email"
 msgstr "Pošalji test email poruku"
 
-#: updater.php:575
+#: updater.php:663
+#, fuzzy
 msgid ""
 "Here You can make sure that your settings are correct and the email can be "
 "delivered."
@@ -265,143 +314,316 @@ msgstr ""
 "Ovde možete da se postarate za to da vaše postavke budu ispravne i da mail "
 "bude dostavljen."
 
-#: updater.php:576
+#: updater.php:664
 msgid "Check email sending"
 msgstr "Proveri slanje maila"
 
-#: updater.php:579
+#: updater.php:667
+#, fuzzy
 msgid "Restore settings"
-msgstr ""
+msgstr "Postavke"
 
-#: updater.php:629
+#: updater.php:731
 msgid "Updating plugins..."
 msgstr "Update-ovanje plugina..."
 
-#: updater.php:646
+#: updater.php:750
+#, fuzzy
+msgid "Updating themes..."
+msgstr "Update-ovanje plugina..."
+
+#: updater.php:767
+#, fuzzy
 msgid "Updating WordPress..."
 msgstr "Update-ovanje WordPress-a..."
 
-#: updater.php:692
+#: updater.php:813
+#, fuzzy
 msgid "Update Failed"
 msgstr "Update nije uspeo"
 
-#: updater.php:697
-msgid "WordPress updated successfully!"
+#: updater.php:818
+#, fuzzy
+msgid "WordPress was updated successfully!"
 msgstr "WordPress updateovan uspešno!"
 
-#: updater.php:713
+#: updater.php:834
 msgid "The Updater plugin made the updates at the site"
 msgstr "Updater plugin je napravio update-ove na sajtu"
 
-#: updater.php:716 updater.php:788
+#: updater.php:837 updater.php:918
 msgid "Hello!"
 msgstr "Pozdrav!"
 
-#: updater.php:717 updater.php:789
+#: updater.php:838 updater.php:919
+#, fuzzy
 msgid "The Updater plugin is being run on your website"
 msgstr "Updater plugin radi na vašem sajtu"
 
-#: updater.php:720
+#: updater.php:841
 msgid "These plugins were updated:"
 msgstr "Ovi pluginovi su updatovani:"
 
-#: updater.php:723 updater.php:800
+#: updater.php:844 updater.php:853 updater.php:930 updater.php:940
 msgid "to the version"
 msgstr "za verziju"
 
-#: updater.php:729
-msgid "WordPress was updated to the version"
-msgstr "WordPress  je update-ovan za verziju"
+#: updater.php:850
+#, fuzzy
+msgid "These themes were updated:"
+msgstr "Ovi pluginovi su updatovani:"
 
-#: updater.php:731
+#: updater.php:859
+#, fuzzy
+msgid "WordPress was updated to the version"
+msgstr "WordPress updateovan uspešno!"
+
+#: updater.php:861
 msgid "We couldn't update WordPress Core in the site"
 msgstr ""
 
-#: updater.php:734
+#: updater.php:864
 msgid ""
 "If you want to change the plugin mode or other settings you should go here:"
 msgstr "Ako želite da promenite režim plugina ili druge postavke idite ovde:"
 
-#: updater.php:735 updater.php:826
+#: updater.php:865 updater.php:966
+#, fuzzy
 msgid "the Updater settings page on your website."
 msgstr "Updater stranica postavki na vašem sajtu. "
 
-#: updater.php:737 updater.php:828
+#: updater.php:867 updater.php:968
+#, fuzzy
 msgid "Thanks for using the plugin"
 msgstr "Hvala što koristite plugin"
 
-#: updater.php:785
+#: updater.php:915
+#, fuzzy
 msgid "Check for updates on"
 msgstr "Proverava update na "
 
-#: updater.php:792
+#: updater.php:922
+#, fuzzy
 msgid "The files that need update are:"
-msgstr "Fajlovi kojima treba update:"
-
-#: updater.php:797
-msgid "These plugins can be updated:"
 msgstr "Ovi pluginovi mogu biti update-ovani:"
 
-#: updater.php:801 updater.php:808
+#: updater.php:927
+#, fuzzy
+msgid "These plugins can be updated:"
+msgstr "Ovi pluginovi su updatovani:"
+
+#: updater.php:931 updater.php:941 updater.php:948
+#, fuzzy
 msgid "the current version is"
 msgstr "trenutna verzija je"
 
-#: updater.php:807
+#: updater.php:937
+#, fuzzy
+msgid "These themes can be updated:"
+msgstr "Ovi pluginovi mogu biti update-ovani:"
+
+#: updater.php:947
+#, fuzzy
 msgid "WordPress can be updated to the version"
 msgstr "WordPress može biti updatovan na verziju"
 
-#: updater.php:813 updater.php:818
+#: updater.php:953 updater.php:958
 msgid "Please use this link to update:"
 msgstr "Koristite ovaj link za update:"
 
-#: updater.php:813 updater.php:818
+#: updater.php:953 updater.php:958
+#, fuzzy
 msgid "the Updater page on your website."
 msgstr "Updater stranica na vašem sajtu"
 
-#: updater.php:815
+#: updater.php:955
+#, fuzzy
 msgid "The Updater plugin starts updating these files."
 msgstr " Updater plugin počinje update ovih fajlova."
 
-#: updater.php:822
-msgid "Congratulations! Your plugins and WordPress have the latest updates!"
+#: updater.php:962
+#, fuzzy
+msgid ""
+"Congratulations! Your plugins, themes and WordPress have the latest updates!"
 msgstr "Čestitamo! Vaša plugin i WordPress imaju poslednji update."
 
-#: updater.php:825
+#: updater.php:965
 msgid ""
 "If you want to change type of mode for the plugin or other settings you "
 "should go here:"
 msgstr ""
 "Ako želite da promenite tip režima za plugin ili druge postavke idite ovde:"
 
-#: updater.php:950
+#: updater.php:1100
 msgid "FAQ"
 msgstr "FAQ"
 
-#: updater.php:951
+#: updater.php:1101
 msgid "Support"
 msgstr "Podrška"
 
-#: updater.php:971
+#: updater.php:1121
 msgid "Notice:"
 msgstr ""
 
-#: updater.php:973
+#: updater.php:1123
 msgid "Due to the peculiarities of the multisite work, Updater plugin has only"
 msgstr ""
 
-#: updater.php:973
+#: updater.php:1123
+#, fuzzy
 msgid "Network settings page"
-msgstr ""
+msgstr "Postavke"
 
-#: updater.php:975
+#: updater.php:1125
 msgid ""
 "Due to the peculiarities of the multisite work, Updater plugin has the "
 "network settings page only and it should be Network Activated. Please"
 msgstr ""
 
-#: updater.php:975
+#: updater.php:1125
 msgid "Activate Updater for Network"
 msgstr ""
+
+#, fuzzy
+#~ msgid "You can test the email sending here"
+#~ msgstr "Pošalji test email poruku"
+
+#, fuzzy
+#~ msgid "Please, check your email"
+#~ msgstr "Пожалуйста, проверьте настройки для сайта."
+
+#~ msgid "FAQ (with images)"
+#~ msgstr "FAQ (sa slikama)"
+
+#, fuzzy
+#~ msgid "here"
+#~ msgstr "Тип сервера"
+
+#, fuzzy
+#~ msgid "Go to the Updater Pro page"
+#~ msgstr "Idi nazad na Updater stranicu"
+
+#, fuzzy
+#~ msgid "Sorry, Your email could not be sent to"
+#~ msgstr "Izvinite, vaša poruka ne može da se dostavi"
+
+#, fuzzy
+#~ msgid "Update&nbsp;to"
+#~ msgstr "Update-ovano do"
+
+#, fuzzy
+#~ msgid "Save & Update"
+#~ msgstr "Update"
+
+#, fuzzy
+#~ msgid "Sorry, Your message could not be sent"
+#~ msgstr "Izvinite, vaša poruka ne može da se dostavi"
+
+#, fuzzy
+#~ msgid "Test message was sent"
+#~ msgstr "Test poruka poslata"
+
+#, fuzzy
+#~ msgid "For example"
+#~ msgstr "example.csv"
+
+#, fuzzy
+#~ msgid "Test a backup process"
+#~ msgstr "Test pravljenje backup-a"
+
+#, fuzzy
+#~ msgid "Backup failed"
+#~ msgstr "Backup svih foldera"
+
+#, fuzzy
+#~ msgid "Save Settings"
+#~ msgstr "Postavke"
+
+#, fuzzy
+#~ msgid "Introducing Updater Pro"
+#~ msgstr "Добавить Updater Pro"
+
+#, fuzzy
+#~ msgid "Update plugins, themes or WordPress in the manual mode"
+#~ msgstr " для того, чтобы обновить ваши плагины или ядро WP в ручном режиме."
+
+#, fuzzy
+#~ msgid "Check the plugin settings."
+#~ msgstr "Пожалуйста, проверьте настройки для сайта."
+
+#, fuzzy
+#~ msgid "Please enter a valid email. Settings are not saved"
+#~ msgstr "Molim vas unesite validno ime pošaljioca.Postavke nisu sačuvane"
+
+#, fuzzy
+#~ msgid "Something was wrong during it, so we will not do the update."
+#~ msgstr "Похоже, что-то пошло не так во время обновления."
+
+#, fuzzy
+#~ msgid "Update WordPress"
+#~ msgstr "Update-ovanje WordPress-a..."
+
+#, fuzzy
+#~ msgid "current version:"
+#~ msgstr "trenutna verzija je"
+
+#, fuzzy
+#~ msgid "Plugin was updated:"
+#~ msgstr "Plugins and Core updater"
+
+#, fuzzy
+#~ msgid "to version"
+#~ msgstr " до версии"
+
+#, fuzzy
+#~ msgid "Theme was updated:"
+#~ msgstr "Plugins and Core updater"
+
+#, fuzzy
+#~ msgid "WordPress Core updated."
+#~ msgstr "WordPress  je update-ovan za verziju"
+
+#~ msgid "Updating on"
+#~ msgstr "Обновления на"
+
+#, fuzzy
+#~ msgid "plugin(s)"
+#~ msgstr "Pro плагины"
+
+#, fuzzy
+#~ msgid "and found the files need to be updated:"
+#~ msgstr "Fajlovi kojima treba update:"
+
+#, fuzzy
+#~ msgid "Plugins can be updated:"
+#~ msgstr "Ovi pluginovi mogu biti update-ovani:"
+
+#~ msgid "For update you should use this link:"
+#~ msgstr "Для обновления воспользуйтесь этой ссылкой:"
+
+#, fuzzy
+#~ msgid "Congratulations! Your plugins and themes have the latest updates!"
+#~ msgstr "Čestitamo! Vaša plugin i WordPress imaju poslednji update."
+
+#, fuzzy
+#~ msgid "Congratulations! Your themes and WordPress have the latest updates!"
+#~ msgstr "Čestitamo! Vaša plugin i WordPress imaju poslednji update."
+
+#, fuzzy
+#~ msgid "Update plugins or WordPress in the manual mode"
+#~ msgstr " для того, чтобы обновить ваши плагины или ядро WP в ручном режиме."
+
+#, fuzzy
+#~ msgid "WordPress Core"
+#~ msgstr "WordPress Version"
+
+#~ msgid "WP Core / Plugins"
+#~ msgstr "WP Core / Plugins"
+
+#, fuzzy
+#~ msgid "User Guide"
+#~ msgstr "Vodič za korisnika"
 
 #~ msgid "Select the plugin mode"
 #~ msgstr "Izaberite režim plugina"
@@ -412,7 +634,8 @@ msgstr ""
 #~ msgid "Notify when new versions of plugins or WordPress are available"
 #~ msgstr "Obavesti kada su nove verzije pluginova ili WordPress dostupne"
 
-#~ msgid "Send email after updating the plugins or WordPress"
+#, fuzzy
+#~ msgid "Send email after updating plugins or WordPress"
 #~ msgstr "Pošalji email nakon update plugina ili WordPress"
 
 #~ msgid ""
@@ -420,73 +643,80 @@ msgstr ""
 #~ "WordPress?"
 #~ msgstr "Koliko često bi trbala plugin da trazi update i WordPress?"
 
-#~ msgid "Updater | Settings"
-#~ msgstr "Updater | Postavke"
-
-#~ msgid "Updater | Tools"
-#~ msgstr "Updater | Alatke"
+#, fuzzy
+#~ msgid "Updater Pro | FAQ"
+#~ msgstr "Добавить Updater Pro"
 
 #, fuzzy
-#~ msgid "Updater | Go PRO"
+#~ msgid "Updater Pro | Settings"
+#~ msgstr "Updater | Postavke"
+
+#, fuzzy
+#~ msgid "Updater Pro | Tools"
 #~ msgstr "Updater | Alatke"
 
 #, fuzzy
 #~ msgid "Rate the plugin"
-#~ msgstr "Update-ovanje plugina..."
+#~ msgstr "Бесплатные плагины"
 
 #, fuzzy
 #~ msgid "If there is something wrong about it, please contact us"
 #~ msgstr "Если у вас есть какие-то вoпросы, обращайтесь на"
 
 #, fuzzy
-#~ msgid "Activate"
-#~ msgstr "Активированные плагины"
+#~ msgid ""
+#~ "1. How often the plugin will search for updates or/and update plugins and "
+#~ "WordPress if I didn't specify the time?"
+#~ msgstr "Koliko često bi trbala plugin da trazi update i WordPress?"
 
 #, fuzzy
-#~ msgid "version!"
-#~ msgstr "Version"
-
-#~ msgid "Updater does it every 12 hours by default."
+#~ msgid "Updater Pro does it every 12 hours by default."
 #~ msgstr "Updater po defaultu to radi svakih 12 sati."
 
+#, fuzzy
 #~ msgid ""
-#~ "By default Updater will be sending notifications to the site admin. If "
-#~ "you want them to be sent to another email address, you can change it here."
+#~ "By default Updater Pro will be sending notifications to the site admin. "
+#~ "If You want them to be sent to another email address, you can change it "
+#~ "here."
 #~ msgstr ""
 #~ "Po defaultu Updater će poslati notifikacije adminu sajta. Ako želite da "
 #~ "idu na drugu adresu, promenite to ovde."
 
-#~ msgid "(For example: admin@example.com.)"
-#~ msgstr "(Npr: admin@example.com.)"
-
-#~ msgid "Sender's name and email address"
+#, fuzzy
+#~ msgid "Sender's name and email address (From:)"
 #~ msgstr "Ime i mail pošaljioca"
 
+#, fuzzy
 #~ msgid ""
-#~ "By default Updater will be sending emails on behalf of your website. You "
-#~ "can edit it here."
+#~ "By default Updater Pro will be sending emails on behalf of Your website. "
+#~ "You can edit it here."
 #~ msgstr ""
 #~ "Po defaultu Updater će slati mailove u ime vašeg sajta. To možete da "
 #~ "promenite ovde"
 
+#, fuzzy
 #~ msgid ""
-#~ "By default Updater will be sending notifications from the Admin email. If "
-#~ "you want them to be sent from another email address, you can change it "
-#~ "here."
+#~ "By default Updater Pro will be sending notifications from the Admin "
+#~ "email. If You want them to be sent from another email address, you can "
+#~ "change it here."
 #~ msgstr ""
 #~ "Po defaultu Updater će slatii notifikacije od maila admina. Ako želite da "
 #~ "budu poslati sa  druge adrese, promenite to ovde."
 
 #, fuzzy
-#~ msgid "For example"
-#~ msgstr "example.csv"
+#~ msgid "(For example: admin@example.com )"
+#~ msgstr "(Npr: admin@example.com.)"
 
-#~ msgid "FAQ (with images)"
-#~ msgstr "FAQ (sa slikama)"
+#~ msgid "Please enter a valid sender name. Settings are not saved"
+#~ msgstr "Molim vas unesite validno ime pošaljioca.Postavke nisu sačuvane"
 
 #, fuzzy
-#~ msgid "Updater plugin"
-#~ msgstr "Update-ovanje plugina..."
+#~ msgid " the Updater Pro settings page on your website."
+#~ msgstr "Updater stranica postavki na vašem sajtu. "
+
+#, fuzzy
+#~ msgid "- to version"
+#~ msgstr " до версии"
 
 #~ msgid ""
 #~ "This functionality is available in the Pro version of the plugin. For "
@@ -626,9 +856,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Если WordPress установлен в корневой директории, оставьте это поле пустым."
 
-#~ msgid "Add Updater Pro"
-#~ msgstr "Добавить Updater Pro"
-
 #~ msgid "Export all settings for sites from current site in:"
 #~ msgstr "Экспортировать все настройки для сайтов с текущего сайта:"
 
@@ -669,9 +896,6 @@ msgstr ""
 
 #~ msgid "Operating System"
 #~ msgstr "Операционная система"
-
-#~ msgid "Server"
-#~ msgstr "Тип сервера"
 
 #~ msgid "Memory usage"
 #~ msgstr "Памяти использовано"
@@ -718,9 +942,6 @@ msgstr ""
 #~ msgid "Home URL"
 #~ msgstr "Основной адрес сайта"
 
-#~ msgid "WordPress DB Version"
-#~ msgstr "Версия базы данных WordPress"
-
 #~ msgid "Multisite"
 #~ msgstr "Мультиблог"
 
@@ -739,11 +960,8 @@ msgstr ""
 #~ msgid "Sorry, email message could not be delivered."
 #~ msgstr "Извините, ваш email не может быть отправлен."
 
-#~ msgid "Pro plugins"
-#~ msgstr "Pro плагины"
-
-#~ msgid "Read more"
-#~ msgstr "Подробнее"
+#~ msgid "Activated plugins"
+#~ msgstr "Активированные плагины"
 
 #~ msgid "Installed plugins"
 #~ msgstr "Установленные плагины"
@@ -753,9 +971,6 @@ msgstr ""
 
 #~ msgid "Purchase"
 #~ msgstr "Купить"
-
-#~ msgid "Free plugins"
-#~ msgstr "Бесплатные плагины"
 
 #~ msgid "Download"
 #~ msgstr "Скачать"
@@ -794,9 +1009,6 @@ msgstr ""
 #~ msgid "N/A - not applicable"
 #~ msgstr "N/A - не установлен"
 
-#~ msgid "Updating on"
-#~ msgstr "Обновления на"
-
 #~ msgid ""
 #~ "By default, Updater will send an email from the Admin email. If you would "
 #~ "like to send that email to a different address, you can set it here."
@@ -826,14 +1038,8 @@ msgstr ""
 #~ msgid "Version of WordPress"
 #~ msgstr "Версия WordPress"
 
-#~ msgid "For update you should use this link:"
-#~ msgstr "Для обновления воспользуйтесь этой ссылкой:"
-
 #~ msgid "Go to Updater page"
 #~ msgstr "Перейти на страницу \"Updater\""
-
-#~ msgid " to update your plugins or WP core in manual mode."
-#~ msgstr " для того, чтобы обновить ваши плагины или ядро WP в ручном режиме."
 
 #~ msgid ""
 #~ "Please input correct time for searching update or/and updating. Settings "
@@ -841,9 +1047,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Пожалуйста, введите правильное время для поиска и/или обновления. "
 #~ "Настройки не сохранены."
-
-#~ msgid " to version"
-#~ msgstr " до версии"
 
 #~ msgid "send email when updating"
 #~ msgstr "Отправить письмо при выполнении обновлении."
@@ -857,9 +1060,6 @@ msgstr ""
 #~ msgid "Options for Plugins and Core updater"
 #~ msgstr "Настройки для Plugins and Core updater"
 
-#~ msgid "Plugins and Core updater"
-#~ msgstr "Plugins and Core updater"
-
 #~ msgid "Options for Plugins and Core updater "
 #~ msgstr "Настройки для Plugins and Core updater"
 
@@ -871,9 +1071,6 @@ msgstr ""
 
 #~ msgid "Check all"
 #~ msgstr "Отметить все"
-
-#~ msgid "Something updated"
-#~ msgstr "Произошли обновления"
 
 #~ msgid "Plagins was updated in your site:"
 #~ msgstr "На Вашем сайте были обновлены следующие плагины:"
@@ -893,14 +1090,8 @@ msgstr ""
 #~ msgid "You must fill all forms to add the site."
 #~ msgstr "Вы должны заполнить все формы для добавления сайта."
 
-#~ msgid "Please, check settings for the site."
-#~ msgstr "Пожалуйста, проверьте настройки для сайта."
-
 #~ msgid "Need to be update!"
 #~ msgstr "Необходимо обновление!"
 
 #~ msgid "Web-site: "
 #~ msgstr "Веб-сайт:"
-
-#~ msgid "It looks like something went wrong during the update."
-#~ msgstr "Похоже, что-то пошло не так во время обновления."

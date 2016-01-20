@@ -1,23 +1,24 @@
 === Updater by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: automatic updates, apdater, auto mode update, core,  disable updates, disable updates manager, easy updates manager, latest version, latest wordpress version, manual mode update, plugin, recent plugin versions, recent version, recent wordpress version, updatar, update,  update control, update email notification, update frequency, update manually, update notification, update plugins, update plugins automatically, update to latest version, update to recent version, update wordpress, update wordpress automatically, update wordpress core, updater, updater plugin, updeiter, wordpress,  wp, wp plugin, wp free plugin, wp updater, wp updater plugin, wp simple updater plugin, wp free updater, wp free updater plugin, wordpress plugin, wordpress free plugin, wordpress updater, wordpress updater plugin, wordpress simple updater plugin, wordpress free updater, wordpress free updater plugin
+Tags: automatic updates, apdater, auto mode update, core,  disable updates, disable updates manager, easy updates manager, latest version, latest wordpress version, manual mode update, plugin, theme, recent plugin versions,recent theme versions, recent version, recent wordpress version, updatar, update,  update control, update email notification, update frequency, update manually, update notification, update plugins, update themes, update plugins automatically, update to latest version, update to recent version, update wordpress, update wordpress automatically, update wordpress core, updater, updater plugin, update themes automatically, updeiter, wordpress,  wp, wp plugin, wp free plugin, wp updater, wp updater plugin, wp updater theme, wp simple updater plugin, wp free updater, wp free updater plugin, wordpress plugin, wordpress free plugin, wordpress updater, wordpress updater plugin, wordpress simple updater plugin, wordpress free updater, wordpress free updater plugin
 Requires at least: 3.8
-Tested up to: 4.4-RC1
-Stable tag: 1.30
+Tested up to: 4.4.1
+Stable tag: 1.31
 License: GPLv2 or later
 
-This plugin allows you to update plugins and WordPress core.
+This plugin allows to update plugins, themes and WordPress core on your website.
 
 == Description ==
 
-This plugin updates your WordPress and the plugins to the recent versions. It also has auto or manual mode for updating and set email notifications. No more lasting updates of each separate plugins. The Updater plugin will do it for you.
+This plugin allows you to update your WordPress, themes, and plugins to the recent versions in the easiest way. You can select auto or manual mode for updating. Also you're able to make a backup before updating, set email notifications before and after update. If necessary, you can disable auto WordPress update.
 
 http://www.youtube.com/watch?v=I63426HTJjI
 
 <a href="http://www.youtube.com/watch?v=CmHctvGHWMs" target="_blank">Updater by BestWebSoft Video instruction on Installation</a>
 
 <a href="http://wordpress.org/plugins/updater/faq/" target="_blank">Updater by BestWebSoft FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Updater by BestWebSoft Support</a>
 
 <a href="http://bestwebsoft.com/plugin/updater-pro?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Updater Pro by BestWebSoft</a>
@@ -26,7 +27,7 @@ http://www.youtube.com/watch?v=I63426HTJjI
 
 1. After downloading and activating the plugin 'Updater', you should go to the page 'Updater' => 'Settings' in the 'BWS Plugins' menu, where the plugin settings are available.
 2. On this page you should choose the plugin mode and edit email notifications settings.
-3. If you want to update your plugins or WP core in the manual mode you should go to the page 'Updater' in the 'Tools' menu. If WordPress or some of your plugins needs update it will be highlighted in red. Check it and click 'update'.
+3. If you want to update your plugins, themes or WP core in the manual mode you should go to the page 'Updater' in the 'Tools' menu. If WordPress or some of your plugins needs update it will be highlighted in red. Check it and click 'update'.
 
 = Translation =
 
@@ -40,8 +41,8 @@ If you would like to create your own language pack or update the existing one, y
 
 Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
 
-If you notice any bugs in the plugin's work, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
+If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
+Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
 We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
 
 == Installation ==
@@ -60,10 +61,10 @@ http://www.youtube.com/watch?v=CmHctvGHWMs
 
 Please follow the instructions below:
 
-1. Please check the plugin settings '/wp-admin/admin.php?page=updater-options'
-2. The plugin sends email notifications if any updates are available. 
+1. Check the plugin settings '/wp-admin/admin.php?page=updater-options'
+2. The plugin sends email notifications if any updates are available.
 3. Some email messages can be marked as spam on the server. Enter email address ('Sender's name and email address'), for example, gmail account or similar. If the message is approved (sent), this means that the email filtering is configured on your server.
-4. Perhaps you didn't configure email sending. In this case You should install SMTP by BestWebSoft plugin and configure it. Afterwards you should send a test email from this plugin and you will see if the plugin logs have errors.
+4. Perhaps you didn't configure email sending. In this case You should install <a href="https://wordpress.org/plugins/bws-smtp/" target="_blank">SMTP by BestWebSoft</a> plugin and configure it. Afterwards you should send a test email from this plugin and you will see if the plugin logs have errors.
 
 = The plugin stopped sending emails after some time. What's the problem? =
 
@@ -88,6 +89,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.31 - 20.01.2016 =
+* NEW : Added the ability to update the themes
+* NEW : Added ability to select the search/update WordPress, themes and plugins
 
 = V1.30 - 02.12.2015 =
 * Bugfix : The bug with plugin menu duplicating was fixed.
@@ -147,7 +152,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 = V1.15 - 16.12.2013 =
 * Update : We updated all functionality for wordpress 3.8.
-* NEW : A notice when changing settings on the plugin's settings page was added. 
+* NEW : A notice when changing settings on the plugin's settings page was added.
 
 = V1.14 - 13.11.2013 =
 * Bugfix : We fixed the bug of syntax error.
@@ -206,6 +211,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Upgrade Notice ==
 
+= V1.31 =
+Added the ability to update the themes. Added ability to select the search/update WordPress, themes and plugins
+
 = V1.30 =
 The bug with plugin menu duplicating was fixed.
 
@@ -252,7 +260,7 @@ Plugin optimization is done. Screenshots and BWS menu were updated.
 We updated all functionality for wordpress 3.8.1.
 
 = V1.15 =
-We updated all functionality for wordpress 3.8. A notice when changing settings on the plugin's settings page was added. 
+We updated all functionality for wordpress 3.8. A notice when changing settings on the plugin's settings page was added.
 
 = V1.14 =
 We fixed the bug of syntax error.
@@ -288,9 +296,9 @@ The code refactoring. Changed location of the pages.
 Add sending a test email. Add Frequently Asked Questions.
 
 = V1.03 =
-The time bug is fixed. Updated the email notification which is sent when new versions of the plugins or WordPress are available. 
+The time bug is fixed. Updated the email notification which is sent when new versions of the plugins or WordPress are available.
 
-= V1.02 = 
+= V1.02 =
 Add sending email when new versions of plugins or WordPress are available. Bugs in the admin menu are fixed. Css-style is updated. We updated all functionality for wordpress 3.5.1.
 
 = V1.01 =

@@ -3,7 +3,7 @@ Plugin Name: Updater
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: This plugin allows you to update plugins and WP core in auto or manual mode.
 Author: BestWebSoft
-Version: 1.18
+Version: 1.31
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -14,8 +14,12 @@ License: GPLv2 or later
 	width: auto !important;
 	margin-top: 10px;
 }
-.pdtr * {
-	width: auto !important;
+.pdtr thead tr th,
+.pdtr tbody tr th,
+.pdtr tbody tr td {
+    border-right: 1px solid #DFDFDF;
+    border-left: 1px solid #fff;
+    width: auto !important;
 }
 .pdtr td,
 .pdtr td {
@@ -29,6 +33,10 @@ License: GPLv2 or later
 }
 .pdtr thead tr th {
 	padding: 8px 8px 7px 0 !important;
+    background-color: #dfdfdf;
+}
+.pdtr tr.pdtr-caption th {
+    background-color: #dfdfdf;
 }
 .pdtr .check-column {
 	padding: 7px 8px 7px 8px !important;
@@ -51,4 +59,26 @@ License: GPLv2 or later
 .pdtr_img {
 	margin-bottom: -3px;
 	opacity: 0.6;
+}
+@media screen and (max-width: 782px) {
+	.pdtr_right {
+	    float: none;
+	    margin-top: 10px;
+	}
+	.pdtr_left {
+	    float: none;
+	    display: inline-block;
+	    padding-right: 0px;
+	}
+	.pdtr input[name="pdtr_block[]"] {
+		visibility: collapse;
+	}
+	.pdtr .form-table input.tog,
+	.pdtr .form-table input[type="radio"] {
+	    margin: 0px 4px 0 0;
+	}
+	.pdtr input[type="checkbox"],
+	.pdtr input[type="radio"] {
+	    margin-top: 4px;
+	}
 }

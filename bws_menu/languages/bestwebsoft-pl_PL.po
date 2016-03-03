@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bestwebsoft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 13:39+0300\n"
-"PO-Revision-Date: 2016-01-19 13:39+0300\n"
+"POT-Creation-Date: 2016-02-22 15:52+0300\n"
+"PO-Revision-Date: 2016-02-22 15:52+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Damian Dąbrowski <contact@codester.pl>\n"
 "Language: pl_PL\n"
@@ -385,23 +385,38 @@ msgstr "Konfiguruj Ustawienia"
 msgid "Add New"
 msgstr "Dodaj nowy"
 
-#: bws_functions.php:696
+#: bws_functions.php:696 bws_functions.php:755
 msgid "Close notice"
 msgstr "Zamknij powiadomienie"
 
-#: bws_functions.php:709
+#: bws_functions.php:750
+#, fuzzy
+msgid "Thank you for choosing"
+msgstr "Dziękujemy za instalację"
+
+#: bws_functions.php:751
+msgid ""
+"If you have a feature, suggestion or idea you'd like to see in the plugin, "
+"we'd love to hear about it!"
+msgstr ""
+
+#: bws_functions.php:752
+msgid "Suggest a Feature"
+msgstr ""
+
+#: bws_functions.php:768
 msgid "Notice"
 msgstr "Uwaga"
 
-#: bws_functions.php:709
+#: bws_functions.php:768
 msgid "The plugin's settings have been changed."
 msgstr "Ustawienia wtyczki zostały zmienione."
 
-#: bws_functions.php:710
+#: bws_functions.php:769
 msgid "Save Changes"
 msgstr "Zapisz zmiany"
 
-#: bws_functions.php:727
+#: bws_functions.php:786
 msgid ""
 "You can always look at premium options by clicking on the \"Show Pro features"
 "\" in the \"Go PRO\" tab"
@@ -409,82 +424,82 @@ msgstr ""
 "Zawsze możesz sprawdzić funkcje premium poprzez kliknięcie \"Pokaż funkcje "
 "PRO\" w zakładce \"Go PRO\""
 
-#: bws_functions.php:807
+#: bws_functions.php:866
 msgid "Add BWS Plugins Shortcode"
 msgstr "Dodaj BWS Shortcode"
 
-#: bws_functions.php:827
+#: bws_functions.php:886
 #, fuzzy
 msgid "Add shortcode"
 msgstr "Dodaj BWS Shortcode"
 
-#: bws_functions.php:827
+#: bws_functions.php:886
 msgid "Add BestWebSoft plugins' shortcodes using this button."
 msgstr ""
 
-#: bws_functions.php:869
+#: bws_functions.php:928
 msgid "Close"
 msgstr "Zamknij"
 
-#: bws_functions.php:961
+#: bws_functions.php:1020
 msgid "Restore all plugin settings to defaults"
 msgstr "Przywróć wszystkie ustawienia do wartości domyśłnych"
 
-#: bws_functions.php:963
+#: bws_functions.php:1022
 msgid "Restore settings"
 msgstr "Przywróć ustawienia"
 
-#: bws_functions.php:974
+#: bws_functions.php:1033
 msgid "Are you sure you want to restore all settings by default?"
 msgstr ""
 "Czy jesteś pewien, że chcesz przywrócić wszystkie ustawienia do wartości "
 "domyślnych?"
 
-#: bws_functions.php:977
+#: bws_functions.php:1036
 msgid "Yes, restore all settings"
 msgstr "Tak, przywróć wszystkie ustawienia"
 
-#: bws_functions.php:978
+#: bws_functions.php:1037
 msgid "No, go back to the settings page"
 msgstr "Nie, wróć do ustawień"
 
-#: bws_functions.php:1024
+#: bws_functions.php:1083
 msgid "Plugin"
 msgstr "Wtyczka"
 
-#: bws_functions.php:1033
+#: bws_functions.php:1092
 msgid "Shortcode settings"
 msgstr "Ustawienia shortcode"
 
-#: bws_functions.php:1038
+#: bws_functions.php:1097
 msgid "The shortcode will be inserted"
 msgstr "Shortcode zostanie umieszczony"
 
-#: bws_functions.php:1043
+#: bws_functions.php:1102
 msgid "Insert"
 msgstr "Umieść"
 
-#: bws_functions.php:1074
+#: bws_functions.php:1133
 msgid "Visit Help Center"
 msgstr ""
 
-#: bws_functions.php:1079
+#: bws_functions.php:1138
 msgid "FAQ"
 msgstr "FAQ"
 
-#: bws_functions.php:1085
+#: bws_functions.php:1144
 msgid "For more information:"
 msgstr ""
 
-#: bws_functions.php:1086
+#: bws_functions.php:1145
 msgid "Documentation"
 msgstr ""
 
-#: bws_functions.php:1087
+#: bws_functions.php:1146
 msgid "Video Instructions"
 msgstr ""
 
-#: bws_functions.php:1088
+#: bws_functions.php:1147
 #, fuzzy
 msgid "Submit a Request"
 msgstr "送信ボタン"

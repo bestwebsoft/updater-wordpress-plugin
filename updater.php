@@ -6,7 +6,7 @@ Description: This plugin allows to update plugins, themes and WordPress core on 
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.31
+Version: 1.32
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -87,19 +87,20 @@ if ( ! function_exists( 'pdtr_register_settings' ) ) {
 		$from_email = 'wordpress@' . $sitename;
 
 		$pdtr_option_defaults = array(
-			'plugin_option_version' 		=> $pdtr_plugin_info["Version"],
-			'pdtr_mode'						=> '0',
-			'pdtr_send_mail_after_update'	=> '1',
-			'pdtr_send_mail_get_update'		=> '1',
-			'pdtr_time'						=> '12',
-			'pdtr_to_email'					=> get_option( 'admin_email' ),
-			'pdtr_from_name'				=> get_bloginfo( 'name' ),
-			'pdtr_from_email'				=> $from_email,
+			'plugin_option_version' 		=>	$pdtr_plugin_info["Version"],
+			'pdtr_mode'						=>	'0',
+			'pdtr_send_mail_after_update'	=>	'1',
+			'pdtr_send_mail_get_update'		=>	'1',
+			'pdtr_time'						=>	'12',
+			'pdtr_to_email'					=>	get_option( 'admin_email' ),
+			'pdtr_from_name'				=>	get_bloginfo( 'name' ),
+			'pdtr_from_email'				=>	$from_email,
 			'first_install'					=>	strtotime( "now" ),
-			'pdtr_option_update_core'		=> 1,
-			'pdtr_option_update_plugin'		=> 1,
-			'pdtr_option_update_theme'		=> 1,
-			'display_settings_notice'		=> 1
+			'pdtr_option_update_core'		=>	1,
+			'pdtr_option_update_plugin'		=>	1,
+			'pdtr_option_update_theme'		=>	1,
+			'display_settings_notice'		=>	1,
+			'suggest_feature_banner'		=>	1
 	  	);
 		if ( is_multisite() ) {
 			if ( ! get_site_option( 'pdtr_options' ) ) {
@@ -195,7 +196,7 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 				$gmt = 'UTC' . get_option( 'gmt_offset' );
 
 			/* Get information about WP core and installed plugins from the website */
-			$pdtr_core_plugin_theme_list = pdtr_processing_site();
+			$pdtr_updater_list = pdtr_processing_site();
 			/* Update plugins and WP if they checked and show the results */
 			if ( ( isset( $_REQUEST["checked_core"] ) || isset( $_REQUEST["checked_plugin"] ) || isset( $_REQUEST["checked_theme"] ) ) && check_admin_referer( plugin_basename(__FILE__), 'pdtr_nonce_name' ) ) { ?>
 				<?php echo '<h1>' . __( 'Updater', 'updater' ) . '</h1>';
@@ -238,23 +239,23 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 
 		if ( isset( $_GET['action'] ) && $_GET['action'] == 'settings' ) {
 
-			/* Check mail */
+			/* Check mail - sending test emails */
 			if ( isset( $_REQUEST["pdtr_form_check_mail"] ) && check_admin_referer( plugin_basename(__FILE__), 'pdtr_nonce_check_mail' ) ) {
-				global $pdtr_core_plugin_theme_list;
-				$pdtr_core_plugin_theme_list = pdtr_processing_site();
+				global $pdtr_updater_list;
+				$pdtr_updater_list = pdtr_processing_site();
 				$plugin_update_list = $theme_update_list = $core = "";
 
-				if ( $pdtr_core_plugin_theme_list["core"]["current"] != $pdtr_core_plugin_theme_list["core"]["new"] )
+				if ( $pdtr_updater_list["core"]["current"] != $pdtr_updater_list["core"]["new"] )
 					$core = true;
 
-				if ( isset( $pdtr_core_plugin_theme_list["plugin_need_update"] ) ) {
-					foreach ( $pdtr_core_plugin_theme_list["plugin_need_update"] as $key => $value ) {
+				if ( isset( $pdtr_updater_list["plugin_need_update"] ) ) {
+					foreach ( $pdtr_updater_list["plugin_need_update"] as $key => $value ) {
 						$plugin_update_list[] = $key;
 					}
 				}
 
-				if ( isset( $pdtr_core_plugin_theme_list["theme_need_update"] ) ) {
-					foreach ( $pdtr_core_plugin_theme_list["theme_need_update"] as $key => $value ) {
+				if ( isset( $pdtr_updater_list["theme_need_update"] ) ) {
+					foreach ( $pdtr_updater_list["theme_need_update"] as $key => $value ) {
 						$theme_update_list[] = $key;
 					}
 				}
@@ -423,10 +424,10 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 								<tr>
 									<td class="plugin-title"><?php _e( 'WordPress Version', 'updater' ); ?></td>
 									<?php $message_update = "";
-									$version = $pdtr_core_plugin_theme_list["core"]["current"];
-									if ( isset( $pdtr_core_plugin_theme_list["core"]["new"] ) ) {
-										if ( $version != $pdtr_core_plugin_theme_list["core"]["new"] ) {
-											$message_update = __( 'Update to', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["core"]["new"];
+									$version = $pdtr_updater_list["core"]["current"];
+									if ( isset( $pdtr_updater_list["core"]["new"] ) ) {
+										if ( $version != $pdtr_updater_list["core"]["new"] ) {
+											$message_update = __( 'Update to', 'updater' ) . ' ' . $pdtr_updater_list["core"]["new"];
 										}
 									} ?>
 									<td class="manage-column check-column" <?php if ( ! empty( $message_update ) ) echo "style=\"background:#e89b92\""; ?> >
@@ -452,16 +453,16 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 											<label><input type="checkbox" class="hide-if-no-js pdtr-check-plugin-all"></label>
 										</th>
 									</tr>
-								<?php if ( empty( $pdtr_core_plugin_theme_list["plugin_list"] ) ) { ?>
+								<?php if ( empty( $pdtr_updater_list["plugin_list"] ) ) { ?>
 									<tr><th><?php _e( 'No plugins found', 'updater' ); ?></th></tr>
 								<?php } else {
-									foreach ( $pdtr_core_plugin_theme_list["plugin_list"] as $plugin_key => $value ) { ?>
+									foreach ( $pdtr_updater_list["plugin_list"] as $plugin_key => $value ) { ?>
 										<tr>
-											<td class="plugin-title"><?php echo $pdtr_core_plugin_theme_list["plugin_list"][ $plugin_key ]["Name"]; ?></td>
+											<td class="plugin-title"><?php echo $pdtr_updater_list["plugin_list"][ $plugin_key ]["Name"]; ?></td>
 											<?php $message_update = "";
-											$version = $pdtr_core_plugin_theme_list["plugin_list"][ $plugin_key ]["Version"];
-											if ( isset( $pdtr_core_plugin_theme_list["plugin_need_update"] ) ) {
-												foreach ( $pdtr_core_plugin_theme_list["plugin_need_update"] as $file => $plugin_update ) {
+											$version = $pdtr_updater_list["plugin_list"][ $plugin_key ]["Version"];
+											if ( isset( $pdtr_updater_list["plugin_need_update"] ) ) {
+												foreach ( $pdtr_updater_list["plugin_need_update"] as $file => $plugin_update ) {
 													if ( $plugin_key == $file ) {
 														if ( $version != $plugin_update["new_version"] ) {
 															$message_update = __( 'Update to', 'updater' ) . ' ' . $plugin_update["new_version"];
@@ -494,16 +495,16 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 											<label><input type="checkbox" class="hide-if-no-js pdtr-check-theme-all"></label>
 										</th>
 									</tr>
-								<?php if ( empty( $pdtr_core_plugin_theme_list["theme_list"] ) ) { ?>
+								<?php if ( empty( $pdtr_updater_list["theme_list"] ) ) { ?>
 									<tr><th><?php _e( 'No themes found', 'updater' ); ?></th></tr>
 								<?php } else {
-									foreach ( $pdtr_core_plugin_theme_list["theme_list"] as $theme_key => $value ) { ?>
+									foreach ( $pdtr_updater_list["theme_list"] as $theme_key => $value ) { ?>
 										<tr>
-											<td class="plugin-title"><?php echo $pdtr_core_plugin_theme_list["theme_list"][ $theme_key ]["Name"]; ?></td>
+											<td class="plugin-title"><?php echo $pdtr_updater_list["theme_list"][ $theme_key ]["Name"]; ?></td>
 											<?php $message_update = "";
-											$version = $pdtr_core_plugin_theme_list["theme_list"][ $theme_key ]["Version"];
-											if ( isset( $pdtr_core_plugin_theme_list["theme_need_update"] ) ) {
-												foreach ( $pdtr_core_plugin_theme_list["theme_need_update"] as $file => $theme_update ) {
+											$version = $pdtr_updater_list["theme_list"][ $theme_key ]["Version"];
+											if ( isset( $pdtr_updater_list["theme_need_update"] ) ) {
+												foreach ( $pdtr_updater_list["theme_need_update"] as $file => $theme_update ) {
 													if ( $theme_key == $file ) {
 														if ( $version != $theme_update["new_version"] ) {
 															$message_update = __( 'Update to', 'updater' ) . ' ' . $theme_update["new_version"];
@@ -677,12 +678,12 @@ if ( ! function_exists ( 'pdtr_settings_page' ) ) {
 if ( ! function_exists ( 'pdtr_processing_site' ) ) {
 	function pdtr_processing_site() {
 		global $wp_version;
-		$pdtr_core_plugin_theme_list = array();
+		$pdtr_updater_list = array();
 		/* Include file for get plugins */
 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		/* Add the list of installed plugins */
 		$wp_list_table_plugins = apply_filters( 'all_plugins', get_plugins() );
-		$pdtr_core_plugin_theme_list["plugin_list"]	= $wp_list_table_plugins;
+		$pdtr_updater_list["plugin_list"]	= $wp_list_table_plugins;
 
 		/* Add the list of plugins, that need to be update */
 		$update_plugins	= get_site_transient( 'update_plugins' );
@@ -692,12 +693,12 @@ if ( ! function_exists ( 'pdtr_processing_site' ) ) {
 				$value = get_object_vars( $value );
 				$plugins[ $file ] = $value;
 			}
-			$pdtr_core_plugin_theme_list["plugin_need_update"] = $plugins;
+			$pdtr_updater_list["plugin_need_update"] = $plugins;
 		}
 
 		/* Add the list of installed themes */
 		$wp_list_table_themes = apply_filters( 'all_themes', wp_get_themes() );
-		$pdtr_core_plugin_theme_list["theme_list"]	= $wp_list_table_themes;
+		$pdtr_updater_list["theme_list"]	= $wp_list_table_themes;
 		/* Add the list of themes, that need to be update */
 		$update_themes 	= get_site_transient( 'update_themes' );
 		$themes			= array();
@@ -705,14 +706,14 @@ if ( ! function_exists ( 'pdtr_processing_site' ) ) {
 			foreach ( $update_themes->response as $file => $value ) {
 				$themes[ $file ] = $value;
 			}
-			$pdtr_core_plugin_theme_list["theme_need_update"] = $themes;
+			$pdtr_updater_list["theme_need_update"] = $themes;
 		}
 
 		/* Add current core version and the latest version of core */
 		$core = get_site_transient( 'update_core' );
 		if ( ! empty( $core->updates ) )
-			$pdtr_core_plugin_theme_list["core"] = array( "current" => $wp_version, "new" => $core->updates[0]->current );
-		return $pdtr_core_plugin_theme_list;
+			$pdtr_updater_list["core"] = array( "current" => $wp_version, "new" => $core->updates[0]->current );
+		return $pdtr_updater_list;
 	}
 }
 /* End function pdtr_processing_site */
@@ -830,7 +831,7 @@ if ( ! function_exists ( 'pdtr_notification_after_update' ) ) {
 	function pdtr_notification_after_update( $plugins_list, $themes_list, $core ) {
 		global $pdtr_options;
 
-		$pdtr_core_plugin_theme_list = pdtr_processing_site();
+		$pdtr_updater_list = pdtr_processing_site();
 		$network = is_multisite() ? 'network/' : '';
 		$subject	=	esc_html__( 'The Updater plugin made the updates at the site', 'updater' ) .  ' ' . esc_attr( get_bloginfo( 'name', 'display' ) );
 		$message	=	'<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
@@ -842,7 +843,7 @@ if ( ! function_exists ( 'pdtr_notification_after_update' ) ) {
 			$message .= '<strong> - ' . __( 'These plugins were updated:', 'updater' ) . '</strong><ul>';
 			foreach ( $plugins_list as $key => $value ) {
 				$name = explode( "/", $value );
-				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["plugin_list"][ $value ]["Version"] . ';</li>';
+				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_updater_list["plugin_list"][ $value ]["Version"] . ';</li>';
 			}
 			$message .= '</ul><br/>';
 		}
@@ -851,13 +852,13 @@ if ( ! function_exists ( 'pdtr_notification_after_update' ) ) {
 			$message .= '<strong> - ' . __( 'These themes were updated:', 'updater' ) . '</strong><ul>';
 			foreach ( $themes_list as $key => $value ) {
 				$name = explode( "/", $value );
-				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["theme_list"][ $value ]["Version"] . ';</li>';
+				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_updater_list["theme_list"][ $value ]["Version"] . ';</li>';
 			}
 			$message .= '</ul><br/>';
 		}
 
 		if ( true === $core ) {
-			$message .= '<strong> - ' . __( 'WordPress was updated to the version', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["core"]["new"] . '.</strong><br/><br/>';
+			$message .= '<strong> - ' . __( 'WordPress was updated to the version', 'updater' ) . ' ' . $pdtr_updater_list["core"]["new"] . '.</strong><br/><br/>';
 		} elseif ( false === $core ) {
 			$message .= '<strong> - ' . __( "We couldn't update WordPress Core in the site", 'updater' ) . '.</strong><br/><br/>';
 		}
@@ -910,7 +911,7 @@ if ( ! function_exists( 'pdtr_check_for_compatibility_with_mlq' ) ) {
 /* Function for sending email if exist update */
 if ( ! function_exists ( 'pdtr_notification_exist_update' ) ) {
 	function pdtr_notification_exist_update( $plugins_list, $themes_list, $core, $test = false ) {
-		global $pdtr_options, $pdtr_core_plugin_theme_list;
+		global $pdtr_options, $pdtr_updater_list;
 		/* Get information about WP core and installed plugins from the website */
 		$network = is_multisite() ? 'network/' : '';
 		$subject	=	esc_html__( 'Check for updates on', 'updater' ) . ' ' . esc_attr( get_bloginfo( 'name', 'display' ) );
@@ -928,8 +929,8 @@ if ( ! function_exists ( 'pdtr_notification_exist_update' ) ) {
 			$message .= '<strong> - ' . __( 'These plugins can be updated:', 'updater' ) . '</strong><ul>';
 			foreach ( $plugins_list as $key => $value ) {
 				$name = explode( "/", $value );
-				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["plugin_need_update"][ $value ]["new_version"] .
-						 ' ('. __( 'the current version is', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["plugin_list"][ $value ]["Version"] . ');</li>';
+				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_updater_list["plugin_need_update"][ $value ]["new_version"] .
+						 ' ('. __( 'the current version is', 'updater' ) . ' ' . $pdtr_updater_list["plugin_list"][ $value ]["Version"] . ');</li>';
 			}
 			$message .= '</ul>';
 		}
@@ -938,15 +939,15 @@ if ( ! function_exists ( 'pdtr_notification_exist_update' ) ) {
 			$message .= '<strong> - ' . __( 'These themes can be updated:', 'updater' ) . '</strong><ul>';
 			foreach ( $themes_list as $key => $value ) {
 				$name = explode( "/", $value );
-				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["theme_need_update"][ $value ]["new_version"] .
-						 ' ('. __( 'the current version is', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["theme_list"][ $value ]["Version"] . ');</li>';
+				$message .= '<li>' . $name[0] . ' - ' . __( 'to the version', 'updater' ) . ' ' . $pdtr_updater_list["theme_need_update"][ $value ]["new_version"] .
+						 ' ('. __( 'the current version is', 'updater' ) . ' ' . $pdtr_updater_list["theme_list"][ $value ]["Version"] . ');</li>';
 			}
 			$message .= '</ul>';
 		}
 
 		if ( true === $core ) {
-			$message .= '<strong> - ' . __( 'WordPress can be updated to the version', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["core"]["new"] .
-					 ' (' . __( 'the current version is', 'updater' ) . ' ' . $pdtr_core_plugin_theme_list["core"]["current"] . ').</strong><br/>';
+			$message .= '<strong> - ' . __( 'WordPress can be updated to the version', 'updater' ) . ' ' . $pdtr_updater_list["core"]["new"] .
+					 ' (' . __( 'the current version is', 'updater' ) . ' ' . $pdtr_updater_list["core"]["current"] . ').</strong><br/>';
 		}
 
 		if ( false === $test ) {
@@ -1009,35 +1010,37 @@ if ( ! function_exists ( 'pdtr_admin_head' ) ) {
 /* Function that update all plugins and WP core. It will be executed every hour if enabled auto mode */
 if ( ! function_exists ( 'pdtr_auto_function' ) ) {
 	function pdtr_auto_function() {
-		global $pdtr_options, $pdtr_core_plugin_theme_list;
-		$plugin_update_list = $theme_update_list = $core =	"";
-		$pdtr_core_plugin_theme_list	=	pdtr_processing_site();
+		global $pdtr_options, $pdtr_updater_list;
+		$plugin_update_list = $theme_update_list = array();
+		$core = false;
 
 		if ( empty( $pdtr_options ) )
 			$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' ) ;
 
-		if ( $pdtr_core_plugin_theme_list["core"]["current"] != $pdtr_core_plugin_theme_list["core"]["new"] )
+		$pdtr_updater_list	=	pdtr_processing_site();
+
+		if ( $pdtr_updater_list["core"]["current"] != $pdtr_updater_list["core"]["new"] && "1" == $pdtr_options["pdtr_option_update_core"] )
 			$core = true;
 
-		if ( isset( $pdtr_core_plugin_theme_list["plugin_need_update"] ) ) {
-			foreach ( $pdtr_core_plugin_theme_list["plugin_need_update"] as $key => $value) {
+		if ( isset( $pdtr_updater_list["plugin_need_update"] ) && "1" == $pdtr_options["pdtr_option_update_plugin"] ) {
+			foreach ( $pdtr_updater_list["plugin_need_update"] as $key => $value) {
 				$plugin_update_list[] = $key;
 			}
 		}
 
-		if ( isset( $pdtr_core_plugin_theme_list["theme_need_update"] ) ) {
-			foreach ( $pdtr_core_plugin_theme_list["theme_need_update"] as $key => $value) {
+		if ( isset( $pdtr_updater_list["theme_need_update"] ) && "1" == $pdtr_options["pdtr_option_update_theme"] ) {
+			foreach ( $pdtr_updater_list["theme_need_update"] as $key => $value) {
 				$theme_update_list[] = $key;
 			}
 		}
 
-		if ( 1 == $pdtr_options["pdtr_send_mail_get_update"] && ( ! empty( $theme_update_list ) ) || ( ! empty( $plugin_update_list ) ) || ( ! empty( $core ) ) ) {
+		if ( 1 == $pdtr_options["pdtr_send_mail_get_update"] && ( ! empty( $theme_update_list ) || ! empty( $plugin_update_list ) || false != $core ) ) {
 			pdtr_notification_exist_update( $plugin_update_list, $theme_update_list, $core );
 		}
 
 		if ( 1 == $pdtr_options["pdtr_mode"] ) {
 			/* If WP core need to be update */
-			if ( ! empty( $core ) )
+			if ( false != $core )
 				$core_result = pdtr_update_core( true ); /* update the WP core */
 			/* Update the list of plugins */
 			if ( ! empty( $plugin_update_list ) ) {
@@ -1048,7 +1051,7 @@ if ( ! function_exists ( 'pdtr_auto_function' ) ) {
 				pdtr_update_theme( $theme_update_list );
 			}
 			/* Send mail */
-			if ( 1 == $pdtr_options["pdtr_send_mail_after_update"] && ( ! empty( $theme_update_list ) ) || ( ! empty( $plugin_update_list ) ) || ( ! empty( $core ) ) ) {
+			if ( 1 == $pdtr_options["pdtr_send_mail_after_update"] && ( ! empty( $theme_update_list ) || ! empty( $plugin_update_list ) ||  false != $core ) ) {
 				pdtr_notification_after_update( $plugin_update_list, $theme_update_list, $core_result );
 			}
 		}
@@ -1108,9 +1111,9 @@ if ( ! function_exists( 'pdtr_register_plugin_links' ) ) {
 
 if ( ! function_exists( 'pdtr_plugin_banner' ) ) {
 	function pdtr_plugin_banner() {
-		global $hook_suffix;
+		global $hook_suffix, $pdtr_plugin_info;
 		if ( 'plugins.php' == $hook_suffix ) {
-			global $pdtr_plugin_info, $pdtr_options;
+			global $pdtr_options;
 			if ( empty( $pdtr_options ) )
 				$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' );
 			if ( isset( $pdtr_options['first_install'] ) && strtotime( '-1 week' ) > $pdtr_options['first_install'] )
@@ -1127,6 +1130,9 @@ if ( ! function_exists( 'pdtr_plugin_banner' ) ) {
 					<?php } ?>
 				</div>
 			<?php }
+		}
+		if ( isset( $_REQUEST['page'] ) && 'updater-options' == $_REQUEST['page'] ) {
+			bws_plugin_suggest_feature_banner( $pdtr_plugin_info, 'pdtr_options', 'updater' );
 		}
 	}
 }
@@ -1147,7 +1153,7 @@ if ( ! function_exists( 'pdtr_uninstall' ) ) {
 	}
 }
 
-/* When deactivate plugin */
+/* When activate plugin */
 register_activation_hook( __FILE__, 'pdtr_activation' );
 
 if ( function_exists( 'is_multisite' ) ) {
@@ -1172,7 +1178,7 @@ if ( function_exists( 'is_multisite' ) ) {
 add_filter( 'plugin_row_meta', 'pdtr_register_plugin_links', 10, 2 );
 /* Add time for cron viev */
 add_filter( 'cron_schedules', 'pdtr_schedules' );
-/* Function that update all plugins and WP core in auto mode. */
+/* Function that update all plugins, themes and WP core in auto mode. */
 add_action( 'pdtr_auto_hook', 'pdtr_auto_function' );
 
 add_action( 'admin_notices', 'pdtr_plugin_banner' );

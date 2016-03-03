@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: automatic updates, apdater, auto mode update, core,  disable updates, disable updates manager, easy updates manager, latest version, latest wordpress version, manual mode update, plugin, theme, recent plugin versions,recent theme versions, recent version, recent wordpress version, updatar, update,  update control, update email notification, update frequency, update manually, update notification, update plugins, update themes, update plugins automatically, update to latest version, update to recent version, update wordpress, update wordpress automatically, update wordpress core, updater, updater plugin, update themes automatically, updeiter, wordpress,  wp, wp plugin, wp free plugin, wp updater, wp updater plugin, wp updater theme, wp simple updater plugin, wp free updater, wp free updater plugin, wordpress plugin, wordpress free plugin, wordpress updater, wordpress updater plugin, wordpress simple updater plugin, wordpress free updater, wordpress free updater plugin
 Requires at least: 3.8
-Tested up to: 4.4.1
-Stable tag: 1.31
+Tested up to: 4.4.2
+Stable tag: 1.32
 License: GPLv2 or later
 
 This plugin allows to update plugins, themes and WordPress core on your website.
@@ -23,11 +23,21 @@ http://www.youtube.com/watch?v=I63426HTJjI
 
 <a href="http://bestwebsoft.com/plugin/updater-pro?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Updater Pro by BestWebSoft</a>
 
+= Features =
+
+* Update your plugins, themes and WordPress
+* Choose the updating mode: manual or automatic
+* Set the update periodicity (for automatic mode)
+* Choose what is necessary to search/update:  WordPress, themes or/and plugins
+* Receive email notifications when new versions are available or/and after update is completed
+
+If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
+
 = User Guide =
 
 1. After downloading and activating the plugin 'Updater', you should go to the page 'Updater' => 'Settings' in the 'BWS Plugins' menu, where the plugin settings are available.
 2. On this page you should choose the plugin mode and edit email notifications settings.
-3. If you want to update your plugins, themes or WP core in the manual mode you should go to the page 'Updater' in the 'Tools' menu. If WordPress or some of your plugins needs update it will be highlighted in red. Check it and click 'update'.
+3. If you want to update your plugins, themes or WordPress in the manual mode you should go to the page 'Updater' in the 'Tools' menu. If WordPress or some of your plugins and themes needs update it will be highlighted in red. Check it and click 'Update'.
 
 = Translation =
 
@@ -81,7 +91,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instruction on System Status</a>
 
 == Screenshots ==
 
@@ -90,9 +100,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.32 - 03.03.2016 =
+* Bugfix : The bug with email notifications was fixed. 
+* Bugfix : Auto update was fixed.
+
 = V1.31 - 20.01.2016 =
-* NEW : Added the ability to update the themes
-* NEW : Added ability to select the search/update WordPress, themes and plugins
+* NEW : Added the ability to update the themes.
+* NEW : Added ability to choose what is necessary to search/update:  WordPress, themes or/and plugins.
 
 = V1.30 - 02.12.2015 =
 * Bugfix : The bug with plugin menu duplicating was fixed.
@@ -211,8 +225,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Upgrade Notice ==
 
+= V1.32 =
+The bug with email notifications was fixed. Auto update was fixed.
+
 = V1.31 =
-Added the ability to update the themes. Added ability to select the search/update WordPress, themes and plugins
+Added the ability to update the themes. Added ability to choose what is necessary to search/update:  WordPress, themes or/and plugins.
 
 = V1.30 =
 The bug with plugin menu duplicating was fixed.

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-28 15:28+0300\n"
-"PO-Revision-Date: 2015-12-28 19:06+0300\n"
-"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
+"PO-Revision-Date: 2016-02-23 12:20+0300\n"
+"Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -141,7 +141,7 @@ msgstr "При оновленні до версії Pro усі ваші нала
 
 #: updater.php:401 updater.php:647
 msgid "Unlock premium options by upgrading to Pro version"
-msgstr "Розблокувати преміум опции оновленням до версії Pro"
+msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
 
 #: updater.php:403 updater.php:649
 msgid "Learn More"

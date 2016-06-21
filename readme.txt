@@ -1,10 +1,10 @@
 === Updater by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: automatic updates, apdater, auto mode update, core,  disable updates, disable updates manager, easy updates manager, latest version, latest wordpress version, manual mode update, plugin, theme, recent plugin versions,recent theme versions, recent version, recent wordpress version, updatar, update,  update control, update email notification, update frequency, update manually, update notification, update plugins, update themes, update plugins automatically, update to latest version, update to recent version, update wordpress, update wordpress automatically, update wordpress core, updater, updater plugin, update themes automatically, updeiter, wordpress,  wp, wp plugin, wp free plugin, wp updater, wp updater plugin, wp updater theme, wp simple updater plugin, wp free updater, wp free updater plugin, wordpress plugin, wordpress free plugin, wordpress updater, wordpress updater plugin, wordpress simple updater plugin, wordpress free updater, wordpress free updater plugin
+Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
 Requires at least: 3.8
-Tested up to: 4.4.2
-Stable tag: 1.32
+Tested up to: 4.5.2
+Stable tag: 1.33
 License: GPLv2 or later
 
 This plugin allows to update plugins, themes and WordPress core on your website.
@@ -45,11 +45,11 @@ If you have a feature, suggestion or idea you'd like to see in the plugin, we'd 
 * Serbian (sr_RS) (thanks to <a href="mailto:borisad@webhostinghub.com">Borisa Djuraskovic</a>)
 * Ukrainian (uk)
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
 
 If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
 Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
@@ -100,8 +100,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.33 - 21.06.2016 =
+* Update : We updated all functionality for wordpress 4.5.2.
+* Bugfix : An error with checking inputs validation was fixed.
+* Pro : Envato compatibility was added.
+
 = V1.32 - 03.03.2016 =
-* Bugfix : The bug with email notifications was fixed. 
+* Bugfix : The bug with email notifications was fixed.
 * Bugfix : Auto update was fixed.
 
 = V1.31 - 20.01.2016 =
@@ -224,6 +229,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.33 =
+We updated all functionality for wordpress 4.5.2. An error with checking inputs validation was fixed.
 
 = V1.32 =
 The bug with email notifications was fixed. Auto update was fixed.

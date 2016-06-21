@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-28 15:28+0300\n"
-"PO-Revision-Date: 2016-02-23 12:20+0300\n"
+"POT-Creation-Date: 2016-06-10 14:07+0300\n"
+"PO-Revision-Date: 2016-06-17 14:59+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
-"Language: ru_RU\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,92 +16,96 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: updater.php:201
+#: updater.php:189
 msgid "Updater"
 msgstr "Updater"
 
-#: updater.php:216
+#: updater.php:204
 msgid "Go back to the Updater page"
 msgstr "Повернутися на сторінку \"Updater\""
 
-#: updater.php:216
+#: updater.php:204
 msgid "Return to the Updater page"
 msgstr "Повернутися на сторінку \"Updater\""
 
-#: updater.php:228 updater.php:272
+#: updater.php:216 updater.php:259
 msgid "Sorry, your message could not be sent to"
 msgstr "Вибачте, ваше e-mail не може бути відправлено на"
 
-#: updater.php:230
+#: updater.php:218
 msgid "The email message with the update results is sent to"
 msgstr "Е-mail з результатами оновлення було відправлено на"
 
-#: updater.php:274
+#: updater.php:261
 msgid "Test message was sent to"
 msgstr "Текстове Е-mail було відправлено на"
 
-#: updater.php:276
+#: updater.php:263
 msgid "Please check off the Send email options, save settings and try again"
 msgstr ""
-"Будь ласка, відмітьте відправку листів, збережіть установки та спробуйте ще "
-"раз."
+"Будь ласка, відмітьте відправку листів, збережіть налаштування та спробуйте "
+"ще раз."
 
-#: updater.php:297
+#: updater.php:284
 msgid ""
 "Please enter a time for search and/or update. A number of hours should be "
 "integer and it should not contain more than 5 digits. Settings are not saved"
 msgstr ""
 "Будь ласка, введіть правильний час для пошуку та / або оновлення. Кількість "
-"годин має бути ціле і повинно містити не більше 5 цифр. Параметри не "
+"годин має бути ціле і повинно містити не більше 5 цифр. Налаштування не "
 "збережені"
 
-#: updater.php:304
+#: updater.php:291
 msgid "Please enter a valid recipient email. Settings are not saved"
 msgstr ""
-"Будь ласка, введіть правильну адресу одержувача. Параметри не збережені"
+"Будь ласка, введіть правильну адресу одержувача. Налаштування не збережені"
 
-#: updater.php:315
+#: updater.php:302
 msgid "Please enter a valid sender email. Settings are not saved"
 msgstr ""
-"Будь ласка, введіть правильну адресу відправника. Параметри не збережені"
+"Будь ласка, введіть правильну адресу відправника. Налаштування не збережені"
 
-#: updater.php:319
+#: updater.php:306
 msgid ""
 "Please select at least one option in the Search/Update section. Settings are "
 "not saved"
 msgstr ""
 "Будь ласка, виберіть хоча б один пункт, в розділі Пошук / Оновлення. "
-"Параметри не збережені"
+"Налаштування не збережені"
 
-#: updater.php:327
+#: updater.php:314
 msgid "All settings are saved"
-msgstr "Всі установки збережено"
+msgstr "Всі налаштування збережено"
 
-#: updater.php:349
+#: updater.php:336
 msgid "All plugin settings were restored."
 msgstr "Всі налаштування плагіна відновлені."
 
-#: updater.php:368
+#: updater.php:355
+msgid "How to Use Step-by-step Instruction"
+msgstr "Покрокова інструкція з використання плагіна"
+
+#: updater.php:358
 msgid "Tools"
 msgstr "Інструменти"
 
-#: updater.php:369 updater.php:1084 updater.php:1099
+#: updater.php:359 updater.php:1084 updater.php:1099
 msgid "Settings"
-msgstr "Установки"
+msgstr "Налаштування"
 
-#: updater.php:371
+#: updater.php:361
 msgid "This setting is available in Pro version"
-msgstr "Дані установки доступні у про-версії плагіну"
+msgstr "Дані налаштування доступні у про-версії плагіну"
 
-#: updater.php:371
+#: updater.php:361
 msgid "User guide"
 msgstr "Посібник користувача"
 
-#: updater.php:373
+#: updater.php:363
 msgid "Go PRO"
 msgstr "Перейти до PRO"
 
-#: updater.php:375
+#: updater.php:365
 msgid ""
 "We strongly recommend that you backup your website and the WordPress "
 "database before updating! We are not responsible for the site work after "
@@ -111,23 +115,23 @@ msgstr ""
 "даних WordPress перед оновленнями! Ми не несемо відповідальності за "
 "коректність роботи сайту після будь-яких оновлень"
 
-#: updater.php:387
+#: updater.php:377
 msgid "the element will be updated"
 msgstr "елемент буде оновлюватися"
 
-#: updater.php:388
+#: updater.php:378
 msgid "the element will not be updated"
 msgstr "елемент не буде оновлюватися"
 
-#: updater.php:391
+#: updater.php:381
 msgid "Update information"
 msgstr "Оновити дані"
 
-#: updater.php:391
+#: updater.php:381
 msgid "Latest update was"
 msgstr "Останнє оновлення було"
 
-#: updater.php:395
+#: updater.php:385
 msgid ""
 "Updater Pro will display, check, and update all plugins/themes (Not just the "
 "active ones)"
@@ -135,111 +139,111 @@ msgstr ""
 "Updater Pro буде відображати, перевіряти та оновлювати усі плагіни/теми (не "
 "тільки активні)"
 
-#: updater.php:397 updater.php:640
+#: updater.php:387 updater.php:634
 msgid "If you upgrade to Pro version all your settings will be saved."
 msgstr "При оновленні до версії Pro усі ваші налаштування будуть збережені."
 
-#: updater.php:401 updater.php:647
+#: updater.php:391 updater.php:641
 msgid "Unlock premium options by upgrading to Pro version"
 msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
 
-#: updater.php:403 updater.php:649
+#: updater.php:393 updater.php:643
 msgid "Learn More"
 msgstr "Дізнатися більше"
 
-#: updater.php:415 updater.php:496 updater.php:565
-msgid "Themes"
-msgstr "Теми"
-
-#: updater.php:417 updater.php:454 updater.php:564
-msgid "Plugins"
-msgstr "плагін(и)"
-
-#: updater.php:420
+#: updater.php:406
 msgid "Update all"
 msgstr "Оновити все"
 
-#: updater.php:427
+#: updater.php:414
 msgid "WordPress Version"
 msgstr "Версія WordPress"
 
-#: updater.php:432 updater.php:470 updater.php:512
+#: updater.php:419 updater.php:457 updater.php:499
 msgid "Update to"
-msgstr "Режим оновлення"
+msgstr "Оновити до"
 
-#: updater.php:439 updater.php:479 updater.php:521
+#: updater.php:426 updater.php:466 updater.php:508
 msgid "Version"
 msgstr "Версія"
 
-#: updater.php:459
+#: updater.php:440 updater.php:551
+msgid "Plugins"
+msgstr "Плагіни"
+
+#: updater.php:446
 msgid "No plugins found"
 msgstr "Плагіни не знайдено."
 
-#: updater.php:501
+#: updater.php:482 updater.php:552
+msgid "Themes"
+msgstr "Теми"
+
+#: updater.php:488
 msgid "No themes found"
 msgstr "Теми не знайдено."
 
-#: updater.php:539
+#: updater.php:526
 msgid "Update"
 msgstr "Оновити все"
 
-#: updater.php:553
-msgid "Plugin mode"
-msgstr "Режим плагіну"
+#: updater.php:540
+msgid "Mode"
+msgstr "Режим роботи"
 
-#: updater.php:556
+#: updater.php:543
 msgid "Manual"
 msgstr "Ручний"
 
-#: updater.php:557
+#: updater.php:544
 msgid "Auto"
 msgstr "Автоматичний"
 
-#: updater.php:561
+#: updater.php:548
 msgid "Search/update"
 msgstr "Пошук/оновлення"
 
-#: updater.php:563
+#: updater.php:550
 msgid "WordPress"
 msgstr "WordPress"
 
-#: updater.php:569
+#: updater.php:556
 msgid "Search/update frequency"
 msgstr "Частота пошуку/оновлення"
 
-#: updater.php:571
+#: updater.php:558
 msgid "hours"
 msgstr "годин"
 
-#: updater.php:573
+#: updater.php:560
 msgid "It should be integer and it should not contain more than 5 digits."
 msgstr "Кількість годин має бути цілим, і не повинно містити більше 5 цифр."
 
-#: updater.php:577
+#: updater.php:564
 msgid "Send email when new versions are available"
 msgstr "Відправити email, коли доступні нові версії"
 
-#: updater.php:583
+#: updater.php:570
 msgid "Send email after updating"
 msgstr "Відправити email після виконання оновлення"
 
-#: updater.php:589
+#: updater.php:576
 msgid "Recipient email address (To:)"
 msgstr "Email отримувача (Кому:)"
 
-#: updater.php:595
+#: updater.php:582
 msgid "'FROM' field"
 msgstr "Поле відправника (Від кого:)"
 
-#: updater.php:597
+#: updater.php:584
 msgid "Name"
 msgstr "Им’я"
 
-#: updater.php:601
+#: updater.php:588
 msgid "Email"
 msgstr "Емейл"
 
-#: updater.php:605
+#: updater.php:592
 msgid ""
 "If this option is changed, email messages may be moved to the spam folder or "
 "email delivery failures may occur."
@@ -247,175 +251,188 @@ msgstr ""
 "Якщо ця настройка буде змінена, то це може призводити до того, що листи "
 "будуть потрапляти в спам або НЕ будуть доставлені."
 
-#: updater.php:613
+#: updater.php:600
 msgid "Close"
 msgstr "Закрити"
 
-#: updater.php:617
-msgid "Disable auto WordPress update"
-msgstr "Відключити автоматичне оновлення ядра WordPress"
-
-#: updater.php:620
-msgid "Disable updates for WordPress minor versions"
-msgstr "Відключити оновлення мінорних версій WordPress"
-
-#: updater.php:624
+#: updater.php:604
 msgid "Make backup before updating"
 msgstr "Створити резервну копію перед оновленням"
 
-#: updater.php:627
+#: updater.php:607
 msgid "Test making the backup"
 msgstr "Створення резервних копій:"
 
-#: updater.php:633
+#: updater.php:613
 msgid "Backup all folders"
 msgstr "Створити резервну копію для всіх папок"
 
-#: updater.php:634
+#: updater.php:614
 msgid "Backup all tables in database"
 msgstr "Створити резервну копію всіх таблиць в базі даних"
 
-#: updater.php:635
+#: updater.php:615
 msgid "Delete test backup after testing"
 msgstr "Видалити тестову резервну копію після тесту"
 
-#: updater.php:656
+#: updater.php:619
+msgid "Disable auto WordPress update"
+msgstr "Відключити автоматичне оновлення ядра WordPress"
+
+#: updater.php:622
+msgid "Disable updates for WordPress minor versions"
+msgstr "Відключити оновлення мінорних версій WordPress"
+
+#: updater.php:626
+msgid "Envato compatibility"
+msgstr "Сумісність з Envato"
+
+#: updater.php:628
+msgid "Generate your Envato API Personal Token"
+msgstr "Створіть ваш Envato API Personal Token"
+
+#: updater.php:628
+msgid "and insert it below."
+msgstr "і вставте його нижче."
+
+#: updater.php:650
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: updater.php:660
+#: updater.php:654
 msgid "Send a test email"
 msgstr "Відправити тестове email"
 
-#: updater.php:663
+#: updater.php:657
 msgid ""
 "Here You can make sure that your settings are correct and the email can be "
 "delivered."
 msgstr ""
-"Тут ви можете перевірити, що установки вірні та email може бути доставлено."
+"Тут ви можете перевірити, що налаштування вірні та email може бути "
+"доставлено."
 
-#: updater.php:664
+#: updater.php:658
 msgid "Check email sending"
 msgstr "Перевірити відправку листа"
 
-#: updater.php:667
+#: updater.php:661
 msgid "Restore settings"
 msgstr "Відновити налаштування"
 
-#: updater.php:731
+#: updater.php:727
 msgid "Updating plugins..."
 msgstr "Оновлення плагінів..."
 
-#: updater.php:750
+#: updater.php:748
 msgid "Updating themes..."
 msgstr "Оновлення тем..."
 
-#: updater.php:767
+#: updater.php:765
 msgid "Updating WordPress..."
 msgstr "Оновлення WordPress..."
 
-#: updater.php:813
+#: updater.php:811
 msgid "Update Failed"
 msgstr "Помилка оновлення..."
 
-#: updater.php:818
+#: updater.php:816
 msgid "WordPress was updated successfully!"
 msgstr "WordPress було успішно оновлено"
 
-#: updater.php:834
+#: updater.php:832
 msgid "The Updater plugin made the updates at the site"
 msgstr "Плагін Updater виконав оновлення на сайті"
 
-#: updater.php:837 updater.php:918
+#: updater.php:835 updater.php:916
 msgid "Hello!"
 msgstr "Привіт!"
 
-#: updater.php:838 updater.php:919
+#: updater.php:836 updater.php:917
 msgid "The Updater plugin is being run on your website"
-msgstr "Плагін Updater Pro було запущено на вашому сайті"
+msgstr "Плагін Updater було запущено на вашому сайті"
 
-#: updater.php:841
+#: updater.php:839
 msgid "These plugins were updated:"
 msgstr "Було оновлено такі плагіни: "
 
-#: updater.php:844 updater.php:853 updater.php:930 updater.php:940
+#: updater.php:842 updater.php:851 updater.php:928 updater.php:938
 msgid "to the version"
 msgstr "до версії"
 
-#: updater.php:850
+#: updater.php:848
 msgid "These themes were updated:"
-msgstr "Було оновлено такі плагіни:"
+msgstr "Було оновлено такі теми:"
 
-#: updater.php:859
+#: updater.php:857
 msgid "WordPress was updated to the version"
 msgstr "WordPress було успішно оновлено"
 
-#: updater.php:861
+#: updater.php:859
 msgid "We couldn't update WordPress Core in the site"
 msgstr "Не вдалося оновити WordPress на сайті."
 
-#: updater.php:864
+#: updater.php:862
 msgid ""
 "If you want to change the plugin mode or other settings you should go here:"
 msgstr ""
-"Яко ви хочете змінити тип режиму для плагіну або інші установки, перейдіть "
-"сюди:"
+"Яко ви хочете змінити тип режиму для плагіну або інші налаштування, "
+"перейдіть сюди:"
+
+#: updater.php:863 updater.php:964
+msgid "the Updater settings page on your website."
+msgstr "сторінка налаштування Updater на вашому сайті."
 
 #: updater.php:865 updater.php:966
-msgid "the Updater settings page on your website."
-msgstr "сторінка установок Updater Pro на вашому сайті."
-
-#: updater.php:867 updater.php:968
 msgid "Thanks for using the plugin"
 msgstr "Дякуємо за користування плагіном"
 
-#: updater.php:915
+#: updater.php:913
 msgid "Check for updates on"
 msgstr "Перевірка оновлень на"
 
-#: updater.php:922
+#: updater.php:920
 msgid "The files that need update are:"
-msgstr "Теми можуть бути оновлені:"
+msgstr "Ці файли можуть бути оновлені:"
 
-#: updater.php:927
+#: updater.php:925
 msgid "These plugins can be updated:"
-msgstr "Було оновлено такі плагіни:"
+msgstr "Ці плагіни можуть бути оновлені:"
 
-#: updater.php:931 updater.php:941 updater.php:948
+#: updater.php:929 updater.php:939 updater.php:946
 msgid "the current version is"
 msgstr "поточна версія"
 
-#: updater.php:937
+#: updater.php:935
 msgid "These themes can be updated:"
-msgstr "Теми можуть бути оновлені:"
+msgstr "Ці теми можуть бути оновлені:"
 
-#: updater.php:947
+#: updater.php:945
 msgid "WordPress can be updated to the version"
 msgstr "WordPress може бути оновлено."
 
-#: updater.php:953 updater.php:958
+#: updater.php:951 updater.php:956
 msgid "Please use this link to update:"
 msgstr "Для оновлення скористуйтесь цим посиланням:"
 
-#: updater.php:953 updater.php:958
+#: updater.php:951 updater.php:956
 msgid "the Updater page on your website."
-msgstr "сторінка Updater Pro на вашому сайті."
+msgstr "сторінка Updater на вашому сайті."
 
-#: updater.php:955
+#: updater.php:953
 msgid "The Updater plugin starts updating these files."
-msgstr "Плагін Updater Pro починає оновлення цих файлів."
+msgstr "Плагін Updater починає оновлення цих файлів."
 
-#: updater.php:962
+#: updater.php:960
 msgid ""
 "Congratulations! Your plugins, themes and WordPress have the latest updates!"
 msgstr "Вітаємо! Ваші плагіни, теми та WordPress не потребують оновлення!"
 
-#: updater.php:965
+#: updater.php:963
 msgid ""
 "If you want to change type of mode for the plugin or other settings you "
 "should go here:"
 msgstr ""
-"Якщо Ви Хочете змінити тип режиму для плагіна або інші настройки, то Вам "
+"Якщо Ви Хочете змінити тип режиму для плагіна або інші налаштування, то Вам "
 "сюди:"
 
 #: updater.php:1100
@@ -450,752 +467,5 @@ msgstr ""
 msgid "Activate Updater for Network"
 msgstr "Увімкніть  Updater для мережі"
 
-#~ msgid "You can test the email sending here"
-#~ msgstr "Ви можете протестувати відправку емейл тут"
-
-#~ msgid "Please, check your email"
-#~ msgstr "Будь ласка, перевірте ваш email"
-
-#~ msgid "FAQ (with images)"
-#~ msgstr "FAQ (із зображеннями)"
-
-#~ msgid ""
-#~ "The plugin RusToLat is active on the site. This may cause errors. Please, "
-#~ "deactivate RusToLat if you have any errors. You can deactivate it"
-#~ msgstr ""
-#~ "Плагін RusToLat активний на вашому сайті. Це може спричинити помилки. "
-#~ "Будь ласка, деактивуйте RusToLat, якщо виникають помилки. Ви можете "
-#~ "деактивувати його "
-
-#~ msgid "here"
-#~ msgstr "тут"
-
-#~ msgid "Go to the Updater Pro page"
-#~ msgstr "Перейти на сторінку \"Updater Pro\""
-
-#~ msgid "Sorry, Your email could not be sent to"
-#~ msgstr "Вибачте, ваше e-mail не може бути відправлено на"
-
-#~ msgid "Update&nbsp;to"
-#~ msgstr "Оновити до "
-
-#~ msgid "Save & Update"
-#~ msgstr "Зберегти та оновити"
-
-#~ msgid ""
-#~ "There is no ZIP library on your server. The backup copies will take up "
-#~ "much space"
-#~ msgstr ""
-#~ "На вашому сервері немає ZIP бібліотеки. Резервні копії буде займати "
-#~ "багато місця"
-
-#~ msgid "Test email"
-#~ msgstr "Тест відправки email"
-
-#~ msgid "testing..."
-#~ msgstr "тестування..."
-
-#~ msgid "Sorry, Your message could not be sent"
-#~ msgstr "Вибачте, ваш email не може бути відправлений"
-
-#~ msgid "Test message was sent"
-#~ msgstr "Тестовий e-mail було відправлено"
-
-#~ msgid "You can specify several emails, separating them by commas."
-#~ msgstr "Ви можете вказати декілька email, відділяючи їх комами."
-
-#~ msgid "For example"
-#~ msgstr "Наприклад"
-
-#~ msgid "Test a backup process"
-#~ msgstr "Протестуйте створення резервної копії"
-
-#~ msgid "For testing you should enable JavaScript"
-#~ msgstr "Для тестування необхідно дозволити JavaScript"
-
-#~ msgid "Backup failed"
-#~ msgstr "Резервне копіювання не може бути виконано"
-
-#~ msgid "Backup is successfully completed"
-#~ msgstr "Резервне копіювання виконано"
-
-#~ msgid "Where can I get it?"
-#~ msgstr "Де я можу його знайти?"
-
-#~ msgid "About backups"
-#~ msgstr "Про створення резервних копій"
-
-#~ msgid "Save Settings"
-#~ msgstr "Зберегти установки"
-
-#~ msgid "Check license key"
-#~ msgstr "Перевірте ліцензійний ключ"
-
-#~ msgid ""
-#~ "Please follow these steps to configure the plugin and start using it:"
-#~ msgstr ""
-#~ "Будь ласка, дотримуйтеся інструкції, щоб налаштувати плагін та почати "
-#~ "його використовувати:"
-
-#~ msgid "Introducing Updater Pro"
-#~ msgstr "Презентація плагіну Updater Pro"
-
-#~ msgid "The plugin mode and email notification settings"
-#~ msgstr "Режим плагіну та установки електронних повідомлень"
-
-#~ msgid "Backup settings and testing"
-#~ msgstr ""
-#~ "Налаштування для створення резервних копій і тестування цього процесу"
-
-#~ msgid "Update plugins, themes or WordPress in the manual mode"
-#~ msgstr "Оновлення плагінів, тем чи ядра WordPress в ручному режимі"
-
-#~ msgid "Still have questions? Please visit the FAQ page"
-#~ msgstr "У вас залишилися питання? Переходьте на сторінку з FAQ"
-
-#~ msgid ""
-#~ "After downloading and activating the plugin 'Updater Pro', You should go "
-#~ "to the Updater Pro page in the 'BWS Plugins' menu. The plugin has four "
-#~ "pages: Tools, Settings, User Guide and FAQ (with images). The plugin "
-#~ "settings are available on the Settings Page."
-#~ msgstr ""
-#~ "Після завантаження та активації плагіна 'Updater Pro', Ви повинні перейти "
-#~ "на сторінку 'Updater Pro' в меню 'BWS Plugins'. Плагін має чотири "
-#~ "сторінки: Інструменти, Установки, Керівництво користувача і FAQ (з "
-#~ "картинками). Налаштування плагіна знаходяться на сторінці 'Updater Pro | "
-#~ "Налаштування '."
-
-#~ msgid ""
-#~ "You can choose the plugin mode and set email notifications on the plugin "
-#~ "settings page. If You would like to receive email notifications, You can "
-#~ "check their sending at the bottom of the page. This way You will see if "
-#~ "mailing is not set up properly or emails getting marked as spam."
-#~ msgstr ""
-#~ "На сторінці налаштувань Ви можете вибрати режим плагіна і налаштувати "
-#~ "параметри відправки листів. Якщо ви хочете отримувати електронні листи, "
-#~ "то ви можете перевірити їх відправку в нижній частині сторінки. "
-#~ "Наприклад, якщо відправка електронної пошти не налаштована або листи "
-#~ "потрапляють в спам, тест дозволить вам це побачити."
-
-#~ msgid ""
-#~ "You can also turn on/off the backup option before updating. We strongly "
-#~ "recommend You to turn it on!"
-#~ msgstr ""
-#~ "Ви також можете вимкнути або включити резервне копіювання перед "
-#~ "оновленням. Ми настійно рекомендуємо Вам включити його!"
-
-#~ msgid ""
-#~ "If you turn it on, You can choose 'Backup all folders' and 'Backup all "
-#~ "tables in database'. By default the plugin makes a backup of the database "
-#~ "tables that have a special WordPress prefix, as a rule this prefix is "
-#~ "'wp_' (all default WordPress tables have such prefix). So if You have "
-#~ "some personal tables without this prefix by default, the plugin won't "
-#~ "backup them. Moreover, by default the plugin makes backup copies of only "
-#~ "WordPress folders (wp-admin, wp-content, wp-includes) in the root "
-#~ "directory, that is why if You really have some personal folders in the "
-#~ "root directory and would like to backup them, You should use the option "
-#~ "'Backup all folders'. Please note that if You specify another names for "
-#~ "WordPress folders (wp-admin, wp-content, wp-includes) in the file 'wp-"
-#~ "settings.php', the plugin will use them instead of the default ones. If "
-#~ "You have any doubts and not sure whether to check these two fields or "
-#~ "not, You'd better check them off, but note that it may increase the "
-#~ "backup size."
-#~ msgstr ""
-#~ "Якщо ви дозволите його, ви можете вибрати  \"Створити резервну копію для "
-#~ "всіх папок \" і  \"Створити резервну копію всіх таблиць в базі даних \". "
-#~ "За замовчуванням плагін робить резервні копії таблиць у базі даних, які "
-#~ "мають спеціальний префікс WordPress, як правило, \"wp_ \" (за умовчанням, "
-#~ "всі WordPress таблиці мають даний префікс). Тому, якщо у вас є які-небудь "
-#~ "особисті таблиці, які не мають такої префікс, за замовчуванням, плагін не "
-#~ "робитиме їх резервне копіювання. Крім того, за замовчуванням, в "
-#~ "кореневому каталозі плагін робить резервні копії лише папок WordPress (wp-"
-#~ "admin, wp-content, wp-includes), так що якщо у вас є які-небудь особисті "
-#~ "папки в кореневому каталозі і ви хочете робити їх резервну копію, "
-#~ "включіть «Резервне копіювання всіх папок». Зверніть увагу, що якщо ви "
-#~ "вказали інші імена для папок WordPress (wp-admin, wp-content, wp-"
-#~ "includes) в 'wp-settings.php', плагін буде використовувати його замість "
-#~ "стандартного. Якщо у вас є сумніви, чи потрібно відзначати ці два поля, "
-#~ "краще відзначте їх, але це може збільшити розмір резервної копії."
-
-#~ msgid ""
-#~ "Also, You can make a backup by clicking 'Create a test backup'. If You "
-#~ "see the message informing that it could not be performed, this means that "
-#~ "there is not enough disk space on the server or no permissions for the "
-#~ "plugin directory."
-#~ msgstr ""
-#~ "Крім того, ви можете зробити резервну копію, натиснувши кнопку "
-#~ "'Протестувати створення резервної копії'. Якщо ви побачите повідомлення, "
-#~ "що плагін не може цього зробити, то у Вас не вистачає дискового простору "
-#~ "на сервері або не вистачає прав для каталогу з плагіном."
-
-#~ msgid ""
-#~ "If You would like to update your plugins, themes or WordPress in the "
-#~ "manual mode You should go to the page 'Updater Pro | Tools'."
-#~ msgstr ""
-#~ "Якщо Ви хочете оновити плагіни, теми або ядро WordPress в ручному режимі, "
-#~ "то необхідно перейти на сторінку 'Updater Pro | Інструменти '."
-
-#~ msgid ""
-#~ "If WordPress or some of Your plugins/themes require update they will be "
-#~ "highlighted with red. Also You can forbid an update for some plugins, "
-#~ "themes or WordPress. For this You should click the icon next to them and "
-#~ "click 'Save & Update' for saving settings."
-#~ msgstr ""
-#~ "Якщо WordPress або деякі плагіни, теми потребують оновлення, то вони "
-#~ "будуть відображатися червоним кольором. Також, Ви можете заблокувати "
-#~ "плагін, тему або ядро WordPress від оновлень. Для цього натисніть на "
-#~ "іконку поруч з ним і натисніть кнопку \"Зберегти & Оновити \" для "
-#~ "збереження змін."
-
-#~ msgid ""
-#~ "Check off what You want to update and click 'Save & Update'. Wait until "
-#~ "all results show up."
-#~ msgstr ""
-#~ "Відзначте те, що Ви хочете обновити й натисніть кнопку \"Зберегти & "
-#~ "Оновити \". Зачекайте, поки не виведуть всі результати."
-
-#~ msgid "Frequently Asked Questions:"
-#~ msgstr "Розповсюдженi питання:"
-
-#~ msgid "The plugin doesn't send any emails"
-#~ msgstr "Плагін не відправляє електронні повідомлення"
-
-#~ msgid "The plugin stopped sending emails. What is the problem?"
-#~ msgstr ""
-#~ "Плагін більше не відправляє електронні повідомлення. У чому проблема?"
-
-#~ msgid ""
-#~ "Sending time does not correspond to that specified on the settings page."
-#~ msgstr ""
-#~ "Час надсилання неспівпадає з тим, що вказаний на сторінці налаштувань."
-
-#~ msgid ""
-#~ "What should I do to restore my site if it's not working after update?"
-#~ msgstr ""
-#~ "Що мені слід зробити, щоб відновити мій сайт, якщо він не працюватиме "
-#~ "після оновлення?"
-
-#~ msgid "Where can I get the backup of my site?"
-#~ msgstr "Де я можу знайти бекап свого сайту?"
-
-#~ msgid "How to restore the MySQL database from a backup?"
-#~ msgstr "Як відновити базу даних MySQL з резервної копії?"
-
-#~ msgid "How to restore files from a backup?"
-#~ msgstr "Як відновити файли з резервної копії?"
-
-#~ msgid "Please follow the instructions below:"
-#~ msgstr "Будь ласка, дотримуйтесь інструкцій нижче:"
-
-#~ msgid "Check the plugin settings."
-#~ msgstr "Перевірте налаштування плагіна"
-
-#~ msgid "The plugin sends email notifications if some updates are available."
-#~ msgstr ""
-#~ "Плагін відправляє email тільки у випадку, коли доступні будь-які "
-#~ "оновлення."
-
-#~ msgid ""
-#~ "Some email messages can be marked as spam on the server. Enter email "
-#~ "address ('From' field), for example, gmail account or similar. If the "
-#~ "message is approved (sent), this means that it is necessary to configure "
-#~ "email filtering on your server."
-#~ msgstr ""
-#~ "Цілком можливо, що email сполучення визначені як спам на сервері. Введіть "
-#~ "адресу електронної пошти (Поле 'FROM'), наприклад, аккаунт Gmail або "
-#~ "аналогічний. Якщо email затверджений (він буде відправлений), то значить "
-#~ "Вам необхідно відкоригувати фільтрацію електронної пошти, налаштовану на "
-#~ "сервері."
-
-#~ msgid ""
-#~ "Are you getting any notifications about new users registration? If you're "
-#~ "not, perhaps you didn't configure email sending. In this case You should "
-#~ "install an extra SMTP plugin by BestWebSoft and configure it."
-#~ msgstr ""
-#~ "Ви отримуєте повідомлення про реєстрацію нових користувачів? Якщо ні, "
-#~ "можливо, ви не налаштували відправку електронних повідомлень. У такому "
-#~ "випадку вам слід встановити додатковий плагін SMTP by BestWebSoft та "
-#~ "налаштувати його."
-
-#~ msgid ""
-#~ "The plugin sends email notifications if some updates are available. If "
-#~ "there are no updates available, You won't get anything."
-#~ msgstr ""
-#~ "Плагін відсилає електронні повідомлення, якщо доступні оновлені версії. "
-#~ "Якщо таких немає, ви не отримаєте повідомлення."
-
-#~ msgid ""
-#~ "The function of sending emails and updating runs when the site is active "
-#~ "(when someone visits your site.) If there is no activity, it will run "
-#~ "when the first activity appears. So the time can be shifted."
-#~ msgstr ""
-#~ "Функція відправки електронних повідомлень та оновлення відбувається тоді, "
-#~ "коли сайт активний (коли хтось відвідує ваш сайт). Якщо активності немає, "
-#~ "це відбудеться при першому прояві активності на сайті. Отже, час може "
-#~ "змінитись."
-
-#~ msgid ""
-#~ "If you check off the backup option before updating in the plugin "
-#~ "settings, You can restore Your website. For this You should restore files "
-#~ "and MySQL database from a backup"
-#~ msgstr ""
-#~ "Якщо ви відзначили створення резервної копії перед оновленням в "
-#~ "налаштуваннях плагіна, ви можете відновити ваш сайт. Для цього Вам "
-#~ "необхідно відновити файли і базу даних MySQL з резервної копії"
-
-#~ msgid "First of all You should restore all files from a backup"
-#~ msgstr "Перш за все, вам необхідно відновити усі файли з резервної копії"
-
-#~ msgid ""
-#~ "Check Your website, if it's not working still, You should restore MySQL "
-#~ "database"
-#~ msgstr ""
-#~ "Будь ласка, перевірте ваш вебсайт, якщо він все ще не працює, вам слід "
-#~ "відновити базу даних MySQL"
-
-#~ msgid ""
-#~ "The plugin creates a folder the name of which is the date and time of a "
-#~ "backup. In this folder You can find the backup of the database in "
-#~ "database.sql.zip and the backup of all files and folders in the zip "
-#~ "archive. You can find this folder in"
-#~ msgstr ""
-#~ "Плагін створює папку, ім'я якої дата і час резервного копіювання. У цій "
-#~ "папці ви можете знайти резервну копію бази даних в database.sql.zip файлі "
-#~ "і резервну копію всіх файлів і папок в ZIP-архіві. Ви можете знайти цю "
-#~ "папку в"
-
-#~ msgid "How to restore MySQL database from a backup?"
-#~ msgstr "Як відновити базу даних MySQL з резервної копії?"
-
-#~ msgid ""
-#~ "In order to do so You should get access to the phpMyAdmin tool available "
-#~ "in cPanel:"
-#~ msgstr ""
-#~ "Для того, щоб зробити це, ви повинні отримати доступ до інструменту "
-#~ "PhpMyAdmin, доступному на вашій cPanel:"
-
-#~ msgid ""
-#~ "The phpMyAdmin tool will be uploaded shortly. First You should choose the "
-#~ "database you'll be importing data from, You can do this in the Database "
-#~ "menu (upper left corner of the page)."
-#~ msgstr ""
-#~ "Інструмент phpMyAdmin буде завантажено. Спочатку вам слід обрати базу "
-#~ "даних, з якої ви будете імпортувати дані, ви можете зробити це у меню "
-#~ "Бази даних (у верхньому лівому куті сторінки)."
-
-#~ msgid "Then click the Import tab: "
-#~ msgstr "Потім натисніть вкладку Імпорт:"
-
-#~ msgid ""
-#~ "You can import .sql file. Choose the file on Your computer. Please note "
-#~ "that You can select a character set in the dropdown menu just below the "
-#~ "upload window. If You are not sure about a character set just keep the "
-#~ "default values."
-#~ msgstr ""
-#~ "У вас є можливість імпорту .sql файлу. Виберіть файл з локального "
-#~ "комп'ютера. Зверніть увагу, що вам дається можливість вибрати кодування "
-#~ "файлу з випадаючого меню трохи нижче вікна завантаження. Якщо ви не "
-#~ "впевнені в наборі символів бази даних просто залишите ті, що йдуть за "
-#~ "замовчуванням."
-
-#~ msgid ""
-#~ "In order to start restoring process, please click /\"Go/\" at the bottom "
-#~ "right corner. After successful import of the database You will see the "
-#~ "notification."
-#~ msgstr ""
-#~ "Для того, щоб розпочати процес відновлення, будь ласка, натисніть кнопку "
-#~ "\"Розпочати\" у правому нижньому куті. Після успішного імпорту бази даних "
-#~ "ви побачите повидомлення."
-
-#~ msgid ""
-#~ "To restore Your website You should change the existing files on Your "
-#~ "site. This can be done via FTP using the file manager provided by Your "
-#~ "hosting company, the panel (cPanel) or via FTP or SFTP client (such as "
-#~ "Filezilla for PC or Transmit for Mac). cPanel contains the most easy "
-#~ "functions for website restoring."
-#~ msgstr ""
-#~ "Для того, щоб відновити ваш вебсайт, вам слід замінити поточні файли на "
-#~ "вашому сайті. Це можна зробити за допомогою FTP, використовуючи файловий "
-#~ "менеджер, що пропонує ваша хостингова компанія, cPanel або за допомогою "
-#~ "клієнту FTP або SFTP (наприклад, Filezilla для ПК або Transmit для Mac). "
-#~ "cPanel має найлегші функції для відновлення веб-сайту."
-
-#~ msgid "These are the steps to restore Your website using cPanel."
-#~ msgstr "Шляхи, щоб відновити ваш веб-сайт за допомогою cPanel."
-
-#~ msgid ""
-#~ "In order to do this You should get access to the File Manager tool "
-#~ "available in your cPanel:"
-#~ msgstr ""
-#~ "Для цього вам необхідно отримати доступ до файлового менеджера, що "
-#~ "доступний у вашій cPanel:"
-
-#~ msgid "Please find the zip archive containing the backup ("
-#~ msgstr "Вам потрібно знайти ZIP-архів з резервною копією ("
-
-#~ msgid "and extract it to the root folder."
-#~ msgstr "та розпакуйте його у кореневу папку."
-
-#~ msgid ""
-#~ "If You would like to restore your website via FTP or SFTP client, please "
-#~ "follow the instructions below. We will show how to do this via Filezilla."
-#~ msgstr ""
-#~ "Якщо ви хочете відновити ваш сайт через FTP або SFTP клієнт, виконаєте "
-#~ "наступні кроки. Ми покажемо, як це зробити на прикладі Filezilla."
-
-#~ msgid ""
-#~ "Once You download and install Filezilla, use the function Quick Connect "
-#~ "to connect to the FTP account."
-#~ msgstr ""
-#~ "Після завантаження та установки Filezilla, скористуйтеся функцією Quick "
-#~ "Connec, щоб з'єднатися з FTP акаунтом."
-
-#~ msgid "You should upload zip archive with the backup ("
-#~ msgstr "Вам необхідно завантажити zip-архів з резервними копіями ("
-
-#~ msgid "to your computer and extract it."
-#~ msgstr "на ваш комп'ютер та розпакувати його."
-
-#~ msgid ""
-#~ "Then change the existing files on your site. Please make sure you "
-#~ "replaced the existing files with the new ones."
-#~ msgstr ""
-#~ "Потім перезапишіть існуючі файли на вашому сайті. Переконайтеся, що ви "
-#~ "міняєте існуючі файли на нові."
-
-#~ msgid "Please enter a valid email. Settings are not saved"
-#~ msgstr ""
-#~ "Будь ласка, введіть коректну адресу відправника. Установки не збережено"
-
-#~ msgid "Something was wrong during it, so we will not do the update."
-#~ msgstr "Схоже, щось пішло не так під час оновлення."
-
-#~ msgid "Update WordPress"
-#~ msgstr "Оновити WordPress"
-
-#~ msgid "Not enough permissions to create a folder"
-#~ msgstr "Недостатньо прав для створення папки"
-
-#~ msgid "Backup completed successfully."
-#~ msgstr "Резервне копіювання успішно завершено."
-
-#~ msgid ""
-#~ "There is no ZIP library on your server. The backup copies will take up "
-#~ "much space."
-#~ msgstr ""
-#~ "На вашому сервері немає ZIP бібліотеки. Резервні копії буде займати "
-#~ "багато місця."
-
-#~ msgid "Database zip-file could not be created"
-#~ msgstr "Не вдалось створити zip-архів бази даних"
-
-#~ msgid "Zip archive of files could not be created"
-#~ msgstr "Не вдалось створити zip-архів файлів"
-
-#~ msgid "Not enough permissions to create a folder in"
-#~ msgstr "Недостатньо прав для створення папки в"
-
-#~ msgid "We couldn't update the plugin(s):"
-#~ msgstr "Не вдалося оновити плагін(и):"
-
-#~ msgid "current version:"
-#~ msgstr "поточна версія:"
-
-#~ msgid "We couldn't update the theme(s):"
-#~ msgstr "Не вдалося оновити тем(и):"
-
-#~ msgid "You can find folder with backups in"
-#~ msgstr "Ви можете знайти папку з резервними копіями в"
-
-#~ msgid "Plugin was updated:"
-#~ msgstr "Плагін оновлено:"
-
-#~ msgid "Theme was updated:"
-#~ msgstr "Тема оновлена:"
-
-#~ msgid "WordPress Core updated."
-#~ msgstr "WordPress оновлено."
-
-#~ msgid "Updating on"
-#~ msgstr "Оновити до"
-
-#~ msgid "all successful"
-#~ msgstr "все успішно"
-
-#~ msgid "with some errors"
-#~ msgstr "з деякими помилками"
-
-#~ msgid "plugin(s)"
-#~ msgstr "плагін(и)"
-
-#~ msgid "and"
-#~ msgstr "та"
-
-#~ msgid "theme(s)"
-#~ msgstr "тем(и)"
-
-#~ msgid "and found the files need to be updated:"
-#~ msgstr "і знайшов файли, які потребують в оновленні:"
-
-#~ msgid "Plugins can be updated:"
-#~ msgstr "Плагіни можуть бути оновлені:"
-
-#~ msgid "For update you should use this link:"
-#~ msgstr "Для оновлення скористайтеся посиланням:"
-
-#~ msgid "Congratulations! Your plugins and themes have the latest updates!"
-#~ msgstr "Вітаємо! Ваші плагіни і теми не потребують оновлення!"
-
-#~ msgid "Congratulations! Your themes and WordPress have the latest updates!"
-#~ msgstr "Вітаємо! Ваші теми і WordPress не потребують оновлення!"
-
-#~ msgid "Update plugins or WordPress in the manual mode"
-#~ msgstr "Оновлення плагінів, тем чи ядра WordPress в ручному режимі"
-
-#~ msgid "Updates off minor versions WordPress Core"
-#~ msgstr "Оновлення мінорних версій WordPress"
-
-#~ msgid "WP core"
-#~ msgstr "ядро WP"
-
-#~ msgid "WP Core / Plugins"
-#~ msgstr "WordPress /  Плагіни"
-
-#~ msgid "User Guide"
-#~ msgstr "Посібник користувача"
-
-#~ msgid ""
-#~ "The plugin's settings have been changed. In order to save them please "
-#~ "don't forget to click the 'Save Changes' button."
-#~ msgstr ""
-#~ "Установки плагіну було змінено. Щоб зберегти їх, будь ласка, не забудьте "
-#~ "натиснути на кнопку \"Зберегти зміни\"."
-
-#~ msgid "Select the plugin mode"
-#~ msgstr "Вибір типу режиму для плагіну"
-
-#~ msgid ""
-#~ "How often should the plugin search for or/and update plugins and "
-#~ "WordPress?"
-#~ msgstr ""
-#~ "Як часто плагіну слід шукати та/або оновлювати плагіни та WordPress?"
-
-#~ msgid "Updater Pro | User Guide"
-#~ msgstr "Updater Pro | Посібник користувача"
-
-#~ msgid "Updater Pro | FAQ"
-#~ msgstr "Updater Pro| FAQ"
-
-#~ msgid "Updater Pro | Settings"
-#~ msgstr "Updater Pro | Установки"
-
-#~ msgid "Updater Pro | Tools"
-#~ msgstr "Updater Pro | Iнструменти"
-
-#~ msgid "requires"
-#~ msgstr "потребує"
-
-#~ msgid ""
-#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
-#~ "and try again."
-#~ msgstr ""
-#~ "чи вище, тому він був деактивований! Будь ласка оновіть WordPress та "
-#~ "спробуйте ще раз."
-
-#~ msgid "Back to the WordPress"
-#~ msgstr "Повернутися до WordPress на"
-
-#~ msgid ""
-#~ "Something went wrong. Try again later. If the error will appear again, "
-#~ "please, contact us <a href=http://support.bestwebsoft.com>BestWebSoft</"
-#~ "a>. We are sorry for inconvenience."
-#~ msgstr ""
-#~ "Виникли певні проблеми. Спробуйте ще раз пізніше. Якщо помилка виникатиме "
-#~ "знову, будь ласка, зверніться до нашої служби підтримки href=http://"
-#~ "support.bestwebsoft.com>BestWebSoft</a>. Просимо вибачення за незручності."
-
-#~ msgid "Wrong license key!"
-#~ msgstr "Неправильній ліцензійний ключ!"
-
-#~ msgid "This license key is bind to another site"
-#~ msgstr "Ліцензійний ключ прив'язано до іншого сайту"
-
-#~ msgid ""
-#~ "This license key is valid, but Your license has expired. To continue "
-#~ "getting top-priority support and plugin updates you should extend it."
-#~ msgstr ""
-#~ "Даний ліцензійний ключ дійсний, але строк вашої ліцензії витік. Якщо ви "
-#~ "хочете оновлювати наш плагін у майбутньому, вам слід подовжити ліцензію."
-
-#~ msgid "Unfortunately, you have exceeded the number of available tries."
-#~ msgstr "На жаль, ви перевищили кількість допустимих спроб."
-
-#~ msgid "The license key is valid. Your license will expire on"
-#~ msgstr "Ліцензійний ключ дійсний. Строк вашої ліцензії витікає"
-
-#~ msgid "The license key is valid."
-#~ msgstr "Ліцензійний ключ дійсний."
-
-#~ msgid "Please, enter your license key"
-#~ msgstr "Будь ласка, введіть ваш ліцензійний ключ"
-
-#~ msgid ""
-#~ "If needed you can check if the license key is correct or reenter it in "
-#~ "the field below. You can find your license key on your personal page - "
-#~ "Client area - on our website"
-#~ msgstr ""
-#~ "При необхідності ви можете перевірити правильність вашого ліцензійного "
-#~ "ключа або знову ввести його у полі, що знаходиться нижче. Ви можете "
-#~ "знайти свій ліцензійний ключ на вашій персональній сторінці - в "
-#~ "особистому кабінеті - на нашому сайті."
-
-#~ msgid ""
-#~ "(your username is the email you specify when purchasing the product). If "
-#~ "necessary, please submit \"Lost your password?\" request."
-#~ msgstr ""
-#~ "(ім'я користувача - це електронна адреса, яку ви вказуєте при купівлі "
-#~ "продукту). При необхідності, будь ласка, відправте запит на відновлення "
-#~ "вашого паролю."
-
-#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-#~ msgstr ""
-#~ "Якщо вам сподобався наш плагін, будь ласка, оцініть його у 5 зірочок на "
-#~ "WordPress"
-
-#~ msgid "Rate the plugin"
-#~ msgstr "Оцінити плагін"
-
-#~ msgid "If there is something wrong about it, please contact us"
-#~ msgstr "Якщо у вас виникли питання, будь ласка, зверніться до нас"
-
-#~ msgid ""
-#~ "WARNING: We have noticed illegal use of our plugin by you. We strongly "
-#~ "recommend you to solve the problem within 24 hours, otherwise the plugin "
-#~ "will be deactivated. Please go to your personal"
-#~ msgstr ""
-#~ "Застереження: Ми помітили, що ви нелегально використовуєте наш плагін. Ми "
-#~ "радимо вам вирішити цю проблему протягом доби, у противному разі плагін "
-#~ "буде деактивовано. Будь ласка, зайдіть на вашу персональну сторінку"
-
-#~ msgid ""
-#~ "(your username is the email you specify when purchasing the product), "
-#~ "where you can make the necessary changes."
-#~ msgstr ""
-#~ "(ім'я користувача - це електронна адреса, яку ви вказуєте при купівлі "
-#~ "продукту), де ви можете внести потрібні зміни."
-
-#~ msgid ""
-#~ "Your license has expired. To continue getting top-priority support and "
-#~ "plugin updates you should extend it."
-#~ msgstr ""
-#~ "Строк вашої ліцензії витік. Якщо ви хочете оновлювати наш плагін у "
-#~ "майбутньому, вам слід подовжити ліцензію."
-
-#~ msgid "You license for"
-#~ msgstr "Ваша ліцензія для"
-
-#~ msgid "expires on"
-#~ msgstr "витікає"
-
-#~ msgid "and you won't be granted TOP-PRIORITY SUPPORT or UPDATES."
-#~ msgstr ""
-#~ "та ви більне не будете оримувати першочергову технічну підтримку да "
-#~ "оновлення."
-
-#~ msgid ""
-#~ "1. How often the plugin will search for updates or/and update plugins and "
-#~ "WordPress if I didn't specify the time?"
-#~ msgstr ""
-#~ "1. Як часто плагін буде шукати та/або оновлювати плагіни та WordPress, "
-#~ "якщо я не вказав час?"
-
-#~ msgid ""
-#~ "4. The time of sending does not match what I have specified (or default "
-#~ "value)."
-#~ msgstr ""
-#~ "4. Час відправки не співпадає з тим, що я вказав (або стандартним "
-#~ "значенням)."
-
-#~ msgid ""
-#~ "Updater Pro does it every 12 hours by default. In auto mode Updater Pro "
-#~ "updates plugins or WP if any updates are available."
-#~ msgstr ""
-#~ "Сандартно Updater Pro робить це кожні 12 годин. В автоматичному режимі "
-#~ "Updater Pro оновлює плагіни або WP, якщо доступні оновлені версії."
-
-#~ msgid ""
-#~ "1) Please check the plugin settings '/wp-admin/admin.php?page=updater-pro-"
-#~ "options'"
-#~ msgstr ""
-#~ "1) Будь ласка, перевірте установки плагіну '/wp-admin/admin.php?"
-#~ "page=updater-pro-options'"
-
-#~ msgid "Updater Pro does it every 12 hours by default."
-#~ msgstr "Стандартно Updater Pro робить це кожні 12 годин."
-
-#~ msgid ""
-#~ "By default Updater Pro will be sending notifications to the site admin. "
-#~ "If You want them to be sent to another email address, you can change it "
-#~ "here."
-#~ msgstr ""
-#~ "За стандартними установками Updater Pro буде відправляти лист на "
-#~ "електронну адресу адміністратора сайту. Якщо ви хочете, щоб лист "
-#~ "відправлявся на іншу адресу, ви можете змінити її тут."
-
-#~ msgid "Sender's name and email address (From:)"
-#~ msgstr "Ім’я та адреса відправника"
-
-#~ msgid ""
-#~ "By default Updater Pro will be sending emails on behalf of Your website. "
-#~ "You can edit it here."
-#~ msgstr ""
-#~ "За стандартними установками Updater Pro будет відправляти лист від імені "
-#~ "Вашого сайту. Ви можете змінити це тут."
-
-#~ msgid ""
-#~ "By default Updater Pro will be sending notifications from the Admin "
-#~ "email. If You want them to be sent from another email address, you can "
-#~ "change it here."
-#~ msgstr ""
-#~ "За стандартними установками Updater Pro буде відправляти повідомлення на "
-#~ "електронну адресу адміністатроа сайту. Якщо ви хочете, щоб повідомлення "
-#~ "відправлялось на іншу адресу, ви можете змінити її тут."
-
-#~ msgid "(For example: admin@example.com )"
-#~ msgstr "(Наприклад: admin@example.com)"
-
-#~ msgid "Please enter a valid sender name. Settings are not saved"
-#~ msgstr ""
-#~ "Будь ласка, введіть коректну адресу відправника. Установки не збережено"
-
-#~ msgid ""
-#~ "You can find folder with backups in '/wp-content/plugins/updater-pro/"
-#~ "pdtrpr_storage/'."
-#~ msgstr ""
-#~ "Ви можете знайти папку з бекапами у '/wp-content/plugins/updater-pro/"
-#~ "pdtrpr_storage/'."
-
-#~ msgid " the Updater Pro settings page on your website."
-#~ msgstr "сторінка установок Updater Pro на вашому сайті"
-
-#~ msgid "- to version"
-#~ msgstr "до версії"
-
-#~ msgid ""
-#~ "This functionality is available in the Pro version of the plugin. For "
-#~ "more details, please follow the link"
-#~ msgstr ""
-#~ "Даний функціонал доступний у про-версії плагіну. Для отримання додаткової "
-#~ "інформації, будь ласка, перейдіть за посиланням"
-
-#~ msgid "It’s time to upgrade your"
-#~ msgstr "Настав час модернізувати Ваш"
-
-#~ msgid "to"
-#~ msgstr "до"
-
-#~ msgid "version!"
-#~ msgstr "версії!"
-
-#~ msgid "Extend standard plugin functionality with new great options."
-#~ msgstr "Розширює можливості стандартного функціоналу плагіна."
+#~ msgid "Plugin mode"
+#~ msgstr "Режим роботи"

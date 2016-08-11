@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Updater by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/
-Description: This plugin allows to update plugins, themes and WordPress core on your website.
+Plugin URI: http://bestwebsoft.com/products/updater/
+Description: Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.33
+Version: 1.34
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -66,7 +66,7 @@ if ( ! function_exists ( 'pdtr_admin_init' ) ) {
 	function pdtr_admin_init() {
 		global $bws_plugin_info, $pdtr_plugin_info;
 
-		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
+		if ( empty( $bws_plugin_info ) )
 			$bws_plugin_info = array( 'id' => '84', 'version' => $pdtr_plugin_info["Version"] );
 
 		/* Call register settings function */

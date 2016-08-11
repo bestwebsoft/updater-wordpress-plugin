@@ -3,11 +3,11 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
 Requires at least: 3.8
-Tested up to: 4.5.2
-Stable tag: 1.33
+Tested up to: 4.6
+Stable tag: 1.34
 License: GPLv2 or later
 
-This plugin allows to update plugins, themes and WordPress core on your website.
+Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 
 == Description ==
 
@@ -21,7 +21,7 @@ http://www.youtube.com/watch?v=I63426HTJjI
 
 <a href="http://support.bestwebsoft.com" target="_blank">Updater by BestWebSoft Support</a>
 
-<a href="http://bestwebsoft.com/plugin/updater-pro?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Updater Pro by BestWebSoft</a>
+<a href="http://bestwebsoft.com/products/updater/?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Updater Pro by BestWebSoft</a>
 
 = Features =
 
@@ -35,7 +35,7 @@ If you have a feature, suggestion or idea you'd like to see in the plugin, we'd 
 
 = User Guide =
 
-1. After downloading and activating the plugin 'Updater', you should go to the page 'Updater' => 'Settings' in the 'BWS Plugins' menu, where the plugin settings are available.
+1. After downloading and activating the plugin 'Updater', you should go to the page 'Updater' => 'Settings' in the 'BWS Panel' menu, where the plugin settings are available.
 2. On this page you should choose the plugin mode and edit email notifications settings.
 3. If you want to update your plugins, themes or WordPress in the manual mode you should go to the page 'Updater' in the 'Tools' menu. If WordPress or some of your plugins and themes needs update it will be highlighted in red. Check it and click 'Update'.
 
@@ -45,7 +45,7 @@ If you have a feature, suggestion or idea you'd like to see in the plugin, we'd 
 * Serbian (sr_RS) (thanks to <a href="mailto:borisad@webhostinghub.com">Borisa Djuraskovic</a>)
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
@@ -59,7 +59,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the `updater` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. Plugin settings are located in 'BWS Plugins', 'Updater', 'Settings'.
+3. Plugin settings are located in 'BWS Panel', 'Updater', 'Settings'.
 
 <a href="https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/edit" target="_blank">View a PDF version of Step-by-step Instruction on Updater Installation</a>.
 
@@ -99,6 +99,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.34 - 10.08.2016 =
+* Update : All functionality for WordPress 4.6 was updated.
 
 = V1.33 - 21.06.2016 =
 * Update : We updated all functionality for wordpress 4.5.2.
@@ -229,6 +232,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.34 =
+* The compatibility with new WordPress version updated.
 
 = V1.33 =
 We updated all functionality for wordpress 4.5.2. An error with checking inputs validation was fixed.

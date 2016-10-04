@@ -1,40 +1,100 @@
 <a href="http://bestwebsoft.com/products/updater/" target=_blank>Updater WordPress Plugin</a>
 ========================
 
-This plugin allows you to update your WordPress, themes, and plugins to the recent versions in the easiest way. You can select auto or manual mode for updating. Also you're able to make a backup before updating, set email notifications before and after update. If necessary, you can disable auto WordPress update.
+Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 
 <img src="http://bestwebsoft.com/wp-content/uploads/2014/09/updater-banner-website.jpg" />
 
-<a href="http://bestwebsoft.com/products/updater/description/" target=_blank>Description</a> | 
-<a href="http://bestwebsoft.com/products/updater/installation/" target=_blank>Installation</a> | 
-<a href="http://bestwebsoft.com/products/updater/faq/" target=_blank>FAQ</a> | 
-<a href="http://bestwebsoft.com/products/updater/screenshots/" target=_blank>Screenshots</a> | 
-<a href="http://bestwebsoft.com/products/updater/changelog/" target=_blank>Changelog</a> | 
-<a href="http://bestwebsoft.com/products/updater/download/" target=_blank>Download</a>
+<p>Updater plugin automatically updates installed plugins, themes, and WordPress website core to the latest versions. Download, install, configure, and forget about constant updates!</p>
+
+<p>Set the update frequency, choose auto or manual mode, create a backup, set email notifications and much more.</p>
+
+<p>Save your time and stay up-to-date!</p>
 
 
-Features
------------------------------
-* Update your plugins, themes and WordPress
-* Choose the updating mode: manual or automatic
-* Set the update periodicity (for automatic mode)
-* Choose what is necessary to search/update:  WordPress, themes or/and plugins
-* Receive email notifications when new versions are available or/and after update is completed
+<div class='video'></div>
 
 
-Translation
------------------------------
-* Russian (ru_RU)
-* Serbian (sr_RS) (thanks to Borisa Djuraskovic)
-* Ukrainian (uk)
+<h4>Free Features</h4>
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+<ul>
+<li>Select update mode:
 
+<ul>
+<li>Manual</li>
+<li>Auto</li>
+</ul></li>
+<li>Search updates and update:
 
-Technical support
------------------------------
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+<ul>
+<li>WordPress</li>
+<li>Plugins</li>
+<li>Themes</li>
+</ul></li>
+<li>Set the update search and update frequency</li>
+<li>Get email notification
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+<ul>
+<li>About new versions</li>
+<li>After updating</li>
+</ul></li>
+<li>Set the recipient email address</li>
+<li>Customize &#8220;FROM&#8221; field</li>
+<li>Compatible with latest WordPress version</li>
+<li>Incredibly simple settings for fast setup without modifying code</li>
+<li>Detailed step-by-step documentation and videos</li>
+</ul>
+
+<blockquote>
+  <p><strong>Pro Features</strong></p>
+  
+  <p>All features from Free version included plus:</p>
+  
+  <ul>
+  <li>Exclude certain plugins, themes from automatic updates</li>
+  <li>Exclude inactive plugins and themes from automatic updates</li>
+  <li>Compatible with <a href="https://envato.com/">Envato</a> (update products purchased on Envato)</li>
+  <li>Create database and files backup before updating</li>
+  <li>Backup all:
+  
+  <ul>
+  <li>Folders</li>
+  <li>Tables</li>
+  </ul></li>
+  <li>Disable WordPress core auto update</li>
+  <li>Get answer to your question within one business day (<a href="http://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
+  </ul>
+  
+  <p><a href="http://bestwebsoft.com/products/updater/?k=49e226d45dc4d3465a079fa62317eab2">Upgrade to Pro Now</a></p>
+</blockquote>
+
+<p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
+
+<h4>Documentation &#38; Videos</h4>
+
+<ul>
+<li><a href="https://docs.google.com/document/d/1UHXGDpOJ2dZrJpPGHmH_i4U3ph50M1L2WuKC583RmTY/">[Doc] How to Use</a></li>
+<li><a href="https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/">[Doc] Installation</a></li>
+<li><a href="https://docs.google.com/document/d/1sY4zig80Nbfl12PoQ8zrpIMh_6bctRd33oeDnYpqUS4/">[Doc] Purchase, Installation &#38; Configuration</a></li>
+<li><a href="http://www.youtube.com/watch?v=CmHctvGHWMs">[Video] Installation Instruction</a></li>
+</ul>
+
+<h4>Help &#38; Support</h4>
+
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8212; <a href="http://support.bestwebsoft.com/">http://support.bestwebsoft.com/</a></p>
+
+<h4>Translation</h4>
+
+<ul>
+<li>Russian (ru_RU)</li>
+<li>Serbian (sr_RS) (thanks to <a href="mailto:borisad@webhostinghub.com">Borisa Djuraskovic</a>)</li>
+<li>Ukrainian (uk)</li>
+</ul>
+
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
+
+<h4>Donate</h4>
+
+<p>Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.</p>
+
+<p><a href="http://bestwebsoft.com/donate/">Donate Now</a></p>

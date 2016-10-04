@@ -3,7 +3,7 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
 Requires at least: 3.8
-Tested up to: 4.6
+Tested up to: 4.6.1
 Stable tag: 1.34
 License: GPLv2 or later
 
@@ -11,49 +11,75 @@ Automatically check and update WordPress website core with all installed plugins
 
 == Description ==
 
-This plugin allows you to update your WordPress, themes, and plugins to the recent versions in the easiest way. You can select auto or manual mode for updating. Also you're able to make a backup before updating, set email notifications before and after update. If necessary, you can disable auto WordPress update.
+Updater plugin automatically updates installed plugins, themes, and WordPress website core to the latest versions. Download, install, configure, and forget about constant updates!
+
+Set the update frequency, choose auto or manual mode, create a backup, set email notifications and much more.
+
+Save your time and stay up-to-date!
 
 http://www.youtube.com/watch?v=I63426HTJjI
 
-<a href="http://www.youtube.com/watch?v=CmHctvGHWMs" target="_blank">Updater by BestWebSoft Video instruction on Installation</a>
+= Free Features =
 
-<a href="http://wordpress.org/plugins/updater/faq/" target="_blank">Updater by BestWebSoft FAQ</a>
+* Select update mode:
+	* Manual
+	* Auto
+* Search updates and update:
+	* WordPress
+	* Plugins
+	* Themes
+* Set the update search and update frequency
+* Get email notification
+	* About new versions
+	* After updating
+* Set the recipient email address
+* Customize “FROM” field
+* Compatible with latest WordPress version
+* Incredibly simple settings for fast setup without modifying code
+* Detailed step-by-step documentation and videos
 
-<a href="http://support.bestwebsoft.com" target="_blank">Updater by BestWebSoft Support</a>
+> **Pro Features**
+>
+> All features from Free version included plus:
+>
+> * Exclude certain plugins, themes from automatic updates
+> * Exclude inactive plugins and themes from automatic updates
+> * Compatible with [Envato](https://envato.com/) (update products purchased on Envato)
+> * Create database and files backup before updating
+> * Backup all:
+> 	* Folders
+> 	* Tables
+> * Disable WordPress core auto update
+> * Get answer to your question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+>
+> [Upgrade to Pro Now](http://bestwebsoft.com/products/updater/?k=49e226d45dc4d3465a079fa62317eab2)
 
-<a href="http://bestwebsoft.com/products/updater/?k=49e226d45dc4d3465a079fa62317eab2" target="_blank" title="Updater Pro">Upgrade to Updater Pro by BestWebSoft</a>
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
 
-= Features =
+= Documentation & Videos =
 
-* Update your plugins, themes and WordPress
-* Choose the updating mode: manual or automatic
-* Set the update periodicity (for automatic mode)
-* Choose what is necessary to search/update:  WordPress, themes or/and plugins
-* Receive email notifications when new versions are available or/and after update is completed
+* [[Doc] How to Use](https://docs.google.com/document/d/1UHXGDpOJ2dZrJpPGHmH_i4U3ph50M1L2WuKC583RmTY/)
+* [[Doc] Installation](https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/)
+* [[Doc] Purchase, Installation & Configuration](https://docs.google.com/document/d/1sY4zig80Nbfl12PoQ8zrpIMh_6bctRd33oeDnYpqUS4/)
+* [[Video] Installation Instruction](http://www.youtube.com/watch?v=CmHctvGHWMs)
 
-If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
+= Help & Support =
 
-= User Guide =
-
-1. After downloading and activating the plugin 'Updater', you should go to the page 'Updater' => 'Settings' in the 'BWS Panel' menu, where the plugin settings are available.
-2. On this page you should choose the plugin mode and edit email notifications settings.
-3. If you want to update your plugins, themes or WordPress in the manual mode you should go to the page 'Updater' in the 'Tools' menu. If WordPress or some of your plugins and themes needs update it will be highlighted in red. Check it and click 'Update'.
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
 
 = Translation =
 
 * Russian (ru_RU)
-* Serbian (sr_RS) (thanks to <a href="mailto:borisad@webhostinghub.com">Borisa Djuraskovic</a>)
+* Serbian (sr_RS) (thanks to [Borisa Djuraskovic](mailto:borisad@webhostinghub.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
 
-= Technical support =
+= Donate =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+[Donate Now](http://bestwebsoft.com/donate/)
 
 == Installation ==
 
@@ -61,7 +87,7 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. Plugin settings are located in 'BWS Panel', 'Updater', 'Settings'.
 
-<a href="https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/edit" target="_blank">View a PDF version of Step-by-step Instruction on Updater Installation</a>.
+[View a PDF version of Step-by-step Instruction on Updater Installation](https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/)
 
 http://www.youtube.com/watch?v=CmHctvGHWMs
 
@@ -74,7 +100,7 @@ Please follow the instructions below:
 1. Check the plugin settings '/wp-admin/admin.php?page=updater-options'
 2. The plugin sends email notifications if any updates are available.
 3. Some email messages can be marked as spam on the server. Enter email address ('Sender's name and email address'), for example, gmail account or similar. If the message is approved (sent), this means that the email filtering is configured on your server.
-4. Perhaps you didn't configure email sending. In this case You should install <a href="https://wordpress.org/plugins/bws-smtp/" target="_blank">SMTP by BestWebSoft</a> plugin and configure it. Afterwards you should send a test email from this plugin and you will see if the plugin logs have errors.
+4. Perhaps you didn't configure email sending. In this case You should install [SMTP](https://wordpress.org/plugins/bws-smtp/) plugin and configure it. Afterwards you should send a test email from this plugin and you will see if the plugin logs have errors.
 
 = The plugin stopped sending emails after some time. What's the problem? =
 
@@ -86,12 +112,12 @@ The function of sending emails and updating runs when the site is active (when s
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
 
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instruction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
 
 == Screenshots ==
 

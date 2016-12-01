@@ -1,9 +1,7 @@
-<a href="http://bestwebsoft.com/products/updater/" target=_blank>Updater WordPress Plugin</a>
+<a href="http://bestwebsoft.com/products/wordpress/plugins/updater/" target=_blank>Updater WordPress Plugin</a>
 ========================
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
-
-<img src="http://bestwebsoft.com/wp-content/uploads/2014/09/updater-banner-website.jpg" />
 
 <p>Updater plugin automatically updates installed plugins, themes, and WordPress website core to the latest versions. Download, install, configure, and forget about constant updates!</p>
 

@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
 Requires at least: 3.8
-Tested up to: 4.6.1
-Stable tag: 1.34
+Tested up to: 4.7.4
+Stable tag: 1.35
 License: GPLv2 or later
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
@@ -125,6 +125,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.35 - 28.04.2017 =
+* Bugfix : Multiple Cross-Site Scripting (XSS) vulnerability was fixed.
 
 = V1.34 - 10.08.2016 =
 * Update : All functionality for WordPress 4.6 was updated.
@@ -258,6 +261,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.35 =
+* Bugs fixed.
 
 = V1.34 =
 * The compatibility with new WordPress version updated.

@@ -32,6 +32,7 @@
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentation and videos</li>
+<li>Multilingual and RTL ready</li>
 </ul>
 <blockquote>
 <p><strong>Pro Features</strong></p>
@@ -47,28 +48,28 @@
 <li>Tables</li>
 </ul>
 </li>
+<li>Delete old backups automatically</li>
 <li>Disable WordPress core auto update</li>
-<li>Get answer to your question within one business day (<a href="http://bestwebsoft.com/support-policy/" rel="nofollow">Support Policy</a>)</li>
+<li>Get answer to your question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow">Support Policy</a>)</li>
 </ul>
-<p><a href="http://bestwebsoft.com/products/updater/?k=49e226d45dc4d3465a079fa62317eab2" rel="nofollow">Upgrade to Pro Now</a></p>
+<p><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=49e226d45dc4d3465a079fa62317eab2" rel="nofollow">Upgrade to Pro Now</a></p>
 </blockquote>
-<p>If you have a feature suggestion or idea you&#8217;d like to see in the plugin, we&#8217;d love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow">Suggest a Feature</a></p>
+<p>If you have a feature suggestion or idea you&#8217;d like to see in the plugin, we&#8217;d love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow">Suggest a Feature</a></p>
 <h4>Documentation &amp; Videos</h4>
 <ul>
 <li><a href="https://docs.google.com/document/d/1UHXGDpOJ2dZrJpPGHmH_i4U3ph50M1L2WuKC583RmTY/" rel="nofollow">[Doc] How to Use</a></li>
-<li><a href="https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/" rel="nofollow">[Doc] Installation</a></li>
-<li><a href="https://docs.google.com/document/d/1sY4zig80Nbfl12PoQ8zrpIMh_6bctRd33oeDnYpqUS4/" rel="nofollow">[Doc] Purchase, Installation &amp; Configuration</a></li>
-<li><a href="http://www.youtube.com/watch?v=CmHctvGHWMs" rel="nofollow">[Video] Installation Instruction</a></li>
+<li><a href="https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/" rel="nofollow">[Doc] Installation</a></li>
+<li><a href="https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/" rel="nofollow">[Doc] Purchase</a></li>
+<li><a href="https://www.youtube.com/watch?v=CmHctvGHWMs" rel="nofollow">[Video] Installation Instruction</a></li>
 </ul>
 <h4>Help &amp; Support</h4>
-<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <a href="http://support.bestwebsoft.com/" rel="nofollow">http://support.bestwebsoft.com/</a></p>
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <a href="https://support.bestwebsoft.com/" rel="nofollow">https://support.bestwebsoft.com/</a></p>
 <h4>Translation</h4>
 <ul>
 <li>Russian (ru_RU)</li>
-<li>Serbian (sr_RS) (thanks to <a href="mailto:&#x62;o&#114;&#105;&#115;&#x61;&#x64;&#x40;&#x77;e&#098;&#104;&#111;&#115;&#x74;&#x69;&#x6e;&#x67;&#104;&#117;&#098;&#046;&#x63;&#x6f;&#x6d;" rel="nofollow">Borisa Djuraskovic</a>)</li>
 <li>Ukrainian (uk)</li>
 </ul>
-<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="https://codex.wordpress.org/Translating_WordPress" rel="nofollow">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow">BestWebSoft</a> and we&#8217;ll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php" rel="nofollow">files Poedit</a>.</p>
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="https://codex.wordpress.org/Translating_WordPress" rel="nofollow">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow">BestWebSoft</a> and we&#8217;ll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php" rel="nofollow">files Poedit</a>.</p>
 <h4>Donate</h4>
 <p>Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.</p>
-<p><a href="http://bestwebsoft.com/donate/" rel="nofollow">Donate Now</a></p>
+<p><a href="https://bestwebsoft.com/donate/" rel="nofollow">Donate Now</a></p>

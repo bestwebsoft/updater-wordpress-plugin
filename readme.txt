@@ -1,10 +1,10 @@
 === Updater by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: http://bestwebsoft.com/donate/
+Donate link: https://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
-Requires at least: 3.8
+Requires at least: 3.9
 Tested up to: 4.7.4
-Stable tag: 1.35
+Stable tag: 1.36
 License: GPLv2 or later
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
@@ -17,7 +17,7 @@ Set the update frequency, choose auto or manual mode, create a backup, set email
 
 Save your time and stay up-to-date!
 
-http://www.youtube.com/watch?v=I63426HTJjI
+https://www.youtube.com/watch?v=I63426HTJjI
 
 = Free Features =
 
@@ -37,6 +37,7 @@ http://www.youtube.com/watch?v=I63426HTJjI
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentation and videos
+* Multilingual and RTL ready
 
 > **Pro Features**
 >
@@ -49,47 +50,47 @@ http://www.youtube.com/watch?v=I63426HTJjI
 > * Backup all:
 > 	* Folders
 > 	* Tables
+> * Delete old backups automatically
 > * Disable WordPress core auto update
-> * Get answer to your question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+> * Get answer to your question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
-> [Upgrade to Pro Now](http://bestwebsoft.com/products/updater/?k=49e226d45dc4d3465a079fa62317eab2)
+> [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=49e226d45dc4d3465a079fa62317eab2)
 
-If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
 = Documentation & Videos =
 
 * [[Doc] How to Use](https://docs.google.com/document/d/1UHXGDpOJ2dZrJpPGHmH_i4U3ph50M1L2WuKC583RmTY/)
-* [[Doc] Installation](https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/)
-* [[Doc] Purchase, Installation & Configuration](https://docs.google.com/document/d/1sY4zig80Nbfl12PoQ8zrpIMh_6bctRd33oeDnYpqUS4/)
-* [[Video] Installation Instruction](http://www.youtube.com/watch?v=CmHctvGHWMs)
+* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+* [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
+* [[Video] Installation Instruction](https://www.youtube.com/watch?v=CmHctvGHWMs)
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <https://support.bestwebsoft.com/>
 
 = Translation =
 
 * Russian (ru_RU)
-* Serbian (sr_RS) (thanks to [Borisa Djuraskovic](mailto:borisad@webhostinghub.com))
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
 
 = Donate =
 
 Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
 
-[Donate Now](http://bestwebsoft.com/donate/)
+[Donate Now](https://bestwebsoft.com/donate/)
 
 == Installation ==
 
 1. Upload the `updater` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. Plugin settings are located in 'BWS Panel', 'Updater', 'Settings'.
+3. Plugin settings are located in 'Updater', 'Settings'.
 
-[View a PDF version of Step-by-step Instruction on Updater Installation](https://docs.google.com/document/d/1tzCpHUUzvRsAKrW-9vOLjJkT-43cBI0bMc05YAqNzHM/)
+[View a PDF version of Step-by-step Instruction on Updater Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
-http://www.youtube.com/watch?v=CmHctvGHWMs
+https://www.youtube.com/watch?v=CmHctvGHWMs
 
 == Frequently Asked Questions ==
 
@@ -99,7 +100,7 @@ Please follow the instructions below:
 
 1. Check the plugin settings '/wp-admin/admin.php?page=updater-options'
 2. The plugin sends email notifications if any updates are available.
-3. Some email messages can be marked as spam on the server. Enter email address ('Sender's name and email address'), for example, gmail account or similar. If the message is approved (sent), this means that the email filtering is configured on your server.
+3. Some email messages can be marked as spam on the server. Enter email address ('Send Email Notifications from' option), for example, gmail account or similar. If the message is approved (sent), this means that the email filtering is configured on your server.
 4. Perhaps you didn't configure email sending. In this case You should install [SMTP](https://wordpress.org/plugins/bws-smtp/) plugin and configure it. Afterwards you should send a test email from this plugin and you will see if the plugin logs have errors.
 
 = The plugin stopped sending emails after some time. What's the problem? =
@@ -112,19 +113,23 @@ The function of sending emails and updating runs when the site is active (when s
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
+Please make sure that the problem hasn't been discussed yet on our forum (<https://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
 
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
 
 == Screenshots ==
 
-1. Updater Tools page.
+1. Updater Software page.
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.36 - 15.05.2017 =
+* Update : The plugin settings page has been updated.
+* Pro : An ability to save only a certain number of backups was added.
 
 = V1.35 - 28.04.2017 =
 * Bugfix : Multiple Cross-Site Scripting (XSS) vulnerability was fixed.
@@ -261,6 +266,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.36 =
+* Usability improved.
 
 = V1.35 =
 * Bugs fixed.

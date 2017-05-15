@@ -1,89 +1,28 @@
+/* admin page menu */
+.menu-top.toplevel_page_updater .wp-menu-image {
+    font-family: 'bwsicons' !important;
+}
+.menu-top.toplevel_page_updater .wp-menu-image:before {
+    content: "\e932";
+    font-family: 'bwsicons' !important;
+}
 /*
-* styles for settings page
+ * Software tab
 */
-.pdtr {
-	width: auto !important;
-	margin-top: 10px;
+#pdtr_wrap .column-category,
+#pdtr_wrap .column-auto_update {
+	width: 15%;
 }
-.pdtr_how_to_use {
-	float: right;
+.pdtr-update-available th.check-column {
+    border-left: 4px solid #d54e21;
 }
-.rtl .pdtr_how_to_use {
-	float: left;
+.pdtr-update-available {
+    background-color: #fef7f1 !important;
 }
-.pdtr thead tr th,
-.pdtr tbody tr th,
-.pdtr tbody tr td {
-	border-left: 1px solid #fff;
-	width: auto !important;
+.pdtr-disable,
+.pdtr-disable:hover {
+	color: #888;
 }
-.pdtr td,
-.pdtr td {
-	border-bottom-color: #DFDFDF;
-	border-top-color: #FFFFFF;
-}
-.pdtr .manage-column {
-	border-left: 1px solid #DFDFDF !important;
-}
-.pdtr thead tr th {
-	padding: 8px 8px !important;
-	background-color: #dfdfdf;
-}
-.pdtr tr.pdtr-caption th {
-	background-color: #dfdfdf;
-}
-.pdtr .check-column {
-	padding: 8px 10px !important;
-}
-.pdtr_right {
-	float: right;
-}
-.rtl .pdtr_right {
-	float: left;
-}
-.pdtr_right input {
-	position: relative;
-	top: -1px;
-}
-.pdtr_left {
-	float: left;
-	padding-right: 15px;
-}
-.rtl .pdtr_left {
-	float: right;
-	padding-left: 15px;
-	padding-right: 0px;
-}
-.pdtr_settings input[type="text"],
-.pdtr_settings input[type="email"] {
-	width: 300px;
-}
-.pdtr_img {
-	margin: 0 6px -3px;
-	opacity: 0.6;
-}
-.rtl .pdtr label {
-	float: right;
-}
-@media screen and (max-width: 782px) {
-	.pdtr_right {
-		float: none;
-		margin-top: 10px;
-	}
-	.pdtr_left {
-		float: none;
-		display: inline-block;
-		padding-right: 0px;
-	}
-	.pdtr input[name="pdtr_block[]"] {
-		visibility: collapse;
-	}
-	.pdtr .form-table input.tog,
-	.pdtr .form-table input[type="radio"] {
-		margin: 0px 4px 0 0;
-	}
-	.pdtr input[type="checkbox"],
-	.pdtr input[type="radio"] {
-		margin-top: 4px;
-	}
+#pdtr_wrap .tablenav.bottom {
+	margin-bottom: 15px;
 }

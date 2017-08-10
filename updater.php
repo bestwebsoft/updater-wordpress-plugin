@@ -6,7 +6,7 @@ Description: Automatically check and update WordPress website core with all inst
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.36
+Version: 1.37
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -34,14 +34,14 @@ if ( ! function_exists( 'pdtr_add_admin_menu' ) ) {
 		global $submenu, $pdtr_plugin_info, $wp_version;
 
 		$tools = add_menu_page( 'Updater', 'Updater', 'manage_options', 'updater', 'pdtr_settings_page', 'none' );
-		add_submenu_page( 'updater', 'Updater', __( 'Installed Software', 'updater' ), 'manage_options', 'updater', 'pdtr_settings_page' );		
+		add_submenu_page( 'updater', 'Updater', __( 'Installed Software', 'updater' ), 'manage_options', 'updater', 'pdtr_settings_page' );
 		$settings = add_submenu_page( 'updater', 'Updater', __( 'Settings', 'updater' ), 'manage_options', 'updater-options', 'pdtr_settings_page' );
 
 		add_submenu_page( 'updater', 'BWS Panel', 'BWS Panel', 'manage_options', 'pdtr-bws-panel', 'bws_add_menu_render' );
 
 		/*pls */
 		if ( isset( $submenu['updater'] ) )
-			$submenu['updater'][] = array( 
+			$submenu['updater'][] = array(
 				'<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'updater' ) . '</span>',
 				'manage_options',
 				'https://bestwebsoft.com/products/wordpress/plugins/updater/?k=347ed3784e3d2aeb466e546bfec268c0pn&pn=84&v=' . $pdtr_plugin_info["Version"] . '&wp_v=' . $wp_version );
@@ -94,7 +94,9 @@ if ( ! function_exists( 'pdtr_register_settings' ) ) {
 	function pdtr_register_settings() {
 		global $pdtr_options, $pdtr_plugin_info;
 
-		if ( is_multisite() ) {
+		$is_multisite = is_multisite();
+
+		if ( $is_multisite ) {
 			if ( ! get_site_option( 'pdtr_options' ) ) {
 				$options_default = pdtr_get_options_default();
 				add_site_option( 'pdtr_options', $options_default );
@@ -108,7 +110,7 @@ if ( ! function_exists( 'pdtr_register_settings' ) ) {
 		}
 
 		/* Get options from the database */
-		$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' );
+		$pdtr_options = $is_multisite ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' );
 
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $pdtr_options['plugin_option_version'] ) || $pdtr_options['plugin_option_version'] != $pdtr_plugin_info["Version"] ) {
@@ -119,7 +121,7 @@ if ( ! function_exists( 'pdtr_register_settings' ) ) {
 			/* show pro features */
 			$pdtr_options['hide_premium_options'] = array();
 
-			if ( is_multisite() )
+			if ( $is_multisite )
 				update_site_option( 'pdtr_options', $pdtr_options );
 			else
 				update_option( 'pdtr_options', $pdtr_options );
@@ -149,7 +151,7 @@ if ( ! function_exists( 'pdtr_get_options_default' ) ) {
 			'to_email'					=>	get_option( 'admin_email' ),
 			'to_email_type'				=> 'custom',
 			'from_name'					=>	get_bloginfo( 'name' ),
-			'from_email'				=>	$from_email,			
+			'from_email'				=>	$from_email,
 			'update_core'				=>	1,
 			'update_plugin'				=>	1,
 			'update_theme'				=>	1
@@ -192,7 +194,7 @@ if ( ! function_exists( 'pdtr_schedules' ) ) {
 if ( ! function_exists( 'pdtr_settings_page' ) ) {
 	function pdtr_settings_page() {
 		global $pdtr_plugin_info; ?>
-		<div class="wrap" id="pdtr_wrap">			
+		<div class="wrap" id="pdtr_wrap">
 			<?php if ( 'updater-options' == $_GET['page'] ) { /* Showing settings tab */
 				require_once( dirname( __FILE__ ) . '/includes/class-pdtr-settings.php' );
 				$page = new Pdtr_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
@@ -221,7 +223,6 @@ if ( ! function_exists( 'pdtr_processing_site' ) ) {
 		$updater_list = array();
 		/* Include file for get plugins */
 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-		
 
 		/* Add the list of plugins, that need to be update */
 		if ( 1 == $pdtr_options["update_plugin"] ) {
@@ -289,7 +290,7 @@ if ( ! function_exists( 'pdtr_processing_site' ) ) {
 					'new_version' 	=> $core->updates[0]->current
 				);
 		}
-		
+
 		return $updater_list;
 	}
 }
@@ -328,13 +329,13 @@ if ( ! function_exists( 'pdtr_update_theme' ) ) {
 			include_once( ABSPATH . 'wp-admin/includes/theme.php' );
 			if ( ! class_exists( 'Bulk_Theme_Upgrader_Skin' ) )
 				include_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader-skins.php' );
-			
+
 			$themes_list = array_map( 'urldecode', $themes_list );
-		
+
 			if ( ! $automode ) {
 				echo '<h2>' . __( 'Updating Themes...', 'updater' ) . '</h2>';
 			}
-			
+
 			$theme_upgrader = new Theme_Upgrader( new Bulk_Theme_Upgrader_Skin() );
 			$theme_upgrader->bulk_upgrade( $themes_list );
 
@@ -379,7 +380,7 @@ if ( ! function_exists( 'pdtr_update_core' ) ) {
 		add_filter( 'update_feedback', 'show_message' );
 		include_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader.php' );
 		$upgrader = new Core_Upgrader();
-		
+
 		if ( '4.1' > $wp_version )
 			$result = @$upgrader->upgrade( $update );
 		else
@@ -395,7 +396,7 @@ if ( ! function_exists( 'pdtr_update_core' ) ) {
 		}
 		if ( ! $automode )
 			show_message( __( 'WordPress was updated successfully!', 'updater' ) );
-		
+
 		/* Check version and set option 'update_core' */
 		wp_version_check();
 
@@ -465,36 +466,10 @@ if ( ! function_exists( 'pdtr_notification_after_update' ) ) {
 			}
 		}
 
-		$headers = 'From: ' . $pdtr_options["from_name"] . ' <' . $pdtr_options["from_email"] . ">\n" . 
+		$headers = 'From: ' . $pdtr_options["from_name"] . ' <' . $pdtr_options["from_email"] . ">\n" .
 			'Content-type: text/html; charset=utf-8' . "\n";
-
-		if ( ! function_exists( 'is_plugin_active' ) )
-			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-		if ( is_plugin_active( 'email-queue/email-queue.php' ) && mlq_if_mail_plugin_is_in_queue( plugin_basename( __FILE__ ) ) ) {
-			foreach ( $emails as $email ) {			
-				/* if email-queue plugin is active and this plugin's "in_queue" status is 'ON' */
-				global $mlq_mail_result;
-				do_action( 'pdtr_get_mail_data', plugin_basename( __FILE__ ), $email, $subject, $message, $headers );
-				/* return $mail_result = true if email-queue has successfully inserted mail in its DB; in other case - return false */
-				$mail_result = $mlq_mail_result;
-				if ( ! $mail_result )
-					break;
-			}
-		} else {
-			$mail_result = wp_mail( $emails, $subject, $message, $headers );
-		}
-
+		$mail_result = wp_mail( $emails, $subject, $message, $headers );
 		return $mail_result;
-	}
-}
-
-/**
- * Function that is used by email-queue plugin to check for compatibility
- * @return void
- */
-if ( ! function_exists( 'pdtr_check_for_compatibility_with_mlq' ) ) {
-	function pdtr_check_for_compatibility_with_mlq() {
-		return false;
 	}
 }
 
@@ -573,25 +548,10 @@ if ( ! function_exists( 'pdtr_notification_exist_update' ) ) {
 			}
 		}
 
-		$headers = 'From: ' . $pdtr_options["from_name"] . ' <' . $pdtr_options["from_email"] . ">\n" . 
+		$headers = 'From: ' . $pdtr_options["from_name"] . ' <' . $pdtr_options["from_email"] . ">\n" .
 			'Content-type: text/html; charset=utf-8' . "\n";
 
-		if ( ! function_exists( 'is_plugin_active' ) )
-			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
-		if ( is_plugin_active( 'email-queue/email-queue.php' ) && mlq_if_mail_plugin_is_in_queue( 'updater/updater.php' ) ) {
-			foreach ( $emails as $email ) {
-				/* if email-queue plugin is active and this plugin's "in_queue" status is 'ON' */
-				global $mlq_mail_result;
-				do_action( 'pdtr_get_mail_data', 'updater/updater.php', $email, $subject, $message, $headers );
-				/* return $mail_result = true if email-queue has successfully inserted mail in its DB; in other case - return false */
-				$mail_result = $mlq_mail_result;
-				if ( ! $mail_result )
-					break;
-			} 
-		} else {
-			$mail_result = wp_mail( $emails, $subject, $message, $headers );
-		}
+		$mail_result = wp_mail( $emails, $subject, $message, $headers );
 		return $mail_result;
 	}
 }
@@ -745,7 +705,7 @@ if ( ! function_exists( 'pdtr_plugin_banner' ) ) {
 				$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' );
 			if ( isset( $pdtr_options['first_install'] ) && strtotime( '-1 week' ) > $pdtr_options['first_install'] )
 				bws_plugin_banner( $pdtr_plugin_info, 'pdtr', 'updater', '0b6882b0c99c2776d06c375dc22b5869', '84', '//ps.w.org/updater/assets/icon-128x128.png' );
-			
+
 			/* show banner go settings pls*/
 			bws_plugin_banner_to_settings( $pdtr_plugin_info, 'pdtr_options', 'updater', 'admin.php?page=updater-options' );
 

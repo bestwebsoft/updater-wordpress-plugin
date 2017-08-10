@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
 Requires at least: 3.9
-Tested up to: 4.7.4
-Stable tag: 1.36
+Tested up to: 4.8.1
+Stable tag: 1.37
 License: GPLv2 or later
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
@@ -76,12 +76,6 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 
 Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
 
-= Donate =
-
-Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
-
-[Donate Now](https://bestwebsoft.com/donate/)
-
 == Installation ==
 
 1. Upload the `updater` folder to the `/wp-content/plugins/` directory.
@@ -126,6 +120,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.37 - 10.08.2017 =
+* Update : The compatibility with Email Queue plugin has been removed.
 
 = V1.36 - 15.05.2017 =
 * Update : The plugin settings page has been updated.
@@ -266,6 +263,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.37 =
+* The compatibility with Email Queue plugin has been removed.
 
 = V1.36 =
 * Usability improved.

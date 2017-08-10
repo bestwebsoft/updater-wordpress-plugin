@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-08 10:42+0300\n"
-"PO-Revision-Date: 2017-05-08 10:42+0300\n"
+"POT-Creation-Date: 2017-08-10 11:57+0300\n"
+"PO-Revision-Date: 2017-08-10 15:57+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/class-pdtr-settings.php:23 updater.php:38 updater.php:199
-#: updater.php:714 updater.php:729
+#: includes/class-pdtr-settings.php:23 updater.php:38 updater.php:201
+#: updater.php:674 updater.php:689
 msgid "Settings"
 msgstr "Настройки"
 
@@ -35,18 +35,18 @@ msgstr "Выберите получателя. Настройки не сохр�
 
 #: includes/class-pdtr-settings.php:94 includes/class-pdtr-settings.php:100
 msgid "Please enter a valid recipient email. Settings are not saved."
-msgstr "Введите действительный емейл получателя. Настройки не сохранены."
+msgstr "Введите действительный email получателя. Настройки не сохранены."
 
 #: includes/class-pdtr-settings.php:112
 msgid "Please enter a valid sender email. Settings are not saved."
-msgstr "Введите действительный емейл отправителя. Настройки не сохранены."
+msgstr "Введите действительный email отправителя. Настройки не сохранены."
 
 #: includes/class-pdtr-settings.php:124
 msgid ""
 "Please select at least one option in the 'Check & Update' section. Settings "
 "are not saved."
 msgstr ""
-"Выберите хотя бы один параметр в разделе «Проверка и Обновление». Настройки "
+"Выберите хотя бы один параметр в разделе «Проверка и обновление». Настройки "
 "не сохранены."
 
 #: includes/class-pdtr-settings.php:133
@@ -59,9 +59,9 @@ msgstr "Настройки Updater"
 
 #: includes/class-pdtr-settings.php:148
 msgid "Check & Update"
-msgstr "Проверка и Обновление"
+msgstr "Проверка и обновление"
 
-#: includes/class-pdtr-settings.php:151 updater.php:439 updater.php:538
+#: includes/class-pdtr-settings.php:151 updater.php:440 updater.php:513
 msgid "WordPress"
 msgstr "WordPress"
 
@@ -80,7 +80,7 @@ msgstr "Закрыть"
 
 #: includes/class-pdtr-settings.php:168
 msgid "Update Inactive Plugins & Themes"
-msgstr "Обновлять Неактивные Плагины и Темы"
+msgstr "Обновлять неактивные плагины и темы"
 
 #: includes/class-pdtr-settings.php:172
 msgid "Enable to update inactive plugins and themes."
@@ -88,7 +88,7 @@ msgstr "Включите, чтобы обновлять неактивные п�
 
 #: includes/class-pdtr-settings.php:184 includes/software-table.php:48
 msgid "Auto Update"
-msgstr "Автоматическое Обновление"
+msgstr "Автоматическое обновление"
 
 #: includes/class-pdtr-settings.php:188
 msgid "Enable to update software automatically."
@@ -96,7 +96,7 @@ msgstr "Включите, чтобы автоматически обновлят
 
 #: includes/class-pdtr-settings.php:193
 msgid "Search & Install Updates Every"
-msgstr "Искать и Устанавливать Обновления Каждые"
+msgstr "Искать и устанавливать обновления каждые"
 
 #: includes/class-pdtr-settings.php:195
 msgid "hours"
@@ -104,7 +104,7 @@ msgstr "часы"
 
 #: includes/class-pdtr-settings.php:199
 msgid "Receive Email Notifications When"
-msgstr "Получать Емейл Уведомленя когда"
+msgstr "Получать email уведомления когда"
 
 #: includes/class-pdtr-settings.php:202
 msgid "New updates are available"
@@ -116,7 +116,7 @@ msgstr "Обновление завершено"
 
 #: includes/class-pdtr-settings.php:209
 msgid "Send Email Notifications to"
-msgstr "Отправлять Емейл Уведомления на"
+msgstr "Отправлять email уведомления на"
 
 #: includes/class-pdtr-settings.php:214
 msgid "Default"
@@ -132,15 +132,15 @@ msgstr "Пользовательский"
 
 #: includes/class-pdtr-settings.php:240
 msgid "You can specify several emails, separating them by commas."
-msgstr "Вы можете указать несколько емейл, разделив их запятой."
+msgstr "Вы можете указать несколько email, разделив их запятой."
 
 #: includes/class-pdtr-settings.php:243
 msgid "Select an existing administrator or a custom email."
-msgstr "Выберите существующего администратора или пользовательский емейл."
+msgstr "Выберите существующего администратора или пользовательский email."
 
 #: includes/class-pdtr-settings.php:247
 msgid "Send Email Notifications from"
-msgstr "Отправлять Емейл Уведомления от"
+msgstr "Отправлять email уведомления от"
 
 #: includes/class-pdtr-settings.php:249
 msgid "Name"
@@ -148,14 +148,14 @@ msgstr "Имя"
 
 #: includes/class-pdtr-settings.php:251
 msgid "Email"
-msgstr "Емейл"
+msgstr "Email"
 
 #: includes/class-pdtr-settings.php:253
 msgid ""
 "Note: Email notifications may be marked as spam or email delivery failures "
 "may occur if you'll change this option."
 msgstr ""
-"Примечание: Емейл уведомления могут быть помечены как спам или могут "
+"Примечание: Email уведомления могут быть помечены как спам или могут "
 "возникнуть сбои доставки, если вы измените эту опцию."
 
 #: includes/class-pdtr-settings.php:266
@@ -171,7 +171,7 @@ msgstr ""
 
 #: includes/class-pdtr-settings.php:273
 msgid "Backup Rotation"
-msgstr "Чередование Резервных копий"
+msgstr "Чередование резервных копий"
 
 #: includes/class-pdtr-settings.php:278
 msgid ""
@@ -184,7 +184,7 @@ msgstr ""
 
 #: includes/class-pdtr-settings.php:282
 msgid "Backup Custom"
-msgstr "Резервное копирование Пользовательских"
+msgstr "Резервное копирование пользовательских"
 
 #: includes/class-pdtr-settings.php:285
 msgid "Folders"
@@ -196,7 +196,7 @@ msgstr "Таблиц в базе данных"
 
 #: includes/class-pdtr-settings.php:292
 msgid "Test Backup"
-msgstr "Тестовое Резервное копирование"
+msgstr "Тестовое резервное копирование"
 
 #: includes/class-pdtr-settings.php:295
 msgid "Enable to delete test backup when it's finished."
@@ -224,29 +224,29 @@ msgstr "Узнайть более"
 
 #: includes/class-pdtr-settings.php:329
 msgid "Skip Minor WordPress Updates"
-msgstr "Пропустить обновления младших версий WordPress"
+msgstr "Пропустить минорные обновления WordPress"
 
 #: includes/class-pdtr-settings.php:331
 msgid ""
 "Enable to turn off automatic update of WordPress minor versions. This will "
 "not have an impact on plugin’s workability."
 msgstr ""
-"Включите, чтобы отключить автоматическое обновление младших версий "
+"Включите, чтобы отключить автоматическое обновление минорных версий "
 "WordPress. Это не повлияет на работу плагина."
 
 #: includes/software-table.php:18
 msgid "item"
-msgstr "елемент"
+msgstr "элемент"
 
 #: includes/software-table.php:19
 msgid "items"
-msgstr "елементы"
+msgstr "элементы"
 
 #: includes/software-table.php:46
 msgid "Title"
 msgstr "Название"
 
-#: includes/software-table.php:47 updater.php:441
+#: includes/software-table.php:47 updater.php:442
 msgid "Version"
 msgstr "Версия"
 
@@ -256,7 +256,7 @@ msgstr "Категория"
 
 #: includes/software-table.php:59
 msgid "Update Now"
-msgstr "Обновить Сейчас"
+msgstr "Обновить сейчас"
 
 #: includes/software-table.php:73
 msgid "New version is available."
@@ -297,7 +297,7 @@ msgstr "Включено"
 
 #: includes/software-table.php:137
 msgid "Disable Auto Update"
-msgstr "Отключить Автоматическое Обновление"
+msgstr "Отключить автоматическое обновление"
 
 #: includes/software-table.php:137
 msgid "Available in Pro"
@@ -310,12 +310,12 @@ msgstr "Отправка Отчетов..."
 #: includes/software-table.php:269
 #, php-format
 msgid "Sorry, Your email could not be sent to %s."
-msgstr "Извините, ваш емейл не может быть отправлен на %s."
+msgstr "Извините, ваш email не может быть отправлен на %s."
 
 #: includes/software-table.php:271
 #, php-format
 msgid "The email with the update results was sent to %s."
-msgstr "Емейл с результатами обновление был отправлен на %s."
+msgstr "Email с результатами обновление был отправлен на %s."
 
 #: includes/software-table.php:275
 msgid "Go to the Updater page"
@@ -333,11 +333,11 @@ msgstr "Установленное программное обеспечение
 msgid "Upgrade to Pro"
 msgstr "Обновиться до Pro"
 
-#: updater.php:202
+#: updater.php:204
 msgid "Software"
 msgstr "Программное обеспечение"
 
-#: updater.php:204
+#: updater.php:206
 msgid ""
 "We strongly recommend you to backup your website and WordPress database "
 "before updating! We are not responsible for the site running after updates."
@@ -346,58 +346,58 @@ msgstr ""
 "данных WordPress перед обновлением! Мы не несем ответственности за работу "
 "сайта после обновлений."
 
-#: updater.php:310
+#: updater.php:311
 msgid "Updating Plugins..."
-msgstr "Обновление Плагинов..."
+msgstr "Обновление плагинов..."
 
-#: updater.php:335
+#: updater.php:336
 msgid "Updating Themes..."
-msgstr "Обновление Тем..."
+msgstr "Обновление тем..."
 
-#: updater.php:353
+#: updater.php:354
 msgid "Updating WordPress..."
 msgstr "Обновление WordPress..."
 
-#: updater.php:392
+#: updater.php:393
 msgid "Update Failed"
 msgstr "Ошибка обновления"
 
-#: updater.php:397
+#: updater.php:398
 msgid "WordPress was updated successfully!"
 msgstr "WordPress удачно обновлен"
 
-#: updater.php:413
+#: updater.php:414
 #, php-format
 msgid "Updating on %s"
 msgstr "Обновления на %s"
 
-#: updater.php:417 updater.php:509
+#: updater.php:418 updater.php:484
 msgid "Hello!"
 msgstr "Здравствуйте!"
 
-#: updater.php:418 updater.php:510
+#: updater.php:419 updater.php:485
 #, php-format
 msgid "Updater plugin is run on your website %s."
 msgstr "Плагин Updater был запущен на вашем сайте %s."
 
-#: updater.php:422 updater.php:518
+#: updater.php:423 updater.php:493
 msgid "Plugin(s)"
 msgstr "Плагин(ы)"
 
-#: updater.php:425 updater.php:434
+#: updater.php:426 updater.php:435
 #, php-format
 msgid "updated to the version %s"
 msgstr "обновлено до версии %s"
 
-#: updater.php:431 updater.php:528
+#: updater.php:432 updater.php:503
 msgid "Theme(s)"
 msgstr "Тем(ы)"
 
-#: updater.php:443
+#: updater.php:444
 msgid "WordPress can’t be updated on your website."
 msgstr "WordPress не может быть обновлен на вашем сайте."
 
-#: updater.php:448 updater.php:556
+#: updater.php:449 updater.php:531
 #, php-format
 msgid ""
 "If you want to change the type of the updating mode or other settings, "
@@ -406,77 +406,77 @@ msgstr ""
 "Если Вы хотите изменить тип режима для плагина или другие настройки, "
 "перейдите на %s."
 
-#: updater.php:448 updater.php:556
+#: updater.php:449 updater.php:531
 msgid "plugin settings page"
 msgstr "страницу настроек плагина"
 
-#: updater.php:450 updater.php:558
+#: updater.php:451 updater.php:533
 #, php-format
 msgid "Thanks for using %s!"
 msgstr "Спасибо за использование %s!"
 
-#: updater.php:506
+#: updater.php:481
 #, php-format
 msgid "Check for Updates on %s"
 msgstr "Проверка обновлений на %s"
 
-#: updater.php:513
+#: updater.php:488
 msgid "The following files need to be updated:"
 msgstr "Следующие файлы нуждаются в обновлении:"
 
-#: updater.php:521 updater.php:531
+#: updater.php:496 updater.php:506
 #, php-format
 msgid "to the version %s"
 msgstr "до версии %s"
 
-#: updater.php:522 updater.php:532 updater.php:538
+#: updater.php:497 updater.php:507 updater.php:513
 #, php-format
 msgid "the current version is %s"
 msgstr "текущая версия: %s"
 
-#: updater.php:538
+#: updater.php:513
 #, php-format
 msgid "Version %s is available"
 msgstr "Доступна версия %s"
 
-#: updater.php:543 updater.php:548
+#: updater.php:518 updater.php:523
 msgid "To start the updating, please follow the link"
 msgstr "Чтобы начать обновление, перейдите по ссылке"
 
-#: updater.php:543 updater.php:548
+#: updater.php:518 updater.php:523
 msgid "Updater page on your website"
 msgstr "страница Updater на вашем сайте"
 
-#: updater.php:545
+#: updater.php:520
 msgid "Updater plugin starts updating these files."
 msgstr "Плагин Updater начинает обновление данных файлов."
 
-#: updater.php:552
+#: updater.php:527
 msgid ""
 "Congratulations! Your plugins, themes and WordPress have the latest versions!"
 msgstr "Поздравляем! Ваши плагины, темы и WordPress имеют последние версии!"
 
-#: updater.php:730
+#: updater.php:690
 msgid "FAQ"
 msgstr "FAQ"
 
-#: updater.php:731
+#: updater.php:691
 msgid "Support"
 msgstr "Тех. поддержка"
 
-#: updater.php:753
+#: updater.php:713
 msgid "Notice:"
 msgstr "Внимание:"
 
-#: updater.php:755
+#: updater.php:715
 msgid "Due to the peculiarities of the multisite work, Updater plugin has only"
 msgstr "В связи с особенностями работы мультисайта плагин Updater имеет только"
 
-#: updater.php:755
+#: updater.php:715
 msgid "Network settings page"
 msgstr "Страницу настроек сети"
 
-#: updater.php:757
+#: updater.php:717
 msgid ""
 "Due to the peculiarities of the multisite work, Updater plugin has the "
 "network settings page only and it should be Network Activated. Please"
@@ -484,7 +484,7 @@ msgstr ""
 "В связи с особенностями работы мультисайта плагин Updater имеет только "
 "страницу настроек сети и должен быть активирован для сети. Пожалуйста,"
 
-#: updater.php:757
+#: updater.php:717
 msgid "Activate Updater for Network"
 msgstr "Активируйте Updater для сети"
 

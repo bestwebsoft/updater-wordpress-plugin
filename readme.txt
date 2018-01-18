@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
 Requires at least: 3.9
-Tested up to: 4.8.1
-Stable tag: 1.37
+Tested up to: 4.9.2
+Stable tag: 1.38
 License: GPLv2 or later
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=I63426HTJjI
 	* About new versions
 	* After updating
 * Set the recipient email address
-* Customize “FROM” field
+* Customize "FROM" field
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentation and videos
@@ -67,7 +67,7 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <https://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help - <https://support.bestwebsoft.com/>
 
 = Translation =
 
@@ -120,6 +120,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.38 - 18.01.2018 =
+* Update : We updated all functionality for wordpress 4.9.2.
 
 = V1.37 - 10.08.2017 =
 * Update : The compatibility with Email Queue plugin has been removed.
@@ -263,6 +266,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.38 =
+* The compatibility with new WordPress version updated.
 
 = V1.37 =
 * The compatibility with Email Queue plugin has been removed.

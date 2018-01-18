@@ -266,7 +266,7 @@ if ( ! function_exists( 'pdtr_handle_action' ) ) {
 						}
 
 						if ( $result_mail != true ) { ?>
-							<p><?php printf( __( "Sorry, Your email could not be sent to %s.", 'updater' ), implode( ",", $emails ) ); ?></p>
+							<p><?php printf( __( "Sorry, your email could not be sent to %s.", 'updater' ), implode( ",", $emails ) ); ?></p>
 						<?php } else { ?>
 							<p><?php printf( __( "The email with the update results was sent to %s.", 'updater' ), implode( ",", $emails ) ); ?></p>
 						<?php }

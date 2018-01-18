@@ -26,3 +26,10 @@
 #pdtr_wrap .tablenav.bottom {
 	margin-bottom: 15px;
 }
+.no-js #pdtr_wrap .toggle-row {
+    display: none;
+}
+.rtl .pdtr-update-available th.check-column {
+    border-right: 4px solid #d54e21;
+    border-left: none !important;
+}

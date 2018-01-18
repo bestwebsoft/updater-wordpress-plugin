@@ -7,6 +7,7 @@ require_once( dirname( dirname( __FILE__ ) ) . '/bws_menu/class-bws-settings.php
 
 if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 	class Pdtr_Settings_Tabs extends Bws_Settings_Tabs {
+		public $users = array();
 		/**
 		 * Constructor.
 		 *
@@ -36,7 +37,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 				'is_network_options' => is_multisite(),
 				'tabs' 				 => $tabs,
 				/*pls */
-				'wp_slug'			 => 'updater',				
+				'wp_slug'			 => 'updater',
 				'doc_link'			 => 'https://docs.google.com/document/d/1UHXGDpOJ2dZrJpPGHmH_i4U3ph50M1L2WuKC583RmTY/',
 				'pro_page' 			 => 'admin.php?page=updater-pro-options',
 				'bws_license_plugin' => 'updater-pro/updater_pro.php',
@@ -44,11 +45,12 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 				'link_pn' 			 => '84'
 				/* pls*/
 			) );
+			$this->users = get_users( 'blog_id=' . $GLOBALS['blog_id'] . '&role=administrator' );
 
 			add_filter( get_parent_class( $this ) . '_additional_restore_options', array( $this, 'additional_restore_options' ) );
 			/*pls */
 			add_filter( get_parent_class( $this ) . '_additional_misc_options_affected', array( $this, 'additional_misc_options_affected' ) );
-			/* pls*/	
+			/* pls*/
 		}
 
 		/**
@@ -58,26 +60,25 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 		 * @return array    The action results
 		 */
 		public function save_options() {
-			
+
 			$this->options["update_core"] 				= ( isset( $_REQUEST["pdtr_update_core"] ) ) ? 1 : 0;
 			$this->options["update_plugin"] 			= ( isset( $_REQUEST["pdtr_update_plugin"] ) ) ? 1 : 0;
 			$this->options["update_theme"] 				= ( isset( $_REQUEST["pdtr_update_theme"] ) ) ? 1 : 0;
 			$this->options["mode"]						= ( isset( $_REQUEST["pdtr_mode"] ) ) ? 1 : 0;
-			$this->options["check_all"]					= ( isset( $_REQUEST["pdtr_check_all"] ) ) ? 1 : 0;			
+			$this->options["check_all"]					= ( isset( $_REQUEST["pdtr_check_all"] ) ) ? 1 : 0;
 
 			if ( preg_match( "/^[0-9]{1,5}+$/", $_REQUEST['pdtr_time'] ) && "0" != intval( $_REQUEST["pdtr_time"] ) )
 				$this->options["time"] = intval( $_REQUEST["pdtr_time"] );
 			else
 				$this->options["time"] = $this->default_options["time"];
-			
+
 			$this->options["send_mail_get_update"]		= ( isset( $_REQUEST["pdtr_send_mail_get_update"] ) ) ? 1 : 0;
 			$this->options["send_mail_after_update"] 	= ( isset( $_REQUEST["pdtr_send_mail_after_update"] ) ) ? 1 : 0;
 
 			/* If user enter Receiver's email check if it correct. Save email if it pass the test. */
-			$this->options['to_email_type'] = esc_attr( $_REQUEST["pdtr_to_email_type"] );
-
-			if ( 'default' == $this->options['to_email_type'] ) {
+			if ( 'default' == $_REQUEST["pdtr_to_email_type"] ) {
 				if ( ! empty( $_REQUEST["pdtr_to_email_default"] ) ) {
+					$this->options['to_email_type'] = esc_attr( $_REQUEST["pdtr_to_email_type"] );
 					$this->options["to_email"] = $_REQUEST["pdtr_to_email_default"];
 				} else {
 					$error = __( "Please select a recipient email. Settings are not saved.", 'updater' );
@@ -95,6 +96,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 							break;
 						}
 					}
+					$this->options['to_email_type'] = 'custom';
 					$this->options["to_email"] = trim( $_REQUEST["pdtr_to_email"] );
 				} else {
 					$error = __( "Please enter a valid recipient email. Settings are not saved.", 'updater' );
@@ -142,7 +144,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 		public function tab_settings() { ?>
 			<h3 class="bws_tab_label"><?php _e( 'Updater Settings', 'updater' ); ?></h3>
 			<?php $this->help_phrase(); ?>
-			<hr>			
+			<hr>
 			<table class="form-table pdtr_settings_form">
 				<tr>
 					<th scope="row"><?php _e( 'Check & Update', 'updater' ); ?></th>
@@ -188,7 +190,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 							<span class="bws_info"><?php _e( 'Enable to update software automatically.', 'updater' ); ?></span>
 						</label>
 					</td>
-				</tr>				
+				</tr>
 				<tr>
 					<th><?php _e( 'Search & Install Updates Every', 'updater' ); ?></th>
 					<td>
@@ -210,18 +212,21 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 					<td>
 						<fieldset>
 							<label>
-								<input type="radio" name="pdtr_to_email_type" value="default" <?php checked( 'default', $this->options["to_email_type"] ); ?> class="bws_option_affect" data-affect-show=".pdtr_to_email_default" data-affect-hide=".pdtr_to_email_custom" /> 
-								<?php _e( 'Default', 'updater' ); ?>
+								<input type="radio" name="pdtr_to_email_type" value="default" <?php checked( 'default', $this->options["to_email_type"] ); ?> class="bws_option_affect" data-affect-show=".pdtr_to_email_default" data-affect-hide=".pdtr_to_email_custom" />
+								<?php _e( 'Default email', 'updater' ); ?>
 							</label>
 							<div class="pdtr_to_email_default">
 								<select name="pdtr_to_email_default[]" multiple="multiple">
 									<option disabled><?php _e( "Select a username", 'updater' ); ?></option>
-									<?php $userslogin = get_users( 'blog_id=' . $GLOBALS['blog_id'] . '&role=administrator' );
-									foreach ( $userslogin as $value ) {
+									<?php foreach ( $this->users as $value ) {
 										if ( isset( $value->data ) ) {
-											if ( $value->data->user_email != '' ) { ?>
-												<option value="<?php echo $value->data->user_login; ?>" <?php if ( 'default' == $this->options["to_email_type"] && in_array( $value->data->user_login, $this->options["to_email"] ) ) echo 'selected'; ?>><?php echo $value->data->user_login; ?></option>
-											<?php }
+											if ( $value->data->user_email != '' ) {
+												printf(
+													'<option value="%1$s" %2$s>%1$s</option>',
+													$value->data->user_login,
+													selected( 'default' == $this->options["to_email_type"] && in_array( $value->data->user_login, $this->options["to_email"] ), true, false )
+												);
+											}
 										} else {
 											if ( $value->user_email != '' ) { ?>
 												<option value="<?php echo $value->user_login; ?>" <?php if ( 'default' == $this->options["to_email_type"] && in_array( $value->user_login, $this->options["to_email"] ) ) echo 'selected'; ?>><?php echo $value->user_login; ?></option>
@@ -233,11 +238,11 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 							<br>
 							<label>
 								<input type="radio" name="pdtr_to_email_type" value="custom" <?php checked( 'custom', $this->options["to_email_type"] ); ?> class="bws_option_affect" data-affect-show=".pdtr_to_email_custom" data-affect-hide=".pdtr_to_email_default" />
-								<?php _e( 'Custom', 'updater' ); ?>
+								<?php _e( 'Custom email', 'updater' ); ?>
 							</label>
 							<div class="pdtr_to_email_custom">
 								<textarea name="pdtr_to_email"><?php if ( 'custom' == $this->options["to_email_type"] ) echo $this->options["to_email"]; ?></textarea>
-								<div class="bws_info"><?php _e( 'You can specify several emails, separating them by commas.', 'updater' ); ?></div>
+								<div class="bws_info"><?php _e( 'You can specify several email, separating them by commas.', 'updater' ); ?></div>
 							</div>
 						</fieldset>
 						<div class="bws_info"><?php _e( 'Select an existing administrator or a custom email.', 'updater' ); ?></div>
@@ -250,7 +255,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 						<input type="text" name="pdtr_from_name" maxlength="250" value="<?php echo $this->options["from_name"]; ?>" />
 						<p><?php _e( "Email", 'updater' ); ?></p>
 						<input type="email" name="pdtr_from_email" maxlength="250" value="<?php echo $this->options["from_email"]; ?>" />
-						<div class="bws_info"><?php _e( "Note: Email notifications may be marked as spam or email delivery failures may occur if you'll change this option.", 'updater' ); ?></div>
+						<div class="bws_info"><?php _e( "Note: If you will change this settings, email notifications may be marked as spam or email delivery failures may occur if you'll change this option.", 'updater' ); ?></div>
 					</td>
 				</tr>
 				<?php do_action( 'pdtr_settings_page_action', $this->options ); ?>
@@ -277,7 +282,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 									</select>
 									<div class="bws_info"><?php _e( 'The maximum number of stored backups. When maximum limit is reached the oldest backup will be automatically deleted.', 'updater' ); ?></div>
 								</td>
-							</tr>				
+							</tr>
 							<tr>
 								<th><?php _e( 'Backup Custom', 'updater' ); ?></th>
 								<td>
@@ -287,17 +292,17 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 										<label><input disabled type="checkbox" name="pdtr_backup_all_db" value="1" /> <?php _e( 'Tables in database', 'updater' ); ?></label>
 									</fieldset>
 								</td>
-							</tr>			
+							</tr>
 							<tr>
 								<th><?php _e( 'Test Backup', 'updater' ); ?></th>
 								<td>
-									<input disabled type="checkbox" name="pdtr_test_backup_delete" value="1" /> 
+									<input disabled type="checkbox" name="pdtr_test_backup_delete" value="1" />
 									<span class="bws_info"><?php _e( "Enable to delete test backup when it's finished.", 'updater' ); ?></span>
 									<p>
 										<input disabled type="button" class="button button-secondary bws_no_bind_notice" name="pdtr_test_backup" value="<?php _e( 'Backup Now', 'updater' ); ?>"/>
 									</p>
 								</td>
-							</tr>				
+							</tr>
 							<tr>
 								<th><?php _e( 'Envato API', 'updater' ); ?></th>
 								<td>
@@ -312,7 +317,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 			<?php } ?>
 			<!-- end pls -->
 		<?php }
-		
+
 		/**
 		 * Custom content for Misc tab
 		 * @access public
@@ -345,7 +350,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 		 */
 		public function additional_restore_options( $default_options ) {
 			wp_clear_scheduled_hook( 'pdtr_auto_hook' );
-			wp_schedule_event( time() + $default_options['time']*60*60, 'pdtr_schedules_hours', 'pdtr_auto_hook' );			
+			wp_schedule_event( time() + $default_options['time']*60*60, 'pdtr_schedules_hours', 'pdtr_auto_hook' );
 			return $default_options;
 		}
 	}

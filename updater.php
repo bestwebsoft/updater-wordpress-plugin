@@ -6,7 +6,7 @@ Description: Automatically check and update WordPress website core with all inst
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.37
+Version: 1.38
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -740,7 +740,7 @@ if ( ! function_exists( 'pdtr_uninstall' ) ) {
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		$all_plugins = get_plugins();
 
-		if ( ! array_key_exists( 'updater/updater_pro.php', $all_plugins ) && ! array_key_exists( 'updater-plus/updater-plus.php', $all_plugins ) ) {
+		if ( ! array_key_exists( 'updater-pro/updater_pro.php', $all_plugins ) && ! array_key_exists( 'updater-plus/updater-plus.php', $all_plugins ) ) {
 			delete_option( 'pdtr_options' );
 			delete_site_option( 'pdtr_options' );
 		}

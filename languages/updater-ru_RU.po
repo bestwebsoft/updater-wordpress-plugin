@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-10 11:57+0300\n"
-"PO-Revision-Date: 2017-08-10 15:57+0300\n"
+"POT-Creation-Date: 2018-01-17 15:39+0200\n"
+"PO-Revision-Date: 2018-01-17 15:39+0200\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -13,167 +13,169 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/class-pdtr-settings.php:23 updater.php:38 updater.php:201
+#: includes/class-pdtr-settings.php:24 updater.php:38 updater.php:201
 #: updater.php:674 updater.php:689
 msgid "Settings"
 msgstr "Настройки"
 
-#: includes/class-pdtr-settings.php:24
+#: includes/class-pdtr-settings.php:25
 msgid "Misc"
 msgstr "Разное"
 
-#: includes/class-pdtr-settings.php:26
+#: includes/class-pdtr-settings.php:27
 msgid "License Key"
 msgstr "Лицензионный ключ"
 
-#: includes/class-pdtr-settings.php:83
+#: includes/class-pdtr-settings.php:84
 msgid "Please select a recipient email. Settings are not saved."
-msgstr "Выберите получателя. Настройки не сохранены."
+msgstr "Пожалуйста выберите получателя. Настройки не сохранены."
 
-#: includes/class-pdtr-settings.php:94 includes/class-pdtr-settings.php:100
+#: includes/class-pdtr-settings.php:95 includes/class-pdtr-settings.php:102
 msgid "Please enter a valid recipient email. Settings are not saved."
-msgstr "Введите действительный email получателя. Настройки не сохранены."
+msgstr ""
+"Пожалуйста введите действительный email получателя. Настройки не сохранены."
 
-#: includes/class-pdtr-settings.php:112
+#: includes/class-pdtr-settings.php:114
 msgid "Please enter a valid sender email. Settings are not saved."
-msgstr "Введите действительный email отправителя. Настройки не сохранены."
+msgstr ""
+"Пожалуйста введите действительный email отправителя. Настройки не сохранены."
 
-#: includes/class-pdtr-settings.php:124
+#: includes/class-pdtr-settings.php:126
 msgid ""
 "Please select at least one option in the 'Check & Update' section. Settings "
 "are not saved."
 msgstr ""
-"Выберите хотя бы один параметр в разделе «Проверка и обновление». Настройки "
-"не сохранены."
+"Пожалуйста выберите хотя бы один параметр в разделе «Проверка и Обновление». "
+"Настройки не сохранены."
 
-#: includes/class-pdtr-settings.php:133
+#: includes/class-pdtr-settings.php:135
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: includes/class-pdtr-settings.php:143
+#: includes/class-pdtr-settings.php:145
 msgid "Updater Settings"
 msgstr "Настройки Updater"
 
-#: includes/class-pdtr-settings.php:148
+#: includes/class-pdtr-settings.php:150
 msgid "Check & Update"
 msgstr "Проверка и обновление"
 
-#: includes/class-pdtr-settings.php:151 updater.php:440 updater.php:513
+#: includes/class-pdtr-settings.php:153 updater.php:440 updater.php:513
 msgid "WordPress"
 msgstr "WordPress"
 
-#: includes/class-pdtr-settings.php:153
+#: includes/class-pdtr-settings.php:155
 msgid "Plugins"
 msgstr "Плагины"
 
-#: includes/class-pdtr-settings.php:155
+#: includes/class-pdtr-settings.php:157
 msgid "Themes"
 msgstr "Темы"
 
-#: includes/class-pdtr-settings.php:164 includes/class-pdtr-settings.php:262
-#: includes/class-pdtr-settings.php:325
+#: includes/class-pdtr-settings.php:166 includes/class-pdtr-settings.php:264
+#: includes/class-pdtr-settings.php:327
 msgid "Close"
 msgstr "Закрыть"
 
-#: includes/class-pdtr-settings.php:168
+#: includes/class-pdtr-settings.php:170
 msgid "Update Inactive Plugins & Themes"
 msgstr "Обновлять неактивные плагины и темы"
 
-#: includes/class-pdtr-settings.php:172
+#: includes/class-pdtr-settings.php:174
 msgid "Enable to update inactive plugins and themes."
 msgstr "Включите, чтобы обновлять неактивные плагины и темы."
 
-#: includes/class-pdtr-settings.php:184 includes/software-table.php:48
+#: includes/class-pdtr-settings.php:186 includes/software-table.php:48
 msgid "Auto Update"
 msgstr "Автоматическое обновление"
 
-#: includes/class-pdtr-settings.php:188
+#: includes/class-pdtr-settings.php:190
 msgid "Enable to update software automatically."
 msgstr "Включите, чтобы автоматически обновлять программное обеспечение."
 
-#: includes/class-pdtr-settings.php:193
+#: includes/class-pdtr-settings.php:195
 msgid "Search & Install Updates Every"
 msgstr "Искать и устанавливать обновления каждые"
 
-#: includes/class-pdtr-settings.php:195
+#: includes/class-pdtr-settings.php:197
 msgid "hours"
 msgstr "часы"
 
-#: includes/class-pdtr-settings.php:199
+#: includes/class-pdtr-settings.php:201
 msgid "Receive Email Notifications When"
 msgstr "Получать email уведомления когда"
 
-#: includes/class-pdtr-settings.php:202
+#: includes/class-pdtr-settings.php:204
 msgid "New updates are available"
 msgstr "Доступны новые обновления"
 
-#: includes/class-pdtr-settings.php:204
+#: includes/class-pdtr-settings.php:206
 msgid "Update is completed"
 msgstr "Обновление завершено"
 
-#: includes/class-pdtr-settings.php:209
+#: includes/class-pdtr-settings.php:211
 msgid "Send Email Notifications to"
 msgstr "Отправлять email уведомления на"
 
-#: includes/class-pdtr-settings.php:214
-msgid "Default"
-msgstr "Стандартно"
+#: includes/class-pdtr-settings.php:216
+msgid "Default email"
+msgstr "Стандартный эл. адрес"
 
-#: includes/class-pdtr-settings.php:218
+#: includes/class-pdtr-settings.php:220
 msgid "Select a username"
 msgstr "Выберите пользователя"
 
-#: includes/class-pdtr-settings.php:236
-msgid "Custom"
-msgstr "Пользовательский"
+#: includes/class-pdtr-settings.php:238
+msgid "Custom email"
+msgstr "Пользовательский эл. адрес"
 
-#: includes/class-pdtr-settings.php:240
-msgid "You can specify several emails, separating them by commas."
+#: includes/class-pdtr-settings.php:242
+msgid "You can specify several email, separating them by commas."
 msgstr "Вы можете указать несколько email, разделив их запятой."
 
-#: includes/class-pdtr-settings.php:243
+#: includes/class-pdtr-settings.php:245
 msgid "Select an existing administrator or a custom email."
 msgstr "Выберите существующего администратора или пользовательский email."
 
-#: includes/class-pdtr-settings.php:247
+#: includes/class-pdtr-settings.php:249
 msgid "Send Email Notifications from"
 msgstr "Отправлять email уведомления от"
 
-#: includes/class-pdtr-settings.php:249
+#: includes/class-pdtr-settings.php:251
 msgid "Name"
 msgstr "Имя"
 
-#: includes/class-pdtr-settings.php:251
+#: includes/class-pdtr-settings.php:253
 msgid "Email"
 msgstr "Email"
 
-#: includes/class-pdtr-settings.php:253
+#: includes/class-pdtr-settings.php:255
 msgid ""
-"Note: Email notifications may be marked as spam or email delivery failures "
-"may occur if you'll change this option."
+"Note: If you will change this settings, email notifications may be marked as "
+"spam or email delivery failures may occur if you'll change this option."
 msgstr ""
-"Примечание: Email уведомления могут быть помечены как спам или могут "
-"возникнуть сбои доставки, если вы измените эту опцию."
+"Примечание: Если вы измените эти настройки, то email уведомления могут быть "
+"помечены как спам или могут возникнуть сбои доставки."
 
-#: includes/class-pdtr-settings.php:266
+#: includes/class-pdtr-settings.php:268
 msgid "Backup"
 msgstr "Резервное копирование"
 
-#: includes/class-pdtr-settings.php:269
+#: includes/class-pdtr-settings.php:271
 msgid ""
 "Enable to automatically create a backup before each update (recommended)."
 msgstr ""
-"Включить автоматическое создание резервной копии перед каждым обновлением "
-"(рекомендуется)."
+"Включите, чтобы автоматически создавать резервную копию перед каждым "
+"обновлением (рекомендуется)."
 
-#: includes/class-pdtr-settings.php:273
+#: includes/class-pdtr-settings.php:275
 msgid "Backup Rotation"
 msgstr "Чередование резервных копий"
 
-#: includes/class-pdtr-settings.php:278
+#: includes/class-pdtr-settings.php:280
 msgid ""
 "The maximum number of stored backups. When maximum limit is reached the "
 "oldest backup will be automatically deleted."
@@ -182,57 +184,57 @@ msgstr ""
 "максимальный предел, самая старая резервная копия будет автоматически "
 "удалена."
 
-#: includes/class-pdtr-settings.php:282
+#: includes/class-pdtr-settings.php:284
 msgid "Backup Custom"
 msgstr "Резервное копирование пользовательских"
 
-#: includes/class-pdtr-settings.php:285
+#: includes/class-pdtr-settings.php:287
 msgid "Folders"
 msgstr "Папок"
 
-#: includes/class-pdtr-settings.php:287
+#: includes/class-pdtr-settings.php:289
 msgid "Tables in database"
 msgstr "Таблиц в базе данных"
 
-#: includes/class-pdtr-settings.php:292
+#: includes/class-pdtr-settings.php:294
 msgid "Test Backup"
 msgstr "Тестовое резервное копирование"
 
-#: includes/class-pdtr-settings.php:295
+#: includes/class-pdtr-settings.php:297
 msgid "Enable to delete test backup when it's finished."
 msgstr "Разрешить удалять тестовую резервную копию по завершении."
 
-#: includes/class-pdtr-settings.php:297
+#: includes/class-pdtr-settings.php:299
 msgid "Backup Now"
 msgstr "Выполнить резервное копирование сейчас"
 
-#: includes/class-pdtr-settings.php:302
+#: includes/class-pdtr-settings.php:304
 msgid "Envato API"
 msgstr "Envato API"
 
-#: includes/class-pdtr-settings.php:305
+#: includes/class-pdtr-settings.php:307
 msgid ""
 "Insert your Envato API Personal Token to enable automatic updates of your "
 "installed products."
 msgstr ""
-"Вставьте свой персональный токен Envato API, чтобы включить автоматическое "
+"Введите свой персональный токен Envato API, чтобы включить автоматическое "
 "обновление установленных продуктов."
 
-#: includes/class-pdtr-settings.php:305
+#: includes/class-pdtr-settings.php:307
 msgid "Learn More"
-msgstr "Узнайть более"
+msgstr "Подробнее"
 
-#: includes/class-pdtr-settings.php:329
+#: includes/class-pdtr-settings.php:331
 msgid "Skip Minor WordPress Updates"
 msgstr "Пропустить минорные обновления WordPress"
 
-#: includes/class-pdtr-settings.php:331
+#: includes/class-pdtr-settings.php:333
 msgid ""
 "Enable to turn off automatic update of WordPress minor versions. This will "
 "not have an impact on plugin’s workability."
 msgstr ""
-"Включите, чтобы отключить автоматическое обновление минорных версий "
-"WordPress. Это не повлияет на работу плагина."
+"Включите, чтобы автоматически создавать резервную копию перед каждым "
+"обновлением (рекомендуется)."
 
 #: includes/software-table.php:18
 msgid "item"
@@ -309,13 +311,13 @@ msgstr "Отправка Отчетов..."
 
 #: includes/software-table.php:269
 #, php-format
-msgid "Sorry, Your email could not be sent to %s."
+msgid "Sorry, your email could not be sent to %s."
 msgstr "Извините, ваш email не может быть отправлен на %s."
 
 #: includes/software-table.php:271
 #, php-format
 msgid "The email with the update results was sent to %s."
-msgstr "Email с результатами обновление был отправлен на %s."
+msgstr "Письмо с результатами обновления был отправлен на %s."
 
 #: includes/software-table.php:275
 msgid "Go to the Updater page"
@@ -364,7 +366,7 @@ msgstr "Ошибка обновления"
 
 #: updater.php:398
 msgid "WordPress was updated successfully!"
-msgstr "WordPress удачно обновлен"
+msgstr "WordPress удачно обновлен!"
 
 #: updater.php:414
 #, php-format
@@ -403,7 +405,7 @@ msgid ""
 "If you want to change the type of the updating mode or other settings, "
 "please go to the %s."
 msgstr ""
-"Если Вы хотите изменить тип режима для плагина или другие настройки, "
+"Если Вы хотите изменить тип обновления для плагина или другие настройки, "
 "перейдите на %s."
 
 #: updater.php:449 updater.php:531
@@ -488,6 +490,15 @@ msgstr ""
 msgid "Activate Updater for Network"
 msgstr "Активируйте Updater для сети"
 
+#~ msgid "Default"
+#~ msgstr "Стандартный эл. адрес"
+
+#~ msgid "Custom"
+#~ msgstr "Пользовательский эл. адрес"
+
+#~ msgid "You can specify several emails, separating them by commas."
+#~ msgstr "Вы можете указать несколько email, разделив их запятой."
+
 #~ msgid ""
 #~ "Please select at least one option in the Update section. Settings are not "
 #~ "saved."
@@ -567,7 +578,7 @@ msgstr "Активируйте Updater для сети"
 
 #~ msgid ""
 #~ "If you want to change the type of the mode for the plugin or other "
-#~ "settings, please go here:"
+#~ "settings, please go:"
 #~ msgstr ""
 #~ "Если Вы хотите изменить тип режима для плагина или другие настройки, то "
 #~ "Вам сюда:"

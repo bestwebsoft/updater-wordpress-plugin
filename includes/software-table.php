@@ -47,7 +47,7 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 				'version'   	=> __( 'Version', 'updater' ),
 				'auto_update' 	=> __( 'Auto Update', 'updater' ),
 				'category'  	=> __( 'Category', 'updater' )
-			);			
+			);
 			return $columns;
 		}
 		/**
@@ -62,7 +62,7 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 		/**
 		 * Fires when the default column output is displayed for a single row.
 		 * @param      string    $column_name      The custom column's name.
-		 * @param      array     $item             The cuurrent letter data.
+		 * @param      array     $item             The current letter data.
 		 * @return    void
 		 */
 		function column_default( $item, $column_name ) {
@@ -71,7 +71,7 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 					$return = $item['version'];
 					if ( ! empty( $item['new_version'] ) && $item['version'] != $item['new_version'] ) {
 						$return .= '<div>' . __( 'New version is available.', 'updater' ) . ' ';
-						
+
 						if ( 'plugin' == $item['type'] )
 							$link_part = '&pdtr_plugin_id=' . $item['wp_key'];
 						elseif ( 'theme' == $item['type'] )
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 						} else {
 							$return .= '<a href="' . wp_nonce_url( self_admin_url( 'admin.php?page=updater&pdtr_tab_action=update' . $link_part ), 'updater-update' . $item['wp_key'] ) . '">' . __( 'Update now.', 'updater' ) . '</a>';
 						}
-						$return .= '</div>';						
+						$return .= '</div>';
 					}
 					return $return;
 				case 'category':
@@ -132,7 +132,7 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 			/* pls*/
 				return $item['name'];
 			/*pls */
-			} else {			
+			} else {
 				$actions       = array();
 				$actions['disable'] = '<a class="pdtr-disable" href="#">' . __( 'Disable Auto Update', 'updater' ) . ' (' . __( 'Available in Pro', 'updater' ) . ')</a>';
 				return sprintf( '%1$s %2$s', $item['name'], $this->row_actions( $actions ) );
@@ -157,8 +157,13 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 		 * @return array list of letters
 		 */
 		function software_list() {
+			global $wpdb;
 			/* Get information about WP core and installed plugins */
-			$result_list_all = pdtr_processing_site();
+			$result_list_all = $wpdb->get_results(
+				"SELECT *
+				FROM `" . $wpdb->base_prefix . "updater_list`
+				WHERE `type` != ''" , ARRAY_A
+			);
 			return $result_list_all;
 		}
 
@@ -183,11 +188,11 @@ if ( ! function_exists( 'pdtr_handle_action' ) ) {
 		$action = ( isset( $_POST['action'] ) && 'update' == $_POST['action'] ) ? 1 : 0;
 		if ( ! $action )
 			$action = ( isset( $_POST['action2'] ) && 'update' == $_POST['action2'] ) ? 1 : 0;
-		
+
 		if ( ! $action ) {
 			/* action links */
 			$action = ( isset( $_REQUEST['pdtr_tab_action'] ) && 'update' == $_REQUEST['pdtr_tab_action'] ) ? 1 : 0;
-			
+
 			$wp_key = '';
 			if ( isset( $_REQUEST['pdtr_plugin_id'] ) )
 				$wp_key = $_REQUEST['pdtr_plugin_id'];
@@ -282,7 +287,7 @@ if ( ! function_exists( 'pdtr_handle_action' ) ) {
 				include( ABSPATH . 'wp-admin/admin-footer.php' );
 				echo '</div>';
 				exit;
-			}			
+			}
 		}
 	}
 }
@@ -292,7 +297,7 @@ if ( ! function_exists( 'pdtr_handle_action' ) ) {
  * @return void
  */
 if ( ! function_exists( 'pdtr_display_table' ) ) {
-	function pdtr_display_table() {		
+	function pdtr_display_table() {
 		$pdtr_software_list = new Pdtr_Software_List();
 		pdtr_handle_action(); ?>
 		<form method="post" action="">

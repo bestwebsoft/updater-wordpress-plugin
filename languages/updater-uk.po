@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-17 15:39+0200\n"
-"PO-Revision-Date: 2018-01-17 15:39+0200\n"
+"POT-Creation-Date: 2018-07-10 15:35+0300\n"
+"PO-Revision-Date: 2018-07-10 16:47+0300\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: uk\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: includes/class-pdtr-settings.php:24 updater.php:38 updater.php:201
-#: updater.php:674 updater.php:689
+#: includes/class-pdtr-settings.php:24 updater.php:38 updater.php:245
+#: updater.php:878 updater.php:893
 msgid "Settings"
 msgstr "Налаштування"
 
@@ -29,21 +29,25 @@ msgstr "Різне"
 msgid "License Key"
 msgstr "Ліцензійний ключ"
 
-#: includes/class-pdtr-settings.php:84
+#: includes/class-pdtr-settings.php:29
+msgid "Custome Code"
+msgstr "Користувацький код"
+
+#: includes/class-pdtr-settings.php:87
 msgid "Please select a recipient email. Settings are not saved."
 msgstr "Будь ласка, оберіть email одержувача. Налаштування не збережено."
 
-#: includes/class-pdtr-settings.php:95 includes/class-pdtr-settings.php:102
+#: includes/class-pdtr-settings.php:98 includes/class-pdtr-settings.php:105
 msgid "Please enter a valid recipient email. Settings are not saved."
 msgstr ""
 "Будь ласка введіть дійсний email одержувача. Налаштування не збережено."
 
-#: includes/class-pdtr-settings.php:114
+#: includes/class-pdtr-settings.php:117
 msgid "Please enter a valid sender email. Settings are not saved."
 msgstr ""
 "Будь ласка введіть дійсний email відправника. Налаштування не збережено."
 
-#: includes/class-pdtr-settings.php:126
+#: includes/class-pdtr-settings.php:129
 msgid ""
 "Please select at least one option in the 'Check & Update' section. Settings "
 "are not saved."
@@ -51,108 +55,109 @@ msgstr ""
 "Будь ласка оберіть хоча б один параметр в розділі «Перевірка і Оновлення». "
 "Налаштування не збережено."
 
-#: includes/class-pdtr-settings.php:135
+#: includes/class-pdtr-settings.php:138
 msgid "Settings saved."
 msgstr "Налаштування збережено."
 
-#: includes/class-pdtr-settings.php:145
+#: includes/class-pdtr-settings.php:149
 msgid "Updater Settings"
 msgstr "Налаштування Updater"
 
-#: includes/class-pdtr-settings.php:150
+#: includes/class-pdtr-settings.php:154
 msgid "Check & Update"
 msgstr "Перевірка і оновлення"
 
-#: includes/class-pdtr-settings.php:153 updater.php:440 updater.php:513
+#: includes/class-pdtr-settings.php:157 updater.php:597 updater.php:632
+#: updater.php:709
 msgid "WordPress"
 msgstr "WordPress"
 
-#: includes/class-pdtr-settings.php:155
+#: includes/class-pdtr-settings.php:159
 msgid "Plugins"
 msgstr "Плагіни"
 
-#: includes/class-pdtr-settings.php:157
+#: includes/class-pdtr-settings.php:161
 msgid "Themes"
 msgstr "Теми"
 
-#: includes/class-pdtr-settings.php:166 includes/class-pdtr-settings.php:264
-#: includes/class-pdtr-settings.php:327
+#: includes/class-pdtr-settings.php:170 includes/class-pdtr-settings.php:271
+#: includes/class-pdtr-settings.php:334
 msgid "Close"
 msgstr "Закрити"
 
-#: includes/class-pdtr-settings.php:170
+#: includes/class-pdtr-settings.php:174
 msgid "Update Inactive Plugins & Themes"
 msgstr "Оновлення неактивних плагінів та тем"
 
-#: includes/class-pdtr-settings.php:174
+#: includes/class-pdtr-settings.php:178
 msgid "Enable to update inactive plugins and themes."
 msgstr "Включити оновлення неактивних плагінів і тем."
 
-#: includes/class-pdtr-settings.php:186 includes/software-table.php:48
+#: includes/class-pdtr-settings.php:190 includes/software-table.php:48
 msgid "Auto Update"
 msgstr "Автоматичне оновлення"
 
-#: includes/class-pdtr-settings.php:190
+#: includes/class-pdtr-settings.php:194
 msgid "Enable to update software automatically."
 msgstr "Включити автоматичне оновлення програмного забезпечення."
 
-#: includes/class-pdtr-settings.php:195
+#: includes/class-pdtr-settings.php:199
 msgid "Search & Install Updates Every"
 msgstr "Шукати та встановлювати оновлення кожні"
 
-#: includes/class-pdtr-settings.php:197
+#: includes/class-pdtr-settings.php:201
 msgid "hours"
 msgstr "годин"
 
-#: includes/class-pdtr-settings.php:201
+#: includes/class-pdtr-settings.php:205
 msgid "Receive Email Notifications When"
 msgstr "Отримання email повідомлень, коли"
 
-#: includes/class-pdtr-settings.php:204
+#: includes/class-pdtr-settings.php:208
 msgid "New updates are available"
 msgstr "Доступні нові оновлення"
 
-#: includes/class-pdtr-settings.php:206
+#: includes/class-pdtr-settings.php:210
 msgid "Update is completed"
 msgstr "Оновлення завершено"
 
-#: includes/class-pdtr-settings.php:211
+#: includes/class-pdtr-settings.php:215
 msgid "Send Email Notifications to"
 msgstr "Відправляти email повідомлення на"
 
-#: includes/class-pdtr-settings.php:216
+#: includes/class-pdtr-settings.php:220
 msgid "Default email"
 msgstr "Стандартна ел. пошта"
 
-#: includes/class-pdtr-settings.php:220
+#: includes/class-pdtr-settings.php:224
 msgid "Select a username"
 msgstr "Оберіть користувача"
 
-#: includes/class-pdtr-settings.php:238
+#: includes/class-pdtr-settings.php:245
 msgid "Custom email"
 msgstr "Користувацька ел. пошта"
 
-#: includes/class-pdtr-settings.php:242
+#: includes/class-pdtr-settings.php:249
 msgid "You can specify several email, separating them by commas."
 msgstr "Ви можете вказати декілька email, відділяючи їх комами."
 
-#: includes/class-pdtr-settings.php:245
+#: includes/class-pdtr-settings.php:252
 msgid "Select an existing administrator or a custom email."
 msgstr "Оберіть існуючого адміністратора або користувацький email."
 
-#: includes/class-pdtr-settings.php:249
+#: includes/class-pdtr-settings.php:256
 msgid "Send Email Notifications from"
 msgstr "Відправляти email повідомлення від"
 
-#: includes/class-pdtr-settings.php:251
+#: includes/class-pdtr-settings.php:258
 msgid "Name"
 msgstr "Ім’я"
 
-#: includes/class-pdtr-settings.php:253
+#: includes/class-pdtr-settings.php:260
 msgid "Email"
 msgstr "Email"
 
-#: includes/class-pdtr-settings.php:255
+#: includes/class-pdtr-settings.php:262
 msgid ""
 "Note: If you will change this settings, email notifications may be marked as "
 "spam or email delivery failures may occur if you'll change this option."
@@ -160,22 +165,22 @@ msgstr ""
 "Примітка: Якщо ви зміните ці налаштування, то email повідомлення можуть бути "
 "помічені як спам або можуть виникнути збої доставки."
 
-#: includes/class-pdtr-settings.php:268
+#: includes/class-pdtr-settings.php:275
 msgid "Backup"
 msgstr "Резервна копія"
 
-#: includes/class-pdtr-settings.php:271
+#: includes/class-pdtr-settings.php:278
 msgid ""
 "Enable to automatically create a backup before each update (recommended)."
 msgstr ""
 "Включення автоматичного створення резервної копії перед кожним оновленням "
 "(рекомендується)."
 
-#: includes/class-pdtr-settings.php:275
+#: includes/class-pdtr-settings.php:282
 msgid "Backup Rotation"
 msgstr "Чергування резервних копій"
 
-#: includes/class-pdtr-settings.php:280
+#: includes/class-pdtr-settings.php:287
 msgid ""
 "The maximum number of stored backups. When maximum limit is reached the "
 "oldest backup will be automatically deleted."
@@ -183,37 +188,37 @@ msgstr ""
 "Максимальна кількість резервних копій для зберігання. Коли максимальна межа "
 "буде досягнута, стара резервна копія буде автоматично видалена."
 
-#: includes/class-pdtr-settings.php:284
+#: includes/class-pdtr-settings.php:291
 msgid "Backup Custom"
 msgstr "Резервна копія користувацьких"
 
-#: includes/class-pdtr-settings.php:287
+#: includes/class-pdtr-settings.php:294
 msgid "Folders"
 msgstr "Папок"
 
-#: includes/class-pdtr-settings.php:289
+#: includes/class-pdtr-settings.php:296
 msgid "Tables in database"
 msgstr "Таблиць в базі даних"
 
-#: includes/class-pdtr-settings.php:294
+#: includes/class-pdtr-settings.php:301
 msgid "Test Backup"
 msgstr "Тестова резервна копія"
 
-#: includes/class-pdtr-settings.php:297
+#: includes/class-pdtr-settings.php:304
 msgid "Enable to delete test backup when it's finished."
 msgstr ""
 "Включити, щоб видалити тестову резервну копію після того, як вона буде "
 "створена."
 
-#: includes/class-pdtr-settings.php:299
+#: includes/class-pdtr-settings.php:306
 msgid "Backup Now"
 msgstr "Створити резервну копію"
 
-#: includes/class-pdtr-settings.php:304
+#: includes/class-pdtr-settings.php:311
 msgid "Envato API"
 msgstr "Envato API"
 
-#: includes/class-pdtr-settings.php:307
+#: includes/class-pdtr-settings.php:314
 msgid ""
 "Insert your Envato API Personal Token to enable automatic updates of your "
 "installed products."
@@ -221,15 +226,15 @@ msgstr ""
 "Введіть ваш особистий Envato API токен для включення автоматичного оновлення "
 "встановлених продуктів."
 
-#: includes/class-pdtr-settings.php:307
+#: includes/class-pdtr-settings.php:314
 msgid "Learn More"
 msgstr "Дізнатися більше"
 
-#: includes/class-pdtr-settings.php:331
+#: includes/class-pdtr-settings.php:338
 msgid "Skip Minor WordPress Updates"
 msgstr "Пропустити оновлення мінорних версій WordPress"
 
-#: includes/class-pdtr-settings.php:333
+#: includes/class-pdtr-settings.php:340
 msgid ""
 "Enable to turn off automatic update of WordPress minor versions. This will "
 "not have an impact on plugin’s workability."
@@ -249,7 +254,7 @@ msgstr "елементи"
 msgid "Title"
 msgstr "Назва"
 
-#: includes/software-table.php:47 updater.php:442
+#: includes/software-table.php:47 updater.php:633
 msgid "Version"
 msgstr "Версія"
 
@@ -306,25 +311,25 @@ msgstr "Вимкнути автоматичне оновлення"
 msgid "Available in Pro"
 msgstr "Доступно для Pro версії плагіну"
 
-#: includes/software-table.php:249
+#: includes/software-table.php:255
 msgid "Sending Report..."
 msgstr "Відправка звіту..."
 
-#: includes/software-table.php:269
+#: includes/software-table.php:275
 #, php-format
 msgid "Sorry, your email could not be sent to %s."
 msgstr "На жаль, Ваш email не може бути надіслан на %s."
 
-#: includes/software-table.php:271
+#: includes/software-table.php:277
 #, php-format
 msgid "The email with the update results was sent to %s."
 msgstr "Лист з результатами оновлення був відправлен на %s."
 
-#: includes/software-table.php:275
+#: includes/software-table.php:281
 msgid "Go to the Updater page"
 msgstr "Перейти на сторінку \"Updater\""
 
-#: includes/software-table.php:275
+#: includes/software-table.php:281
 msgid "Go back to the Updater page"
 msgstr "Повернутися на сторінку \"Updater\""
 
@@ -336,11 +341,11 @@ msgstr "Встановлене програмне забезпечення"
 msgid "Upgrade to Pro"
 msgstr "Оновити до Pro"
 
-#: updater.php:204
+#: updater.php:248
 msgid "Software"
 msgstr "Програмне забезпечення"
 
-#: updater.php:206
+#: updater.php:250
 msgid ""
 "We strongly recommend you to backup your website and WordPress database "
 "before updating! We are not responsible for the site running after updates."
@@ -349,58 +354,76 @@ msgstr ""
 "даних WordPress перед оновленням! Ми не несемо відповідальності за роботу "
 "сайту після оновлення."
 
-#: updater.php:311
+#: updater.php:418
 msgid "Updating Plugins..."
 msgstr "Оновлення плагінів..."
 
-#: updater.php:336
+#: updater.php:444
 msgid "Updating Themes..."
 msgstr "Оновлення тем..."
 
-#: updater.php:354
+#: updater.php:467
 msgid "Updating WordPress..."
 msgstr "Оновлення WordPress..."
 
-#: updater.php:393
+#: updater.php:506
 msgid "Update Failed"
 msgstr "Помилка оновлення..."
 
-#: updater.php:398
+#: updater.php:511
 msgid "WordPress was updated successfully!"
 msgstr "WordPress було успішно оновлено!"
 
-#: updater.php:414
+#: updater.php:557
 #, php-format
 msgid "Updating on %s"
 msgstr "Оновлення на %s"
 
-#: updater.php:418 updater.php:484
+#: updater.php:561 updater.php:680
 msgid "Hello!"
 msgstr "Привіт!"
 
-#: updater.php:419 updater.php:485
+#: updater.php:562 updater.php:681
 #, php-format
 msgid "Updater plugin is run on your website %s."
 msgstr "Плагін Updater було запущено на вашому сайті %s."
 
-#: updater.php:423 updater.php:493
+#: updater.php:568
+msgid "The following files can't be updated"
+msgstr "Наступні файли не можуть бути оновлені"
+
+#: updater.php:571 updater.php:609 updater.php:689
 msgid "Plugin(s)"
 msgstr "Плагін(и)"
 
-#: updater.php:426 updater.php:435
+#: updater.php:576 updater.php:590
+msgid "failed update"
+msgstr "помилка при оновленні"
+
+#: updater.php:576 updater.php:590 updater.php:693 updater.php:702
+#: updater.php:709
+#, php-format
+msgid "the current version is %s"
+msgstr "поточна версія: %s"
+
+#: updater.php:585 updater.php:621 updater.php:698
+msgid "Theme(s)"
+msgstr "Тем(и)"
+
+#: updater.php:598
+msgid "WordPress can’t be updated on your website."
+msgstr "WordPress не може бути оновлений на вашому сайті."
+
+#: updater.php:606
+msgid "The following files were updated successfully"
+msgstr "Наступні файли оновлені успішно"
+
+#: updater.php:613 updater.php:625
 #, php-format
 msgid "updated to the version %s"
 msgstr "оновлено до версії  %s"
 
-#: updater.php:432 updater.php:503
-msgid "Theme(s)"
-msgstr "Тем(и)"
-
-#: updater.php:444
-msgid "WordPress can’t be updated on your website."
-msgstr "WordPress не може бути оновлений на вашому сайті."
-
-#: updater.php:449 updater.php:531
+#: updater.php:642 updater.php:727
 #, php-format
 msgid ""
 "If you want to change the type of the updating mode or other settings, "
@@ -409,77 +432,72 @@ msgstr ""
 "Якщо ви хочете змінити тип оновлення для плагіну або інші налаштування, будь "
 "ласка, перейдіть до %s."
 
-#: updater.php:449 updater.php:531
+#: updater.php:642 updater.php:727
 msgid "plugin settings page"
 msgstr "сторінки налаштувань плагіна"
 
-#: updater.php:451 updater.php:533
+#: updater.php:644 updater.php:729
 #, php-format
 msgid "Thanks for using %s!"
 msgstr "Дякуємо за користування %s!"
 
-#: updater.php:481
+#: updater.php:677
 #, php-format
 msgid "Check for Updates on %s"
 msgstr "Перевірка оновлень на %s"
 
-#: updater.php:488
+#: updater.php:684
 msgid "The following files need to be updated:"
 msgstr "Наступні файли потребують оновлення:"
 
-#: updater.php:496 updater.php:506
+#: updater.php:692 updater.php:701
 #, php-format
 msgid "to the version %s"
 msgstr "до версії  %s"
 
-#: updater.php:497 updater.php:507 updater.php:513
-#, php-format
-msgid "the current version is %s"
-msgstr "поточна версія: %s"
-
-#: updater.php:513
+#: updater.php:709
 #, php-format
 msgid "Version %s is available"
 msgstr "Доступна версія %s"
 
-#: updater.php:518 updater.php:523
+#: updater.php:714 updater.php:719
 msgid "To start the updating, please follow the link"
 msgstr "Щоб почати оновлення, будь ласка, перейдіть за посиланням"
 
-#: updater.php:518 updater.php:523
+#: updater.php:714 updater.php:719
 msgid "Updater page on your website"
 msgstr "сторінка Updater на вашому сайті"
 
-#: updater.php:520
+#: updater.php:716
 msgid "Updater plugin starts updating these files."
 msgstr "Плагін Updater починає оновлення цих файлів."
 
-#: updater.php:527
+#: updater.php:723
 msgid ""
 "Congratulations! Your plugins, themes and WordPress have the latest versions!"
 msgstr "Вітаємо! Ваші плагіни, теми та WordPress мають найостанніші версії!"
 
-#: updater.php:690
+#: updater.php:894
 msgid "FAQ"
 msgstr "FAQ"
 
-#: updater.php:691
+#: updater.php:895
 msgid "Support"
 msgstr "Тех. підтримка"
 
-#: updater.php:713
+#: updater.php:917
 msgid "Notice:"
 msgstr "Попередження:"
 
-#: updater.php:715
+#: updater.php:919
 msgid "Due to the peculiarities of the multisite work, Updater plugin has only"
 msgstr "Через особливості роботи мультисайту, плагін Updater має тільки"
 
-#: updater.php:715
+#: updater.php:919
 msgid "Network settings page"
 msgstr "Сторінку налаштувань в мережі"
 
-#: updater.php:717
+#: updater.php:921
 msgid ""
 "Due to the peculiarities of the multisite work, Updater plugin has the "
 "network settings page only and it should be Network Activated. Please"
@@ -487,9 +505,12 @@ msgstr ""
 "Через особливості роботи мультисайту, плагін Updater має сторінку "
 "налаштування тільки в мережі та має бути увімкнен для мережі. Будь ласка,"
 
-#: updater.php:717
+#: updater.php:921
 msgid "Activate Updater for Network"
 msgstr "Увімкніть  Updater для мережі"
+
+#~ msgid "failed update to the version %s"
+#~ msgstr "помилка при оновленні версії до %s"
 
 #~ msgid ""
 #~ "Please select at least one option in the Update section. Settings are not "

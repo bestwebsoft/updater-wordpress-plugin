@@ -23,8 +23,9 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 			$tabs = array(
 				'settings' 		=> array( 'label' => __( 'Settings', 'updater' ) ),
 				'misc' 			=> array( 'label' => __( 'Misc', 'updater' ) ),
+				'custom_code'	=> array( 'label' => __( 'Custome Code', 'updater' ) ),
 				/*pls */
-				'license'		=> array( 'label' => __( 'License Key', 'updater' ) )
+				'license'		=> array( 'label' => __( 'License Key', 'updater' ) ),
 				/* pls*/
 			);
 
@@ -68,7 +69,8 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 			$this->options["check_all"]					= ( isset( $_REQUEST["pdtr_check_all"] ) ) ? 1 : 0;
 
 			if ( preg_match( "/^[0-9]{1,5}+$/", $_REQUEST['pdtr_time'] ) && "0" != intval( $_REQUEST["pdtr_time"] ) )
-				$this->options["time"] = intval( $_REQUEST["pdtr_time"] );
+				$this->options["time"] = intval(
+					$_REQUEST["pdtr_time"] );
 			else
 				$this->options["time"] = $this->default_options["time"];
 

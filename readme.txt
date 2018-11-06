@@ -4,7 +4,7 @@ Donate link: https://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
 Requires at least: 3.9
 Tested up to: 4.9.8
-Stable tag: 1.39
+Stable tag: 1.40
 License: GPLv2 or later
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
@@ -28,6 +28,7 @@ https://www.youtube.com/watch?v=I63426HTJjI
 	* WordPress
 	* Plugins
 	* Themes
+	* Translations [NEW]
 * Set the update search and update frequency
 * Get email notification
 	* About new versions
@@ -121,7 +122,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
-= V1.39 - 08.08.2018 =
+= V1.40 - 06.11.2018 =
+* NEW: Ability to check and update translations was added.
+
+= V1.39 - 08.07.2018 =
 * Bugfix : The bug with sending email when failed to update new version was fixed.
 * Bugfix : The bug with sending email after automatic update new version was fixed.
 
@@ -270,6 +274,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.40 =
+* New features added.
 
 = V1.39 =
 * Bugs fixed.

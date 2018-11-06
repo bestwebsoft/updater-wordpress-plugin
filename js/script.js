@@ -10,7 +10,7 @@
 				return;
 			}
 			var update_link = $( target ).find( 'tr[data-key="' + $( this ).data( 'plugin' ) + '"]' ).find( '.pdtr-update-now' );
-			
+
 			$( this ).attr( 'disabled', 'disabled' );
 
 			if ( update_link.length > 0 ) {

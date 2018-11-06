@@ -23,7 +23,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 			$tabs = array(
 				'settings' 		=> array( 'label' => __( 'Settings', 'updater' ) ),
 				'misc' 			=> array( 'label' => __( 'Misc', 'updater' ) ),
-				'custom_code'	=> array( 'label' => __( 'Custome Code', 'updater' ) ),
+				'custom_code'	=> array( 'label' => __( 'Custom Code', 'updater' ) ),
 				/*pls */
 				'license'		=> array( 'label' => __( 'License Key', 'updater' ) ),
 				/* pls*/
@@ -65,14 +65,16 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 			$this->options["update_core"] 				= ( isset( $_REQUEST["pdtr_update_core"] ) ) ? 1 : 0;
 			$this->options["update_plugin"] 			= ( isset( $_REQUEST["pdtr_update_plugin"] ) ) ? 1 : 0;
 			$this->options["update_theme"] 				= ( isset( $_REQUEST["pdtr_update_theme"] ) ) ? 1 : 0;
+			$this->options["update_language"]			= ( isset( $_REQUEST["pdtr_update_language"] ) ) ? 1 : 0;
 			$this->options["mode"]						= ( isset( $_REQUEST["pdtr_mode"] ) ) ? 1 : 0;
 			$this->options["check_all"]					= ( isset( $_REQUEST["pdtr_check_all"] ) ) ? 1 : 0;
 
-			if ( preg_match( "/^[0-9]{1,5}+$/", $_REQUEST['pdtr_time'] ) && "0" != intval( $_REQUEST["pdtr_time"] ) )
+			if ( preg_match( "/^[0-9]{1,5}+$/", $_REQUEST['pdtr_time'] ) && "0" != intval( $_REQUEST["pdtr_time"] ) ) {
 				$this->options["time"] = intval(
 					$_REQUEST["pdtr_time"] );
-			else
+			} else {
 				$this->options["time"] = $this->default_options["time"];
+			}
 
 			$this->options["send_mail_get_update"]		= ( isset( $_REQUEST["pdtr_send_mail_get_update"] ) ) ? 1 : 0;
 			$this->options["send_mail_after_update"] 	= ( isset( $_REQUEST["pdtr_send_mail_after_update"] ) ) ? 1 : 0;
@@ -106,34 +108,39 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 			}
 
 			$this->options["from_name"] = stripslashes( esc_html( $_REQUEST["pdtr_from_name"] ) );
-			if ( empty( $this->options['from_email'] ) )
+			if ( empty( $this->options['from_email'] ) ) {
 				$this->options['from_email'] = $this->default_options['from_email'];
+			}
 
 			/* If user enter Sender's email check if it correct. Save email if it pass the test. */
-			if ( is_email( trim( $_REQUEST["pdtr_from_email"] ) ) || empty( $_REQUEST["pdtr_from_email"] ) )
+			if ( is_email( trim( $_REQUEST["pdtr_from_email"] ) ) || empty( $_REQUEST["pdtr_from_email"] ) ) {
 				$this->options["from_email"] = trim( $_REQUEST["pdtr_from_email"] );
-			else
+			} else {
 				$error = __( "Please enter a valid sender email. Settings are not saved.", 'updater' );
+			}
 
 			/* Add or delete hook of auto/handle mode */
-			if ( wp_next_scheduled( 'pdtr_auto_hook' ) )
+			if ( wp_next_scheduled( 'pdtr_auto_hook' ) ) {
 				wp_clear_scheduled_hook( 'pdtr_auto_hook' );
+			}
 
 			if ( '0' != $this->options["mode"] || '0' != $this->options["send_mail_get_update"] ) {
 				$time = time() + $this->options['time']*60*60;
 				wp_schedule_event( $time, 'pdtr_schedules_hours', 'pdtr_auto_hook' );
 			}
 
-			if ( empty( $this->options["update_core"] ) && empty( $this->options["update_plugin"] ) && empty( $this->options["update_theme"] ) )
+			if ( empty( $this->options["update_core"] ) && empty( $this->options["update_plugin"] ) && empty( $this->options["update_theme"] ) && empty( $this->options["update_language"] ) ) {
 				$error = __( "Please select at least one option in the 'Check & Update' section. Settings are not saved.", 'updater' );
+			}
 
 			/* Update options in the database */
 			if ( empty( $error ) ) {
 				$this->options = apply_filters( 'pdtr_before_save_options', $this->options );
-				if ( $this->is_multisite )
+				if ( $this->is_multisite ) {
 					update_site_option( 'pdtr_options', $this->options );
-				else
+				} else {
 					update_option( 'pdtr_options', $this->options );
+				}
 				$message = __( 'Settings saved.', 'updater' );
 			}
 
@@ -157,6 +164,8 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 							<label><input type="checkbox" name="pdtr_update_plugin" value="1" <?php checked( 1, $this->options["update_plugin"] ); ?> /> <?php _e( 'Plugins', 'updater' ); ?></label>
 							<br />
 							<label><input type="checkbox" name="pdtr_update_theme" value="1" <?php checked( 1, $this->options["update_theme"] ); ?> /> <?php _e( 'Themes', 'updater' ); ?></label>
+							<br />
+							<label><input type="checkbox" name="pdtr_update_language" value="1" <?php checked( 1, $this->options["update_language"] ); ?> /> <?php _e( 'Translations', 'updater' ); ?></label>
 						</fieldset>
 					</td>
 				</tr>

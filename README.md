@@ -18,6 +18,7 @@
 <li>WordPress</li>
 <li>Plugins</li>
 <li>Themes</li>
+<li>Translations [NEW]</li>
 </ul>
 </li>
 <li>Set the update search and update frequency</li>

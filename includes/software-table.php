@@ -66,6 +66,7 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 		 * @return    void
 		 */
 		function column_default( $item, $column_name ) {
+		    global $pdtr_options;
 			switch ( $column_name ) {
 				case 'version':
 					$return = $item['version'];
@@ -100,7 +101,12 @@ if ( ! class_exists( 'Pdtr_Software_List' ) ) {
 					else
 						return __( 'Core', 'updater' );
 				case 'auto_update':
-					return __( 'Enabled', 'updater' );
+				    if ( 1 == $pdtr_options['mode'] ) {
+					    return __( 'Enabled', 'updater' );
+                    } else {
+				        return __( 'Disabled', 'updater' );
+                    }
+
 				case 'title':
 					return $item['name'];
 				default:

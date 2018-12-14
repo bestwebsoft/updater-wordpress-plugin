@@ -61,7 +61,8 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 		 * @return array    The action results
 		 */
 		public function save_options() {
-
+            $_POST;
+            $_POST;
 			$this->options["update_core"] 				= ( isset( $_REQUEST["pdtr_update_core"] ) ) ? 1 : 0;
 			$this->options["update_plugin"] 			= ( isset( $_REQUEST["pdtr_update_plugin"] ) ) ? 1 : 0;
 			$this->options["update_theme"] 				= ( isset( $_REQUEST["pdtr_update_theme"] ) ) ? 1 : 0;
@@ -124,7 +125,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 				wp_clear_scheduled_hook( 'pdtr_auto_hook' );
 			}
 
-			if ( '0' != $this->options["mode"] || '0' != $this->options["send_mail_get_update"] ) {
+			if ( 0 != $this->options["mode"] || 0 != $this->options["send_mail_get_update"] ) {
 				$time = time() + $this->options['time']*60*60;
 				wp_schedule_event( $time, 'pdtr_schedules_hours', 'pdtr_auto_hook' );
 			}

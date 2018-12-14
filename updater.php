@@ -6,7 +6,7 @@ Description: Automatically check and update WordPress website core with all inst
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.40
+Version: 1.41
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -243,7 +243,7 @@ if ( ! function_exists( 'pdtr_schedules' ) ) {
 /* Function for display updater settings page in the BWS admin area */
 if ( ! function_exists( 'pdtr_settings_page' ) ) {
 	function pdtr_settings_page() {
-		global $pdtr_plugin_info; ?>
+		global $pdtr_plugin_info, $pdtr_options; ?>
 		<div class="wrap" id="pdtr_wrap">
 			<?php if ( 'updater-options' == $_GET['page'] ) { /* Showing settings tab */
 				require_once( dirname( __FILE__ ) . '/includes/class-pdtr-settings.php' );
@@ -974,26 +974,28 @@ if ( ! function_exists( 'pdtr_auto_function' ) ) {
 			include_once( ABSPATH . 'wp-admin/includes/file.php' );
 			include_once( ABSPATH . 'wp-admin/includes/update.php' );
 
-			/* If WP core need to be update */
-			if ( false != $core ) {
-				$core_result = pdtr_update_core( true ); /* update the WP core */
-			}
-			/* Update the list of plugins */
-			if ( ! empty( $plugin_update_list ) ) {
-				pdtr_update_plugin( $plugin_update_list, true );
-			}
-			/* Update the list of themes */
-			if ( ! empty( $theme_update_list ) ) {
-				pdtr_update_theme( $theme_update_list, true );
-			}
-			/* Update the list of languages */
-			if ( ! empty( $language_list_for_update ) && $pdtr_options["update_language"] ) {
-				pdtr_update_language( $language_list_for_update, true );
-			}
-			/* Send mail */
-			if ( 1 == $pdtr_options["send_mail_after_update"] && ( ! empty( $theme_update_list ) || ! empty( $plugin_update_list ) || false != $core || ! empty( $languages ) ) ) {
-				pdtr_notification_after_update( $plugin_update_list, $theme_update_list, $core, $core_result, $languages );
-			}
+        if ( 1 == $pdtr_options['mode'] ) { /* if auto update on */
+            /* If WP core need to be update */
+            if ( false != $core ) {
+                $core_result = pdtr_update_core( true ); /* update the WP core */
+            }
+            /* Update the list of plugins */
+            if ( ! empty( $plugin_update_list ) ) {
+                pdtr_update_plugin( $plugin_update_list, true );
+            }
+            /* Update the list of themes */
+            if ( ! empty( $theme_update_list ) ) {
+                pdtr_update_theme( $theme_update_list, true );
+            }
+            /* Update the list of languages */
+            if ( ! empty( $language_list_for_update ) && $pdtr_options["update_language"] ) {
+                pdtr_update_language( $language_list_for_update, true );
+            }
+            /* Send mail */
+            if ( 1 == $pdtr_options["send_mail_after_update"] && ( ! empty( $theme_update_list ) || ! empty( $plugin_update_list ) || false != $core || ! empty( $languages ) ) ) {
+                pdtr_notification_after_update( $plugin_update_list, $theme_update_list, $core, $core_result, $languages );
+            }
+        }
 
 		wp_clear_scheduled_hook( 'pdtr_auto_hook' );
 

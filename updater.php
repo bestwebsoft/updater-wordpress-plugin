@@ -6,13 +6,13 @@ Description: Automatically check and update WordPress website core with all inst
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.41
+Version: 1.42
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
 /*
-	© Copyright 2018  BestWebSoft  ( https://support.bestwebsoft.com )
+	© Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -961,18 +961,23 @@ if ( ! function_exists( 'pdtr_auto_function' ) ) {
 					$languages[] = $value["wp_key"];
 				}
 			}
-		}
+		} else {
+			wp_clear_scheduled_hook( 'pdtr_auto_hook' );
+			$time = ( ! empty( $pdtr_options['time'] ) ) ? time() + $pdtr_options['time']*60*60 : time() + 12*60*60;
+			wp_schedule_event( $time, 'pdtr_schedules_hours', 'pdtr_auto_hook' );
+		    return;
+        }
 
 		if ( 1 == $pdtr_options["send_mail_get_update"] ) {
 			pdtr_notification_exist_update( $plugin_update_list, $theme_update_list, $core, $languages );
 		}
 
-			include_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader.php' );
-			if ( false != $core ) {
-				include_once( ABSPATH . 'wp-admin/includes/misc.php' );
-			}
-			include_once( ABSPATH . 'wp-admin/includes/file.php' );
-			include_once( ABSPATH . 'wp-admin/includes/update.php' );
+        include_once( ABSPATH . 'wp-admin/includes/class-wp-upgrader.php' );
+        if ( false != $core ) {
+            include_once( ABSPATH . 'wp-admin/includes/misc.php' );
+        }
+        include_once( ABSPATH . 'wp-admin/includes/file.php' );
+        include_once( ABSPATH . 'wp-admin/includes/update.php' );
 
         if ( 1 == $pdtr_options['mode'] ) { /* if auto update on */
             /* If WP core need to be update */

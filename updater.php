@@ -6,7 +6,7 @@ Description: Automatically check and update WordPress website core with all inst
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.42
+Version: 1.43
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */

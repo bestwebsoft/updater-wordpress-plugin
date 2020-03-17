@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
-Requires at least: 3.9
-Tested up to: 5.2.2
-Stable tag: 1.43
+Requires at least: 4.5
+Tested up to: 5.3.2
+Stable tag: 1.44
 License: GPLv2 or later
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
@@ -121,6 +121,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 2. Updater Settings page.
 
 == Changelog ==
+
+= V1.44 - 17.03.2020 =
+* Update : All functionality was updated for WordPress 5.3.2.
+* Update : BWS plugins section is updated.
 
 = V1.43 - 04.09.2019 =
 * Update: The deactivation feedback has been changed. Misleading buttons have been removed.
@@ -284,6 +288,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.44 =
+* The compatibility with new WordPress version updated.
 
 = V1.43 =
 * Usability improved.

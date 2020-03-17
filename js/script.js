@@ -19,5 +19,22 @@
 				window.parent.location = $( this ).attr( 'href' );
 			}
 		} );
+		if ( ! $("input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) && ! $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
+			$( '.pdtr_email_settings' ).addClass( 'hidden' );
+		};
+		$( "input:checkbox[name='pdtr_send_mail_get_update']" ).change( function() {
+			if ( ! $("input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) && ! $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
+				$('.pdtr_email_settings').addClass( 'hidden' );
+			} else {
+				$( '.pdtr_email_settings' ).removeClass( 'hidden' );
+			};
+		});
+		$( "input:checkbox[name='pdtr_send_mail_after_update']" ).change( function() {
+			if ( ! $( "input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) && ! $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
+				$( '.pdtr_email_settings' ).addClass( 'hidden' );
+			} else {
+				$( '.pdtr_email_settings' ).removeClass( 'hidden' );
+			};
+		});
 	});
 })(jQuery);

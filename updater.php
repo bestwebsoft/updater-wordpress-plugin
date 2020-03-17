@@ -6,13 +6,13 @@ Description: Automatically check and update WordPress website core with all inst
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.43
+Version: 1.44
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
 /*
-	© Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
+	© Copyright 2020  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -74,21 +74,27 @@ if ( ! function_exists( 'pdtr_init' ) ) {
 		}
 
 		/* Function check if plugin is compatible with current WP version */
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $pdtr_plugin_info, '3.9' );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $pdtr_plugin_info, '4.5' );
 	}
 }
 
 if ( ! function_exists( 'pdtr_admin_init' ) ) {
 	function pdtr_admin_init() {
-		global $bws_plugin_info, $pdtr_plugin_info;
+		global $bws_plugin_info, $pdtr_plugin_info, $pdtr_options, $pagenow;
 
 		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '84', 'version' => $pdtr_plugin_info["Version"] );
 		}
-
 		/* Call register settings function */
 		if ( isset( $_GET['page'] ) && ( "updater-options" == $_GET['page'] || $_REQUEST['page'] == 'updater' ) ) {
 			pdtr_register_settings();
+		}
+		if ( 'plugins.php' == $pagenow ) {
+			/* Install the option defaults */
+			if ( function_exists( 'bws_plugin_banner_go_pro' ) ) {
+				pdtr_register_settings();
+			    bws_plugin_banner_go_pro( $pdtr_options, $pdtr_plugin_info, 'pdtr', 'updater', '0b6882b0c99c2776d06c375dc22b5869', '84', 'updater' );
+			}
 		}
 	}
 }
@@ -246,12 +252,14 @@ if ( ! function_exists( 'pdtr_settings_page' ) ) {
 		global $pdtr_plugin_info, $pdtr_options; ?>
 		<div class="wrap" id="pdtr_wrap">
 			<?php if ( 'updater-options' == $_GET['page'] ) { /* Showing settings tab */
+				if ( ! class_exists( 'Bws_Settings_Tabs' ) )
+					require_once( dirname( __FILE__ ) . '/bws_menu/class-bws-settings.php' );
 				require_once( dirname( __FILE__ ) . '/includes/class-pdtr-settings.php' );
 				$page = new Pdtr_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
-				<h1>Updater <?php _e( 'Settings', 'updater' ); ?></h1>
+				<h1><?php _e( 'Updater Settings', 'updater' ); ?></h1>
 				<?php $page->display_content();
 			} else { ?>
-				<h1><?php _e( 'Software', 'updater' ); ?></h1>
+				<h1><?php _e( 'Installed Software', 'updater' ); ?></h1>
 				<div class="error notice inline">
 					<p><strong><?php _e( 'We strongly recommend you to backup your website and WordPress database before updating! We are not responsible for the site running after updates.', 'updater' ); ?></strong></p>
 				</div>
@@ -865,33 +873,192 @@ if ( ! function_exists( 'pdtr_notification_exist_update' ) ) {
 if ( ! function_exists( 'pdtr_lang_codes' ) ) {
 	function pdtr_lang_codes() {
 		$pdtr_lang_codes = array(
-			'ab' => 'Abkhazian', 'aa' => 'Afar', 'af' => 'Afrikaans', 'ak' => 'Akan', 'sq' => 'Albanian', 'am' => 'Amharic', 'ar' => 'Arabic', 'an' => 'Aragonese', 'hy' => 'Armenian', 'as' => 'Assamese', 'av' => 'Avaric', 'ae' => 'Avestan', 'ay' => 'Aymara', 'az' => 'Azerbaijani',
-			'bm' => 'Bambara', 'ba' => 'Bashkir', 'eu' => 'Basque', 'be' => 'Belarusian', 'bn' => 'Bengali', 'bh' => 'Bihari', 'bi' => 'Bislama', 'bs' => 'Bosnian', 'br' => 'Breton', 'bg' => 'Bulgarian', 'my' => 'Burmese',
-			'ca' => 'Catalan; Valencian', 'ch' => 'Chamorro', 'ce' => 'Chechen', 'ny' => 'Chichewa; Chewa; Nyanja', 'zh' => 'Chinese', 'cu' => 'Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic', 'cv' => 'Chuvash', 'km' => 'Central Khmer', 'kw' => 'Cornish', 'co' => 'Corsican', 'cr' => 'Cree', 'hr' => 'Croatian', 'cs' => 'Czech',
-			'da' => 'Danish', 'dv' => 'Divehi; Dhivehi; Maldivian', 'nl' => 'Dutch; Flemish', 'dz' => 'Dzongkha',
-			'en' => 'English','eo' => 'Esperanto', 'et' => 'Estonian', 'ee' => 'Ewe',
-			'fo' => 'Faroese', 'fj' => 'Fijjian', 'fi' => 'Finnish', 'fr' => 'French', 'ff' => 'Fulah',
-			'gd' => 'Gaelic; Scottish Gaelic', 'gl' => 'Galician', 'lg' => 'Ganda', 'ka' => 'Georgian', 'de' => 'German', 'el' => 'Greek, Modern', 'gn' => 'Guarani', 'gu' => 'Gujarati',
-			'ht' => 'Haitian; Haitian Creole', 'ha' => 'Hausa', 'he' => 'Hebrew', 'hz' => 'Herero', 'hi' => 'Hindi', 'ho' => 'Hiri Motu', 'hu' => 'Hungarian',
-			'is' => 'Icelandic', 'io' => 'Ido', 'ig' => 'Igbo', 'id' => 'Indonesian', 'ie' => 'Interlingue', 'ia' => 'Interlingua (International Auxiliary Language Association)', 'iu' => 'Inuktitut', 'ik' => 'Inupiaq', 'ga' => 'Irish', 'it' => 'Italian',
-			'ja' => 'Japanese', 'jv' => 'Javanese',
-			'kl' => 'Kalaallisut; Greenlandic', 'kn' => 'Kannada', 'kr' => 'Kanuri', 'ks' => 'Kashmiri', 'kk' => 'Kazakh', 'ki' => 'Kikuyu; Gikuyu', 'rw' => 'Kinyarwanda', 'ky' => 'Kirghiz; Kyrgyz', 'kv' => 'Komi', 'kg' => 'Kongo', 'ko' => 'Korean', 'kj' => 'Kuanyama; Kwanyama', 'ku' => 'Kurdish',
-			'lo' => 'Lao', 'la' => 'Latin', 'lv' => 'Latvian', 'li' => 'Limburgan; Limburger; Limburgish', 'ln' => 'Lingala', 'lt' => 'Lithuanian', 'lu' => 'Luba-Katanga', 'lb' => 'Luxembourgish; Letzeburgesch',
-			'mk' => 'Macedonian', 'mg' => 'Malagasy', 'ms' => 'Malay', 'ml' => 'Malayalam', 'mt' => 'Maltese', 'gv' => 'Manx', 'mi' => 'Maori', 'mr' => 'Marathi', 'mh' => 'Marshallese', 'mo' => 'Moldavian', 'mn' => 'Mongolian',
-			'na' => 'Nauru', 'nv' => 'Navajo; Navaho', 'nr' => 'Ndebele, South; South Ndebele', 'nd' => 'Ndebele, North; North Ndebele', 'ng' => 'Ndonga', 'ne' => 'Nepali', 'se' => 'Northern Sami', 'no' => 'Norwegian', 'nn' => 'Norwegian Nynorsk; Nynorsk, Norwegian', 'nb' => 'Norwegian Bokmål; Bokmål, Norwegian',
-			'oc' => 'Occitan, Provençal', 'oj' => 'Ojibwa', 'or' => 'Oriya', 'om' => 'Oromo', 'os' => 'Ossetian; Ossetic',
-			'pi' => 'Pali', 'pa' => 'Panjabi; Punjabi', 'fa' => 'Persian', 'pl' => 'Polish', 'pt' => 'Portuguese', 'ps' => 'Pushto',
-			'qu' => 'Quechua',
-			'ro' => 'Romanian', 'rm' => 'Romansh', 'rn' => 'Rundi', 'ru' => 'Russian',
-			'sm' => 'Samoan', 'sg' => 'Sango', 'sa' => 'Sanskrit', 'sc' => 'Sardinian', 'sr' => 'Serbian', 'sn' => 'Shona', 'ii' => 'Sichuan Yi', 'sd' => 'Sindhi', 'si' => 'Sinhala; Sinhalese', 'sk' => 'Slovak', 'sl' => 'Slovenian', 'so' => 'Somali', 'st' => 'Sotho, Southern', 'es' => 'Spanish; Castilian', 'su' => 'Sundanese', 'sw' => 'Swahili', 'ss' => 'Swati', 'sv' => 'Swedish',
-			'tl' => 'Tagalog', 'ty' => 'Tahitian', 'tg' => 'Tajik', 'ta' => 'Tamil', 'tt' => 'Tatar', 'te' => 'Telugu', 'th' => 'Thai', 'bo' => 'Tibetan', 'ti' => 'Tigrinya', 'to' => 'Tonga (Tonga Islands)', 'ts' => 'Tsonga', 'tn' => 'Tswana', 'tr' => 'Turkish', 'tk' => 'Turkmen', 'tw' => 'Twi',
-			'ug' => 'Uighur; Uyghur', 'uk' => 'Ukrainian', 'ur' => 'Urdu', 'uz' => 'Uzbek',
-			've' => 'Venda', 'vi' => 'Vietnamese', 'vo' => 'Volapük',
-			'wa' => 'Walloon', 'cy' => 'Welsh', 'fy' => 'Western Frisian', 'wo' => 'Wolof',
-			'xh' => 'Xhosa',
-			'yi' => 'Yiddish', 'yo' => 'Yoruba',
-			'za' => 'Zhuang; Chuang', 'zu' => 'Zulu'
-		);
+            'ab' => 'Abkhazian',
+            'aa' => 'Afar',
+            'af' => 'Afrikaans',
+            'ak' => 'Akan',
+            'sq' => 'Albanian',
+            'am' => 'Amharic',
+            'ar' => 'Arabic',
+            'an' => 'Aragonese',
+            'hy' => 'Armenian',
+            'as' => 'Assamese',
+            'av' => 'Avaric',
+            'ae' => 'Avestan',
+            'ay' => 'Aymara',
+            'az' => 'Azerbaijani',
+            'bm' => 'Bambara',
+            'ba' => 'Bashkir',
+            'eu' => 'Basque',
+            'be' => 'Belarusian',
+            'bn' => 'Bengali',
+            'bh' => 'Bihari',
+            'bi' => 'Bislama',
+            'bs' => 'Bosnian',
+            'br' => 'Breton',
+            'bg' => 'Bulgarian',
+            'my' => 'Burmese',
+            'ca' => 'Catalan; Valencian',
+            'ch' => 'Chamorro',
+            'ce' => 'Chechen',
+            'ny' => 'Chichewa; Chewa; Nyanja',
+            'zh' => 'Chinese',
+            'cu' => 'Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic',
+            'cv' => 'Chuvash',
+            'km' => 'Central Khmer',
+            'kw' => 'Cornish',
+            'co' => 'Corsican',
+            'cr' => 'Cree',
+            'hr' => 'Croatian',
+            'cs' => 'Czech',
+            'da' => 'Danish',
+            'dv' => 'Divehi; Dhivehi; Maldivian',
+            'nl' => 'Dutch; Flemish',
+            'dz' => 'Dzongkha',
+            'en' => 'English',
+            'eo' => 'Esperanto',
+            'et' => 'Estonian',
+            'ee' => 'Ewe',
+            'fo' => 'Faroese',
+            'fj' => 'Fijjian',
+            'fi' => 'Finnish',
+            'fr' => 'French',
+            'ff' => 'Fulah',
+            'gd' => 'Gaelic; Scottish Gaelic',
+            'gl' => 'Galician',
+            'lg' => 'Ganda',
+            'ka' => 'Georgian',
+            'de' => 'German',
+            'el' => 'Greek, Modern',
+            'gn' => 'Guarani',
+            'gu' => 'Gujarati',
+            'ht' => 'Haitian; Haitian Creole',
+            'ha' => 'Hausa',
+            'he' => 'Hebrew',
+            'hz' => 'Herero',
+            'hi' => 'Hindi',
+            'ho' => 'Hiri Motu',
+            'hu' => 'Hungarian',
+            'is' => 'Icelandic',
+            'io' => 'Ido',
+            'ig' => 'Igbo',
+            'id' => 'Indonesian',
+            'ie' => 'Interlingue',
+            'ia' => 'Interlingua (International Auxiliary Language Association)',
+            'iu' => 'Inuktitut',
+            'ik' => 'Inupiaq',
+            'ga' => 'Irish',
+            'it' => 'Italian',
+            'ja' => 'Japanese',
+            'jv' => 'Javanese',
+            'kl' => 'Kalaallisut; Greenlandic',
+            'kn' => 'Kannada',
+            'kr' => 'Kanuri',
+            'ks' => 'Kashmiri',
+            'kk' => 'Kazakh',
+            'ki' => 'Kikuyu; Gikuyu',
+            'rw' => 'Kinyarwanda',
+            'ky' => 'Kirghiz; Kyrgyz',
+            'kv' => 'Komi',
+            'kg' => 'Kongo',
+            'ko' => 'Korean',
+            'kj' => 'Kuanyama; Kwanyama',
+            'ku' => 'Kurdish',
+            'lo' => 'Lao',
+            'la' => 'Latin',
+            'lv' => 'Latvian',
+            'li' => 'Limburgan; Limburger; Limburgish',
+            'ln' => 'Lingala',
+            'lt' => 'Lithuanian',
+            'lu' => 'Luba-Katanga',
+            'lb' => 'Luxembourgish; Letzeburgesch',
+            'mk' => 'Macedonian',
+            'mg' => 'Malagasy',
+            'ms' => 'Malay',
+            'ml' => 'Malayalam',
+            'mt' => 'Maltese',
+            'gv' => 'Manx',
+            'mi' => 'Maori',
+            'mr' => 'Marathi',
+            'mh' => 'Marshallese',
+            'mo' => 'Moldavian',
+            'mn' => 'Mongolian',
+            'na' => 'Nauru',
+            'nv' => 'Navajo; Navaho',
+            'nr' => 'Ndebele, South; South Ndebele',
+            'nd' => 'Ndebele, North; North Ndebele',
+            'ng' => 'Ndonga',
+            'ne' => 'Nepali',
+            'se' => 'Northern Sami',
+            'no' => 'Norwegian',
+            'nn' => 'Norwegian Nynorsk; Nynorsk, Norwegian',
+            'nb' => 'Norwegian Bokmål; Bokmål, Norwegian',
+            'oc' => 'Occitan, Provençal',
+            'oj' => 'Ojibwa',
+            'or' => 'Oriya',
+            'om' => 'Oromo',
+            'os' => 'Ossetian; Ossetic',
+            'pi' => 'Pali',
+            'pa' => 'Panjabi; Punjabi',
+            'fa' => 'Persian',
+            'pl' => 'Polish',
+            'pt' => 'Portuguese',
+            'ps' => 'Pushto',
+            'qu' => 'Quechua',
+            'ro' => 'Romanian',
+            'rm' => 'Romansh',
+            'rn' => 'Rundi',
+            'ru' => 'Russian',
+            'sm' => 'Samoan',
+            'sg' => 'Sango',
+            'sa' => 'Sanskrit',
+            'sc' => 'Sardinian',
+            'sr' => 'Serbian',
+            'sn' => 'Shona',
+            'ii' => 'Sichuan Yi',
+            'sd' => 'Sindhi',
+            'si' => 'Sinhala; Sinhalese',
+            'sk' => 'Slovak',
+            'sl' => 'Slovenian',
+            'so' => 'Somali',
+            'st' => 'Sotho, Southern',
+            'es' => 'Spanish; Castilian',
+            'su' => 'Sundanese',
+            'sw' => 'Swahili',
+            'ss' => 'Swati',
+            'sv' => 'Swedish',
+            'tl' => 'Tagalog',
+            'ty' => 'Tahitian',
+            'tg' => 'Tajik',
+            'ta' => 'Tamil',
+            'tt' => 'Tatar',
+            'te' => 'Telugu',
+            'th' => 'Thai',
+            'bo' => 'Tibetan',
+            'ti' => 'Tigrinya',
+            'to' => 'Tonga (Tonga Islands)',
+            'ts' => 'Tsonga',
+            'tn' => 'Tswana',
+            'tr' => 'Turkish',
+            'tk' => 'Turkmen',
+            'tw' => 'Twi',
+            'ug' => 'Uighur; Uyghur',
+            'uk' => 'Ukrainian',
+            'ur' => 'Urdu',
+            'uz' => 'Uzbek',
+            've' => 'Venda',
+            'vi' => 'Vietnamese',
+            'vo' => 'Volapük',
+            'wa' => 'Walloon',
+            'cy' => 'Welsh',
+            'fy' => 'Western Frisian',
+            'wo' => 'Wolof',
+            'xh' => 'Xhosa',
+            'yi' => 'Yiddish',
+            'yo' => 'Yoruba',
+            'za' => 'Zhuang; Chuang',
+            'zu' => 'Zulu',
+        );
 		return $pdtr_lang_codes;
 	}
 }
@@ -914,6 +1081,7 @@ if ( ! function_exists( 'pdtr_admin_head' ) ) {
 			wp_enqueue_script( 'pdtr_script', plugins_url( 'js/script.js', __FILE__ ) );
 
 			bws_enqueue_settings_scripts();
+            bws_plugins_include_codemirror();
 		} elseif ( $hook_suffix == 'plugin-install.php' ) {
 			wp_enqueue_script( 'pdtr_script', plugins_url( 'js/script.js', __FILE__ ) );
 		}
@@ -1061,14 +1229,6 @@ if ( ! function_exists( 'pdtr_plugin_banner' ) ) {
 	function pdtr_plugin_banner() {
 		global $hook_suffix, $pdtr_plugin_info;
 		if ( 'plugins.php' == $hook_suffix ) {
-			/* pls show banner go pro */
-			global $pdtr_options;
-			if ( empty( $pdtr_options ) ) {
-				$pdtr_options = is_multisite() ? get_site_option( 'pdtr_options' ) : get_option( 'pdtr_options' );
-			}
-			if ( isset( $pdtr_options['first_install'] ) && strtotime( '-1 week' ) > $pdtr_options['first_install'] ) {
-				bws_plugin_banner( $pdtr_plugin_info, 'pdtr', 'updater', '0b6882b0c99c2776d06c375dc22b5869', '84', '//ps.w.org/updater/assets/icon-128x128.png' );
-			}
 
 			/* show banner go settings pls*/
 			bws_plugin_banner_to_settings( $pdtr_plugin_info, 'pdtr_options', 'updater', 'admin.php?page=updater-options' );
@@ -1078,7 +1238,7 @@ if ( ! function_exists( 'pdtr_plugin_banner' ) ) {
 					<?php if ( is_plugin_active_for_network( plugin_basename( __FILE__ ) ) ) {
 						_e( 'Due to the peculiarities of the multisite work, Updater plugin has only', 'updater' ); ?> <a target="_blank" href="<?php echo network_admin_url( 'admin.php?page=updater-options' ); ?>"><?php _e( 'Network settings page', 'updater' ); ?></a>
 					<?php } else {
-						_e( 'Due to the peculiarities of the multisite work, Updater plugin has the network settings page only and it should be Network Activated. Please', 'updater' ); ?> <a target="_blank" href="<?php echo network_admin_url( 'plugins.php' ); ?>"><?php _e( 'Activate Updater for Network', 'updater' ); ?></a>
+						_e( 'Due to the peculiarities of the multisite work, Updater plugin has the network settings page only and it should be Network Activated.', 'updater' ); ?> <a target="_blank" href="<?php echo network_admin_url( 'plugins.php' ); ?>"><?php _e( 'Activate Updater for Network', 'updater' ); ?></a>
 					<?php } ?>
 				</div>
 			<?php }

@@ -41,7 +41,7 @@
 <ul>
 <li>Exclude certain plugins, themes from automatic updates</li>
 <li>Exclude inactive plugins and themes from automatic updates</li>
-<li>Compatible with <a href="https://envato.com/" rel="nofollow">Envato</a> (update products purchased on Envato)</li>
+<li>Compatible with <a href="https://envato.com/" rel="nofollow ugc">Envato</a> (update products purchased on Envato)</li>
 <li>Create database and files backup before updating</li>
 <li>Backup all:
 <ul>
@@ -51,23 +51,23 @@
 </li>
 <li>Delete old backups automatically</li>
 <li>Disable WordPress core auto update</li>
-<li>Get answer to your question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow">Support Policy</a>)</li>
+<li>Get answer to your question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow ugc">Support Policy</a>)</li>
 </ul>
-<p><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=49e226d45dc4d3465a079fa62317eab2" rel="nofollow">Upgrade to Pro Now</a></p>
+<p><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=49e226d45dc4d3465a079fa62317eab2" rel="nofollow ugc">Upgrade to Pro Now</a></p>
 </blockquote>
-<p>If you have a feature suggestion or idea you&#8217;d like to see in the plugin, we&#8217;d love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow">Suggest a Feature</a></p>
+<p>If you have a feature suggestion or idea you&#8217;d like to see in the plugin, we&#8217;d love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow ugc">Suggest a Feature</a></p>
 <h4>Documentation &amp; Videos</h4>
 <ul>
-<li><a href="https://docs.google.com/document/d/1UHXGDpOJ2dZrJpPGHmH_i4U3ph50M1L2WuKC583RmTY/" rel="nofollow">[Doc] How to Use</a></li>
-<li><a href="https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/" rel="nofollow">[Doc] Installation</a></li>
-<li><a href="https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/" rel="nofollow">[Doc] Purchase</a></li>
-<li><a href="https://www.youtube.com/watch?v=CmHctvGHWMs" rel="nofollow">[Video] Installation Instruction</a></li>
+<li><a href="https://docs.google.com/document/d/1UHXGDpOJ2dZrJpPGHmH_i4U3ph50M1L2WuKC583RmTY/" rel="nofollow ugc">[Doc] How to Use</a></li>
+<li><a href="https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/" rel="nofollow ugc">[Doc] Installation</a></li>
+<li><a href="https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/" rel="nofollow ugc">[Doc] Purchase</a></li>
+<li><a href="https://www.youtube.com/watch?v=CmHctvGHWMs" rel="nofollow ugc">[Video] Installation Instruction</a></li>
 </ul>
 <h4>Help &amp; Support</h4>
-<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8211; <a href="https://support.bestwebsoft.com/" rel="nofollow">https://support.bestwebsoft.com/</a></p>
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8211; <a href="https://support.bestwebsoft.com/" rel="nofollow ugc">https://support.bestwebsoft.com/</a></p>
 <h4>Translation</h4>
 <ul>
 <li>Russian (ru_RU)</li>
 <li>Ukrainian (uk)</li>
 </ul>
-<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="https://codex.wordpress.org/Translating_WordPress" rel="nofollow">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow">BestWebSoft</a> and we&#8217;ll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php" rel="nofollow">files Poedit</a>.</p>
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="https://codex.wordpress.org/Translating_WordPress" rel="nofollow ugc">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow ugc">BestWebSoft</a> and we&#8217;ll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php" rel="nofollow ugc">files Poedit</a>.</p>

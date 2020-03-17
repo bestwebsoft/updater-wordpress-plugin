@@ -218,7 +218,7 @@ if ( ! function_exists( 'pdtr_handle_action' ) ) {
 			global $pdtr_options;
 
 			$core_for_update = false;
-			$plugin_list_for_update = $theme_list_for_update = array();
+			$plugin_list_for_update = $theme_list_for_update = $language_result = array();
 
 			if ( isset( $_REQUEST['pdtr_plugin_id'] ) ) {
 				foreach ( (array)$_REQUEST['pdtr_plugin_id'] as $value ) {
@@ -258,7 +258,7 @@ if ( ! function_exists( 'pdtr_handle_action' ) ) {
 				if ( 1 == $pdtr_options["send_mail_after_update"] ) {
 					if ( $core_result || ! empty( $plugin_list_for_update ) || ! empty( $theme_list_for_update ) ) {
 						echo '<h2>' . __( 'Sending Report...', 'updater' ) . '</h2>';
-						$result_mail = pdtr_notification_after_update( $plugin_list_for_update, $theme_list_for_update, $core_for_update, $core_result );
+						$result_mail = pdtr_notification_after_update( $plugin_list_for_update, $theme_list_for_update, $core_for_update, $core_result, $language_result );
 
 						if ( 'default' == $pdtr_options["to_email_type"] ) {
 							$emails = array();

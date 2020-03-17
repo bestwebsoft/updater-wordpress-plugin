@@ -3,8 +3,6 @@
  * Displays the content on the plugin settings page
  */
 
-require_once( dirname( dirname( __FILE__ ) ) . '/bws_menu/class-bws-settings.php' );
-
 if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 	class Pdtr_Settings_Tabs extends Bws_Settings_Tabs {
 		public $users = array();
@@ -61,8 +59,8 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 		 * @return array    The action results
 		 */
 		public function save_options() {
-            $_POST;
-            $_POST;
+			$message = $notice = $error = '';
+
 			$this->options["update_core"] 				= ( isset( $_REQUEST["pdtr_update_core"] ) ) ? 1 : 0;
 			$this->options["update_plugin"] 			= ( isset( $_REQUEST["pdtr_update_plugin"] ) ) ? 1 : 0;
 			$this->options["update_theme"] 				= ( isset( $_REQUEST["pdtr_update_theme"] ) ) ? 1 : 0;
@@ -102,13 +100,13 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 						}
 					}
 					$this->options['to_email_type'] = 'custom';
-					$this->options["to_email"] = trim( $_REQUEST["pdtr_to_email"] );
+					$this->options["to_email"] = sanitize_email( $_REQUEST["pdtr_to_email"] );
 				} else {
 					$error = __( "Please enter a valid recipient email. Settings are not saved.", 'updater' );
 				}
 			}
 
-			$this->options["from_name"] = stripslashes( esc_html( $_REQUEST["pdtr_from_name"] ) );
+			$this->options["from_name"] = stripslashes( sanitize_text_field( $_REQUEST["pdtr_from_name"] ) );
 			if ( empty( $this->options['from_email'] ) ) {
 				$this->options['from_email'] = $this->default_options['from_email'];
 			}
@@ -246,6 +244,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 										}
 									} ?>
 								</select>
+                                <p class="bws_info"><?php _e( 'Select an existing administrator or a custom email.', 'updater' ); ?></p>
 							</div>
 							<br>
 							<label>
@@ -254,10 +253,9 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 							</label>
 							<div class="pdtr_to_email_custom">
 								<textarea name="pdtr_to_email"><?php if ( 'custom' == $this->options["to_email_type"] ) echo $this->options["to_email"]; ?></textarea>
-								<div class="bws_info"><?php _e( 'You can specify several email, separating them by commas.', 'updater' ); ?></div>
+								<p class="bws_info"><?php _e( "Add multiple email addresses separated by comma.", 'updater' ); ?></p>
 							</div>
 						</fieldset>
-						<div class="bws_info"><?php _e( 'Select an existing administrator or a custom email.', 'updater' ); ?></div>
 					</td>
 				</tr>
 				<tr class="pdtr_email_settings">
@@ -267,7 +265,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 						<input type="text" name="pdtr_from_name" maxlength="250" value="<?php echo $this->options["from_name"]; ?>" />
 						<p><?php _e( "Email", 'updater' ); ?></p>
 						<input type="email" name="pdtr_from_email" maxlength="250" value="<?php echo $this->options["from_email"]; ?>" />
-						<div class="bws_info"><?php _e( "Note: If you will change this settings, email notifications may be marked as spam or email delivery failures may occur if you'll change this option.", 'updater' ); ?></div>
+						<p class="bws_info"><?php _e( "Note: If you will change this settings, email notifications may be marked as spam or email delivery failures may occur if you'll change this option.", 'updater' ); ?></p>
 					</td>
 				</tr>
 				<?php do_action( 'pdtr_settings_page_action', $this->options ); ?>

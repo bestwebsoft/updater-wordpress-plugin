@@ -33,3 +33,6 @@
     border-right: 4px solid #d54e21;
     border-left: none !important;
 }
+.pdtr_normal_text {
+    font-style: normal !important;
+}

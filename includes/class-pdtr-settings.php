@@ -20,6 +20,7 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 
 			$tabs = array(
 				'settings' 		=> array( 'label' => __( 'Settings', 'updater' ) ),
+				'notifications'  => array( 'label' => __( 'Notifications', 'updater' ) ),
 				'misc' 			=> array( 'label' => __( 'Misc', 'updater' ) ),
 				'custom_code'	=> array( 'label' => __( 'Custom Code', 'updater' ) ),
 				/*pls */
@@ -118,6 +119,12 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 				$error = __( "Please enter a valid sender email. Settings are not saved.", 'updater' );
 			}
 
+			/* If user enter subject & message.Save it.*/
+			$this->options["email_subject_update"] = ( ! empty( $this->options['email_subject_update'] ) ) ? sanitize_text_field( $_POST["pdtr_email_subject_update"] ) : $this->default_options['email_subject_update'];
+			$this->options["email_subject_complete"] = ( ! empty( $this->options['email_subject_complete'] ) ) ? sanitize_text_field( $_POST["pdtr_email_subject_complete"] ) : $this->default_options['email_subject_complete'];
+			$this->options["email_message_update"] = ( ! empty( $this->options['email_message_update'] ) ) ? esc_attr( $_POST["pdtr_email_message_update"] ) : $this->default_options['email_message_update'];
+			$this->options["email_message_complete"] = ( ! empty( $this->options['email_message_complete'] ) ) ? esc_attr( $_POST["pdtr_email_message_complete"] ) : $this->default_options['email_message_complete'];
+
 			/* Add or delete hook of auto/handle mode */
 			if ( wp_next_scheduled( 'pdtr_auto_hook' ) ) {
 				wp_clear_scheduled_hook( 'pdtr_auto_hook' );
@@ -206,7 +213,71 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 					<td>
 						<input type="number" name="pdtr_time" class="small-text" value="<?php echo $this->options["time"]; ?>" min="1" max="99999" /> <?php _e( 'hours', 'updater' ); ?>
 					</td>
-				</tr>
+				</tr>				
+				<?php do_action( 'pdtr_settings_page_action', $this->options ); ?>
+			</table>
+			<!-- pls -->
+			<?php if ( ! $this->hide_pro_tabs ) { ?>
+				<div class="bws_pro_version_bloc">
+					<div class="bws_pro_version_table_bloc">
+						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'updater' ); ?>"></button>
+						<div class="bws_table_bg"></div>
+						<table class="form-table bws_pro_version">
+							<tr>
+								<th><?php _e( 'Backup', 'updater' ); ?></th>
+								<td>
+									<input disabled type="checkbox" name="pdtr_make_backup" value="1" />
+									<span class="bws_info"><?php _e( 'Enable to automatically create a backup before each update (recommended).', 'updater' ); ?></span>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'Backup Rotation', 'updater' ); ?></th>
+								<td>
+									<select disabled name="pdtr_backups_count">
+										<option value="4">4</option>
+									</select>
+									<div class="bws_info"><?php _e( 'The maximum number of stored backups. When maximum limit is reached the oldest backup will be automatically deleted.', 'updater' ); ?></div>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'Backup Custom', 'updater' ); ?></th>
+								<td>
+									<fieldset>
+										<label><input disabled type="checkbox" name="pdtr_backup_all_files" value="1" /> <?php _e( 'Folders', 'updater' ); ?></label>
+										<br/>
+										<label><input disabled type="checkbox" name="pdtr_backup_all_db" value="1" /> <?php _e( 'Tables in database', 'updater' ); ?></label>
+									</fieldset>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'Test Backup', 'updater' ); ?></th>
+								<td>
+									<input disabled type="checkbox" name="pdtr_test_backup_delete" value="1" />
+									<span class="bws_info"><?php _e( "Enable to delete test backup when it's finished.", 'updater' ); ?></span>
+									<p>
+										<input disabled type="button" class="button button-secondary bws_no_bind_notice" name="pdtr_test_backup" value="<?php _e( 'Backup Now', 'updater' ); ?>"/>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<th><?php _e( 'Envato API', 'updater' ); ?></th>
+								<td>
+									<input disabled type="text" name="pdtr_envato_token" class="widefat" value="" autocomplete="off">
+									<div class="bws_info"><?php _e( 'Insert your Envato API Personal Token to enable automatic updates of your installed products.', 'updater' ); ?> <a href="https://build.envato.com/create-token/?purchase:download=t&amp;purchase:verify=t&amp;purchase:list=t" target="_blank"><?php _e( 'Learn More', 'updater' ); ?></a></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<?php $this->bws_pro_block_links(); ?>
+				</div>
+			<?php } ?>
+			<!-- end pls -->
+		<?php }
+
+		public function tab_notifications() { ?>
+			<h3 class="bws_tab_label"><?php _e( 'Email Notifications Settings', 'updater' ); ?></h3>
+			<hr>		
+			<table class="form-table pdtr_settings_form">				
 				<tr>
 					<th><?php _e( 'Receive Email Notifications When', 'updater' ); ?></th>
 					<td>
@@ -268,64 +339,46 @@ if ( ! class_exists( 'Pdtr_Settings_Tabs' ) ) {
 						<p class="bws_info"><?php _e( "Note: If you will change this settings, email notifications may be marked as spam or email delivery failures may occur if you'll change this option.", 'updater' ); ?></p>
 					</td>
 				</tr>
+				<tr class="pdtr_email_settings_new_update<?php echo ( 0 == $this->options["send_mail_get_update"] ) ? ' hidden' : ''; ?>">
+					<th><?php _e( 'New Updates are Available', 'updater' ); ?></th>
+					<td>
+						<p><?php _e( 'Subject', 'updater' ); ?></p>
+						<textarea<?php echo $this->change_permission_attr; ?> rows="5" name="pdtr_email_subject_update"><?php echo $this->options['email_subject_update']; ?></textarea>
+						<div class="bws_info pdtr_normal_text">
+							<?php _e( 'Allowed Variables:', 'updater' ); ?><br/>							
+							<strong>{SITE_NAME}</strong> - <?php _e( 'Website name.', 'updater' ); ?>
+						</div>
+						<p style="margin-top: 6px;"><?php _e( 'Message', 'updater' ); ?></p>
+						<textarea<?php echo $this->change_permission_attr; ?> rows="5" name="pdtr_email_message_update"><?php echo $this->options['email_message_update']; ?></textarea>
+						<div class="bws_info pdtr_normal_text">
+							<?php _e( 'Allowed Variables:', 'updater' ); ?><br/>
+							<strong>{UPDATE_LIST}</strong> - <?php _e( 'List of available updates.', 'updater' ); ?><br/>
+							<strong>{SITE_NAME}</strong> - <?php _e( 'Website name.', 'updater' ); ?><br/>
+							<strong>{SITE_URL}</strong> - <?php _e( 'Website URL.', 'updater' ); ?>
+						</div>
+					</td>
+				</tr>
+				<tr class="pdtr_email_settings_updated_completed<?php echo ( 0 == $this->options["send_mail_after_update"] ) ? ' hidden' : ''; ?>">
+					<th><?php _e( 'Update is Completed', 'updater' ); ?></th>
+					<td>
+						<p><?php _e( 'Subject', 'updater' ); ?></p>
+						<textarea<?php echo $this->change_permission_attr; ?> rows="5" name="pdtr_email_subject_complete"><?php echo $this->options['email_subject_complete']; ?></textarea>
+						<div class="bws_info pdtr_normal_text">
+							<?php _e( 'Allowed Variables:', 'updater' ); ?><br/>							
+							<strong>{SITE_NAME}</strong> - <?php _e( 'Website name.', 'updater' ); ?>
+						</div>
+						<p style="margin-top: 6px;"><?php _e( 'Message', 'updater' ); ?></p>
+						<textarea<?php echo $this->change_permission_attr; ?> rows="5" name="pdtr_email_message_complete"><?php echo  $this->options['email_message_complete'] ; ?></textarea>
+						<div class="bws_info pdtr_normal_text">
+							<?php _e( 'Allowed Variables:', 'updater' ); ?><br/>
+							<strong>{UPDATE_LIST}</strong> - <?php _e( 'Updates results.', 'updater' ); ?><br/>
+							<strong>{SITE_NAME}</strong> - <?php _e( 'Website name.', 'updater' ); ?><br/>
+							<strong>{SITE_URL}</strong> - <?php _e( 'Website URL.', 'updater' ); ?>
+						</div>
+					</td>
+				</tr>
 				<?php do_action( 'pdtr_settings_page_action', $this->options ); ?>
-			</table>
-			<!-- pls -->
-			<?php if ( ! $this->hide_pro_tabs ) { ?>
-				<div class="bws_pro_version_bloc">
-					<div class="bws_pro_version_table_bloc">
-						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php _e( 'Close', 'updater' ); ?>"></button>
-						<div class="bws_table_bg"></div>
-						<table class="form-table bws_pro_version">
-							<tr>
-								<th><?php _e( 'Backup', 'updater' ); ?></th>
-								<td>
-									<input disabled type="checkbox" name="pdtr_make_backup" value="1" />
-									<span class="bws_info"><?php _e( 'Enable to automatically create a backup before each update (recommended).', 'updater' ); ?></span>
-								</td>
-							</tr>
-							<tr>
-								<th><?php _e( 'Backup Rotation', 'updater' ); ?></th>
-								<td>
-									<select disabled name="pdtr_backups_count">
-										<option value="4">4</option>
-									</select>
-									<div class="bws_info"><?php _e( 'The maximum number of stored backups. When maximum limit is reached the oldest backup will be automatically deleted.', 'updater' ); ?></div>
-								</td>
-							</tr>
-							<tr>
-								<th><?php _e( 'Backup Custom', 'updater' ); ?></th>
-								<td>
-									<fieldset>
-										<label><input disabled type="checkbox" name="pdtr_backup_all_files" value="1" /> <?php _e( 'Folders', 'updater' ); ?></label>
-										<br/>
-										<label><input disabled type="checkbox" name="pdtr_backup_all_db" value="1" /> <?php _e( 'Tables in database', 'updater' ); ?></label>
-									</fieldset>
-								</td>
-							</tr>
-							<tr>
-								<th><?php _e( 'Test Backup', 'updater' ); ?></th>
-								<td>
-									<input disabled type="checkbox" name="pdtr_test_backup_delete" value="1" />
-									<span class="bws_info"><?php _e( "Enable to delete test backup when it's finished.", 'updater' ); ?></span>
-									<p>
-										<input disabled type="button" class="button button-secondary bws_no_bind_notice" name="pdtr_test_backup" value="<?php _e( 'Backup Now', 'updater' ); ?>"/>
-									</p>
-								</td>
-							</tr>
-							<tr>
-								<th><?php _e( 'Envato API', 'updater' ); ?></th>
-								<td>
-									<input disabled type="text" name="pdtr_envato_token" class="widefat" value="" autocomplete="off">
-									<div class="bws_info"><?php _e( 'Insert your Envato API Personal Token to enable automatic updates of your installed products.', 'updater' ); ?> <a href="https://build.envato.com/create-token/?purchase:download=t&amp;purchase:verify=t&amp;purchase:list=t" target="_blank"><?php _e( 'Learn More', 'updater' ); ?></a></div>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<?php $this->bws_pro_block_links(); ?>
-				</div>
-			<?php } ?>
-			<!-- end pls -->
+			</table>			
 		<?php }
 
 		/**

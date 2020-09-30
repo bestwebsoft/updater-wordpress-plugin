@@ -20,20 +20,24 @@
 			}
 		} );
 		if ( ! $("input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) && ! $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
-			$( '.pdtr_email_settings' ).addClass( 'hidden' );
+			$( '.pdtr_email_settings, .pdtr_email_settings_new_update, .pdtr_email_settings_updated_completed' ).addClass( 'hidden' );
 		};
 		$( "input:checkbox[name='pdtr_send_mail_get_update']" ).change( function() {
 			if ( ! $("input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) && ! $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
-				$('.pdtr_email_settings').addClass( 'hidden' );
+				$('.pdtr_email_settings, .pdtr_email_settings_new_update').addClass( 'hidden' );
+			} else if ( ! $("input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) &&  $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
+				$( '.pdtr_email_settings_new_update' ).addClass( 'hidden' );
 			} else {
-				$( '.pdtr_email_settings' ).removeClass( 'hidden' );
+				$( '.pdtr_email_settings, .pdtr_email_settings_new_update' ).removeClass( 'hidden' );
 			};
 		});
 		$( "input:checkbox[name='pdtr_send_mail_after_update']" ).change( function() {
 			if ( ! $( "input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) && ! $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
-				$( '.pdtr_email_settings' ).addClass( 'hidden' );
+				$( '.pdtr_email_settings, .pdtr_email_settings_updated_completed' ).addClass( 'hidden' );
+			} else if (  $("input:checkbox[name='pdtr_send_mail_get_update']" ).is( ':checked' ) && ! $( "input:checkbox[name='pdtr_send_mail_after_update']" ).is( ':checked' ) ) {
+				$( '.pdtr_email_settings_updated_completed' ).addClass( 'hidden' );
 			} else {
-				$( '.pdtr_email_settings' ).removeClass( 'hidden' );
+				$( '.pdtr_email_settings, .pdtr_email_settings_updated_completed' ).removeClass( 'hidden' );
 			};
 		});
 	});

@@ -6,7 +6,7 @@ Description: Automatically check and update WordPress website core with all inst
 Author: BestWebSoft
 Text Domain: updater
 Domain Path: /languages
-Version: 1.44
+Version: 1.45
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -107,6 +107,13 @@ if ( ! function_exists( 'pdtr_register_settings' ) ) {
 
 		$is_multisite = is_multisite();
 
+		if ( empty( $pdtr_plugin_info ) ) {
+		    if ( ! function_exists( 'get_plugin_data' ) ) {
+		        require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		    }
+		    $pdtr_plugin_info = get_plugin_data( __FILE__ );
+		}
+
 		if ( $is_multisite ) {
 			if ( ! get_site_option( 'pdtr_options' ) ) {
 				$options_default = pdtr_get_options_default();
@@ -163,6 +170,13 @@ if ( ! function_exists( 'pdtr_get_options_default' ) ) {
 		}
 		$from_email = 'wordpress@' . $sitename;
 
+		$email_message_new_update_default =  __( 'Hello!', 'updater' ) . "\n" . __( 'Updater plugin is run on your website', 'updater' ) . " {SITE_NAME}.\n\n" . __( 'The following files need to be updated:', 'updater' ) . "\n\n{UPDATE_LIST}\n\n"
+            . sprintf( __( 'If you want to change the type of the updating mode or other settings, please go to the %s.', 'updater' ), '<a href=' . network_admin_url( 'admin.php?page=updater-options' ) . '>' . __( 'plugin settings page', 'updater' ) . '</a>' )
+            . "\n\n----------------------------------------\n\n" .  sprintf( __( 'Thanks for using %s!', 'updater' ), '<a href=' . esc_url('https://bestwebsoft.com/products/wordpress/plugins/updater/' ) . '>' . "Updater" . '</a>' );
+        $email_message_complete_update_default = __( 'Hello!', 'updater' ) . "\n" . __( 'Updater plugin is run on your website', 'updater' ) . " {SITE_NAME}.\n\n{UPDATE_LIST}\n\n"
+            . sprintf( __( 'If you want to change the type of the updating mode or other settings, please go to the %s.', 'updater' ), '<a href=' . network_admin_url( 'admin.php?page=updater-options' ) . '>' . __( 'plugin settings page', 'updater' ) . '</a>' )
+            . "\n\n----------------------------------------\n\n" .  sprintf( __( 'Thanks for using %s!', 'updater' ), '<a href=' . esc_url('https://bestwebsoft.com/products/wordpress/plugins/updater/' ) . '>' . "Updater" . '</a>' );
+
 		$options_default = array(
 			'plugin_option_version' 	=>	$pdtr_plugin_info["Version"],
 			'first_install'				=>	strtotime( "now" ),
@@ -180,6 +194,10 @@ if ( ! function_exists( 'pdtr_get_options_default' ) ) {
 			'update_plugin'				=>	1,
 			'update_theme'				=>	1,
 			'update_language'			=>	1,
+			'email_subject_update'      => __( 'Check for Updates on', 'updater' ) . " {SITE_NAME}",
+			'email_subject_complete'    => __( 'Updating on', 'updater' ) . " {SITE_NAME}",
+			'email_message_update'      => $email_message_new_update_default,
+			'email_message_complete'    => $email_message_complete_update_default,
 		);
 		return $options_default;
 	}
@@ -278,6 +296,9 @@ if ( ! function_exists( 'pdtr_processing_site' ) ) {
 	function pdtr_processing_site() {
 		global $wp_version, $pdtr_options, $wpdb;
 		$updater_list = array();
+
+		if ( empty( $pdtr_options ) )
+			pdtr_register_settings();
 
 		$wpdb->query( "TRUNCATE " . $wpdb->base_prefix . "updater_list" );
 
@@ -616,6 +637,10 @@ if ( ! function_exists( 'pdtr_notification_after_update' ) ) {
 		$have_updating_plugins = $have_updating_themes = $language_result = array();
 
 		$updater_list = pdtr_processing_site();
+		$subject = $pdtr_options['email_subject_complete'];
+		$message = $pdtr_options['email_message_complete'];
+		$plugins_list_update = '';
+
 
 		if ( ! empty( $plugins_list ) ) {
 			foreach ( $plugins_list as $key => $value ) {
@@ -652,55 +677,47 @@ if ( ! function_exists( 'pdtr_notification_after_update' ) ) {
 					$language_result[] = $data;
 				}
 			}
-		}
-
-		$subject = sprintf( __( 'Updating on %s', 'updater' ), esc_attr( get_bloginfo( 'name', 'display' ) ) );
-
-		$message = '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
-			<body>
-			<h3>' . __( 'Hello!', 'updater' ) . '</h3>' .
-			sprintf( __( 'Updater plugin is run on your website %s.', 'updater' ), '<a href=' . home_url() . '>' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '</a>' ) .
-			'<br/><br/>';
+		}		
 
 		/* Errors */
 		if ( ( false == $core_result && true == $core_for_update ) || true == $have_error_plugin  || true == $have_error_theme || ! empty( $language_result ) ) {
 
-			$message .= __( "The following files can't be updated", 'updater' ) . ':<br/><br/>';
+			$plugins_list_update .= __( "The following files can't be updated", 'updater' ) . ':<br/><br/>';
 
 			if ( true == $have_error_plugin ) {
-				$message .= '<strong>' . __( 'Plugin(s)', 'updater' ) . ':</strong><ul>';
+				$plugins_list_update .= '<strong>' . __( 'Plugin(s)', 'updater' ) . ':</strong><ul>';
 				foreach ( $plugins_result as $key => $value ) {
 				    if ( true != $value ) {
 						$name = explode( "/", $key );
 
-						$message .= '<li><span style="color:#d52721">' . $name[0] . ' - ' . __( 'failed update', 'updater' ) . ' (' . sprintf( __( 'the current version is %s', 'updater' ), $updater_list["plugin_list"][ $key ]["Version"] ) . ');</span></li>';
+						$plugins_list_update .= '<li><span style="color:#d52721">' . $name[0] . ' - ' . __( 'failed update', 'updater' ) . ' (' . sprintf( __( 'the current version is %s', 'updater' ), $updater_list["plugin_list"][ $key ]["Version"] ) . ');</span></li>';
 					}
 				}
-				$message .= '</ul><br/>';
+				$plugins_list_update .= '</ul><br/>';
 			}
 
 			if ( true == $have_error_theme ) {
-				$message .= '<strong>' . __( 'Theme(s)', 'updater' ) . ':</strong><ul>';
+				$plugins_list_update .= '<strong>' . __( 'Theme(s)', 'updater' ) . ':</strong><ul>';
 				foreach ( $themes_result as $key => $value ) {
 						if ( true != $value ) {
 							$name = explode( "/", $key );
 
-							$message .= '<li><span style="color:#d52721">' . $name[0] . ' - ' . __( 'failed update', 'updater' ) . ' (' . sprintf( __( 'the current version is %s', 'updater' ), $updater_list["theme_list"][ $key ]["Version"] ) . ');</span></li>';
+							$plugins_list_update .= '<li><span style="color:#d52721">' . $name[0] . ' - ' . __( 'failed update', 'updater' ) . ' (' . sprintf( __( 'the current version is %s', 'updater' ), $updater_list["theme_list"][ $key ]["Version"] ) . ');</span></li>';
 						}
 				}
-				$message .= '</ul><br/>';
+				$plugins_list_update .= '</ul><br/>';
 			}
 
 			if ( false == $core_result && true == $core_for_update ) {
-				$message .= '<strong>' . __( 'WordPress', 'updater' ) . ':</strong><ul>
+				$plugins_list_update .= '<strong>' . __( 'WordPress', 'updater' ) . ':</strong><ul>
 					<li><span style="color:#d52721">' . __( "WordPress can’t be updated on your website.", 'updater' ) . '</span></li>
 					</ul><br/>';
 			}
 
 			if ( ! empty( $language_result ) ) {
-				$message .= '<strong>' . __( 'Translations', 'updater' ) . ':</strong><ul>';
+				$plugins_list_update .= '<strong>' . __( 'Translations', 'updater' ) . ':</strong><ul>';
 				foreach ( $language_result as $language ) {
-					$message .= '<li><span style="color:#d52721">' . $language . ' - ' . __( "failed update.", 'updater' ) . '</span></li>
+					$plugins_list_update .= '<li><span style="color:#d52721">' . $language . ' - ' . __( "failed update.", 'updater' ) . '</span></li>
 					</ul><br/>';
 				}
 			}
@@ -708,48 +725,58 @@ if ( ! function_exists( 'pdtr_notification_after_update' ) ) {
 
 		if ( $have_updating_plugins || $have_updating_themes || ( true == $core_result && true == $core_for_update ) || empty( $language_result ) ) {
 
-			$message .= __( 'The following files were updated successfully', 'updater' ) . ':<br/><br/>';
+			$plugins_list_update .= __( 'The following files were updated successfully', 'updater' ) . ':<br/><br/>';
 
 			if ( $have_updating_plugins ) {
-				$message .= '<strong>' . __( 'Plugin(s)', 'updater' ) . ':</strong><ul>';
+				$plugins_list_update .= '<strong>' . __( 'Plugin(s)', 'updater' ) . ':</strong><ul>';
 				foreach ( $plugins_result as $key => $value ) {
 					if ( false != $value ) {
 						$name = explode( "/", $key );
-						$message .= '<li><span style="color:#179247">' . $name[0] . ' - ' . sprintf( __( 'updated to the version %s', 'updater' ), $updater_list["plugin_list"][ $key ]["Version"] ) . ';</span></li>';
+						$$plugins_list_update .= '<li><span style="color:#179247">' . $name[0] . ' - ' . sprintf( __( 'updated to the version %s', 'updater' ), $updater_list["plugin_list"][ $key ]["Version"] ) . ';</span></li>';
 					}
 				}
-				$message .= '</ul><br/>';
+				$plugins_list_update .= '</ul><br/>';
 			}
 
 			if ( $have_updating_themes ) {
-				$message .= '<strong>' . __( 'Theme(s)', 'updater' ) . ':</strong><ul>';
+				$plugins_list_update .= '<strong>' . __( 'Theme(s)', 'updater' ) . ':</strong><ul>';
 				foreach ( $themes_result as $key => $value ) {
 					if ( false != $value ) {
 						$name = explode( "/", $key );
-						$message .= '<li><span style="color:#179247">' . $name[0] . ' - ' . sprintf( __( 'updated to the version %s', 'updater' ), $updater_list["theme_list"][ $key ]["Version"] ) . ';</span></li>';
+						$plugins_list_update .= '<li><span style="color:#179247">' . $name[0] . ' - ' . sprintf( __( 'updated to the version %s', 'updater' ), $updater_list["theme_list"][ $key ]["Version"] ) . ';</span></li>';
 					}
 				}
-				$message .= '</ul><br/>';
+				$plugins_list_update .= '</ul><br/>';
 			}
 
 				if ( true == $core_result && true == $core_for_update ) {
-					$message .= '<strong>' . __( 'WordPress', 'updater' ) . ':</strong><ul>
+					$plugins_list_update .= '<strong>' . __( 'WordPress', 'updater' ) . ':</strong><ul>
 					<li><span style="color:#179247">' . __( 'Version', 'updater' ) . ' ' . $wp_version . '.</span></li>
 					</ul><br/>';
 				}
 
-			if ( empty( $language_result ) ) {
-				$message .= '<strong>' . __( 'Translations', 'updater' ) . ':</strong><ul>';
+			if ( ! empty( $language_result ) ) {
+				$plugins_list_update .= '<strong>' . __( 'Translations', 'updater' ) . ':</strong><ul>';
 				foreach ( $languages as $language ) {
-					$message .= '<li><span style="color:#179247">' . $language . ' - ' . __( "updated successfully.", 'updater' ) . '</span></li>
+					$plugins_list_update .= '<li><span style="color:#179247">' . $language . ' - ' . __( "updated successfully.", 'updater' ) . '</span></li>
 					</ul><br/>';
 				}
 			}
-		}
+		} 
+		
+		$plugins_list_update .= '</body></html>';
 
-		$message .= sprintf( __( 'If you want to change the type of the updating mode or other settings, please go to the %s.', 'updater' ), '<a href=' . network_admin_url( 'admin.php?page=updater-options' ) . '>' . __( 'plugin settings page', 'updater' ) . '</a>' ) .
-			'<br/><br/>----------------------------------------<br/><br/>' .
-			sprintf( __( 'Thanks for using %s!', 'updater' ), '<a href="https://bestwebsoft.com/products/wordpress/plugins/updater/">Updater</a>' ) . '</body></html>';
+		$subject = str_replace(
+			array( '{SITE_NAME}' ),
+			array( get_bloginfo( 'name' ) ),
+			$subject
+		);
+
+		$message = str_replace(
+			array( '{SITE_NAME}', '{SITE_URL}', '{UPDATE_LIST}' ),
+			array( get_bloginfo( 'name' ), get_bloginfo( 'url' ), $plugins_list_update ),
+			$message
+		);
 
 		if ( 'default' == $pdtr_options["to_email_type"] ) {
 			$emails = array();
@@ -770,7 +797,7 @@ if ( ! function_exists( 'pdtr_notification_after_update' ) ) {
 
 		$headers = 'From: ' . $pdtr_options["from_name"] . ' <' . $pdtr_options["from_email"] . ">\n" .
 			'Content-type: text/html; charset=utf-8' . "\n";
-		$mail_result = wp_mail( $emails, $subject, $message, $headers );
+		$mail_result = wp_mail( $emails, $subject, htmlspecialchars_decode( nl2br( $message ) ), $headers );
 		return $mail_result;
 	}
 }
@@ -780,68 +807,70 @@ if ( ! function_exists( 'pdtr_notification_exist_update' ) ) {
 	function pdtr_notification_exist_update( $plugins_list, $themes_list, $core, $languages, $test = false ) {
 		global $pdtr_options, $wpdb;
 		pdtr_processing_site();
-		$subject = sprintf( __( 'Check for Updates on %s', 'updater' ), esc_attr( get_bloginfo( 'name', 'display' ) ) );
-		$message = '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
-					<body>
-					<h3>' . __( 'Hello!', 'updater' ) . '</h3>' .
-					sprintf( __( 'Updater plugin is run on your website %s.', 'updater' ), ' <a href=' . home_url() . '>' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '</a>' );
-
-		if ( ! empty( $themes_list ) || ! empty( $plugins_list ) || false != $core || ! empty( $languages ) ) {
-			$message .= ' ' . __( 'The following files need to be updated:', 'updater' );
-		}
-
-		$message .= '<br/><br/>';
-
+		$subject = $pdtr_options['email_subject_update'];		
+		$message = $pdtr_options['email_message_update'];		
+		$plugins_list_update = '';
+		
 		if ( ! empty( $plugins_list ) ) {
-			$message .= '<strong>' . __( 'Plugin(s)', 'updater' ) . ':</strong><ul>';
+			$plugins_list_update .= '<strong>' . __( 'Plugin(s)', 'updater' ) . ':</strong><ul>';
 			foreach ( $plugins_list as $value ) {
 				$plugin = $wpdb->get_row( "SELECT `version`, `new_version`, `name` FROM `" . $wpdb->prefix . "updater_list` WHERE `wp_key` = '" . $value . "'", ARRAY_A );
-				$message .= '<li>' . $plugin["name"] . ' - ' . sprintf( __( 'to the version %s', 'updater' ), $plugin["new_version"] ) .
+				$plugins_list_update .= '<li>' . $plugin["name"] . ' - ' . sprintf( __( 'to the version %s', 'updater' ), $plugin["new_version"] ) .
 						 ' ('. sprintf( __( 'the current version is %s', 'updater' ), $plugin["version"] ) . ');</li>';
 			}
+			$plugins_list_update .= '</ul>';
 		}
 
 		if ( ! empty( $themes_list ) ) {
-			$message .= '<strong>' . __( 'Theme(s)', 'updater' ) . ':</strong><ul>';
+			$plugins_list_update .= '<strong>' . __( 'Theme(s)', 'updater' ) . ':</strong><ul>';
 			foreach ( $themes_list as $value ) {
 				$theme = $wpdb->get_row( "SELECT `version`, `new_version`, `name` FROM `" . $wpdb->prefix . "updater_list` WHERE `wp_key` = '" . $value . "'", ARRAY_A );
-				$message .= '<li>' . $theme["name"] . ' - ' . sprintf( __( 'to the version %s', 'updater' ), $theme["new_version"] ) .
+				$plugins_list_update .= '<li>' . $theme["name"] . ' - ' . sprintf( __( 'to the version %s', 'updater' ), $theme["new_version"] ) .
 							' ('. sprintf( __( 'the current version is %s', 'updater' ), $theme["version"] ) . ');</li>';
 			}
-			$message .= '</ul>';
-		}
+			$plugins_list_update .= '</ul>';
+		}		
 
 		if ( true === $core ) {
 			$core_version = $wpdb->get_row( "SELECT `version`, `new_version` FROM `" . $wpdb->prefix . "updater_list` WHERE `wp_key` = `wp_core`", ARRAY_A );
-			$message .= '<strong>' . __( 'WordPress', 'updater' ) . ':</strong><ul><li>' . sprintf( __( 'Version %s is available', 'updater' ), $core_version["new_version"] ) . ' (' . sprintf( __( 'the current version is %s', 'updater' ), $core_version["version"] ) . ').</li></ul>';
+			$plugins_list_update .= '<strong>' . __( 'WordPress', 'updater' ) . ':</strong><ul><li>' . sprintf( __( 'Version %s is available', 'updater' ), $core_version["new_version"] ) . ' (' . sprintf( __( 'the current version is %s', 'updater' ), $core_version["version"] ) . ').</li></ul>';
 		}
 
 		if ( ! empty( $languages ) ) {
-			$message .= '<strong>' . __( 'Translations', 'updater' ) . ':</strong><ul>';
+			$plugins_list_update .= '<strong>' . __( 'Translations', 'updater' ) . ':</strong><ul>';
 			foreach ( $languages as $language ) {
-				$message .= '<li>' . $language . '</li>';
+				$plugins_list_update .= '<li>' . $language . '</li>';
 			}
-			$message .= '</ul>';
+			$plugins_list_update .= '</ul>';
 		}
 
 		if ( false === $test ) {
 			if ( 0 == $pdtr_options["mode"] ) {
-				$message .= '<br/>' . __( 'To start the updating, please follow the link', 'updater' ) . ' - <a href=' . network_admin_url( 'admin.php?page=updater' ) . '>' . __( 'Updater page on your website', 'updater' ) . '</a>.';
+				$plugins_list_update .= '<br/>' . __( 'To start the updating, please follow the link', 'updater' ) . ' - <a href=' . network_admin_url( 'admin.php?page=updater' ) . '>' . __( 'Updater page on your website', 'updater' ) . '</a>.';
 			} else {
-				$message .= '<br/>' . __( 'Updater plugin starts updating these files.', 'updater' );
+				$plugins_list_update .= '<br/>' . __( 'Updater plugin starts updating these files.', 'updater' );
 			}
 		} elseif ( ! empty( $themes_list ) || ! empty( $plugins_list ) || false != $core || ! empty( $languages ) ) {
-			$message .= '<br/>' . __( 'To start the updating, please follow the link', 'updater' ) . ' - <a href=' . network_admin_url( 'admin.php?page=updater' ) . '>' . __( 'Updater page on your website', 'updater' ) . '</a>.';
+			$plugins_list_update .= '<br/>' . __( 'To start the updating, please follow the link', 'updater' ) . ' - <a href=' . network_admin_url( 'admin.php?page=updater' ) . '>' . __( 'Updater page on your website', 'updater' ) . '</a>.';
 		}
 
 		if ( empty( $themes_list ) && empty( $plugins_list ) && false == $core && empty( $languages ) ) {
-			$message .= __( 'Congratulations! Your plugins, themes, translations and WordPress have the latest versions!', 'updater' );
+			$plugins_list_update .= __( 'Your files are all up to date.', 'updater' );
 		}
 
-		$message .= '<br/><br/>' .
-			sprintf( __( 'If you want to change the type of the updating mode or other settings, please go to the %s.', 'updater' ), '<a href=' . network_admin_url( 'admin.php?page=updater-options' ) . '>' . __( 'plugin settings page', 'updater' ) . '</a>' ) .
-			'<br/><br/>----------------------------------------<br/><br/>' .
-			sprintf( __( 'Thanks for using %s!', 'updater' ), '<a href="https://bestwebsoft.com/products/wordpress/plugins/updater/">Updater</a>' ) . '</body></html>';
+		$plugins_list_update .= '</body></html>';
+
+		$subject = str_replace(
+			array( '{SITE_NAME}' ),
+			array( get_bloginfo( 'name' ) ),
+			$subject
+		);
+
+		$message = str_replace(
+			array( '{SITE_NAME}', '{SITE_URL}', '{UPDATE_LIST}' ),
+			array( get_bloginfo( 'name' ), get_bloginfo( 'url' ), $plugins_list_update ),
+			$message
+		);
 
 		if ( 'default' == $pdtr_options["to_email_type"] ) {
 			$emails = array();
@@ -863,7 +892,7 @@ if ( ! function_exists( 'pdtr_notification_exist_update' ) ) {
 		$headers = 'From: ' . $pdtr_options["from_name"] . ' <' . $pdtr_options["from_email"] . ">\n" .
 			'Content-type: text/html; charset=utf-8' . "\n";
 
-		$mail_result = wp_mail( $emails, $subject, $message, $headers );
+		$mail_result = wp_mail( $emails, $subject,  htmlspecialchars_decode( nl2br( $message ) ), $headers );
 		return $mail_result;
 	}
 }

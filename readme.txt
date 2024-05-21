@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: updater, updater plugin, recent version, recent wordpress version, update frequency, update manually, update notification, update plugins, update wordpres, update to latest version, update automatically, update manually
-Requires at least: 4.5
-Tested up to: 5.5.1
-Stable tag: 1.45
+Requires at least: 5.6
+Tested up to: 6.5.2
+Stable tag: 1.46
 License: GPLv2 or later
 
 Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
@@ -16,6 +16,9 @@ Updater plugin automatically updates installed plugins, themes, and WordPress we
 Set the update frequency, choose auto or manual mode, create a backup, set email notifications and much more.
 
 Save your time and stay up-to-date!
+
+[View Demo](https://bestwebsoft.com/demo-updater-for-your-wordpress-site/?ref=readme)
+
 
 https://www.youtube.com/watch?v=I63426HTJjI
 
@@ -122,6 +125,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Updater Email Notifications settings page.
 
 == Changelog ==
+
+= V1.46 - 21.05.2024 =
+* Update : All functionality was updated for WordPress 6.5.
+* Update : BWS panel section was updated.
+* Bugfix : Security issues have been fixed.
 
 = V1.45 - 29.09.2020 =
 * NEW: Ability to change Email Notifications.
@@ -294,6 +302,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : Css-style was added.
 
 == Upgrade Notice ==
+
+= V1.46 =
+* The compatibility with new WordPress version updated.
+* Usability improved.
+* Security issues have been fixed.
 
 = V1.45 =
 * Usability improved.

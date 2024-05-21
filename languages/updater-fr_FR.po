@@ -1,0 +1,584 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-05-21 13:38+0300\n"
+"PO-Revision-Date: 2024-05-21 13:44+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.3\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-KeywordsList: esc_html_e;esc_html__;_e;__;esc_attr_e;esc_attr__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: src/bws_menu\n"
+
+#: src/includes/class-pdtr-settings.php:34 src/updater.php:40
+#: src/updater.php:1400 src/updater.php:1420
+msgid "Settings"
+msgstr "Réglages"
+
+#: src/includes/class-pdtr-settings.php:35
+msgid "Notifications"
+msgstr "Notifications"
+
+#: src/includes/class-pdtr-settings.php:36
+msgid "Misc"
+msgstr "Divers"
+
+#: src/includes/class-pdtr-settings.php:37
+msgid "Custom Code"
+msgstr "Code personnalisé"
+
+#: src/includes/class-pdtr-settings.php:39
+msgid "License Key"
+msgstr "Clé de licence"
+
+#: src/includes/class-pdtr-settings.php:100
+msgid "Please select a recipient email. Settings are not saved."
+msgstr ""
+"Veuillez sélectionner l'email du destinataire. Les paramètres ne sont pas "
+"sauvegardés."
+
+#: src/includes/class-pdtr-settings.php:111
+#: src/includes/class-pdtr-settings.php:118
+msgid "Please enter a valid recipient email. Settings are not saved."
+msgstr ""
+"Veuillez saisir un courriel valide pour le destinataire. Les paramètres ne "
+"sont pas sauvegardés."
+
+#: src/includes/class-pdtr-settings.php:131
+msgid "Please enter a valid sender email. Settings are not saved."
+msgstr ""
+"Veuillez saisir un courriel d'expéditeur valide. Les paramètres ne sont pas "
+"sauvegardés."
+
+#: src/includes/class-pdtr-settings.php:151
+msgid ""
+"Please select at least one option in the 'Check & Update' section. Settings "
+"are not saved."
+msgstr ""
+"Veuillez sélectionner au moins une option dans la section \"Vérification et "
+"mise à jour\". Les paramètres ne sont pas sauvegardés."
+
+#: src/includes/class-pdtr-settings.php:162
+msgid "Settings saved."
+msgstr "Paramètres sauvegardés."
+
+#: src/includes/class-pdtr-settings.php:173 src/updater.php:317
+msgid "Updater Settings"
+msgstr "Enregistrer les réglages"
+
+#: src/includes/class-pdtr-settings.php:178
+msgid "Check & Update"
+msgstr "Vérifier et mettre à jour"
+
+#: src/includes/class-pdtr-settings.php:181 src/updater.php:829
+#: src/updater.php:870 src/updater.php:977
+msgid "WordPress"
+msgstr "WordPress"
+
+#: src/includes/class-pdtr-settings.php:183
+msgid "Plugins"
+msgstr "Extensions"
+
+#: src/includes/class-pdtr-settings.php:185
+msgid "Themes"
+msgstr "Thèmes"
+
+#: src/includes/class-pdtr-settings.php:187 src/updater.php:835
+#: src/updater.php:876 src/updater.php:981
+msgid "Translations"
+msgstr "Traductions"
+
+#: src/includes/class-pdtr-settings.php:195
+#: src/includes/class-pdtr-settings.php:233
+#: src/includes/class-pdtr-settings.php:425
+msgid "Close"
+msgstr "Fermer"
+
+#: src/includes/class-pdtr-settings.php:199
+msgid "Update Inactive Plugins & Themes"
+msgstr "Mettre à jour les plugins et les thèmes inactifs"
+
+#: src/includes/class-pdtr-settings.php:203
+msgid "Enable to update inactive plugins and themes."
+msgstr "Permet de mettre à jour les plugins et thèmes inactifs."
+
+#: src/includes/class-pdtr-settings.php:214 src/includes/software-table.php:62
+msgid "Auto Update"
+msgstr "Mettre à jour auto"
+
+#: src/includes/class-pdtr-settings.php:218
+msgid "Enable to update software automatically."
+msgstr "Activez la mise à jour automatique du logiciel."
+
+#: src/includes/class-pdtr-settings.php:223
+msgid "Search & Install Updates Every"
+msgstr "Rechercher et installer les mises à jour tous les"
+
+#: src/includes/class-pdtr-settings.php:225
+msgid "hours"
+msgstr "heures"
+
+#: src/includes/class-pdtr-settings.php:237
+msgid "Backup"
+msgstr "Sauvegarde"
+
+#: src/includes/class-pdtr-settings.php:240
+msgid ""
+"Enable to automatically create a backup before each update (recommended)."
+msgstr ""
+"Activer la création automatique d'une sauvegarde avant chaque mise à jour "
+"(recommandé)."
+
+#: src/includes/class-pdtr-settings.php:244
+msgid "Backup Rotation"
+msgstr "Rotation de la sauvegarde"
+
+#: src/includes/class-pdtr-settings.php:249
+msgid ""
+"The maximum number of stored backups. When maximum limit is reached the "
+"oldest backup will be automatically deleted."
+msgstr ""
+"Le nombre maximum de sauvegardes stockées. Lorsque la limite maximale est "
+"atteinte, la sauvegarde la plus ancienne est automatiquement supprimée."
+
+#: src/includes/class-pdtr-settings.php:253
+msgid "Backup Custom"
+msgstr "Sauvegarde personnalisée"
+
+#: src/includes/class-pdtr-settings.php:256
+msgid "Folders"
+msgstr "Dossiers"
+
+#: src/includes/class-pdtr-settings.php:258
+msgid "Tables in database"
+msgstr "Tables de la base de données"
+
+#: src/includes/class-pdtr-settings.php:263
+msgid "Test Backup"
+msgstr "Test de sauvegarde"
+
+#: src/includes/class-pdtr-settings.php:266
+msgid "Enable to delete test backup when it's finished."
+msgstr "Permet de supprimer la sauvegarde du test lorsqu'elle est terminée."
+
+#: src/includes/class-pdtr-settings.php:268
+msgid "Backup Now"
+msgstr "Sauvegarder maintenant"
+
+#: src/includes/class-pdtr-settings.php:273
+msgid "Envato API"
+msgstr "Envato API"
+
+#: src/includes/class-pdtr-settings.php:276
+msgid ""
+"Insert your Envato API Personal Token to enable automatic updates of your "
+"installed products."
+msgstr ""
+"Insérez votre jeton personnel Envato API pour activer les mises à jour "
+"automatiques de vos produits installés."
+
+#: src/includes/class-pdtr-settings.php:276
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#: src/includes/class-pdtr-settings.php:293
+msgid "Email Notifications Settings"
+msgstr "Paramètres de Notifications par courriel"
+
+#: src/includes/class-pdtr-settings.php:297
+msgid "Receive Email Notifications When"
+msgstr "Recevez des notifications par courriel lorsque"
+
+#: src/includes/class-pdtr-settings.php:300
+msgid "New updates are available"
+msgstr "De nouvelles mises à jour sont disponibles"
+
+#: src/includes/class-pdtr-settings.php:302
+msgid "Update is completed"
+msgstr "La mise à jour est terminée"
+
+#: src/includes/class-pdtr-settings.php:307
+msgid "Send Email Notifications to"
+msgstr "Envoyez des notifications par courriel à"
+
+#: src/includes/class-pdtr-settings.php:312
+msgid "Default email"
+msgstr "Email par Défaut"
+
+#: src/includes/class-pdtr-settings.php:316
+msgid "Select a username"
+msgstr "Nom d'utilisateur / Identifiant"
+
+#: src/includes/class-pdtr-settings.php:343
+msgid "Select an existing administrator or a custom email."
+msgstr "Sélectionnez un administrateur existant ou un courriel personnalisé."
+
+#: src/includes/class-pdtr-settings.php:348
+msgid "Custom email"
+msgstr "E-mail personnalisé"
+
+#: src/includes/class-pdtr-settings.php:356
+msgid "Add multiple email addresses separated by comma."
+msgstr "Ajoutez plusieurs adresses électroniques séparées par une virgule."
+
+#: src/includes/class-pdtr-settings.php:362
+msgid "Send Email Notifications from"
+msgstr "Envoyez des notifications par courriel à partir de"
+
+#: src/includes/class-pdtr-settings.php:364
+msgid "Name"
+msgstr "Nom"
+
+#: src/includes/class-pdtr-settings.php:366
+msgid "Email"
+msgstr "Adresse e-mail"
+
+#: src/includes/class-pdtr-settings.php:368
+msgid ""
+"Note: If you will change this settings, email notifications may be marked as "
+"spam or email delivery failures may occur if you'll change this option."
+msgstr ""
+"Remarque : Si vous modifiez ces paramètres, les notifications par courrier "
+"électronique peuvent être marquées comme spam ou des échecs de livraison de "
+"courrier électronique peuvent se produire si vous modifiez cette option."
+
+#: src/includes/class-pdtr-settings.php:372
+msgid "New Updates are Available"
+msgstr "De nouvelles mises à jour sont disponibles"
+
+#: src/includes/class-pdtr-settings.php:374
+#: src/includes/class-pdtr-settings.php:393
+msgid "Subject"
+msgstr "Sujet"
+
+#: src/includes/class-pdtr-settings.php:377
+#: src/includes/class-pdtr-settings.php:383
+#: src/includes/class-pdtr-settings.php:396
+#: src/includes/class-pdtr-settings.php:402
+msgid "Allowed Variables:"
+msgstr "Variables autorisées :"
+
+#: src/includes/class-pdtr-settings.php:378
+#: src/includes/class-pdtr-settings.php:385
+#: src/includes/class-pdtr-settings.php:397
+#: src/includes/class-pdtr-settings.php:404
+msgid "Website name."
+msgstr "Nom du site web."
+
+#: src/includes/class-pdtr-settings.php:380
+#: src/includes/class-pdtr-settings.php:399
+msgid "Message"
+msgstr "Message"
+
+#: src/includes/class-pdtr-settings.php:384
+msgid "List of available updates."
+msgstr "Liste des mises à jour disponibles."
+
+#: src/includes/class-pdtr-settings.php:386
+#: src/includes/class-pdtr-settings.php:405
+msgid "Website URL."
+msgstr "URL du site web."
+
+#: src/includes/class-pdtr-settings.php:391
+msgid "Update is Completed"
+msgstr "La mise à jour est terminée"
+
+#: src/includes/class-pdtr-settings.php:403
+msgid "Updates results."
+msgstr "Mise à jour des résultats."
+
+#: src/includes/class-pdtr-settings.php:429
+msgid "Skip Minor WordPress Updates"
+msgstr "Sauter les mises à jour mineures de WordPress"
+
+#: src/includes/class-pdtr-settings.php:431
+msgid ""
+"Enable to turn off automatic update of WordPress minor versions. This will "
+"not have an impact on plugin’s workability."
+msgstr ""
+"Activez la désactivation de la mise à jour automatique des versions mineures "
+"de WordPress. Cela n'aura pas d'impact sur le fonctionnement du plugin."
+
+#: src/includes/software-table.php:28
+msgid "item"
+msgstr "article"
+
+#: src/includes/software-table.php:29
+msgid "items"
+msgstr "articles"
+
+#: src/includes/software-table.php:60
+msgid "Title"
+msgstr "Titre"
+
+#: src/includes/software-table.php:61 src/updater.php:871
+msgid "Version"
+msgstr "Version"
+
+#: src/includes/software-table.php:63
+msgid "Category"
+msgstr "Catégorie"
+
+#: src/includes/software-table.php:74
+msgid "Update Now"
+msgstr "Mettre à jour maintenant"
+
+#: src/includes/software-table.php:89
+msgid "New version is available."
+msgstr "Une nouvelle version est disponible."
+
+#: src/includes/software-table.php:101
+#, php-format
+msgid "View %2$s details"
+msgstr "Voir %2$s détails"
+
+#: src/includes/software-table.php:106
+msgid "or"
+msgstr "ou"
+
+#: src/includes/software-table.php:106
+msgid "update now"
+msgstr "mettre à jour maintenant"
+
+#: src/includes/software-table.php:108
+msgid "Update now."
+msgstr "Mettez à Jour maintenant."
+
+#: src/includes/software-table.php:115
+msgid "Plugin"
+msgstr "Extension"
+
+#: src/includes/software-table.php:117
+msgid "Theme"
+msgstr "Thème"
+
+#: src/includes/software-table.php:119
+msgid "Core"
+msgstr "Noyau"
+
+#: src/includes/software-table.php:123
+msgid "Enabled"
+msgstr "Activé"
+
+#: src/includes/software-table.php:125
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: src/includes/software-table.php:164
+msgid "Disable Auto Update"
+msgstr "Désactiver la mise à jour automatique"
+
+#: src/includes/software-table.php:164
+msgid "Available in Pro"
+msgstr "Disponible avec Pro"
+
+#: src/includes/software-table.php:294
+msgid "Sending Report..."
+msgstr "Envoi du rapport..."
+
+#: src/includes/software-table.php:315
+#, php-format
+msgid "Sorry, your email could not be sent to %s."
+msgstr "Désolé, votre courriel n'a pas pu être envoyé à %s."
+
+#: src/includes/software-table.php:317
+#, php-format
+msgid "The email with the update results was sent to %s."
+msgstr ""
+"Le courriel contenant les résultats de la mise à jour a été envoyé à %s."
+
+#: src/includes/software-table.php:323
+msgid "Go to the Updater page"
+msgstr "Accédez à la page Updater"
+
+#: src/includes/software-table.php:323
+msgid "Go back to the Updater page"
+msgstr "Retournez à la page de l'Updater"
+
+#: src/updater.php:39 src/updater.php:322
+msgid "Installed Software"
+msgstr "Logiciel installé"
+
+#: src/updater.php:46
+msgid "Upgrade to Pro"
+msgstr "Passer à la version Pro"
+
+#: src/updater.php:194 src/updater.php:197
+msgid "Hello!"
+msgstr "Bonjour !"
+
+#: src/updater.php:194 src/updater.php:197
+msgid "Updater plugin is run on your website"
+msgstr "Le plugin Updater est exécuté sur votre site web"
+
+#: src/updater.php:194
+msgid "The following files need to be updated:"
+msgstr "Les fichiers suivants doivent être mis à jour :"
+
+#: src/updater.php:195 src/updater.php:198
+#, php-format
+msgid ""
+"If you want to change the type of the updating mode or other settings, "
+"please go to the %s."
+msgstr ""
+"Si vous souhaitez modifier le type de mode de mise à jour ou d'autres "
+"paramètres, allez à la page %s."
+
+#: src/updater.php:195 src/updater.php:198
+msgid "plugin settings page"
+msgstr "page des paramètres du plug-in"
+
+#: src/updater.php:196 src/updater.php:199
+#, php-format
+msgid "Thanks for using %s!"
+msgstr "Merci d'utiliser %s!"
+
+#: src/updater.php:218
+msgid "Check for Updates on"
+msgstr "Consultez les mises à jour sur"
+
+#: src/updater.php:219
+msgid "Updating on"
+msgstr "Mise à jour sur"
+
+#: src/updater.php:324
+msgid ""
+"We strongly recommend you to backup your website and WordPress database "
+"before updating! We are not responsible for the site running after updates."
+msgstr ""
+"Nous vous recommandons vivement de sauvegarder votre site web et votre base "
+"de données WordPress avant de procéder à la mise à jour ! Nous ne sommes pas "
+"responsables du fonctionnement du site après les mises à jour."
+
+#: src/updater.php:552
+msgid "Updating Plugins..."
+msgstr "Mise à jour des plugins..."
+
+#: src/updater.php:585
+msgid "Updating Themes..."
+msgstr "Mise à jour des thèmes..."
+
+#: src/updater.php:623
+msgid "Updating Translations..."
+msgstr "Mise à jour des traductions..."
+
+#: src/updater.php:653
+msgid "Updating WordPress..."
+msgstr "Mise à jour de WordPress..."
+
+#: src/updater.php:699
+msgid "Update Failed"
+msgstr "Mise à jour échouée"
+
+#: src/updater.php:705
+msgid "WordPress was updated successfully!"
+msgstr "La mise à jour de WordPress a été effectuée avec succès !"
+
+#: src/updater.php:802
+msgid "The following files can't be updated"
+msgstr "Les fichiers suivants ne peuvent pas être mis à jour"
+
+#: src/updater.php:805 src/updater.php:848 src/updater.php:940
+msgid "Plugin(s)"
+msgstr "Plugin(s)"
+
+#: src/updater.php:810 src/updater.php:822
+msgid "failed update"
+msgstr "échec de la mise à jour"
+
+#: src/updater.php:810 src/updater.php:822 src/updater.php:952
+#: src/updater.php:970 src/updater.php:977
+#, php-format
+msgid "the current version is %s"
+msgstr "la version actuelle est %s"
+
+#: src/updater.php:817 src/updater.php:859 src/updater.php:958
+msgid "Theme(s)"
+msgstr "Thématique(s)"
+
+#: src/updater.php:830
+msgid "WordPress can’t be updated on your website."
+msgstr "WordPress ne peut pas être mis à jour sur votre site web."
+
+#: src/updater.php:837
+msgid "failed update."
+msgstr "mise à jour manquée."
+
+#: src/updater.php:845
+msgid "The following files were updated successfully"
+msgstr "Les fichiers suivants ont été mis à jour avec succès"
+
+#: src/updater.php:852 src/updater.php:863
+#, php-format
+msgid "updated to the version %s"
+msgstr "mise à jour de la version %s"
+
+#: src/updater.php:878
+msgid "updated successfully."
+msgstr "a été mis à jour avec succès."
+
+#: src/updater.php:951 src/updater.php:969
+#, php-format
+msgid "to the version %s"
+msgstr "à la version %s"
+
+#: src/updater.php:977
+#, php-format
+msgid "Version %s is available"
+msgstr "La version %s est disponible"
+
+#: src/updater.php:990 src/updater.php:995
+msgid "To start the updating, please follow the link"
+msgstr "Pour commencer la mise à jour, veuillez suivre le lien suivant"
+
+#: src/updater.php:990 src/updater.php:995
+msgid "Updater page on your website"
+msgstr "Page de mise à jour sur votre site web"
+
+#: src/updater.php:992
+msgid "Updater plugin starts updating these files."
+msgstr "Le plugin Updater commence à mettre à jour ces fichiers."
+
+#: src/updater.php:999
+msgid "Your files are all up to date."
+msgstr "Vos fichiers sont tous à jour."
+
+#: src/updater.php:1422
+msgid "FAQ"
+msgstr "FAQ"
+
+#: src/updater.php:1423
+msgid "Support"
+msgstr "Support"
+
+#: src/updater.php:1442
+msgid "Notice:"
+msgstr "Remarque :"
+
+#: src/updater.php:1445
+msgid "Due to the peculiarities of the multisite work, Updater plugin has only"
+msgstr ""
+"En raison des particularités du travail multisite, le plugin Updater a "
+"seulement"
+
+#: src/updater.php:1447
+msgid "Network settings page"
+msgstr "Page des paramètres du réseau"
+
+#: src/updater.php:1450
+msgid ""
+"Due to the peculiarities of the multisite work, Updater plugin has the "
+"network settings page only and it should be Network Activated."
+msgstr ""
+"En raison des particularités du travail multisite, le plugin Updater ne "
+"dispose que de la page de configuration du réseau et doit être activé pour "
+"le réseau."
+
+#: src/updater.php:1452
+msgid "Activate Updater for Network"
+msgstr "Activer l'Updater pour le réseau"
